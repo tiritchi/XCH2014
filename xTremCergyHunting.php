@@ -1,4 +1,17 @@
+<?php
+	require_once("./registar/include/membersite_config.php");
+
+	if(!$fgmembersite->CheckLogin())
+	{
+   		$fgmembersite->RedirectToURL("inscription.html");
+   		exit;
+	}
+?>
+
+
+
 <!DOCTYPE html>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -7,15 +20,6 @@
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="signin.css"></link>
 
-		<?php
-		require_once("./include/membersite_config.php");
- 
-		if(!$fgmembersite->CheckLogin())
-		{
-    		$fgmembersite->RedirectToURL("login.php");
-    		exit;
-		}
-		?>
     </head>
     
     <body>
