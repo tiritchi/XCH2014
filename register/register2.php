@@ -34,8 +34,8 @@ if(isset($_POST['submitted']))
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="First name">First name</label>
   <div class="controls">
+  	<span class="input-group-addon">First name</span>
     <input id="First name" name="First name" placeholder="First name" class="form-control" required="" type="text">
     
   </div>
@@ -43,8 +43,8 @@ if(isset($_POST['submitted']))
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="Last name">Last name</label>
   <div class="controls">
+    <span class="input-group-addon">Last name</span>
     <input id="Last name" name="Last name" placeholder="Last name" class="form-control" required="" type="text">
     
   </div>
@@ -52,8 +52,8 @@ if(isset($_POST['submitted']))
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="Email">Email</label>
   <div class="controls">
+    <span class="input-group-addon">@</span>
     <input id="Email" name="Email" placeholder="example@example.com" class="form-control" required="" type="text">
     
   </div>
@@ -61,8 +61,8 @@ if(isset($_POST['submitted']))
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="Phone N°">Phone N°</label>
   <div class="controls">
+    <span class="input-group-addon">Phone N°</span>
     <input id="Phone N°" name="Phone N°" placeholder="06XXXXXXXX" class="form-control" required="" type="text">
     
   </div>
@@ -70,8 +70,8 @@ if(isset($_POST['submitted']))
 
 <!-- Select Basic -->
 <div class="control-group">
-  <label class="control-label" for="Sexe">sexe</label>
   <div class="controls">
+    <span class="input-group-addon">Sexe</span>
     <select id="Sexe" name="Sexe" class="input-small">
       <option>Male</option>
       <option>Female</option>
