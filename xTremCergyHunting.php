@@ -1,15 +1,3 @@
-<?php
-	require_once("./registar/include/membersite_config.php");
-
-	if(!$fgmembersite->CheckLogin())
-	{
-   		$fgmembersite->RedirectToURL("inscription.html");
-   		exit;
-	}
-?>
-
-
-
 <!DOCTYPE html>
 
 <html>
