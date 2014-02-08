@@ -42,7 +42,7 @@
                 <button class="btn btn-success" type="submit">
                     Sign in
                 </button>
-                <a class="btn btn-primary btn-sm" role="button" href="register/register.php">
+                <a class="btn btn-primary btn-sm" role="button" href="register/register2.php">
             	Sign up ! »
        			</a>
             </form>
@@ -62,7 +62,7 @@
             La XTrem Cergy Hunting est un évènement trop trop cool organisé par ENSEAventure lors duquel vous devrez tuer des gens avec un pistolet à eau
         </p>
         <p>
-        <a class="btn btn-primary btn-lg" role="button" href="register/register.php">
+        <a class="btn btn-primary btn-lg" role="button" href="register/register2.php">
             Inscrivez-vous ! »
         </a>
         </p>
