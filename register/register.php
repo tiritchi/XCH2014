@@ -15,15 +15,16 @@ if(isset($_POST['submitted']))
     <head>
         <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
         <title>Register</title>
-        <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css" />
-        <script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="signin.css"></link>  
+<!--        <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css" />
         <link rel="STYLESHEET" type="text/css" href="style/pwdwidget.css" />
+        -->
+        <script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
         <script src="scripts/pwdwidget.js" type="text/javascript"></script>
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
         <title>xTremCergyHunting</title>
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="signin.css"></link>  
     </head>
 <body>
 
