@@ -43,6 +43,10 @@ if(isset($_POST['submitted']))
 
 <!-- Text input-->
 <div class="input-group">
+        <span class="input-group-addon"></span>
+        <input type="text" class="form-control" placeholder="Username">
+</div>
+<div class="input-group">
   <div class="controls">
     <span class="input-group-addon">Last name</span>
     <input id="Last name" name="Last name" placeholder="Last name" class="form-control" required="" type="text">
