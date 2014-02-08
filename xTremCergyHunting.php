@@ -43,7 +43,7 @@
                     Sign in
                 </button>
                 <a class="btn btn-primary btn-sm" role="button" href="register/register.php">
-            	Inscrivez-vous ! »
+            	Sign up ! »
        			</a>
             </form>
         </div>
