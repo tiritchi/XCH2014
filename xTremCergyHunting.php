@@ -30,9 +30,6 @@
                 XTrem Cergy Hunting
 
             </a>
-            <a class="btn btn-primary btn-lg" role="button" href="register/register.php">
-            Inscrivez-vous ! »
-       		</a>
         </div>
         <div class="navbar-collapse collapse">
             <form class="navbar-form navbar-right" role="form">
@@ -45,6 +42,9 @@
                 <button class="btn btn-success" type="submit">
                     Sign in
                 </button>
+                <a class="btn btn-primary btn-sm" role="button" href="register/register.php">
+            	Inscrivez-vous ! »
+       			</a>
             </form>
         </div>
         <!--
