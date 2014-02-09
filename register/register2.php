@@ -15,7 +15,7 @@
    				 <h3 class="panel-title">Formulaire d'inscription</h3>
   			</div>
   			<div class="panel-body">
-  				<form class="form-horizontal" action="post.php" method="post">
+  				<form class="form-horizontal" action="post2.php" method="post">
 				<fieldset>
 
 				<!-- Text input-->

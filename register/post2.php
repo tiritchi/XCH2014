@@ -10,11 +10,11 @@
 	{
 		$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
 		echo '<p> connected to DB</p>';
-		
+
 		if (isset($_POST['password']) AND $_POST['password'] == "test")
 		{
 			echo '<p> good password</p>';
-			$bdd = exec('INSERT INTO users(id,fname,lname,mail,phone,sexe,date) VALUES('',"test","test","test","test","test",'')');
+			$bdd = exec('INSERT INTO users(id,fname,lname,mail,phone,sexe,date) VALUES(\'\',\'test\',\'test\',\'test\',\'test\',\'test\',\'\')');
 
 		}
 		else
