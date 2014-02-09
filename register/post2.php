@@ -21,7 +21,7 @@
 	{
 		echo '<p> good password</p>';
 		//$bdd = exec('INSERT INTO users(id,fname,lname,mail,phone,sexe,date) VALUES(\'\',\'test\',\'test\',\'test\',\'test\',\'test\',\'\')');
-		$nom = "test4";
+		$nom = $_POST['Fname'];
 		$possesseur ="test4";
 		$console ="test4";
 		$prix = "522";
