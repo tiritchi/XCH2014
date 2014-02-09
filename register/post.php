@@ -10,6 +10,54 @@
 	{
 		$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
 		echo '<p> connected to DB</p>';
+		$fname=$_POST['Fname'];
+		$lname=$_POST['Lname'];
+		$phone=$_POST['Phone'];
+		$email=$_POST['Email'];
+		$sexe=$_POST['sexe'];
+		 
+		if (isset($_POST['password']) AND $_POST['password'] == "test")
+		{
+			$req = $bdd->execute('INSERT INTO users(id,fname,lname,mail,phone,sexe,date) VALUES('',"test","test","test","test","test",'')');
+			$req = execute(array(
+				'prenom' => $fname;
+				'nom'=> $lname;
+				'tel' => $phone;
+				'mail' => $email;
+				'sexe' => $sexe;
+			));
+
+			$reponse = $bdd->query('SELECT * FROM users');
+
+			while ($donnees = $reponse->fetch())
+			{
+			?>
+			    <p>
+			    	<?php echo $donnees['fname']; ?><br/>;
+			    	<?php echo $donnees['lname']; ?><br/>;
+			    	<?php echo $donnees['mail']; ?><br/>;
+			    	<?php echo $donnees['phone']; ?><br/>;
+			    	<?php echo $donnees['sexe']; ?><br/><br/>;
+				</p>
+				<?php
+			}
+			$reponse -> closeCursor();
+			?>
+			<body>    
+				<p>Bonjour !</p>
+
+				<p>Je sais comment tu t'appelles, hé hé. Tu t'appelles <?php echo htmlspecialchars($_POST['Last_name']); ?> !</p>
+
+				<p>Si tu veux changer de prénom, <a href="register2.php">clique ici</a> pour revenir à la page formulaire.php.</p>
+			</body>
+			<?php
+		}
+		else 
+		{
+			echo '<p>wrong password</p>';
+		}
+
+
 	} 
 	catch (Exception $e) 
 	{
@@ -17,51 +65,5 @@
 		echo '<p> erreur DB</p>';
 	}
 
-	echo '<p> test </p>';
-//	$fname=$_POST['Fname'];
-//	$lname=$_POST['Lname'];
-//	$phone=$_POST['Phone'];
-//	$email=$_POST['Email'];
-//	$sexe=$_POST['sexe'];
-	 
-	if (isset($_POST['password']) AND $_POST['password'] == "test")
-	{
-		$req = $bdd->execute('INSERT INTO users(id,fname,lname,mail,phone,sexe,date) VALUES('',"test","test","test","test","test",'')');
-//		$req = execute(array(
-//			'prenom' => $fname;
-//			'nom'=> $lname;
-//			'tel' => $phone;
-//			'mail' => $email;
-//			'sexe' => $sexe;
-//			));
-		$reponse = $bdd->query('SELECT * FROM users');
-
-		while ($donnees = $reponse->fetch())
-		{
-		?>
-		    <p>
-		    	<?php echo $donnees['fname']; ?><br/>;
-		    	<?php echo $donnees['lname']; ?><br/>;
-		    	<?php echo $donnees['mail']; ?><br/>;
-		    	<?php echo $donnees['phone']; ?><br/>;
-		    	<?php echo $donnees['sexe']; ?><br/><br/>;
-			</p>
-			<?php
-		}
-		$reponse -> closeCursor();
-?>
-		<body>    
-			<p>Bonjour !</p>
-
-			<p>Je sais comment tu t'appelles, hé hé. Tu t'appelles <?php echo htmlspecialchars($_POST['Last_name']); ?> !</p>
-
-			<p>Si tu veux changer de prénom, <a href="register2.php">clique ici</a> pour revenir à la page formulaire.php.</p>
-		</body>
-		<?php
-	}
-	else 
-	{
-		echo '<p>wrong password</p>';
-	}
 ?>
 </html>
