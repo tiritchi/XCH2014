@@ -21,12 +21,12 @@
 	{
 		echo '<p> good password</p>';
 		//$bdd = exec('INSERT INTO users(id,fname,lname,mail,phone,sexe,date) VALUES(\'\',\'test\',\'test\',\'test\',\'test\',\'test\',\'\')');
-		$nom = $_POST['Fname'];
-		$possesseur ="test4";
-		$console ="test4";
-		$prix = "522";
+		$nom = $_POST['Lname'];
+		$possesseur =$_POST['Fname'];
+		$console =;$_POST['Email']
+		$prix = $_POST['Phone'];
 		$nbre_joueurs_max = "522";
-		$commentaires = "test2";
+		$commentaires = $_POST['sexe'];
 
 			// On récupère tout le contenu de la table jeux_video
 		$req = $bdd->prepare('INSERT INTO jeux_video(nom, possesseur, console, prix, nbre_joueurs_max, commentaires) VALUES(:nom, :possesseur, :console, :prix, :nbre_joueurs_max, :commentaires)');
