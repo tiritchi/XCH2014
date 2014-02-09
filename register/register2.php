@@ -45,7 +45,7 @@
 				<!-- Text input-->
 				<div class="input-group">
 				    <span class="input-group-addon">Password</span>
-				    <input type="password" id="password" name="user_psswd" placeholder="password" class="form-control" required="">
+				    <input type="password" id="user_psswd" name="user_psswd" placeholder="password" class="form-control" required="">
 				</div><br/>
 
 				<!-- Select Basic -->

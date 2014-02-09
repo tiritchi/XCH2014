@@ -35,8 +35,9 @@
 		    'email' => $email,
 		    'phone' => $phone,
 		    'sexe' => $sexe,
-		    'date'=>$date,
-		    'psswd'=>$psswd
+		    'psswd'=>$psswd,
+		    'date'=>$date
+
 	    ));
 	}
 	else
