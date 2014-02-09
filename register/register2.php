@@ -1,15 +1,3 @@
-<?PHP
-require_once("./include/membersite_config.php");
-
-if(isset($_POST['submitted']))
-{
-   if($fgmembersite->RegisterUser())
-   {
-        $fgmembersite->RedirectToURL("thank-you.html");
-   }
-}
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,6 +67,7 @@ if(isset($_POST['submitted']))
 				<!-- Button -->
 				<div class="col-lg-offset-4">
 					<div class="input-group">
+						<span class="input-group-addon"> <input id="password" name="password" placeholder="Password" class="form-control" required="" type="text"> </span>
 						<button id="Submit" name="Submit" class="btn btn-primary">Submit</button>
 					</div>
 				</div>
