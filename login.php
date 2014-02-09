@@ -23,16 +23,20 @@
 	}
 	$user = $_POST['email'];
 	$psswd= $_POST['password'];
-	$req=$bdd->query('SELECT psswd FROM users WHERE mail=/'$user/'');
+	$req=$bdd->prepare('SELECT psswd FROM users WHERE mail=:mail');
+	$req->execute(array(
+		'mail'=>$user
+		));
+	$stat=$req->fetch();
 	echo '<p> DB reached</p>';
-	if($req==NULL)
+	if($stat==NULL)
 	{
 		echo '<p> Vous n êtes pas inscrit</p>';
 	}
 	else
 	{
-		echo $req['psswd'];
-		$password_correct = $req['psswd']; /* Le hash stocké précédemment */
+		echo $stat['psswd'];
+		$password_correct = $stat['psswd']; /* Le hash stocké précédemment */
         $hasher = new PasswordHash(8, FALSE);
         $check = $hasher->CheckPassword($psswd, $password_correct);
          
