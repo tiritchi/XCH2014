@@ -33,12 +33,12 @@
             </a>
         </div>
         <div class="navbar-collapse collapse">
-            <form class="navbar-form navbar-right" role="form">
+            <form class="navbar-form navbar-right" role="form" action="login.php" method="post">
                 <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Email"></input>
+                    <input class="form-control" name='email' type="text" placeholder="Email"></input>
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="password" placeholder="Password"></input>
+                    <input class="form-control" name='password' type="password" placeholder="Password"></input>
                 </div>
                 <button class="btn btn-success" type="submit">
                     Sign in
