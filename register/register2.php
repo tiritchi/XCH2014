@@ -11,14 +11,17 @@
 <body>
 	<div class="col-lg-4 col-lg-offset-4">
 		<div class="panel panel-primary">
-			<form>
-				<div class="panel-heading">
-	   				 <h3 class="panel-title">Formulaire d'inscription</h3>
-	   				 <div class="input-group">
-						<button id="home" class="btn btn-default navbar-btn"><a href="xTremCergyHunting.php.php">Home</a></button>
-					</div class="col-lg-offset-1">
-	  			</div>
-  			</form>
+			<div class="panel-heading">
+				<ul class="pager">
+					<li class="previous"><a href="#">&larr; Older</a></li>
+					<li class="next"><h3 class="panel-title">Formulaire d'inscription</h3></li>
+				</ul>
+
+<!--				<div class="row-fluid">
+   					<div class="span8" ><h3 class="panel-title">Formulaire d'inscription</h3></div>
+   					<div class="span4" ><button class="btn btn-primary">Submit</button></div>
+   				</div>
+  			</div>-->
   			<div class="panel-body">
   				<form class="form-horizontal" action="post.php" method="post">
 				<fieldset>
