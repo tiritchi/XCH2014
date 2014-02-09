@@ -7,7 +7,6 @@
         <title>xTremCergyHunting</title>
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="signin.css"></link>
-        <?php require('lib/PasswordHash.php'); ?>
 
     </head>
     

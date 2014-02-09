@@ -42,6 +42,12 @@
 				    <input id="Phone N°" name="Phone" placeholder="06XXXXXXXX" class="form-control" required="" type="text">
 				</div><br/>
 
+				<!-- Text input-->
+				<div class="input-group">
+				    <span class="input-group-addon">Password</span>
+				    <input id="password" name="password" placeholder="*********" class="form-control" required="" type="text">
+				</div><br/>
+
 				<!-- Select Basic -->
 				<div class="input-group">
 				    <span class="input-group-addon">Sexe</span>
