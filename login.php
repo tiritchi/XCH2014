@@ -28,18 +28,20 @@
 	$stat->execute(array(
 		'mail'=>$user
 		));
-	echo '<br/>';
-	echo $stat->rowCount();
-	echo '<br/>';
-	$req=$stat->fetch();
+	$rcount=$stat->rowCount();
+	
 //	echo '<p> DB reached</p>';
 	if($req==NULL)
 	{
 		echo '<p> Vous n êtes pas inscrit</p>';
 	}
+	else if(!(rcount==1)){
+		echo 'DataBase Error !';
+	}
 	else
 	{
 //		echo $req['psswd'];
+		$req=$stat->fetch();
 		$password_correct = $req['psswd']; /* Le hash stocké précédemment */
         $hasher = new PasswordHash(8, FALSE);
         $check = $hasher->CheckPassword($psswd, $password_correct);
