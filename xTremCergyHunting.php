@@ -74,9 +74,8 @@
         $password = "test";
         $hasher = new PasswordHash(8, FALSE);
         $hash = $hasher->HashPassword($password);
-        echo $hash;
+        echo $hash'<br/>';
 
-        $password = "test";
         $password_correct = "test"; /* Le hash stocké précédemment */
         $hasher = new PasswordHash(8, FALSE);
         $check = $hasher->CheckPassword($password, $password_correct);
