@@ -18,6 +18,16 @@ if(isset($_POST['submitted']))
     <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../signin.css"></link>
+    <script type="text/javascript">
+        $(window).on('load', function () {
+
+            $('.selectpicker').selectpicker({
+                'selectedText': 'cat'
+            });
+
+            // $('.selectpicker').selectpicker('hide');
+        });
+    </script>
 </head>
 
 <body>
@@ -60,10 +70,10 @@ if(isset($_POST['submitted']))
 <!-- Select Basic -->
 <div class="input-group">
     <span class="input-group-addon">Sexe</span>
-    <select id="Sexe" name="Sexe" class="input-small">
-      <option>Male</option>
-      <option>Female</option>
-    </select>
+    <select class="selectpicker">
+		<option data-icon="icon-heart">Male</option>
+		<option data-icon="icon-heart">Female</option>
+	</select>
 </div><br/>
 
 <!-- Button -->
