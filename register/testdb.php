@@ -3,11 +3,12 @@
 	try 
 	{
 		$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
+		echo '<p> connected to DB</p>';
 	} 
 	catch (Exception $e) 
 	{
 		die('Erreur : ' . $e->getMessage());
-		echo '<p> erreur DB</p>'
+		echo '<p> erreur DB</p>';
 	} 
 		// Si tout va bien, on peut continuer
 
