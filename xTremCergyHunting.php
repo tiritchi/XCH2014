@@ -33,7 +33,7 @@
             </a>
         </div>
         <div class="navbar-collapse collapse">
-            <form class="navbar-form navbar-right" role="form" action="login.php" method="post">
+            <form class="navbar-form navbar-right" action="login.php" method="post">
                 <div class="form-group">
                     <input class="form-control" name='email' type="text" placeholder="Email"></input>
                 </div>
