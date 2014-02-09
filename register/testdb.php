@@ -34,7 +34,7 @@
 	    'commentaires' => $commentaires
     ));
 
-	$reponse = $bdd->query('SELECT * FROM jeux_video WHERE possesseur='test' ');
+	$reponse = $bdd->query('SELECT * FROM jeux_video WHERE possesseur="test" ');
 
 		// On affiche chaque entrée une à une
 	while ($donnees = $reponse->fetch())
