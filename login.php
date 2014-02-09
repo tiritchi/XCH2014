@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="signin.css"></link>
         <?php require('lib/PasswordHash.php'); ?>
 </head>
-<p> test </p>
 <?php
 //	echo 'test';
 	try 
