@@ -6,6 +6,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
 </head>
 <?php
+	echo '<p> test </p>';
 	$fname=$_POST['Fname'];
 	$lname=$_POST['Lname'];
 	$phone=$_POST['Phone'];
@@ -39,11 +40,11 @@
 		{
 		?>
 		    <p>
-		    	<?php echo $donnees['fname']; ?><br/>
-		    	<?php echo $donnees['lname']; ?><br/>
-		    	<?php echo $donnees['mail']; ?><br/>
-		    	<?php echo $donnees['phone']; ?><br/>
-		    	<?php echo $donnees['sexe']; ?><br/><br/>
+		    	<?php echo $donnees['fname']; ?><br/>;
+		    	<?php echo $donnees['lname']; ?><br/>;
+		    	<?php echo $donnees['mail']; ?><br/>;
+		    	<?php echo $donnees['phone']; ?><br/>;
+		    	<?php echo $donnees['sexe']; ?><br/><br/>;
 			</p>
 			<?php
 		}
