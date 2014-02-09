@@ -21,12 +21,13 @@ if(isset($_POST['submitted']))
 </head>
 
 <body>
+<div class="col-lg-7 col-lg-offset-2">
 <div class="panel panel-primary">
 	<div class="panel-heading">
     <h3 class="panel-title">Formulaire d'inscription</h3>
   	</div>
   	<div class="panel-body">
-  		<form class="form-horizontal">
+  	<form class="form-horizontal">
 <fieldset>
 
 <!-- Form Name -->
@@ -73,6 +74,7 @@ if(isset($_POST['submitted']))
 </fieldset>
 </form>
   	</div>
+</div>
 </div>
 </body>
 </html>
