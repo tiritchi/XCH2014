@@ -47,17 +47,7 @@
          
         if ($check) {
 	        echo "Password correct!";
-			echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">';
-			session_start();
-			$_SESSION['id'] = $resultat['id'];
-			$_SESSION['pseudo'] = $pseudo;
-			$_SESSION['groupe'] = $resultat['groupe']; 
-			$_SESSION['sous_groupe'] = $resultat['sous_groupe'];
-			if(session_start() == 1){
-				 header('Location: index.php');  
-				
-			}
-			echo 'Vous etes connecté !'; 
+			echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">'; 
         }
         else {
          echo 'Password incorrect...<br/>';
