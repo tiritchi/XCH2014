@@ -21,7 +21,7 @@
 	}
 	$user = $_POST['email'];
 	$psswd= $_POST['password'];
-	$req=$bdd->query('SELECT password FROM users WHERE email=/'$user/'');
+	$req=$bdd->query('SELECT psswd FROM users WHERE mail=/'$user/'');
 	if($req==NULL)
 	{
 		echo '<p> Vous n\'êtes pas inscrit</p>';
