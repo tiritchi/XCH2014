@@ -47,9 +47,7 @@
          
         if ($check) {
 	        echo "Password correct!";
-	        <script language="javascript">
-				setTimeout('location.href="xTremCergyHunting.php"',2000);
-			</script> 
+			echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">'; 
         }
         else {
          echo 'Password incorrect...<br/>';
