@@ -26,7 +26,7 @@
 	 
 	if (isset($_POST['password']) AND $_POST['password'] == "test")
 	{
-		$req = $bdd->execute('INSERT INTO users(id,fname,lname,mail,phone,sexe,date) VALUES('',:nom, :prenom,:mail,:tel,:sexe,'')');
+		$req = $bdd->execute('INSERT INTO users(id,fname,lname,mail,phone,sexe,date) VALUES('',"test","test","test","test","test",'')');
 //		$req = execute(array(
 //			'prenom' => $fname;
 //			'nom'=> $lname;
