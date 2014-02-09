@@ -15,7 +15,7 @@
 		die('Erreur : ' . $e->getMessage());
 		echo '<p> erreur DB</p>';
 	} 
-//	$bdd = exec('INSERT INTO users(id,fname,lname,mail,phone,sexe,date) VALUES('','','','','','','')');
+	$bdd = exec('INSERT INTO users(fname,lname,mail,phone,sexe,date) VALUES(\'test\',\'test\',\'test\',\'test\',\'3232\',\'test\',\'\')');
 ?>
 <html>
 <body>
