@@ -14,6 +14,11 @@
 			<div class="panel-heading">
    				 <h3 class="panel-title">Formulaire d'inscription</h3>
   			</div>
+  			<div >
+				<div class="input-group">
+					<button id="home" class="btn btn-default navbar-btn"><a href="xTremCergyHunting.php.php">Home</a></button>
+				</div >
+			</div class="col-lg-offset-1">
   			<div class="panel-body">
   				<form class="form-horizontal" action="post.php" method="post">
 				<fieldset>
@@ -59,11 +64,6 @@
 
 				<!-- Button -->
 				<div class="row">
-					<div class="col-lg-offset-1">
-						<div class="input-group">
-							<button id="home" class="active"><a href="xTremCergyHunting.php.php">Home</a></button>
-						</div class="col-lg-2">
-					</div>
 					<div class ="col-lg-6 col-lg-offset-3">
 						<div class="input-group">
 							<input type="password" id="password" name="password" placeholder="password" class="form-control" required=""> 
