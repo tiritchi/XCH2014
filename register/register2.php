@@ -11,14 +11,14 @@
 <body>
 	<div class="col-lg-4 col-lg-offset-4">
 		<div class="panel panel-primary">
-			<div class="panel-heading">
-   				 <h3 class="panel-title">Formulaire d'inscription</h3>
-  			</div>
-  			<div >
-				<div class="input-group">
-					<button id="home" class="btn btn-default navbar-btn"><a href="xTremCergyHunting.php.php">Home</a></button>
-				</div >
-			</div class="col-lg-offset-1">
+			<form>
+				<div class="panel-heading">
+	   				 <h3 class="panel-title">Formulaire d'inscription</h3>
+	   				 <div class="input-group">
+						<button id="home" class="btn btn-default navbar-btn"><a href="xTremCergyHunting.php.php">Home</a></button>
+					</div class="col-lg-offset-1">
+	  			</div>
+  			</form>
   			<div class="panel-body">
   				<form class="form-horizontal" action="post.php" method="post">
 				<fieldset>
