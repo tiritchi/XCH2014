@@ -28,6 +28,9 @@
 	$stat->execute(array(
 		'mail'=>$user
 		));
+	echo '<br/>';
+	echo $stat->rowCount();
+	echo '<br/>';
 	$req=$stat->fetch();
 //	echo '<p> DB reached</p>';
 	if($req==NULL)
@@ -36,7 +39,7 @@
 	}
 	else
 	{
-		echo $req['psswd'];
+//		echo $req['psswd'];
 		$password_correct = $req['psswd']; /* Le hash stocké précédemment */
         $hasher = new PasswordHash(8, FALSE);
         $check = $hasher->CheckPassword($psswd, $password_correct);
