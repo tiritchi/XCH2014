@@ -23,7 +23,7 @@
 		//$bdd = exec('INSERT INTO users(id,fname,lname,mail,phone,sexe,date) VALUES(\'\',\'test\',\'test\',\'test\',\'test\',\'test\',\'\')');
 		$nom = $_POST['Lname'];
 		$possesseur =$_POST['Fname'];
-		$console =;$_POST['Email']
+		$console =$_POST['Email'];
 		$prix = $_POST['Phone'];
 		$nbre_joueurs_max = "522";
 		$commentaires = "oo";
