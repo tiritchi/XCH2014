@@ -10,7 +10,7 @@
 		$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
 		echo '<p> connected to DB test</p>';
 		
-		$bdd->exec("INSERT INTO `users`(`fname`,`lname`,`mail`,`phone`,`sexe`,`date`) VALUES('test','test,'aa@aa.com',`0621849218`,`Male`,``)");
+		$bdd->exec("INSERT INTO `users`(`fname`,`lname`,`mail`,`phone`,`sexe`,`date`) VALUES('test','test,'aa@aa.com','0621849218','Male','')");
 
 		echo '<p>l utilisateur a ete rajouté</p>';
 	} 
