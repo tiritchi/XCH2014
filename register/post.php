@@ -8,6 +8,7 @@
 <?php
 	if (isset($_POST['password']) and $_POST['password']=="test")
 	{
+?>
 		<body>    
 			<p>Bonjour !</p>
 
@@ -15,6 +16,11 @@
 
 			<p>Si tu veux changer de prénom, <a href="register2.php">clique ici</a> pour revenir à la page formulaire.php.</p>
 		</body>
+	<?php
+	}
+	else 
+	{
+		echo("wrong password")
 	}
 ?>
 </html>

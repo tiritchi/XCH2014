@@ -65,9 +65,11 @@
 				</div><br/>
 
 				<!-- Button -->
-				<div class="col-lg-offset-4">
+				<div class="row">
+					<div>
+						<input id="password" name="password" placeholder="Password" class="form-control" required="" type="text"> 
+					</div>
 					<div class="input-group">
-						<span class="input-group-addon"> <input id="password" name="password" placeholder="Password" class="form-control" required="" type="text"> </span>
 						<button id="Submit" name="Submit" class="btn btn-primary">Submit</button>
 					</div>
 				</div>
