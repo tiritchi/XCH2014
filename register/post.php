@@ -28,7 +28,7 @@
 		$psswd = $_POST['userpsswd'];
 		$date = '';
 
-		$req = $bdd->prepare('INSERT INTO users (fname,lname,mail,phone,sexe,password,date) VALUES (:prenom,:nom,:email,:phone,:sexe,:psswd,:date)');
+		$req = $bdd->prepare('INSERT INTO users (fname,lname,mail,phone,sexe,psswd,date) VALUES (:prenom,:nom,:email,:phone,:sexe,:psswd,:date)');
 		$req->execute(array(
 		    'nom' => $nom,
 		    'prenom' => $prenom,
