@@ -71,8 +71,8 @@ if(isset($_POST['submitted']))
 <div class="input-group">
     <span class="input-group-addon">Sexe</span>
     <select class="selectpicker">
-		<option data-icon="icon-heart">Male</option>
-		<option data-icon="icon-heart">Female</option>
+		<option <span class="glyphicon glyphicon-search"></span> Male</option>
+		<option Female</option>
 	</select>
 </div><br/>
 
