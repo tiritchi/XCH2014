@@ -43,9 +43,6 @@ if(isset($_POST['submitted']))
   	<form class="form-horizontal">
 <fieldset>
 
-<!-- Form Name -->
-<legend>Register</legend>
-
 <!-- Text input-->
 <div class="input-group">
 	<span class="input-group-addon">First name</span>
