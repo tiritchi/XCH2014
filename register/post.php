@@ -27,8 +27,8 @@
 
 		$req = $bdd->prepare('INSERT INTO users(id,fname,lname,mail,phone,sexe,date) VALUES('',:nom, :prenom,:mail,:tel,:sexe,'')');
 		$req = execute(array(
-			'nom' => $fname;
-			'lname'=> $lname;
+			'prenom' => $fname;
+			'nom'=> $lname;
 			'tel' => $phone;
 			'mail' => $email;
 			'sexe' => $sexe;
