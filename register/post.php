@@ -18,22 +18,22 @@
 	}
 
 	echo '<p> test </p>';
-	$fname=$_POST['Fname'];
-	$lname=$_POST['Lname'];
-	$phone=$_POST['Phone'];
-	$email=$_POST['Email'];
+//	$fname=$_POST['Fname'];
+//	$lname=$_POST['Lname'];
+//	$phone=$_POST['Phone'];
+//	$email=$_POST['Email'];
 //	$sexe=$_POST['sexe'];
 	 
 	if (isset($_POST['password']) AND $_POST['password'] == "test")
 	{
-		$req = $bdd->prepare('INSERT INTO users(id,fname,lname,mail,phone,sexe,date) VALUES('',:nom, :prenom,:mail,:tel,:sexe,'')');
-		$req = execute(array(
-			'prenom' => $fname;
-			'nom'=> $lname;
-			'tel' => $phone;
-			'mail' => $email;
-			'sexe' => $sexe;
-			));
+		$req = $bdd->execute('INSERT INTO users(id,fname,lname,mail,phone,sexe,date) VALUES('',:nom, :prenom,:mail,:tel,:sexe,'')');
+//		$req = execute(array(
+//			'prenom' => $fname;
+//			'nom'=> $lname;
+//			'tel' => $phone;
+//			'mail' => $email;
+//			'sexe' => $sexe;
+//			));
 		$reponse = $bdd->query('SELECT * FROM users');
 
 		while ($donnees = $reponse->fetch())
@@ -48,8 +48,8 @@
 			</p>
 			<?php
 		}
-
-		?>
+		$reponse -> closeCursor();
+?>
 		<body>    
 			<p>Bonjour !</p>
 
