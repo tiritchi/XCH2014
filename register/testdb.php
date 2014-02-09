@@ -2,7 +2,7 @@
 <?php
 	try 
 	{
-		$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
+		$bdd = new mysql_connect('mysql:host=localhost;dbname=test', 'root', 'raspberry');
 	} 
 	catch (Exception $e) 
 	{
