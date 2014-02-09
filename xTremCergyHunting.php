@@ -59,7 +59,10 @@
     <div class="jumbotron">
         <h1>XTrem Cergy Hunting</h1>
         <p>
-            La XTrem Cergy Hunting est un évènement trop trop cool organisé par ENSEAventure lors duquel vous devrez tuer des gens avec un pistolet à eau
+            La XTrem Cergy Hunting est un évènement trop trop cool organisé par ENSEAventure lors duquel vous devrez tuer des gens avec un pistolet à eau<br/>
+            <?php
+            echo password_hash("rasmuslerdorf", PASSWORD_DEFAULT)."\n";
+            ?>
         </p>
         <p>
         <a class="btn btn-primary btn-lg" role="button" href="register/register2.php">
