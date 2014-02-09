@@ -3,12 +3,13 @@
 <head>
 		<meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
-        <title>xTremCergyHunting</title>
+        <title>logging in ../title>
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="signin.css"></link>
-        <?php require('../lib/PasswordHash.php'); ?>
+        <?php require('lib/PasswordHash.php'); ?>
 </head>
 <?php
+	echo 'test';
 	try 
 	{
 		$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
