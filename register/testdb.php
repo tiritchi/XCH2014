@@ -11,6 +11,21 @@
 		echo '<p> connected to DB test</p>';
 		
 		$bdd->exec("INSERT INTO users(fname,lname,mail,phone,sexe,date) VALUES('test','test,'aa@aa.com','0621849218','Male','')");
+		$reponse = $bdd->query('SELECT * FROM users');
+		while($donnees = $reponse->fetch())
+		{
+			?>
+			<p>
+		    	<?php echo $donnees['fname']; ?><br/>;
+		    	<?php echo $donnees['lname']; ?><br/>;
+		    	<?php echo $donnees['mail']; ?><br/>;
+		    	<?php echo $donnees['phone']; ?><br/>;
+		    	<?php echo $donnees['sexe']; ?><br/><br/>;
+			</p>
+			<?php
+		}
+		$reponse -> closeCursor();
+		?>
 
 		echo '<p>l utilisateur a ete rajouté</p>';
 	} 
