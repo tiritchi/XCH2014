@@ -4,6 +4,7 @@
 	<title>Register</title>
 	<meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+    <?php require('lib/PasswordHash.php'); ?>
 </head>
 <?php
 	try 
