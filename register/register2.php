@@ -66,10 +66,15 @@
 
 				<!-- Button -->
 				<div class="row">
-					<div class="input-group">
-						<input type="password" id="password" name="password" placeholder="password" class="form-control" required="" type="text"> 
-						<span>""</span>
-						<button id="Submit" name="Submit" class="btn btn-primary">Submit</button>
+					<div class ="col-lg-3">
+						<div class="input-group">
+							<input type="password" id="password" name="password" placeholder="password" class="form-control" required="" type="text"> 
+						</div>
+					</div>
+					<div class ="col-lg-1">
+						<div class="input-group">
+							<button id="Submit" name="Submit" class="btn btn-primary">Submit</button>
+						</div>
 					</div>
 				</div>
 

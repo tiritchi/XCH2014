@@ -6,9 +6,9 @@
     <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
 </head>
 <?php
-	if (isset($_POST['password']) and $_POST['password']=="test")
+	if (isset($_POST['password']) AND $_POST['password'] == "test")
 	{
-?>
+	?>
 		<body>    
 			<p>Bonjour !</p>
 
@@ -16,11 +16,11 @@
 
 			<p>Si tu veux changer de prénom, <a href="register2.php">clique ici</a> pour revenir à la page formulaire.php.</p>
 		</body>
-	<?php
+		<?php
 	}
 	else 
 	{
-		echo("wrong password")
+		echo '<p>wrong password</p>';
 	}
 ?>
 </html>
