@@ -59,6 +59,11 @@
 
 				<!-- Button -->
 				<div class="row">
+					<div class="col-lg-offset-1">
+						<div class="input-group">
+							<button id="home" action="xTremCergyHunting.php.php" class="btn btn-primary">Home</button>
+						</div class="col-lg-2">
+					</div>
 					<div class ="col-lg-6 col-lg-offset-2">
 						<div class="input-group">
 							<input type="password" id="password" name="password" placeholder="password" class="form-control" required=""> 
@@ -67,8 +72,8 @@
 					<div >
 						<div class="input-group">
 							<button id="Submit" name="Submit" class="btn btn-primary">Submit</button>
-						</div class="col-lg-2">
-					</div>
+						</div>
+					</div class="col-lg-offset-1">
 				</div>
 
 				</fieldset>
