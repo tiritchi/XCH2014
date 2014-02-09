@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="signin.css"></link>
         <?php require('lib/PasswordHash.php'); ?>
 </head>
+<p> test </p>
 <?php
 	echo 'test';
 	try 
@@ -22,11 +23,11 @@
 	}
 	$user = $_POST['email'];
 	$psswd= $_POST['password'];
-	$req=$bdd->query('SELECT psswd FROM users WHERE mail=/'$user/'');
+//	$req=$bdd->query('SELECT psswd FROM users WHERE mail=/'$user/'');
 	echo '<p> DB reached</p>';
 	if($req==NULL)
 	{
-		echo '<p> Vous n\'êtes pas inscrit</p>';
+		echo '<p> Vous n êtes pas inscrit</p>';
 	}
 	else
 	{
