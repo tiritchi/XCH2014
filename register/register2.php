@@ -40,7 +40,7 @@ if(isset($_POST['submitted']))
    				 <h3 class="panel-title">Formulaire d'inscription</h3>
   			</div>
   			<div class="panel-body">
-  				<form class="form-horizontal">
+  				<form class="form-horizontal" method="post.php">
 				<fieldset>
 
 				<!-- Text input-->
