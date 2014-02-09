@@ -20,23 +20,23 @@
 	if (isset($_POST['password']) AND $_POST['password'] == "test")
 	{
 		echo '<p> good password</p>';
-		//$bdd = exec('INSERT INTO users(id,fname,lname,mail,phone,sexe,date) VALUES(\'\',\'test\',\'test\',\'test\',\'test\',\'test\',\'\')');
 		$nom = $_POST['Lname'];
-		$possesseur =$_POST['Fname'];
-		$console =$_POST['Email'];
-		$prix = $_POST['Phone'];
-		$nbre_joueurs_max = "522";
-		$commentaires = $_POST['sexe'];
+		$prenom =$_POST['Fname'];
+		$email =$_POST['Email'];
+		$phone = $_POST['Phone'];
+		$sexe = $_POST['sexe'];
+		$date = '';
 
 			// On récupère tout le contenu de la table jeux_video
-		$req = $bdd->prepare('INSERT INTO jeux_video(nom, possesseur, console, prix, nbre_joueurs_max, commentaires) VALUES(:nom, :possesseur, :console, :prix, :nbre_joueurs_max, :commentaires)');
+//		$req = $bdd->prepare('INSERT INTO jeux_video(nom, possesseur, console, prix, nbre_joueurs_max, commentaires) VALUES(:nom, :possesseur, :console, :prix, :nbre_joueurs_max, :commentaires)');
+		$req = $bdd->prepare('INSERT INTO users (fname,lname,mail,phone,sexe,date) VALUES (:prenom,:nom,:email,:phone,:sexe,:date)');
 		$req->execute(array(
 		    'nom' => $nom,
-		    'possesseur' => $possesseur,
-		    'console' => $console,
-		    'prix' => $prix,
-		    'nbre_joueurs_max' => $nbre_joueurs_max,
-		    'commentaires' => $commentaires
+		    'prenom' => $prenom,
+		    'email' => $email,
+		    'phone' => $phone,
+		    'sexe' => $sexe,
+		    'date'=>$date
 	    ));
 	}
 	else
