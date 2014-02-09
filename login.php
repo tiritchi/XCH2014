@@ -10,11 +10,12 @@
 </head>
 <p> test </p>
 <?php
-	echo 'test';
+//	echo 'test';
 	try 
 	{
 		$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
-		echo '<p> connected to DB</p>';
+		$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//		echo '<p> connected to DB</p>';
 	} 
 	catch (Exception $e) 
 	{
@@ -23,20 +24,20 @@
 	}
 	$user = $_POST['email'];
 	$psswd= $_POST['password'];
-	$req=$bdd->prepare('SELECT psswd FROM users WHERE mail=:mail');
-	$req->execute(array(
+	$stat=$bdd->prepare('SELECT psswd FROM users WHERE mail=:mail');
+	$stat->execute(array(
 		'mail'=>$user
 		));
-	$stat=$req->fetch();
-	echo '<p> DB reached</p>';
-	if($stat==NULL)
+	$req=$stat->fetch();
+//	echo '<p> DB reached</p>';
+	if($req==NULL)
 	{
 		echo '<p> Vous n êtes pas inscrit</p>';
 	}
 	else
 	{
-		echo $stat['psswd'];
-		$password_correct = $stat['psswd']; /* Le hash stocké précédemment */
+		echo $req['psswd'];
+		$password_correct = $req['psswd']; /* Le hash stocké précédemment */
         $hasher = new PasswordHash(8, FALSE);
         $check = $hasher->CheckPassword($psswd, $password_correct);
          
