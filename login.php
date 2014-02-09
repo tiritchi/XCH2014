@@ -31,7 +31,7 @@
 	$rcount=$stat->rowCount();
 	
 //	echo '<p> DB reached</p>';
-	if($req==NULL)
+	if($rcount==0)
 	{
 		echo '<p> Vous n êtes pas inscrit</p>';
 	}
