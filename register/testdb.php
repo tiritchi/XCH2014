@@ -1,8 +1,8 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <?php
 	try 
 	{
-		$bdd = new mysql_connect('mysql:host=localhost;dbname=test', 'root', 'raspberry');
+		$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
 	} 
 	catch (Exception $e) 
 	{
