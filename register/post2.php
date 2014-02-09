@@ -26,7 +26,7 @@
 		$console =;$_POST['Email']
 		$prix = $_POST['Phone'];
 		$nbre_joueurs_max = "522";
-		$commentaires = $_POST['sexe'];
+		$commentaires = "oo";
 
 			// On récupère tout le contenu de la table jeux_video
 		$req = $bdd->prepare('INSERT INTO jeux_video(nom, possesseur, console, prix, nbre_joueurs_max, commentaires) VALUES(:nom, :possesseur, :console, :prix, :nbre_joueurs_max, :commentaires)');
