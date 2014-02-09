@@ -34,13 +34,13 @@
 				<!-- Text input-->
 				<div class="input-group">
 					<span class="input-group-addon">First name</span>
-				    <input id="First name" name="First name" placeholder="First name" class="form-control" required="" type="text">
+				    <input id="First name" name="Fname" placeholder="First name" class="form-control" required="" type="text">
 				</div><br/>
 
 				<!-- Text input-->
 				<div class="input-group">
 				    <span class="input-group-addon">Last name</span>
-				    <input id="Last name" name="Last name" placeholder="Last_name" class="form-control" required="" type="text">
+				    <input id="Last name" name="Lname" placeholder="Last_name" class="form-control" required="" type="text">
 				</div><br/>
 
 				<!-- Text input-->
@@ -52,15 +52,15 @@
 				<!-- Text input-->
 				<div class="input-group">
 				    <span class="input-group-addon">Phone N°</span>
-				    <input id="Phone N°" name="Phone N°" placeholder="06XXXXXXXX" class="form-control" required="" type="text">
+				    <input id="Phone N°" name="Phone" placeholder="06XXXXXXXX" class="form-control" required="" type="text">
 				</div><br/>
 
 				<!-- Select Basic -->
 				<div class="input-group">
 				    <span class="input-group-addon">Sexe</span>
-				    <select class="selectpicker">
-						<option> Male</option>
-						<option> Female</option>
+				    <select class="selectpicker" name="sexe">
+						<option>Male</option>
+						<option>Female</option>
 					</select>
 				</div><br/>
 
