@@ -46,7 +46,10 @@
         $check = $hasher->CheckPassword($psswd, $password_correct);
          
         if ($check) {
-         echo "Password correct!";
+	        echo "Password correct!";
+	        <script language="javascript">
+				setTimeout('location.href="xTremCergyHunting.php"',2000);
+			</script> 
         }
         else {
          echo 'Password incorrect...<br/>';
