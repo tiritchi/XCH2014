@@ -23,7 +23,7 @@
 	}
 	$user = $_POST['email'];
 	$psswd= $_POST['password'];
-	$stat=$bdd->prepare('SELECT psswd FROM users WHERE mail=:mail');
+	$stat=$bdd->prepare('SELECT * FROM users WHERE mail=:mail');
 	$stat->execute(array(
 		'mail'=>$user
 		));
@@ -47,7 +47,17 @@
          
         if ($check) {
 	        echo "Password correct!";
-			echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">'; 
+			echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">';
+			session_start();
+			$_SESSION['id'] = $resultat['id'];
+			$_SESSION['pseudo'] = $pseudo;
+			$_SESSION['groupe'] = $resultat['groupe']; 
+			$_SESSION['sous_groupe'] = $resultat['sous_groupe'];
+			if(session_start() == 1){
+				 header('Location: index.php');  
+				
+			}
+			echo 'Vous etes connecté !'; 
         }
         else {
          echo 'Password incorrect...<br/>';
