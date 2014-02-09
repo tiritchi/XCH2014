@@ -5,20 +5,7 @@
 	<meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../signin.css"></link>
-<!--    <script type="text/javascript" src="bootstrap-select.js"></script>
-    <link rel="stylesheet2" type="text/css" href="bootstrap-select.css">
-    <script type="text/javascript">
-        $(window).on('load', function () {
-
-            $('.selectpicker').selectpicker({
-                'selectedText': 'cat'
-            });
-
-            // $('.selectpicker').selectpicker('hide');
-        });
-    </script>
--->    
+    <link rel="stylesheet" href="../signin.css"></link>   
 </head>
 
 <body>
