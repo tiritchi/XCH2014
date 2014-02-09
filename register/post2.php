@@ -16,15 +16,14 @@
 		die('Erreur : ' . $e->getMessage());
 		echo '<p> erreur DB</p>';
 	}
-?>
-<?php
+
 	if (isset($_POST['password']) AND $_POST['password'] == "test")
 	{
 		echo '<p> good password</p>';
 		//$bdd = exec('INSERT INTO users(id,fname,lname,mail,phone,sexe,date) VALUES(\'\',\'test\',\'test\',\'test\',\'test\',\'test\',\'\')');
-		$nom = "test3";
-		$possesseur ="test3";
-		$console ="test3";
+		$nom = "test4";
+		$possesseur ="test4";
+		$console ="test4";
 		$prix = "522";
 		$nbre_joueurs_max = "522";
 		$commentaires = "test2";
