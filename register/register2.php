@@ -20,8 +20,8 @@
 <!--				<div class="row-fluid">
    					<div class="span8" ><h3 class="panel-title">Formulaire d'inscription</h3></div>
    					<div class="span4" ><button class="btn btn-primary">Submit</button></div>
-   				</div>
-  			</div>-->
+   				</div>-->
+  			</div>
   			<div class="panel-body">
   				<form class="form-horizontal" action="post.php" method="post">
 				<fieldset>
