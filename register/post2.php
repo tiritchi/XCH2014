@@ -16,17 +16,12 @@
 		die('Erreur : ' . $e->getMessage());
 		echo '<p> erreur DB</p>';
 	}
-?>
-<?php
-	if (isset($_POST['password']) AND $_POST['password'] == "test")
-	{
-		echo '<p> good password</p>';
-		$reponse = $bdd->query('SELECT * FROM jeux_video WHERE possesseur="test" ');
+	$reponse = $bdd->query('SELECT * FROM jeux_video WHERE possesseur="test" ');
 
 		// On affiche chaque entrée une à une
 	while ($donnees = $reponse->fetch())
 	{
-		?>
+	?>
 	    <p>
 		    <strong>Jeu</strong> : <?php echo $donnees['nom']; ?><br />
 		    Le possesseur de ce jeu est : <?php echo $donnees['possesseur']; ?>, et il le vend à <?php echo $donnees['prix']; ?> euros !<br />
@@ -38,6 +33,12 @@
 
 	$reponse->closeCursor(); // Termine le traitement de la requête
 ?>
+?>
+<?php
+	if (isset($_POST['password']) AND $_POST['password'] == "test")
+	{
+		echo '<p> good password</p>';
+
 	}
 	else
 	{
