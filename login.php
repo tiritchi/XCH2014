@@ -23,7 +23,7 @@
 	}
 	$user = $_POST['email'];
 	$psswd= $_POST['password'];
-//	$req=$bdd->query('SELECT psswd FROM users WHERE mail=/'$user/'');
+	$req=$bdd->query('SELECT psswd FROM users WHERE mail=/'$user/'');
 	echo '<p> DB reached</p>';
 	if($req==NULL)
 	{
