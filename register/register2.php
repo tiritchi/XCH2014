@@ -13,14 +13,9 @@
 		<div class="panel panel-primary">
 			<div class="panel-heading">
 				<ul class="pager">
-					<li class="previous"><a href="#">&larr; Older</a></li>
-					<li class="next"><h3 class="panel-title">Formulaire d'inscription</h3></li>
-				</ul>
-
-<!--				<div class="row-fluid">
-   					<div class="span8" ><h3 class="panel-title">Formulaire d'inscription</h3></div>
-   					<div class="span4" ><button class="btn btn-primary">Submit</button></div>
-   				</div>-->
+					<li class="previous"><a href="../xTremCergyHunting.php">&larr; ACCUEIL</a></li>
+					<li class="next"><h2 class="panel-title">Formulaire d'inscription</h2></li>
+				</ul>				
   			</div>
   			<div class="panel-body">
   				<form class="form-horizontal" action="post.php" method="post">
