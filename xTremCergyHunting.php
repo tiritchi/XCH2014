@@ -79,14 +79,16 @@
     <br/>
     <?php
         $password_correct = "test"; /* Le hash stocké précédemment */
-        $hasher = new PasswordHash(8, FALSE);
-        $check = $hasher->CheckPassword($password, $password_correct);
+        $hasher2 = new PasswordHash(8, FALSE);
+        $hash2 = $hasher2->HashPassword($password_correct);
+        $check = $hasher2->CheckPassword($password, $password_correct);
          
         if ($check) {
          echo "Password correct!";
         }
         else {
-         echo "Password incorrect...";
+         echo 'Password incorrect...<br/>';
+         echo $hash2;
         }
     ?>
     
