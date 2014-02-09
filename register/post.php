@@ -4,7 +4,8 @@
 	<title>Register</title>
 	<meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
-    <?php 
+</head>
+<?php 
     	try {
     		$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
     	} 
@@ -13,8 +14,7 @@
     		die('Erreur : ' . $e->getMessage());
     		echo '<p> erreur DB</p>'
     	} 
-    ?>
-</head>
+?>
 <?php
 	if (isset($_POST['password']) AND $_POST['password'] == "test")
 	{
