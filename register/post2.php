@@ -16,5 +16,13 @@
 		die('Erreur : ' . $e->getMessage());
 		echo '<p> erreur DB</p>';
 	}
+	if (isset($_POST['password']) AND $_POST['password'] == "test")
+	{
+		echo '<p> good password</p>';
+	}
+	else
+	{
+		echo '<p> wrong password</p>';
+	}
 ?>
 </html>
