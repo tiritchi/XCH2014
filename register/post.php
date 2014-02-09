@@ -6,26 +6,26 @@
     <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
 </head>
 <?php
+	try 
+	{
+		$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
+		echo '<p> connected to DB</p>';
+	} 
+	catch (Exception $e) 
+	{
+		die('Erreur : ' . $e->getMessage());
+		echo '<p> erreur DB</p>';
+	}
+
 	echo '<p> test </p>';
 	$fname=$_POST['Fname'];
 	$lname=$_POST['Lname'];
 	$phone=$_POST['Phone'];
 	$email=$_POST['Email'];
-	$sexe=$_POST['sexe'];
+//	$sexe=$_POST['sexe'];
 	 
 	if (isset($_POST['password']) AND $_POST['password'] == "test")
 	{
-		try 
-		{
-			$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
-			echo '<p> connected to DB</p>';
-		} 
-		catch (Exception $e) 
-		{
-			die('Erreur : ' . $e->getMessage());
-			echo '<p> erreur DB</p>';
-		} 
-
 		$req = $bdd->prepare('INSERT INTO users(id,fname,lname,mail,phone,sexe,date) VALUES('',:nom, :prenom,:mail,:tel,:sexe,'')');
 		$req = execute(array(
 			'prenom' => $fname;
