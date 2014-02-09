@@ -66,10 +66,9 @@
 
 				<!-- Button -->
 				<div class="row">
-					<div>
-						<input id="password" name="password" placeholder="Password" class="form-control" required="" type="text"> 
-					</div>
 					<div class="input-group">
+						<input type="password" id="password" name="password" placeholder="password" class="form-control" required="" type="text"> 
+						<span>""</span>
 						<button id="Submit" name="Submit" class="btn btn-primary">Submit</button>
 					</div>
 				</div>
