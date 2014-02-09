@@ -16,23 +16,23 @@
 		echo '<p> erreur DB</p>';
 	} 
 		// Si tout va bien, on peut continuer
-	$nom = "test";
-	$possesseur ="test";
-	$console ="test";
-	$prix = "52";
-	$nbre_joueurs_max = "52";
-	$commentaires = "test";
+//	$nom = "test";
+//	$possesseur ="test";
+//	$console ="test";
+//	$prix = "52";
+//	$nbre_joueurs_max = "52";
+//	$commentaires = "test";
 
 		// On récupère tout le contenu de la table jeux_video
-	//$req = $bdd->prepare('INSERT INTO jeux_video(nom, possesseur, console, prix, nbre_joueurs_max, commentaires) VALUES(:nom, :possesseur, :console, :prix, :nbre_joueurs_max, :commentaires)');
-	//$req->execute(array(
-	//    'nom' => $nom,
-	//    'possesseur' => $possesseur,
-	//    'console' => $console,
-	//    'prix' => $prix,
-	//    'nbre_joueurs_max' => $nbre_joueurs_max,
-	//    'commentaires' => $commentaires
-    //));
+//	$req = $bdd->prepare('INSERT INTO jeux_video(nom, possesseur, console, prix, nbre_joueurs_max, commentaires) VALUES(:nom, :possesseur, :console, :prix, :nbre_joueurs_max, :commentaires)');
+//	$req->execute(array(
+//	    'nom' => $nom,
+//	    'possesseur' => $possesseur,
+//	    'console' => $console,
+//	    'prix' => $prix,
+//	    'nbre_joueurs_max' => $nbre_joueurs_max,
+//	    'commentaires' => $commentaires
+//    ));
 
 	$reponse = $bdd->query('SELECT * FROM jeux_video WHERE possesseur="test" ');
 
