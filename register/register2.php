@@ -40,52 +40,35 @@ if(isset($_POST['submitted']))
 
 <!-- Text input-->
 <div class="input-group">
-        <span class="input-group-addon"></span>
-        <input type="text" class="form-control" placeholder="Username">
-</div>
-<div class="input-group">
-  <div class="controls">
     <span class="input-group-addon">Last name</span>
     <input id="Last name" name="Last name" placeholder="Last name" class="form-control" required="" type="text">
-    
-  </div>
 </div>
 
 <!-- Text input-->
 <div class="input-group">
-  <div class="controls">
     <span class="input-group-addon">@</span>
     <input id="Email" name="Email" placeholder="example@example.com" class="form-control" required="" type="text">
-    
-  </div>
 </div>
 
 <!-- Text input-->
 <div class="input-group">
-  <div class="controls">
     <span class="input-group-addon">Phone N°</span>
     <input id="Phone N°" name="Phone N°" placeholder="06XXXXXXXX" class="form-control" required="" type="text">
-    
-  </div>
 </div>
 
 <!-- Select Basic -->
 <div class="input-group">
-  <div class="controls">
     <span class="input-group-addon">Sexe</span>
     <select id="Sexe" name="Sexe" class="input-small">
       <option>Male</option>
       <option>Female</option>
     </select>
-  </div>
 </div>
 
 <!-- Button -->
 <div class="input-group">
-  <label class="control-label" for="Submit">Submit</label>
-  <div class="controls">
-    <button id="Submit" name="Submit" class="btn btn-primary">Submit</button>
-  </div>
+	<label class="control-label" for="Submit">Submit</label>
+	<button id="Submit" name="Submit" class="btn btn-primary">Submit</button>
 </div>
 
 </fieldset>
