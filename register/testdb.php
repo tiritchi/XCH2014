@@ -10,14 +10,8 @@
 		$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
 		echo '<p> connected to DB test</p>';
 		
-		$req=$bdd->prepare('INSERT INTO users(fname,lname,mail,phone,sexe,date) VALUES(:prenom,:nom,:mail,:tel,:sexe,'')');
-		$req->execute(array(
-			'prenom' = "test";
-			'nom' = "test";
-			'tel' = "0621849218";
-			'mail' = "aaa@mail.com";
-			'sexe' = "Male";
-			));
+		$bdd->exec("INSERT INTO `users`(`fname`,`lname`,`mail`,`phone`,`sexe`,`date`) VALUES('test','test,'aa@aa.com',`0621849218`,`Male`,``)");
+
 		echo '<p>l utilisateur a ete rajouté</p>';
 	} 
 	catch (Exception $e) 
