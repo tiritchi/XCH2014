@@ -31,6 +31,7 @@
 	}
 	else
 	{
+		echo $req['psswd'];
 		$password_correct = $req['psswd']; /* Le hash stocké précédemment */
         $hasher = new PasswordHash(8, FALSE);
         $check = $hasher->CheckPassword($psswd, $password_correct);
