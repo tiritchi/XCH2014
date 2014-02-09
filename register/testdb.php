@@ -9,7 +9,7 @@
 	{
 		$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
 		echo '<p> connected to DB test</p>';
-		$bdd = exec('INSERT INTO users(fname,lname,mail,phone,sexe,date) VALUES(\'test\',\'test\',\'test\',\'test\',\'3232\',\'test\',\'\')');
+		$bdd = exec('INSERT INTO users(fname,lname,mail,phone,sexe,date) VALUES(\'test\',\'test\',\'test\',\'3232\',\'test\',\'\')');
 	} 
 	catch (Exception $e) 
 	{
