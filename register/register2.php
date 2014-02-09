@@ -46,7 +46,7 @@ if(isset($_POST['submitted']))
 
 <!-- Text input-->
 <div class="input-group">
-    <span class="input-group-addon">@</span>
+    <span class="input-group-addon">eMail</span>
     <input id="Email" name="Email" placeholder="example@example.com" class="form-control" required="" type="text">
 </div>
 
