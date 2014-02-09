@@ -64,10 +64,10 @@
 							<input type="password" id="password" name="password" placeholder="password" class="form-control" required=""> 
 						</div>
 					</div>
-					<div class ="col-lg-1">
+					<div >
 						<div class="input-group">
 							<button id="Submit" name="Submit" class="btn btn-primary">Submit</button>
-						</div>
+						</div class="col-lg-1">
 					</div>
 				</div>
 
