@@ -18,15 +18,25 @@
 	}
 
 	if (isset($_POST['password']) AND $_POST['password'] == "test")
-	{
+	{	
+		
+		//hashage du password
+		$password = $_POST['userpsswd'];
+        $hasher = new PasswordHash(8, FALSE);
+        $hash = $hasher->HashPassword($password);
+        //password hashé
+
+
 		echo '<p> good password</p>';
 		$nom = $_POST['Lname'];
 		$prenom =$_POST['Fname'];
 		$email =$_POST['Email'];
 		$phone = $_POST['Phone'];
 		$sexe = $_POST['sexe'];
-		$psswd = $_POST['userpsswd'];
+		$psswd = $hash;
 		$date = '';
+
+		//envoie des informations à la DB
 
 		$req = $bdd->prepare('INSERT INTO users (fname,lname,mail,phone,sexe,psswd,date) VALUES (:prenom,:nom,:email,:phone,:sexe,:psswd,:date)');
 		$req->execute(array(
