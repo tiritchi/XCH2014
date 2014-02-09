@@ -7,6 +7,7 @@
         <title>xTremCergyHunting</title>
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="signin.css"></link>
+        <?php require('includes/PasswordHash.php'); ?>
 
     </head>
     
@@ -68,8 +69,12 @@
         </a>
         </p>
     </div>
+    
     <?php
-            echo password_hash("rasmuslerdorf", PASSWORD_DEFAULT)."\n";
+        $password = "test";
+        $hasher = new PasswordHash(8, FALSE);
+        $hash = $hasher->HashPassword($password);
+        echo $hash;
     ?>
     
     </body>
