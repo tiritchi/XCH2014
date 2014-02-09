@@ -35,7 +35,7 @@
 	{
 		echo '<p> Vous n êtes pas inscrit</p>';
 	}
-	else if(!(rcount==1)){
+	else if(rcount>=1){
 		echo 'DataBase Error !';
 	}
 	else
