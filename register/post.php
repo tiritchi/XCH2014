@@ -6,18 +6,19 @@
     <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
 </head>
 <?php 
-	try {
-		$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
-	} 
-	catch (Exception $e) 
-	{
-		die('Erreur : ' . $e->getMessage());
-		echo '<p> erreur DB</p>'
-	} 
-	
 	if (isset($_POST['password']) AND $_POST['password'] == "test")
 	{
-	?>
+
+		try {
+			$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
+		} 
+		catch (Exception $e) 
+		{
+			die('Erreur : ' . $e->getMessage());
+			echo '<p> erreur DB</p>'
+		} 
+
+		?>
 		<body>    
 			<p>Bonjour !</p>
 
