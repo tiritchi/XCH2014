@@ -29,3 +29,10 @@
 
 	$reponse->closeCursor(); // Termine le traitement de la requête
 ?>
+<html>
+<body>
+	<p>
+		test
+	</p>
+</body>
+</html>
