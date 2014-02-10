@@ -1,13 +1,16 @@
 <?php
 session_start();
-if(!(isset($_SESSION['connected']) && $_SESSION['connected']=TRUE$_SESSION['admin']=TRUE && isset($_SESSION['admin']))
+if(!(isset($_SESSION['connected']) && $_SESSION['connected']=TRUE))
     {
-        echo '<meta http-equiv="refresh" content="0; url=index.php">';
+        echo '<meta http-equiv="refresh" content="0; url=../../login.php">';
     }
 else
     {
-    include 'header.php';
-    include 'footer.php';
-	}
-?>
+        include 'header.php';
+        include 'footer.php';
+         
 
+                
+    
+    }
+?>
