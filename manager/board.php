@@ -73,7 +73,7 @@ session_start(); // On démarre la session AVANT toute chose
 		<h1>Hello, world!</h1>
 		<p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
 	</div>
-	'
+	';
 	}
 else
 {
