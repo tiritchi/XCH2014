@@ -19,11 +19,11 @@
 		die('Erreur : ' . $e->getMessage());
 		echo '<p> erreur DB</p>';
 	}
-	$row_count = 0;
-	$stmt = $bdd->query('SELECT mail FROM users WHERE mail=$email');
+	$row_count = '0';
+	$stmt = $bdd->query('SELECT mail FROM users WHERE mail=\'$email\'');
 	$row_count = $stmt->rowCount();
 
-	if($row_count==1)
+	if($row_count=='1')
 	{
 		echo '
 			<div class="alert alert-warning">
