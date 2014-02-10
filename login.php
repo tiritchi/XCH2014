@@ -52,9 +52,15 @@ $_SESSION['connected']=FALSE;
         if ($check) {
         	$_SESSION['user']=$_POST['email'];
         	$_SESSION['connected']=TRUE;
-	        echo "Redirecting ... ";
-			echo '<meta http-equiv="refresh" content="1; url=manager/board.php">'; 
-//			echo $_SESSION['user'];
+        	echo "Redirecting ... ";
+        	if($req['group']=="admin")
+        	{
+        		echo '<meta http-equiv="refresh" content="1; url=manager/admin_board.php">';
+        	}
+        	else
+        	{
+				echo '<meta http-equiv="refresh" content="1; url=manager/board.php">';
+        	}
         }
         else {
         session_destroy();
