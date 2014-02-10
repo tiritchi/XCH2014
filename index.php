@@ -31,7 +31,7 @@ if (isset($_GET['page']) && $_GET['page'] != "")
 }
 else
 {
-    header('Location: ./index.php?page=index');
+    header('Location: index.php?page=index');
 }
  
 ?>
