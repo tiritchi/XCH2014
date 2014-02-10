@@ -1,4 +1,5 @@
 <?php
+echo '1';
  
 if (isset($_GET['page']) && $_GET['page'] != "")
 {
