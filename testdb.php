@@ -44,7 +44,7 @@
 				{
 				?>
 					<TR> 
-						<TH> <?php echo '$donnees['nom']';?> </TH> 
+						<TH> <?php echo '$donnees[\'nom\']';?> </TH> 
 						<TD> Valeur B2 </TD> 
 						<TD> Valeur B3 </TD> 
 						<TD> Valeur B4 </TD> 
