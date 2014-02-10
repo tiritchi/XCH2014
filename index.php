@@ -2,10 +2,10 @@
  
 if (isset($_GET['page']) && $_GET['page'] != "")
 {
-    $basepath = "include/";
+    $basepath = "./include/";
     switch ($_GET['page']){
 	case "index":
-		require_once($basepath."index.php");
+		include($basepath."index.php");
 		break;
 	case "login":
 		include($basepath."login.php");
