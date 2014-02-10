@@ -9,7 +9,7 @@ if (isset($_GET['page']) && $_GET['page'] != "")
     }
     else
     {
-        require_once("pages/404.php");
+        require_once("404.php");
     }
 }
 else
