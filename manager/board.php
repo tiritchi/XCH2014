@@ -1,8 +1,8 @@
 <?php
 session_start();
 if(!$_SESSION['connected']=TRUE){
-	echo '<--';
 	echo '<meta http-equiv="refresh" content="0; url=xTremCergyHunting.php">';
+	echo '<!--';
 } 
 ?>
 
@@ -75,6 +75,11 @@ if(!$_SESSION['connected']=TRUE){
 
 </body>
 </html>
+<?php
+if(!$_SESSION['connected']=TRUE){
+	echo '-->';
+} 
+?>
 
 
 
