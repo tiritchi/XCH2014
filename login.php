@@ -52,11 +52,14 @@ $_SESSION['user']=$_POST['email'];
         if ($check) {
 	        echo "Password correct!";
 			echo '<meta http-equiv="refresh" content="2; url=manager/board.php">'; 
+			?><?php include("access.php");?><?php
+			echo $grant;
         }
         else {
-         echo 'Password incorrect...<br/>';
-         echo 'redirection sur la page d\'accueil dans 2 sec';
-         echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">'; 
+        session_destroy();
+        echo 'Password incorrect...<br/>';
+        echo 'redirection sur la page d\'accueil dans 2 sec';
+        echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">'; 
         }
 	}
 ?>

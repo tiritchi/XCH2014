@@ -1,11 +1,7 @@
 <?php
 session_start(); // On démarre la session AVANT toute chose
 ?>
-<?php 
-	include("../access/php");
-	if($grant==true)
-	{
-		echo '
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +19,11 @@ session_start(); // On démarre la session AVANT toute chose
 </style>
 </head>
 <body>
+<?php 
+	include("../access/php");
+	if($grant==true)
+	{
+		echo '
     <div class="bs-example">
         <nav id="myNavbar" class="navbar navbar-inverse" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -72,12 +73,13 @@ session_start(); // On démarre la session AVANT toute chose
 		<h1>Hello, world!</h1>
 		<p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
 	</div>
-</body>
-</html>
 	'
-}
+	}
 else
 {
 	echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">';
 }
 ?>
+</body>
+</html>
+	
