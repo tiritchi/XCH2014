@@ -1,6 +1,6 @@
 <?php
 session_start(); // On démarre la session AVANT toute chose
-$_SESSION['user']=$_POST['email'];
+$_SESSION['user']=NULL;
 $_SESSION['connected']=FALSE;
 ?>
 <!DOCTYPE HTML>
@@ -38,6 +38,8 @@ $_SESSION['connected']=FALSE;
 	if($rcount==0)
 	{
 		echo '<p> Vous n êtes pas inscrit</p>';
+		echo 'redirection sur la page d\'accueil dans 2 sec';
+        echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">';
 	}
 	else if(rcount>=1){
 		echo 'DataBase Error !';
@@ -51,6 +53,7 @@ $_SESSION['connected']=FALSE;
         $check = $hasher->CheckPassword($psswd, $password_correct);
          
         if ($check) {
+        	$_SESSION['user']=$_POST['email'];
         	$_SESSION['connected']=TRUE;
 	        echo "Redirecting ... ";
 			echo '<meta http-equiv="refresh" content="1; url=manager/board.php">'; 
