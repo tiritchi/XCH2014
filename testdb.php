@@ -4,19 +4,11 @@
 	<meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="signin.css"></link>   
+    <link rel="stylesheet" href="signin.css"></link> 
+    <?php require('lib/events.php'); ?>  
 </head>
 <?php
-	try 
-	{
-		$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
-		echo '<p> connected to DB test</p>';
-	} 
-	catch (Exception $e) 
-	{
-		die('Erreur : ' . $e->getMessage());
-		echo '<p> erreur DB</p>';
-	} 
+	db_init();
 //	$bdd->exec('INSERT INTO users (fname,lname,mail,phone,sexe,date) VALUES (\'test\',\'test2\',\'aa@.com\',\'62065206\',\'Male\',\'\')');
 //	echo '<p> inserted</p>';
 

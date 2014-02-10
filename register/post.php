@@ -19,6 +19,7 @@
 		die('Erreur : ' . $e->getMessage());
 		echo '<p> erreur DB</p>';
 	}
+	
 	$row_count = '0';
 	$stmt = $bdd->prepare('SELECT mail FROM users WHERE mail=?');
 	$stmt->execute(array($_POST['Email']));
