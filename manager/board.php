@@ -2,14 +2,14 @@
 session_start(); // On démarre la session AVANT toute chose
 ?>
 <?php 
-	include("../access/php");
+	include("../access.php");
 	if($grant==true)
 	{
 		echo file_get_contents('board_main.php');
 	}
 	else
 	{
-		echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">';
+		echo '<meta http-equiv="refresh" content="2; url=../xTremCergyHunting.php">';
 	}
 ?>
 
