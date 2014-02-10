@@ -55,7 +55,7 @@ $_SESSION['connected']=FALSE;
         	echo "Redirecting ... ";
         	if($req['group']=="admin")
         	{
-        		echo '<meta http-equiv="refresh" content="1; url=manager/admin_board.php">';
+        		echo '<meta http-equiv="refresh" content="1; url=manager/admin/admin_board.php">';
         	}
         	else if($req['group']=="user")
         	{
