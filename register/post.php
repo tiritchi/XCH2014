@@ -21,7 +21,7 @@
 	}
 	$row_count = '0';
 //	$stmt = $bdd->query('SELECT mail FROM users WHERE mail=\''$_POST['Email']'\'');
-	$row_count = $stmt->rowCount();
+//	$row_count = $stmt->rowCount();
 
 	if($row_count==1)
 	{
