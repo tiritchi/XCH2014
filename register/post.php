@@ -50,7 +50,7 @@
 
 	    ));
 	    echo 'redirection sur la page d\'accueil dans 2 sec';
-        echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">'; 
+        echo '<meta http-equiv="refresh" content="2; url=../xTremCergyHunting.php">'; 
 	}
 	else
 	{
