@@ -10,7 +10,9 @@ session_start(); // On démarre la session AVANT toute chose
     <link rel="stylesheet" href="../signin.css"></link> 
 </head>
 <html>
-	<p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link"><?php echo $_SESSION['user']?></a></p>
+	<nav class="navbar navbar-inverse" role="navigation">
+		<p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link"><?php echo $_SESSION['user']?></a></p>
+	</nav>
 	<div class="jumbotron">
 		<h1>Hello, world!</h1>
 		<p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
