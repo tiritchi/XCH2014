@@ -39,7 +39,7 @@
 
 		//envoie des informations à la DB
 
-		$req = $bdd->prepare('INSERT INTO users (group,fname,lname,mail,phone,sexe,psswd,reg_date) VALUES ('',:prenom,:nom,:email,:phone,:sexe,:psswd,NOW())');
+		$req = $bdd->prepare('INSERT INTO users (group,fname,lname,mail,phone,sexe,psswd,reg_date) VALUES (\'\',:prenom,:nom,:email,:phone,:sexe,:psswd,NOW())');
 		$req->execute(array(
 		    'nom' => $nom,
 		    'prenom' => $prenom,
