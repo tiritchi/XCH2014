@@ -51,7 +51,7 @@ $_SESSION['user']=$_POST['email'];
          
         if ($check) {
 	        echo "Password correct!";
-			echo '<meta http-equiv="refresh" content="2; url=board/board.php">'; 
+			echo '<meta http-equiv="refresh" content="2; url=manager/board.php">'; 
         }
         else {
          echo 'Password incorrect...<br/>';
