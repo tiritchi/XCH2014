@@ -5,7 +5,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=TRUE && $_SESSION['ad
     include 'header.php';
     echo '<body>';
     include 'navbar.php';
-//    include 'panel.php';
+    include 'panel.php';
     echo '
         </body>
         </html>';
