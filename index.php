@@ -9,10 +9,10 @@ if (isset($_GET['page']) && $_GET['page'] != "")
 		include($basepath."index.php");
 		break;
 	case "login":
-		include($basepath."login.php");
+		include($basepath."register/login.php");
 		break;
 	case "logout":
-		include($basepath."logout.php");
+		include($basepath."register/logout.php");
 		break;
 	case "board":
 		include($basepath."manager/board.php");
