@@ -32,7 +32,7 @@
             </a>
         </div>
         <div class="navbar-collapse collapse">
-            <form class="navbar-form navbar-right" action="../login.php?page=login" method="post">
+            <form class="navbar-form navbar-right" action="../index.php?page=login" method="post">
                 <div class="form-group">
                     <input class="form-control" name='email' type="text" placeholder="Email"></input>
                 </div>
@@ -63,7 +63,7 @@
             
         </p>
         <p>
-        <a class="btn btn-primary btn-lg" role="button" href="../login.php?page=register">
+        <a class="btn btn-primary btn-lg" role="button" href="../index.php?page=register">
             Inscrivez-vous ! »
         </a>
         </p>
