@@ -2,19 +2,27 @@
  
 if (isset($_GET['page']) && $_GET['page'] != "")
 {
-    $path = $_GET['page'].".php";
-    if (file_exists($path))
-    {
-        require_once($path);
-    }
-    else
-    {
-        require_once("404.php");
+    $basepath = "include/";
+    switch ($_GET['page']){
+	case "index":
+		include($basepath."index.php");
+		break;
+	case "login":
+		include($basepath."login.php");
+		break;
+	case "board":
+		include($basepath."manager/board.php");
+		break;
+	case "admin":
+		include($basepath."manager/admin/admin_board.php");
+		break;
+	default:
+		include($basepath."index.php");
     }
 }
 else
 {
-    header('Location: ./index.php?page=xTremCergyHunting');
+    header('Location: ./index.php?page=index');
 }
  
 ?>
