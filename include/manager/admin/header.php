@@ -55,8 +55,9 @@
 			                                <li><a href="index.php?page=logout">Log out</a></li>
 			                            </ul>
 			                        </li>
+			                   		<span class="glyphicon glyphicon-user"></span>
 			                    </ul>
-			                    <span class="glyphicon glyphicon-user"></span>
+
 
 			                </div>
 			            </div>
