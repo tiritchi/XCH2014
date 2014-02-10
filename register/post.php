@@ -42,7 +42,7 @@
 
 		$req = $bdd->prepare('INSERT INTO users (group,fname,lname,mail,phone,sexe,psswd,reg_date) VALUES (:group,:prenom,:nom,:email,:phone,:sexe,:psswd,NOW())');
 		$req->execute(array(
-			'group'=>$group,
+			'group'=>'',
 		    'nom' => $nom,
 		    'prenom' => $prenom,
 		    'email' => $email,
