@@ -24,7 +24,7 @@
 	$stmt->execute(array($_POST['Email']));
 	$row_count = $stmt->rowCount();
 
-	if($row_count==1)
+	if($row_count=='1')
 	{
 		echo '
 			<div class="alert alert-warning">
@@ -33,7 +33,7 @@
 		echo 'redirection sur la page d\'accueil dans 2 sec';
         echo '<meta http-equiv="refresh" content="10; url=../xTremCergyHunting.php">';
 	}
-	elseif (isset($_POST['password']) AND $_POST['password'] == "test" AND $row_count==0)
+	elseif (isset($_POST['password']) AND $_POST['password'] == "test" AND $row_count=='0')
 	{	
 		echo $row_count;
 		//hashage du password
