@@ -61,7 +61,7 @@ else
                                 <li><a href="#">Action</a></li>
                                 <li><a href="#">Another action</a></li>
                                 <li class="divider"></li>
-                                <li><a href="../logout.php">Log out</a></li>
+                                <li><a href="../../logout.php">Log out</a></li>
                             </ul>
                         </li>
                     </ul>
