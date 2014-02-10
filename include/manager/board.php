@@ -9,14 +9,14 @@ else
 		include 'header.php';
 		?>
 		<div class="row">
-			<div class="col-md-offset-1 col-md-5">
+			<div class="col-md-offset-1 col-md-4">
 				<div class="jumbotron">
 					<h1>Hello, world!</h1>
 					<p>...</p>
 					<p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
 				</div>
 			</div>
-			<div class="col-md-offset-1 col-md-5">
+			<div class="col-md-offset-1 col-md-4">
 				<div class="jumbotron">
 					<h1>Hello, world!</h1>
 					<p>...</p>
