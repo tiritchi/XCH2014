@@ -52,8 +52,7 @@ $_SESSION['user']=$_POST['email'];
         if ($check) {
 	        echo "Password correct!";
 			echo '<meta http-equiv="refresh" content="2; url=manager/board.php">'; 
-			include("access.php");
-			if($grant==true){echo 'test';}
+			echo $_SESSION['user'];
         }
         else {
         session_destroy();
