@@ -1,7 +1,7 @@
     <?php
 	$grant = false;
     /* session_start();  */// ici on continue la session
-    if ((isset($_SESSION['user'])) && ($_SESSION['pseudo'] != ''))
+    if ((isset($_SESSION['user'])) && ($_SESSION['user'] != ''))
     {
 	return $grant= true;
     // la session est bien active, et la personne est bien connectée ...
