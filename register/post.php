@@ -27,8 +27,6 @@
         $hash = $hasher->HashPassword($password);
         //password hashé
 
-
-		echo '<p> good password</p>';
 		$nom = $_POST['Lname'];
 		$prenom =$_POST['Fname'];
 		$email =$_POST['Email'];
@@ -47,10 +45,13 @@
 		    'phone' => $phone,
 		    'sexe' => $sexe,
 		    'psswd'=>$psswd
-
 	    ));
-	    echo 'redirection sur la page d\'accueil dans 2 sec';
-        echo '<meta http-equiv="refresh" content="2; url=../xTremCergyHunting.php">'; 
+   	    echo 'redirection sur la page d\'accueil dans 2 sec';
+   		echo '
+   			<div class="alert alert-success">
+  				<a href="#" class="alert-link">Successful signup ! thanks</a>
+			</div>';
+        echo '<meta http-equiv="refresh" content="10; url=../xTremCergyHunting.php">'; 
 	}
 	else
 	{
