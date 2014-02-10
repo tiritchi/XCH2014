@@ -1,13 +1,10 @@
 <?php
-echo '1';
  
 if (isset($_GET['page']) && $_GET['page'] != "")
 {
-	echo '1';
     $basepath = "./include/";
     switch ($_GET['page']){
 	case "index":
-		echo 'test';
 		include($basepath."index.php");
 		break;
 	case "login":
