@@ -57,9 +57,14 @@ $_SESSION['connected']=FALSE;
         	{
         		echo '<meta http-equiv="refresh" content="1; url=manager/admin_board.php">';
         	}
-        	else
+        	else if($req['group']=="user")
         	{
 				echo '<meta http-equiv="refresh" content="1; url=manager/board.php">';
+        	}
+        	else
+        	{
+        		echo 'erreur';
+        		echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">';
         	}
         }
         else {
