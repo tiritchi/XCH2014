@@ -26,34 +26,35 @@
 	<div class="panel panel-default">
 		<!-- Default panel contents -->
 		<div class="panel-heading">Panel heading</div>
-		<div class="panel-body">
-			<p>...</p>
-		</div>
 
 		<!-- Table -->
 		<table class="table">
-			<TR> 
-				<TH> Jeu </TH> 
-				<TH> Possesseur </TH> 
-				<TH> Prix </TH> 
-				<TH> Commentaires </TH> 
-			</TR> 
-		    <?php 
-		    	$reponse = $bdd->query('SELECT * FROM jeux_video WHERE console=\'PC\'');
-		    	while ($donnees = $reponse->fetch())
-				{
-				?>
-					<TR> 
-						<TD> <?php echo $donnees['nom'];?> </TD> 
-						<TD> <?php echo $donnees['possesseur'];?> </TD> 
-						<TD> <?php echo $donnees['prix'];?> </TD> 
-						<TD> <?php echo $donnees['commentaires'];?> </TD> 
-					</TR> 
-				<?php
-				}
-					$reponse->closeCursor(); // Termine le traitement de la requête
+			<thead>
+				<TR> 
+					<TH> Jeu </TH> 
+					<TH> Possesseur </TH> 
+					<TH> Prix </TH> 
+					<TH> Commentaires </TH> 
+				</TR>
+			</thead>
+			<tbody> 
+			    <?php 
+			    	$reponse = $bdd->query('SELECT * FROM jeux_video WHERE console=\'PC\'');
+			    	while ($donnees = $reponse->fetch())
+					{
+					?>
+						<TR> 
+							<TD> <?php echo $donnees['nom'];?> </TD> 
+							<TD> <?php echo $donnees['possesseur'];?> </TD> 
+							<TD> <?php echo $donnees['prix'];?> </TD> 
+							<TD> <?php echo $donnees['commentaires'];?> </TD> 
+						</TR> 
+					<?php
+					}
+						$reponse->closeCursor(); // Termine le traitement de la requête
 
-				?>
+					?>
+				</tbody>
 		</table>
 	</div>
 
