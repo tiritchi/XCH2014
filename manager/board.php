@@ -48,12 +48,12 @@ session_start(); // On démarre la session AVANT toute chose
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><?php echo $_SESSION['user']?> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Action</a></li>
                                 <li><a href="#">Another action</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">Settings</a></li>
+                                <li><a href="../logout.php">Log out</a></li>
                             </ul>
                         </li>
                     </ul>
