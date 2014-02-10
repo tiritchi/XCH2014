@@ -12,15 +12,27 @@
 	try 
 	{
 		$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
-		echo '<p> connected to DB</p>';
+//		echo '<p> connected to DB</p>';
 	} 
 	catch (Exception $e) 
 	{
 		die('Erreur : ' . $e->getMessage());
 		echo '<p> erreur DB</p>';
 	}
+	$row_count = 0;
+	$stmt = $bdd->query('SELECT mail FROM users WHERE mail=$email');
+	$row_count = $stmt->rowCount();
 
-	if (isset($_POST['password']) AND $_POST['password'] == "test")
+	if($row_count==1)
+	{
+		echo '
+			<div class="alert alert-warning">
+  				<a href="../xTremCergyHunting.php" class="alert-link">Vous êtes déjà inscrit</a>
+			</div>';
+		echo 'redirection sur la page d\'accueil dans 2 sec';
+        echo '<meta http-equiv="refresh" content="10; url=../xTremCergyHunting.php">';
+	}
+	elseif (isset($_POST['password']) AND $_POST['password'] == "test" AND $row_count==0)
 	{	
 		
 		//hashage du password
@@ -48,11 +60,11 @@
 		    'sexe' => $sexe,
 		    'psswd'=>$psswd
 	    ));
-   	    echo 'redirection sur la page d\'accueil dans 2 sec';
    		echo '
    			<div class="alert alert-success">
   				<a href="../xTremCergyHunting.php" class="alert-link">Successful signup ! thanks</a>
 			</div>';
+		echo 'redirection sur la page d\'accueil dans 2 sec';
         echo '<meta http-equiv="refresh" content="10; url=../xTremCergyHunting.php">'; 
 	}
 	else
