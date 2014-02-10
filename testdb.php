@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-	<title>test db/title>
+	<title>test db</title>
 	<meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,10 +33,10 @@
 		<!-- Table -->
 		<table class="table">
 			<TR> 
-				<TH> Titre A1 </TH> 
-				<TH> Titre A2 </TH> 
-				<TH> Titre A3 </TH> 
-				<TH> Titre A4 </TH> 
+				<TH> Jeu </TH> 
+				<TH> Possesseur </TH> 
+				<TH> Prix </TH> 
+				<TH> Commentaires </TH> 
 			</TR> 
 		    <?php 
 		    	$reponse = $bdd->query('SELECT * FROM jeux_video WHERE console=\'PC\'');
@@ -44,7 +44,7 @@
 				{
 				?>
 					<TR> 
-						<TH> Titre B1 </TH> 
+						<TH> <?php echo '$donnees['nom']';?> </TH> 
 						<TD> Valeur B2 </TD> 
 						<TD> Valeur B3 </TD> 
 						<TD> Valeur B4 </TD> 
