@@ -13,12 +13,17 @@ session_start(); // On démarre la session AVANT toute chose
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<style type="text/css">
+	.bs-example{
+    	margin: 20px;
+    }
+</style>
 </head>
 <body>
 	<nav class="navbar navbar-inverse" role="navigation">
 		<p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link"><?php echo $_SESSION['user']?></a></p>
 	</nav>
-	
+
 <div class="bs-example">
     <nav id="myNavbar" class="navbar navbar-default" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
