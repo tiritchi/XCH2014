@@ -26,7 +26,7 @@ else
 <body>
 
     <div class="bs-example">
-        <nav id="myNavbar" class="navbar navbar-inverse" role="navigation">
+        <nav id="myNavbar" class="navbar navbar-default" role="navigation">
 
             <div class="container">
                 <div class="navbar-header">
