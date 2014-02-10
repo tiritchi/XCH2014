@@ -6,11 +6,13 @@
         <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
         <title>xTremCergyHunting</title>
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://d3levm2kxut31z.cloudfront.net/assets/application-1e01f7284ac73823805a97e39b82a814.css" media="screen" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="signin.css"></link>
 
     </head>
     
     <body>
+    <canvas class='blur' src='https://d3levm2kxut31z.cloudfront.net/assets/locations/Japan-c1110ff40b050d8cc436e49df22afdb1.jpg'></canvas>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
     <div class="container">
