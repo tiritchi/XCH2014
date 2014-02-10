@@ -5,7 +5,7 @@ session_start(); // On démarre la session AVANT toute chose
 	include("../access.php");
 	if($grant==true)
 	{
-		$user=$_SESSION['user'];
+		echo $_SESSION['user'];
 		echo file_get_contents('board_main.php');
 	}
 	else
