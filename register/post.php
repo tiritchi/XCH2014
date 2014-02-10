@@ -23,7 +23,7 @@
 	$stmt = $bdd->prepare('SELECT mail FROM users WHERE mail=?');
 	$stmt->execute(array($_POST['Email']));
 	$row_count = $stmt->rowCount();
-
+	echo $row_count;
 	if($row_count=='1')
 	{
 		echo '
@@ -35,7 +35,6 @@
 	}
 	elseif (isset($_POST['password']) AND $_POST['password'] == "test" AND $row_count=='0')
 	{	
-		echo $row_count;
 		//hashage du password
 		$password = $_POST['userpsswd'];
         $hasher = new PasswordHash(8, FALSE);
