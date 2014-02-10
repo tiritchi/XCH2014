@@ -2,10 +2,10 @@
  
 if (isset($_GET['page']) && $_GET['page'] != "")
 {
-    $path = "pages/".$_GET['page'];
+    $path = $_GET['page'];
     if (file_exists($path))
     {
-        require_once("pages/".$_GET['page'].".php");
+        require_once($path.".php");
     }
     else
     {
