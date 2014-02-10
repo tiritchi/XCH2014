@@ -6,6 +6,8 @@ session_start(); // On démarre la session AVANT toute chose
 	<title>Board</title>
 	<meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../signin.css"></link> 
 </head>
 <html>
 	<nav class="navbar navbar-default" role="navigation">
