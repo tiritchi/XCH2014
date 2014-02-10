@@ -17,7 +17,7 @@ $phpmailer->Password   = "12030657";        // Gmail account password
 $phpmailer->SetFrom('tiritchi@gmail.com', 'cedric pillet'); //set from name
 
 $phpmailer->Subject    = "test";
-$phpmailer->MsgHTML($body);
+$phpmailer->MsgHTML("blobloblbolbo");
 
 $phpmailer->AddAddress("tiritchi@gmail.com", "cedric pillet");
 
