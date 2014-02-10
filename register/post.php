@@ -51,7 +51,7 @@
    	    echo 'redirection sur la page d\'accueil dans 2 sec';
    		echo '
    			<div class="alert alert-success">
-  				<a href="#" class="alert-link">Successful signup ! thanks</a>
+  				<a href="../xTremCergyHunting.php" class="alert-link">Successful signup ! thanks</a>
 			</div>';
         echo '<meta http-equiv="refresh" content="10; url=../xTremCergyHunting.php">'; 
 	}
