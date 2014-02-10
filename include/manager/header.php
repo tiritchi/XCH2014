@@ -56,6 +56,8 @@
 			                            </ul>
 			                        </li>
 			                    </ul>
+			                    <span class="glyphicon glyphicon-user"></span>
+
 			                </div>
 			            </div>
 			        </nav>
