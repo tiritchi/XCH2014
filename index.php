@@ -3,7 +3,7 @@
 if (isset($_GET['page']) && $_GET['page'] != "")
 {
 	echo '1';
-    $basepath = "./include/";
+    $basepath = "include/";
     switch ($_GET['page']){
 	case "index":
 		echo 'test';
@@ -33,6 +33,7 @@ if (isset($_GET['page']) && $_GET['page'] != "")
 }
 else
 {
+    echo "1";
     header('Location: ./index.php?page=index');
 }
  
