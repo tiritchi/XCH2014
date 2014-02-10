@@ -9,5 +9,5 @@ session_destroy();
 //setcookie('pass_hache', '');
 //session.cookie_lifetime == 0;
 echo'session fermé';
-header('Location: ../login.php'); 
+header('Location: index.php'); 
 ?>
