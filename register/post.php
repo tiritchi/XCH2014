@@ -29,27 +29,24 @@
 
 
 		echo '<p> good password</p>';
-//		$group_u ='';
 		$nom = $_POST['Lname'];
 		$prenom =$_POST['Fname'];
 		$email =$_POST['Email'];
 		$phone = $_POST['Phone'];
 		$sexe = $_POST['sexe'];
 		$psswd = $hash;
-//		$date = NOW();
+
 
 		//envoie des informations à la DB
 
 		$req = $bdd->prepare('INSERT INTO users (fname,lname,mail,phone,sexe,psswd,reg_date) VALUES (:prenom,:nom,:email,:phone,:sexe,:psswd,NOW())');
 		$req->execute(array(
-//			'group'=>$group_u,
 		    'nom' => $nom,
 		    'prenom' => $prenom,
 		    'email' => $email,
 		    'phone' => $phone,
 		    'sexe' => $sexe,
 		    'psswd'=>$psswd
-//		    'date'=>$date
 
 	    ));
 	}

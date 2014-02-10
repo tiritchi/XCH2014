@@ -35,14 +35,11 @@ $_SESSION['connected']=FALSE;
 	$rcount=$stat->rowCount();
 	
 //	echo '<p> DB reached</p>';
-	if($rcount==0)
+	if(!$rcount==1)
 	{
 		echo '<p> Vous n êtes pas inscrit</p>';
 		echo 'redirection sur la page d\'accueil dans 2 sec';
         echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">';
-	}
-	else if(rcount>=1){
-		echo 'DataBase Error !';
 	}
 	else
 	{
