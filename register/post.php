@@ -23,15 +23,13 @@
 	$stmt = $bdd->prepare('SELECT mail FROM users WHERE mail=?');
 	$stmt->execute(array($_POST['Email']));
 	$row_count = $stmt->rowCount();
-	echo $row_count;
 	if($row_count>=1)
 	{
 		echo '
 			<div class="alert alert-warning">
-  				<a href="../xTremCergyHunting.php" class="alert-link">Vous êtes déjà inscrit</a>
+  				<strong>Warning!</strong> Vous êtes déjà inscrit ! redirection sur la page d\'accueil dans 2 sec
 			</div>';
-		echo 'redirection sur la page d\'accueil dans 2 sec';
-        echo '<meta http-equiv="refresh" content="10; url=../xTremCergyHunting.php">';
+        echo '<meta http-equiv="refresh" content="2; url=../xTremCergyHunting.php">';
 	}
 	elseif (isset($_POST['password']) AND $_POST['password'] == "test" AND $row_count==0)
 	{	
@@ -62,14 +60,15 @@
 	    ));
    		echo '
    			<div class="alert alert-success">
-  				<a href="../xTremCergyHunting.php" class="alert-link">Successful signup ! thanks</a>
+  				<strong>Successful signup ! thanks</strong> <br>
+  				redirection sur la page d\'accueil dans quelques secondes ...
 			</div>';
-		echo 'redirection sur la page d\'accueil dans quelques secondes ...';
         echo '<meta http-equiv="refresh" content="10; url=../xTremCergyHunting.php">'; 
 	}
 	else
 	{
 		echo '<p> wrong password</p>';
+		echo 'vous n\'êtes pas autorisé à vous inscrire';
 	}
 ?>
 </html>
