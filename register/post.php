@@ -35,11 +35,11 @@
 		$phone = $_POST['Phone'];
 		$sexe = $_POST['sexe'];
 		$psswd = $hash;
-		$date = NOW();
+//		$date = NOW();
 
 		//envoie des informations à la DB
 
-		$req = $bdd->prepare('INSERT INTO users (fname,lname,mail,phone,sexe,psswd,date) VALUES (:prenom,:nom,:email,:phone,:sexe,:psswd,:date)');
+		$req = $bdd->prepare('INSERT INTO users (fname,lname,mail,phone,sexe,psswd,date) VALUES (:prenom,:nom,:email,:phone,:sexe,:psswd,NOW())');
 		$req->execute(array(
 		    'nom' => $nom,
 		    'prenom' => $prenom,
@@ -47,7 +47,7 @@
 		    'phone' => $phone,
 		    'sexe' => $sexe,
 		    'psswd'=>$psswd,
-		    'date'=>$date
+//		    'date'=>$date
 
 	    ));
 	}
