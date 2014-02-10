@@ -1,73 +1,80 @@
-<?PHP
-require_once("./include/membersite_config.php");
-
-if(isset($_POST['submitted']))
-{
-   if($fgmembersite->Login())
-   {
-        $fgmembersite->RedirectToURL("login-home.php");
-   }
-}
-
+<?php
+session_start(); // On démarre la session AVANT toute chose
+$_SESSION['user']=NULL;
+$_SESSION['connected']=FALSE;
+$_SESSION['admin']=FALSE;
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!DOCTYPE HTML>
+<html>
 <head>
-      <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
-      <title>Login</title>
-      <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css" />
-      <script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
+		<meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+        <title>logging in ..</title>
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="signin.css"></link>
+        <?php require('lib/PasswordHash.php'); ?>
 </head>
-<body>
-
-<!-- Form Code Start -->
-<div id='fg_membersite'>
-<form id='login' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
-<fieldset >
-<legend>Login</legend>
-
-<input type='hidden' name='submitted' id='submitted' value='1'/>
-
-<div class='short_explanation'>* required fields</div>
-
-<div><span class='error'><?php echo $fgmembersite->GetErrorMessage(); ?></span></div>
-<div class='container'>
-    <label for='username' >UserName*:</label><br/>
-    <input type='text' name='username' id='username' value='<?php echo $fgmembersite->SafeDisplay('username') ?>' maxlength="50" /><br/>
-    <span id='login_username_errorloc' class='error'></span>
-</div>
-<div class='container'>
-    <label for='password' >Password*:</label><br/>
-    <input type='password' name='password' id='password' maxlength="50" /><br/>
-    <span id='login_password_errorloc' class='error'></span>
-</div>
-
-<div class='container'>
-    <input type='submit' name='Submit' value='Submit' />
-</div>
-<div class='short_explanation'><a href='reset-pwd-req.php'>Forgot Password?</a></div>
-</fieldset>
-</form>
-<!-- client-side Form Validations:
-Uses the excellent form validation script from JavaScript-coder.com-->
-
-<script type='text/javascript'>
-// <![CDATA[
-
-    var frmvalidator  = new Validator("login");
-    frmvalidator.EnableOnPageErrorDisplay();
-    frmvalidator.EnableMsgsTogether();
-
-    frmvalidator.addValidation("username","req","Please provide your username");
-    
-    frmvalidator.addValidation("password","req","Please provide the password");
-
-// ]]>
-</script>
-</div>
-<!--
-Form Code End (see html-form-guide.com for more info.)
--->
-
-</body>
+<?php
+//	echo 'test';
+	try 
+	{
+		$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
+		$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//		echo '<p> connected to DB</p>';
+	} 
+	catch (Exception $e) 
+	{
+		die('Erreur : ' . $e->getMessage());
+		echo '<p> erreur DB</p>';
+	}
+	$user = $_POST['email'];
+	$psswd= $_POST['password'];
+	$stat=$bdd->prepare('SELECT * FROM users WHERE mail=:mail');
+	$stat->execute(array(
+		'mail'=>$user
+		));
+	$rcount=$stat->rowCount();
+	
+//	echo '<p> DB reached</p>';
+	if(!$rcount==1)
+	{
+		echo '<p> Vous n êtes pas inscrit</p>';
+		echo 'redirection sur la page d\'accueil dans 2 sec';
+        echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">';
+	}
+	else
+	{
+//		echo $req['psswd'];
+		$req=$stat->fetch();
+		$password_correct = $req['psswd']; /* Le hash stocké précédemment */
+        $hasher = new PasswordHash(8, FALSE);
+        $check = $hasher->CheckPassword($psswd, $password_correct);
+         
+        if ($check) {
+        	$_SESSION['user']=$_POST['email'];
+        	$_SESSION['connected']=TRUE;
+        	echo "Redirecting ... ";
+        	if($req['group']=="admin")
+        	{
+        		$_SESSION['admin']=TRUE;
+        		echo '<meta http-equiv="refresh" content="1; url=manager/admin/admin_board.php">';
+        	}
+        	else if($req['group']=="user")
+        	{
+				echo '<meta http-equiv="refresh" content="1; url=manager/board.php">';
+        	}
+        	else
+        	{
+        		echo 'erreur';
+        		echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">';
+        	}
+        }
+        else {
+        session_destroy();
+        echo 'Password incorrect...<br/>';
+        echo 'redirection sur la page d\'accueil dans 2 sec';
+        echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">'; 
+        }
+	}
+?>
 </html>
