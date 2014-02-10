@@ -8,11 +8,11 @@ $phpmailer          = new PHPMailer();
 
 
 $phpmailer->IsSMTP(); // telling the class to use SMTP
-$phpmailer->Host       = "smtp.gmail.com"; // SMTP server
+$phpmailer->Host       = "ss://smtp2.ensea.fr"; // SMTP server
 $phpmailer->SMTPAuth   = true;                  // enable SMTP authentication
 $phpmailer->Port       = 587;          // set the SMTP port for the GMAIL server; 465 for ssl and 587 for tls
-$phpmailer->Username   = "tiritchi@gmail.com"; // Gmail account username
-$phpmailer->Password   = "12030657";        // Gmail account password
+$phpmailer->Username   = "enseaven"; // Gmail account username
+$phpmailer->Password   = "lapinNounours";        // Gmail account password
 
 $phpmailer->SetFrom('tiritchi@gmail.com', 'cedric pillet'); //set from name
 
