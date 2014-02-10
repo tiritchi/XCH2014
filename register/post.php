@@ -23,7 +23,7 @@
 	$stmt = $bdd->query('SELECT mail FROM users WHERE mail=\'$email\'');
 	$row_count = $stmt->rowCount();
 
-	if($row_count=='1')
+	if($row_count==1)
 	{
 		echo '
 			<div class="alert alert-warning">
@@ -32,7 +32,7 @@
 		echo 'redirection sur la page d\'accueil dans 2 sec';
         echo '<meta http-equiv="refresh" content="10; url=../xTremCergyHunting.php">';
 	}
-	elseif (isset($_POST['password']) AND $_POST['password'] == "test" AND $row_count=='0')
+	elseif (isset($_POST['password']) AND $_POST['password'] == "test" AND $row_count==0)
 	{	
 		
 		//hashage du password
@@ -64,7 +64,7 @@
    			<div class="alert alert-success">
   				<a href="../xTremCergyHunting.php" class="alert-link">Successful signup ! thanks</a>
 			</div>';
-		echo 'redirection sur la page d\'accueil dans 2 sec';
+		echo 'redirection sur la page d\'accueil dans quelques secondes ...';
         echo '<meta http-equiv="refresh" content="10; url=../xTremCergyHunting.php">'; 
 	}
 	else
