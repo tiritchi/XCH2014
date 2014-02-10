@@ -5,7 +5,6 @@
 		<title>Board</title>
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
-        <link href="https://d3levm2kxut31z.cloudfront.net/assets/application-1e01f7284ac73823805a97e39b82a814.css" media="screen" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 		<style type="text/css">
@@ -63,4 +62,3 @@
 			            </div>
 			        </nav>
 			    </div>
-		    <canvas class='blur' src='https://d3levm2kxut31z.cloudfront.net/assets/locations/Japan-c1110ff40b050d8cc436e49df22afdb1.jpg'></canvas>
