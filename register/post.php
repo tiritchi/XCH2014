@@ -29,7 +29,7 @@
 
 
 		echo '<p> good password</p>';
-		$group ="";
+		$group ='';
 		$nom = $_POST['Lname'];
 		$prenom =$_POST['Fname'];
 		$email =$_POST['Email'];
