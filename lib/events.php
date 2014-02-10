@@ -1,4 +1,7 @@
 <?php
+
+	$bdd=NULL;
+
 	function db_init()
 	{
 		global $bdd;
@@ -14,5 +17,15 @@
 			echo '<p> erreur DB</p>';
 		}
 		return $bdd;
+	}
+
+	function add_user_event()
+	{
+
+	}
+
+	function mark_as_read()
+	{
+		
 	}
 ?>

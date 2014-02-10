@@ -2,6 +2,7 @@
 session_start(); // On démarre la session AVANT toute chose
 $_SESSION['user']=NULL;
 $_SESSION['connected']=FALSE;
+$_SESSION['admin']=FALSE;
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -55,6 +56,7 @@ $_SESSION['connected']=FALSE;
         	echo "Redirecting ... ";
         	if($req['group']=="admin")
         	{
+        		$_SESSION['admin']=TRUE;
         		echo '<meta http-equiv="refresh" content="1; url=manager/admin/admin_board.php">';
         	}
         	else if($req['group']=="user")
