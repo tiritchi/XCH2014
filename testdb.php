@@ -8,7 +8,7 @@
     <?php require('lib/events.php'); ?>  
 </head>
 <?php
-	db_init();
+	$bdd=db_init();
 //	$bdd->exec('INSERT INTO users (fname,lname,mail,phone,sexe,date) VALUES (\'test\',\'test2\',\'aa@.com\',\'62065206\',\'Male\',\'\')');
 //	echo '<p> inserted</p>';
 

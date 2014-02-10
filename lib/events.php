@@ -1,7 +1,7 @@
 <?php
-	global $bdd;
 	function db_init()
 	{
+		global $bdd;
 		try 
 		{
 			$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
@@ -13,5 +13,6 @@
 			die('Erreur : ' . $e->getMessage());
 			echo '<p> erreur DB</p>';
 		}
+		return $bdd;
 	}
 ?>
