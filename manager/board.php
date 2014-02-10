@@ -1,13 +1,4 @@
-<?php
-session_start();
-if(isset($_SESSION['connected']) && $_SESSION['connected']=TRUE){
-	}
-else
-{
-	echo '<meta http-equiv="refresh" content="0; url=../xTremCergyHunting.php">';
-	echo '<!--';
-} 
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
