@@ -1,5 +1,5 @@
     <?php
-	$grant = true;
+	$grant = false;
     /* session_start();  */// ici on continue la session
     if ((isset($_SESSION['user'])) && ($_SESSION['pseudo'] != ''))
     {
