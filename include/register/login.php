@@ -10,9 +10,9 @@ $_SESSION['admin']=FALSE;
 		<meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
         <title>logging in ..</title>
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="signin.css"></link>
-        <?php require('lib/PasswordHash.php'); ?>
+        <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../signin.css"></link>
+        <?php require('../lib/PasswordHash.php'); ?>
 </head>
 <?php
 //	echo 'test';
@@ -40,7 +40,7 @@ $_SESSION['admin']=FALSE;
 	{
 		echo '<p> Vous n êtes pas inscrit</p>';
 		echo 'redirection sur la page d\'accueil dans 2 sec';
-        echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">';
+        echo '<meta http-equiv="refresh" content="2; url=../login.php">';
 	}
 	else
 	{
@@ -57,23 +57,23 @@ $_SESSION['admin']=FALSE;
         	if($req['group']=="admin")
         	{
         		$_SESSION['admin']=TRUE;
-        		echo '<meta http-equiv="refresh" content="1; url=manager/admin/admin_board.php">';
+        		echo '<meta http-equiv="refresh" content="1; url=../../index.php?page=admin">';
         	}
         	else if($req['group']=="user")
         	{
-				echo '<meta http-equiv="refresh" content="1; url=manager/board.php">';
+				echo '<meta http-equiv="refresh" content="1; url=../../index.php?page=board">';
         	}
         	else
         	{
         		echo 'erreur';
-        		echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">';
+        		echo '<meta http-equiv="refresh" content="2; url=../../index.php">';
         	}
         }
         else {
         session_destroy();
         echo 'Password incorrect...<br/>';
         echo 'redirection sur la page d\'accueil dans 2 sec';
-        echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">'; 
+        echo '<meta http-equiv="refresh" content="2; url=../../index.php">'; 
         }
 	}
 ?>

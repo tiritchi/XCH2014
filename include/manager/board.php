@@ -2,7 +2,7 @@
 session_start();
 if(!(isset($_SESSION['connected']) && $_SESSION['connected']=TRUE))
 	{
-		echo '<meta http-equiv="refresh" content="0; url=../xTremCergyHunting.php">';
+		echo '<meta http-equiv="refresh" content="0; url=../../login.php">';
 	}
 else
 	{?>
@@ -60,7 +60,7 @@ else
 			                                <li><a href="#">Action</a></li>
 			                                <li><a href="#">Another action</a></li>
 			                                <li class="divider"></li>
-			                                <li><a href="../logout.php">Log out</a></li>
+			                                <li><a href="../../index.php?page=logout">Log out</a></li>
 			                            </ul>
 			                        </li>
 			                    </ul>

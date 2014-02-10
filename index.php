@@ -19,6 +19,9 @@ if (isset($_GET['page']) && $_GET['page'] != "")
 	case "register":
 		include($basepath."register/register2.php");
 		break;
+	case "post":
+		include($basepath."register/post.php")
+		break;
 	case "admin":
 		include($basepath."manager/admin/admin_board.php");
 		break;

@@ -32,7 +32,7 @@
             </a>
         </div>
         <div class="navbar-collapse collapse">
-            <form class="navbar-form navbar-right" action="login.php" method="post">
+            <form class="navbar-form navbar-right" action="../login.php?page=login" method="post">
                 <div class="form-group">
                     <input class="form-control" name='email' type="text" placeholder="Email"></input>
                 </div>
@@ -42,7 +42,7 @@
                 <button class="btn btn-success" type="submit">
                     Sign in
                 </button>
-                <a class="btn btn-primary btn-sm" role="button" href="register/register2.php">
+                <a class="btn btn-primary btn-sm" role="button" href="../login.php?page=register">
             	Sign up ! »
        			</a>
             </form>
@@ -63,7 +63,7 @@
             
         </p>
         <p>
-        <a class="btn btn-primary btn-lg" role="button" href="register/register2.php">
+        <a class="btn btn-primary btn-lg" role="button" href="../login.php?page=register">
             Inscrivez-vous ! »
         </a>
         </p>

@@ -4,8 +4,8 @@
 	<title>Register</title>
 	<meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
-    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../signin.css"></link>
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../signin.css"></link>
     <?php require('../lib/PasswordHash.php'); ?>
 </head>
 <?php
@@ -30,7 +30,7 @@
 			<div class="alert alert-warning">
   				<strong>Warning!</strong> Vous êtes déjà inscrit ! redirection sur la page d\'accueil dans 2 sec
 			</div>';
-        echo '<meta http-equiv="refresh" content="2; url=../xTremCergyHunting.php">';
+        echo '<meta http-equiv="refresh" content="2; url=../../index.php">';
 	}
 	elseif (isset($_POST['password']) AND $_POST['password'] == "test" AND $row_count==0)
 	{	
@@ -64,7 +64,7 @@
   				<strong>Successful signup ! thanks</strong> <br>
   				redirection sur la page d\'accueil dans quelques secondes ...
 			</div>';
-        echo '<meta http-equiv="refresh" content="10; url=../xTremCergyHunting.php">'; 
+        echo '<meta http-equiv="refresh" content="10; url=../../index.php">'; 
 	}
 	else
 	{
