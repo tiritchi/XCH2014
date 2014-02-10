@@ -18,7 +18,7 @@ session_start(); // On démarre la session AVANT toute chose
 </head>
 <body>
     <div class="bs-example">
-        <nav id="myNavbar" class="navbar navbar-default" role="navigation">
+        <nav id="myNavbar" class="navbar navbar-inverse" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="container">
                 <div class="navbar-header">
