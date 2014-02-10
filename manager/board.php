@@ -1,7 +1,10 @@
 <?php
 session_start();
 if(isset($_SESSION['connected']) && $_SESSION['connected']=TRUE){
-	echo '<meta http-equiv="refresh" content="0; url=xTremCergyHunting.php">';
+	}
+else
+{
+	echo '<meta http-equiv="refresh" content="0; url=../xTremCergyHunting.php">';
 	echo '<!--';
 } 
 ?>
@@ -75,11 +78,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=TRUE){
 
 </body>
 </html>
-<?php
-if(!$_SESSION['connected']=TRUE){
-	echo '-->';
-} 
-?>
+
 
 
 
