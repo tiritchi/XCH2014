@@ -20,7 +20,7 @@
 		echo '<p> erreur DB</p>';
 	}
 	$row_count = '0';
-	$stmt = $bdd->query('SELECT mail FROM users WHERE mail=\'$email\'');
+	$stmt = $bdd->query('SELECT mail FROM users WHERE mail=\''$_POST['Email']'\'');
 	$row_count = $stmt->rowCount();
 
 	if($row_count==1)
@@ -34,7 +34,7 @@
 	}
 	elseif (isset($_POST['password']) AND $_POST['password'] == "test" AND $row_count==0)
 	{	
-		
+		echo $row_count;
 		//hashage du password
 		$password = $_POST['userpsswd'];
         $hasher = new PasswordHash(8, FALSE);
