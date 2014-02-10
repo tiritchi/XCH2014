@@ -14,7 +14,7 @@ if (isset($_GET['page']) && $_GET['page'] != "")
 }
 else
 {
-    header('Location: ./index.php?page=xTremCergyHunting.php');
+    header('Location: ./index.php?page=xTremCergyHunting');
 }
  
 ?>
