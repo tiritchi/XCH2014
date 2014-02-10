@@ -5,8 +5,8 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
         <title>xTremCergyHunting</title>
-        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="../signin.css"></link>
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="signin.css"></link>
 
     </head>
     
@@ -32,7 +32,7 @@
             </a>
         </div>
         <div class="navbar-collapse collapse">
-            <form class="navbar-form navbar-right" action="../index.php?page=login" method="post">
+            <form class="navbar-form navbar-right" action="index.php?page=login" method="post">
                 <div class="form-group">
                     <input class="form-control" name='email' type="text" placeholder="Email"></input>
                 </div>
@@ -42,7 +42,7 @@
                 <button class="btn btn-success" type="submit">
                     Sign in
                 </button>
-                <a class="btn btn-primary btn-sm" role="button" href="../login.php?page=register">
+                <a class="btn btn-primary btn-sm" role="button" href="login.php?page=register">
             	Sign up ! »
        			</a>
             </form>
@@ -63,7 +63,7 @@
             
         </p>
         <p>
-        <a class="btn btn-primary btn-lg" role="button" href="../index.php?page=register">
+        <a class="btn btn-primary btn-lg" role="button" href="index.php?page=register">
             Inscrivez-vous ! »
         </a>
         </p>
