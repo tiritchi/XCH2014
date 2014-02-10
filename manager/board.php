@@ -23,7 +23,7 @@ session_start(); // On démarre la session AVANT toute chose
 	include("../access/php");
 	if($grant==true)
 	{
-		echo '
+		echo "
     <div class="bs-example">
         <nav id="myNavbar" class="navbar navbar-inverse" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -73,7 +73,7 @@ session_start(); // On démarre la session AVANT toute chose
 		<h1>Hello, world!</h1>
 		<p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
 	</div>
-	';
+	";
 	}
 else
 {
