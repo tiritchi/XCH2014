@@ -1,6 +1,11 @@
 <?php
-session_start(); // On démarre la session AVANT toute chose
+session_start();
+if(!$_SESSION['connected']=TRUE){
+	echo '<--';
+	echo '<meta http-equiv="refresh" content="0; url=xTremCergyHunting.php">';
+} 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +25,7 @@ session_start(); // On démarre la session AVANT toute chose
 
     <div class="bs-example">
         <nav id="myNavbar" class="navbar navbar-inverse" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
+
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -31,7 +36,7 @@ session_start(); // On démarre la session AVANT toute chose
                     </button>
                     <a class="navbar-brand" href="#">Brand</a>
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
+
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href="#">Home</a></li>
@@ -58,7 +63,7 @@ session_start(); // On démarre la session AVANT toute chose
                             </ul>
                         </li>
                     </ul>
-                </div><!-- /.navbar-collapse -->
+                </div>
             </div>
         </nav>
     </div> 

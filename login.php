@@ -1,6 +1,7 @@
 <?php
 session_start(); // On démarre la session AVANT toute chose
 $_SESSION['user']=$_POST['email'];
+$_SESSION['connected']=FALSE;
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -50,6 +51,7 @@ $_SESSION['user']=$_POST['email'];
         $check = $hasher->CheckPassword($psswd, $password_correct);
          
         if ($check) {
+        	$_SESSION['connected']=TRUE;
 	        echo "Redirecting ... ";
 			echo '<meta http-equiv="refresh" content="1; url=manager/board.php">'; 
 //			echo $_SESSION['user'];
