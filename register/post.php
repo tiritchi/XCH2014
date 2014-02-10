@@ -35,7 +35,7 @@
 		$phone = $_POST['Phone'];
 		$sexe = $_POST['sexe'];
 		$psswd = $hash;
-		$date = '';
+		$date = NOW();
 
 		//envoie des informations à la DB
 
