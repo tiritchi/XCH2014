@@ -7,7 +7,13 @@ session_start(); // On démarre la session AVANT toute chose
 	<meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../signin.css"></link> 
+    <link rel="stylesheet" href="../signin.css"></link>
+    <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.dropdown-toggle').dropdown();
+        });
+   </script> 
 </head>
 <html>
 	<nav class="navbar navbar-inverse" role="navigation">
