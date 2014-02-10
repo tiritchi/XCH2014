@@ -32,7 +32,7 @@
 		echo 'redirection sur la page d\'accueil dans 2 sec';
         echo '<meta http-equiv="refresh" content="10; url=../xTremCergyHunting.php">';
 	}
-	elseif (isset($_POST['password']) AND $_POST['password'] == "test" AND $row_count==0)
+	elseif (isset($_POST['password']) AND $_POST['password'] == "test" AND $row_count=='0')
 	{	
 		
 		//hashage du password
