@@ -1,3 +1,7 @@
+<?php
+session_start(); // On démarre la session AVANT toute chose
+$_SESSION['user']=$_POST['email'];
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -47,7 +51,7 @@
          
         if ($check) {
 	        echo "Password correct!";
-			echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">'; 
+			echo '<meta http-equiv="refresh" content="2; url=board/board.php">'; 
         }
         else {
          echo 'Password incorrect...<br/>';
