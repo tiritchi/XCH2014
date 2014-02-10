@@ -2,11 +2,9 @@
  
 if (isset($_GET['page']) && $_GET['page'] != "")
 {
-	echo '1';
     $basepath = "include/";
     switch ($_GET['page']){
 	case "index":
-		echo 'test';
 		include($basepath."index.php");
 		break;
 	case "login":
@@ -22,7 +20,7 @@ if (isset($_GET['page']) && $_GET['page'] != "")
 		include($basepath."register/register2.php");
 		break;
 	case "post":
-		include($basepath."register/post.php")
+		include($basepath."register/post.php");
 		break;
 	case "admin":
 		include($basepath."manager/admin/admin_board.php");
@@ -33,7 +31,6 @@ if (isset($_GET['page']) && $_GET['page'] != "")
 }
 else
 {
-    echo "1";
     header('Location: ./index.php?page=index');
 }
  
