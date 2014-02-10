@@ -10,6 +10,9 @@ if (isset($_GET['page']) && $_GET['page'] != "")
 	case "login":
 		include($basepath."login.php");
 		break;
+	case "logout":
+		include($basepath."logout.php");
+		break;
 	case "board":
 		include($basepath."manager/board.php");
 		break;
