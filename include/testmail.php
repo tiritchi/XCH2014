@@ -1,51 +1,29 @@
 <?php
-$mail = 'tiritchi@gmail.com'; // Déclaration de l'adresse de destination.
-if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail)) // On filtre les serveurs qui rencontrent des bogues.
-{
-	$passage_ligne = "\r\n";
+
+echo 'envoi du mail';
+//include the file
+require_once('lib/phpmailer/class.phpmailer.php');
+
+$phpmailer          = new PHPMailer();
+
+
+$phpmailer->IsSMTP(); // telling the class to use SMTP
+$phpmailer->Host       = "ssl://smtp.gmail.com"; // SMTP server
+$phpmailer->SMTPAuth   = true;                  // enable SMTP authentication
+$phpmailer->Port       = 587;          // set the SMTP port for the GMAIL server; 465 for ssl and 587 for tls
+$phpmailer->Username   = "tiritchi@gmail.com"; // Gmail account username
+$phpmailer->Password   = "12030657";        // Gmail account password
+
+$phpmailer->SetFrom('tiritchi@gmail.com', 'cedric pillet'); //set from name
+
+$phpmailer->Subject    = "test";
+$phpmailer->MsgHTML($body);
+
+$phpmailer->AddAddress("tiritchi@gmail.com", "cedric pillet");
+
+if(!$phpmailer->Send()) {
+  echo "Mailer Error: " . $phpmailer->ErrorInfo;
+} else {
+  echo "Message sent!";
 }
-else
-{
-	$passage_ligne = "\n";
-}
-//=====Déclaration des messages au format texte et au format HTML.
-$message_txt = "Salut à tous, voici un e-mail envoyé par un script PHP.";
-$message_html = "<html><head></head><body><b>Salut à tous</b>, voici un e-mail envoyé par un <i>script PHP</i>.</body></html>";
-//==========
- 
-//=====Création de la boundary
-$boundary = "-----=".md5(rand());
-//==========
- 
-//=====Définition du sujet.
-$sujet = "Hey mon ami !";
-//=========
- 
-//=====Création du header de l'e-mail.
-$header = "From: \"WeaponsB\"<weaponsb@mail.fr>".$passage_ligne;
-$header.= "Reply-to: \"WeaponsB\" <weaponsb@mail.fr>".$passage_ligne;
-$header.= "MIME-Version: 1.0".$passage_ligne;
-$header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
-//==========
- 
-//=====Création du message.
-$message = $passage_ligne."--".$boundary.$passage_ligne;
-//=====Ajout du message au format texte.
-$message.= "Content-Type: text/plain; charset=\"ISO-8859-1\"".$passage_ligne;
-$message.= "Content-Transfer-Encoding: 8bit".$passage_ligne;
-$message.= $passage_ligne.$message_txt.$passage_ligne;
-//==========
-$message.= $passage_ligne."--".$boundary.$passage_ligne;
-//=====Ajout du message au format HTML
-$message.= "Content-Type: text/html; charset=\"ISO-8859-1\"".$passage_ligne;
-$message.= "Content-Transfer-Encoding: 8bit".$passage_ligne;
-$message.= $passage_ligne.$message_html.$passage_ligne;
-//==========
-$message.= $passage_ligne."--".$boundary."--".$passage_ligne;
-$message.= $passage_ligne."--".$boundary."--".$passage_ligne;
-//==========
- 
-//=====Envoi de l'e-mail.
-mail($mail,$sujet,$message,$header);
-//==========
 ?>
