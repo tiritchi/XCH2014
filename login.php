@@ -3,6 +3,7 @@ session_start(); // On démarre la session AVANT toute chose
 $_SESSION['user']=NULL;
 $_SESSION['connected']=FALSE;
 $_SESSION['admin']=FALSE;
+$_SESSION['lock']=1;
 ?>
 <!DOCTYPE HTML>
 <html>

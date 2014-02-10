@@ -1,10 +1,11 @@
 <?php
 session_start();
 if(isset($_SESSION['connected']) && $_SESSION['connected']=TRUE && $_SESSION['admin']=TRUE && isset($_SESSION['admin'])){
-    require "header.php";
+    $_SESSION['lock']=0;
+    include 'header.php';
     echo '<body>';
-    require "navbar.php";
-    require "panel.php";
+    include 'navbar.php';
+    include 'panel.php';
     echo '
         </body>
         </html>';
