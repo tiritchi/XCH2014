@@ -44,10 +44,10 @@
 				{
 				?>
 					<TR> 
-						<TH> <?php echo '$donnees[\'nom\']';?> </TH> 
-						<TD> Valeur B2 </TD> 
-						<TD> Valeur B3 </TD> 
-						<TD> Valeur B4 </TD> 
+						<TD> <?php echo $donnees['nom'];?> </TD> 
+						<TD> <?php echo $donnees['possesseur'];?> </TD> 
+						<TD> <?php echo $donnees['prix'];?> </TD> 
+						<TD> <?php echo $donnees['commentaires'];?> </TD> 
 					</TR> 
 				<?php
 				}
