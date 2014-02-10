@@ -46,7 +46,7 @@
 		    'email' => $email,
 		    'phone' => $phone,
 		    'sexe' => $sexe,
-		    'psswd'=>$psswd,
+		    'psswd'=>$psswd
 //		    'date'=>$date
 
 	    ));
