@@ -14,8 +14,7 @@
 		</style>
 		</head>
 		<body>
-			<div class="jumbotron">
-
+			<div class="page-header">
 			    <div class="bs-example">
 			        <nav id="myNavbar" class="navbar navbar-inverse" role="navigation">
 
@@ -62,3 +61,4 @@
 			            </div>
 			        </nav>
 			    </div>
+			</div>
