@@ -2,6 +2,7 @@
  
 if (isset($_GET['page']) && $_GET['page'] != "")
 {
+	echo '1';
     $basepath = "./include/";
     switch ($_GET['page']){
 	case "index":
