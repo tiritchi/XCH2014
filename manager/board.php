@@ -1,6 +1,12 @@
 <?php
 session_start(); // On démarre la session AVANT toute chose
 ?>
+<?php 
+	include("../access/php");
+	if($grant==true)
+	{
+		echo '
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,7 +54,7 @@ session_start(); // On démarre la session AVANT toute chose
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><?php echo $_SESSION['user']?> <b class="caret"></b></a>
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><?php echo $_SESSION[/'user/']?> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Action</a></li>
                                 <li><a href="#">Another action</a></li>
@@ -68,3 +74,10 @@ session_start(); // On démarre la session AVANT toute chose
 	</div>
 </body>
 </html>
+	'
+}
+else
+{
+	echo '<meta http-equiv="refresh" content="2; url=xTremCergyHunting.php">';
+}
+?>
