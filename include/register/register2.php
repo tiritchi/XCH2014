@@ -62,7 +62,7 @@
 
 				<!-- Button -->
 				<div class="row">
-					<div class ="col-lg-2 col-xs-2 ">
+					<div class ="col-lg-6 col-xs-6 ">
 						<div class="input-group">
 							<input type="password" id="password" name="password" placeholder="password" class="form-control" required=""> 
 						</div>
