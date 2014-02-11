@@ -71,7 +71,7 @@
 						<div class="input-group">
 							<button id="Submit" name="Submit" class="btn btn-primary">Submit</button>
 						</div>
-					</divclass="col-lg-offset-1 col-xs-offset-1">
+					</div class="col-lg-offset-1 col-xs-offset-1">
 				</div>
 
 				</fieldset>
