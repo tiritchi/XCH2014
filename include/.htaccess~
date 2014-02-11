@@ -1,8 +1,0 @@
-PerlSetVar AuthFile /secret/passadmin.txt
-AuthName "Acces Restreint" 
-AuthType Basic
-
-<limit GET POST>
-require valid-user 
-</limit> 
-
