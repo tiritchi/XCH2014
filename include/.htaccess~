@@ -1,4 +1,4 @@
-PerlSetVar AuthFile passadmin.txt
+PerlSetVar AuthFile /secret/passadmin.txt
 AuthName "Acces Restreint" 
 AuthType Basic
 
