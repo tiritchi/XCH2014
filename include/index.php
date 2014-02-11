@@ -38,7 +38,7 @@
                 </a>
             </div>
             <div class="navbar-collapse collapse">
-                <form class="navbar-form navbar-right" action="index.php?page=login" method="post">
+                <form class="navbar-form navbar-right" action="login" method="post">
                     <div class="form-group">
                         <input class="form-control" name='email' type="text" placeholder="Email"></input>
                     </div>
@@ -48,9 +48,7 @@
                     <button class="btn btn-success" type="submit">
                         Sign in
                     </button>
-                    <a class="btn btn-primary btn-sm" role="button" href="login">
-                	Sign up ! »
-           			</a>
+                    <a class="btn btn-primary btn-sm" role="button" href="register">Sign up !</a>
                 </form>
             </div>
             <!--
@@ -68,7 +66,7 @@
             
         </p>
         <p>
-        <a class="btn btn-primary btn-lg" role="button" href="index.php?page=register">
+        <a class="btn btn-primary btn-lg" role="button" href="register">
             Inscrivez-vous ! »
         </a>
         </p>

@@ -13,12 +13,12 @@
 		<div class="panel panel-primary">
 			<div class="panel-heading">
 				<ul class="pager">
-					<li class="previous"><a href="../">&larr; ACCUEIL</a></li>
+					<li class="previous"><a href=".">&larr; ACCUEIL</a></li>
 					<li class="next"><h2 class="panel-title">Formulaire d'inscription</h2></li>
 				</ul>				
   			</div>
   			<div class="panel-body">
-  				<form class="form-horizontal" action="post.php" method="post">
+  				<form class="form-horizontal" action="post" method="post">
 				<fieldset>
 
 				<!-- Text input-->

@@ -51,7 +51,7 @@
 			                                <li><a href="#">Action</a></li>
 			                                <li><a href="#">Another action</a></li>
 			                                <li class="divider"></li>
-			                                <li><a href="index.php?page=logout">Log out</a></li>
+			                                <li><a href="logout">Log out</a></li>
 			                            </ul>
 			                        </li>
 			                    </ul>
