@@ -1,2 +1,2 @@
-
-
+RewriteEngine On
+RewriteRule    ^XCH2014/index.php$  /XCH2014/
