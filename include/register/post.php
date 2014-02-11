@@ -43,18 +43,24 @@
 		$email =$_POST['Email'];
 		$phone = $_POST['Phone'];
 		$sexe = $_POST['sexe'];
+		$adress = $_POST['Adress_a']."-".$_POST['Adress_pc']."-".$_POST['Adress_c'];
+		$date = $_POST['Bd_y']."-".$_POST['Bd_m']."-".$_POST['Bd_d'];
+		$nick = $_POST['Nn'];
 		$psswd = $hash;
 
 
 		//envoie des informations à la DB
 
-		$req = $bdd->prepare('INSERT INTO users (fname,lname,school,mail,phone,sexe,psswd,reg_date) VALUES (:prenom,:nom,\'\',:email,:phone,:sexe,:psswd,NOW())');
+		$req = $bdd->prepare('INSERT INTO users (fname,lname,school,mail,phone,sexe,adresse,date_naissance,pseudo,psswd,reg_date) VALUES (:prenom,:nom,\'\',:email,:phone,:sexe,:adresse,:date_n,:pseudo,:psswd,NOW())');
 		$req->execute(array(
 		    'nom' => $nom,
 		    'prenom' => $prenom,
 		    'email' => $email,
 		    'phone' => $phone,
 		    'sexe' => $sexe,
+		    'adresse'=>$adress,
+		    'date_n'=>$date,
+		    'pseudo'=>$nick,
 		    'psswd'=>$psswd
 	    ));
    		echo '

@@ -100,7 +100,7 @@
 						<option>12</option>
 
 					</select>
-	    			<select class="selectpicker show-tick" multiple title='YY' name="BD_y">
+	    			<select class="selectpicker show-tick" multiple title='YY' name="Bd_y">
 						<option>97</option>
 						<option>96</option>
 						<option>95</option>
