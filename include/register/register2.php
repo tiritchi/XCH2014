@@ -13,28 +13,26 @@
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
-    <!-- 2.3.2
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.js"></script>
-    -->
     <script type="text/javascript">
         $(window).on('load', function () {
+        	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) 
+        	{
+    			$('.selectpicker').selectpicker('mobile');
 
-            $('.selectpicker').selectpicker({
-                'selectedText': 'cat'
+			}
+
+            else
+            {
+            	$('.selectpicker').selectpicker({
+               	width:'auto'
+               }
             });
 
-            // $('.selectpicker').selectpicker('hide');
         });
     </script>
 </head>
 
 <body>
-	<select class="selectpicker">
-	    <option>Mustard</option>
-	    <option>Ketchup</option>
-	    <option>Relish</option>
-	</select>
 	<div class="col-lg-4 col-lg-offset-4">
 		<div class="panel panel-primary">
 			<div class="panel-heading">
@@ -60,9 +58,78 @@
 				</div><br/>
 
 				<!-- Text input-->
-				<div class="input-group">
-				    <span class="input-group-addon">Birthday</span>
-				    <input id="Birthday" name="birthday" placeholder="Birthday" class="form-control" required="" type="text">
+				<div class="row">
+					<div class="input-group">
+					    <span class="input-group-addon">Birthday</span>
+		    			<select class="selectpicker thick" title='DD' name="Bd_d">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10</option>
+							<option>11</option>
+							<option>12</option>
+							<option>13</option>
+							<option>14</option>
+							<option>15</option>
+							<option>16</option>
+							<option>17</option>
+							<option>18</option>
+							<option>19</option>
+							<option>20</option>
+							<option>21</option>
+							<option>22</option>
+							<option>23</option>
+							<option>24</option>
+							<option>25</option>
+							<option>26</option>
+							<option>27</option>
+							<option>28</option>
+							<option>29</option>
+							<option>30</option>
+							<option>31</option>
+						</select>
+		    			<select class="selectpicker thick" title='MM' name="Bd_m">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10</option>
+							<option>11</option>
+							<option>12</option>
+
+						</select>
+		    			<select class="selectpicker thick" title='YY' name="BD_y">
+							<option>97</option>
+							<option>96</option>
+							<option>95</option>
+							<option>94</option>
+							<option>93</option>
+							<option>92</option>
+							<option>91</option>
+							<option>90</option>
+							<option>89</option>
+							<option>88</option>
+							<option>87</option>
+							<option>86</option>
+							<option>85</option>
+							<option>84</option>
+							<option>83</option>
+							<option>82</option>
+							<option>81</option>
+							<option>80</option>
+						</select>
+					</div>
 				</div><br/>
 
 				<!-- Text input-->
@@ -79,6 +146,12 @@
 
 				<!-- Text input-->
 				<div class="input-group">
+				    <span class="input-group-addon">Nickname</span>
+				    <input id="Nickname" name="Nn" placeholder="Nickname" class="form-control" required="" type="text">
+				</div><br/>
+
+				<!-- Text input-->
+				<div class="input-group">
 				    <span class="input-group-addon">Password</span>
 				    <input type="password" id="userpsswd" name="userpsswd" placeholder="password" class="form-control" required="">
 				</div><br/>
@@ -89,6 +162,20 @@
 				    <select class="selectpicker" name="sexe">
 						<option>Male</option>
 						<option>Female</option>
+					</select>
+				</div><br/>
+
+				<div class="input-group">
+				    <span class="input-group-addon">School</span>
+				    <select class="selectpicker" name="school">
+						<option>ENSEA</option>
+						<option>EISTI</option>
+						<option>FAC</option>
+						<option>EBI</option>
+						<option>ISTOM</option>
+						<option>ESSEC</option>
+						<option>OSTEO</option>
+						<option>EPMI</option>
 					</select>
 				</div><br/>
 
