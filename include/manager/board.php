@@ -2,7 +2,7 @@
 session_start();
 if(!(isset($_SESSION['connected']) && $_SESSION['connected']=TRUE))
 	{
-		echo '<meta http-equiv="refresh" content="0; url=localhost/XCH2014/">';
+		echo '<meta http-equiv="refresh" content="0; url=.">';
 	}
 else
 	{
