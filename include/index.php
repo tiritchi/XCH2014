@@ -15,7 +15,7 @@
             .bs-example{
                 margin: 20px;
             }
-
+        </style>
     </head>
     
     <body>
