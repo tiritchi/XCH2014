@@ -50,7 +50,7 @@
 				</div><br/>
 
 				<!-- Text input-->
-				<div class="input-group">
+				<div class="input-group col-lg-offset-1 col-xs-offset-1">
 					<div class="row">
 						<div class="input-group">
 						    <span class="input-group-addon">Birthday</span>
