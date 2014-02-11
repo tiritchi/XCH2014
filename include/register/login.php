@@ -40,7 +40,7 @@ $_SESSION['admin']=FALSE;
 	{
 		echo '<p> Vous n êtes pas inscrit</p>';
 		echo 'redirection sur la page d\'accueil dans 2 sec';
-        echo '<meta http-equiv="refresh" content="2; url=login.php">';
+        echo '<meta http-equiv="refresh" content="2; url=.">';
 	}
 	else
 	{
@@ -57,23 +57,23 @@ $_SESSION['admin']=FALSE;
         	if($req['group']=="admin")
         	{
         		$_SESSION['admin']=TRUE;
-        		echo '<meta http-equiv="refresh" content="1; url=index.php?page=admin">';
+        		echo '<meta http-equiv="refresh" content="1; url=admin">';
         	}
         	else if($req['group']=="user")
         	{
-				echo '<meta http-equiv="refresh" content="1; url=index.php?page=board">';
+				echo '<meta http-equiv="refresh" content="1; url=board">';
         	}
         	else
         	{
         		echo 'erreur';
-        		echo '<meta http-equiv="refresh" content="2; url=index.php">';
+        		echo '<meta http-equiv="refresh" content="2; url=.">';
         	}
         }
         else {
         session_destroy();
         echo 'Password incorrect...<br/>';
         echo 'redirection sur la page d\'accueil dans 2 sec';
-        echo '<meta http-equiv="refresh" content="2; url=index.php">'; 
+        echo '<meta http-equiv="refresh" content="2; url=.">'; 
         }
 	}
 ?>

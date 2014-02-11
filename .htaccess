@@ -1,10 +1,9 @@
 RewriteEngine On
-RewriteRule    ^$  /XCH2014/accueil
-RewriteRule    ^accueil$  /XCH2014/index.php?page=index
+RewriteRule    ^$  /XCH2014/index.php?page=index
 RewriteRule    ^register$  /XCH2014/index.php?page=register
 RewriteRule    ^login$  /XCH2014/index.php?page=login
 RewriteRule    ^admin$  /XCH2014/index.php?page=admin
 RewriteRule    ^board$  /XCH2014/index.php?page=board
 RewriteRule    ^logout$  /XCH2014/index.php?page=logout
 RewriteRule    ^post$  /XCH2014/index.php?page=post
-
+RewriteRule    ^test.html$	/XCH2014/test.php
