@@ -5,8 +5,6 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
         <title>xTremCergyHunting</title>
-        <!--<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="signin.css"></link>-->
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
         <script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
