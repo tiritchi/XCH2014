@@ -4,8 +4,22 @@
 	<title>Register</title>
 	<meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="signin.css"></link>   
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap-select.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap-select.css">
+
+    <!-- 3.0 -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(window).on('load', function () {
+
+            $('.selectpicker').selectpicker({
+                'selectedText': 'cat'
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -30,7 +44,13 @@
 				<!-- Text input-->
 				<div class="input-group">
 				    <span class="input-group-addon">Last name</span>
-				    <input id="Last name" name="Lname" placeholder="Last_name" class="form-control" required="" type="text">
+				    <input id="Last name" name="Lname" placeholder="Last name" class="form-control" required="" type="text">
+				</div><br/>
+
+				<!-- Text input-->
+				<div class="input-group">
+				    <span class="input-group-addon">Birthday</span>
+				    <input id="Birthday" name="birthday" placeholder="Birthday" class="form-control" required="" type="text">
 				</div><br/>
 
 				<!-- Text input-->
@@ -42,7 +62,7 @@
 				<!-- Text input-->
 				<div class="input-group">
 				    <span class="input-group-addon">Phone N°</span>
-				    <input id="Phone N°" name="Phone" placeholder="06XXXXXXXX" class="form-control" required="" type="text">
+				    <input id="Phone N°" name="Phone" placeholder="XXXXXXXXXX" class="form-control" required="" type="text">
 				</div><br/>
 
 				<!-- Text input-->
