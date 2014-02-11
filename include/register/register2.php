@@ -16,7 +16,8 @@
     <script type="text/javascript">
         $(window).on('load', function () {
         	$('.selectpicker').selectpicker({
-                'selectedText': 'cat'
+                'selectedText': 'cat',
+                'width':'auto'
             });
 
         });
