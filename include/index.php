@@ -48,7 +48,7 @@
                     <button class="btn btn-success" type="submit">
                         Sign in
                     </button>
-                    <a class="btn btn-primary btn-sm" role="button" href="login.php?page=register">
+                    <a class="btn btn-primary btn-sm" role="button" href="login">
                 	Sign up ! »
            			</a>
                 </form>
