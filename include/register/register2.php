@@ -62,7 +62,7 @@
 
 				<!-- Button -->
 				<div class="row">
-					<div class ="col-lg-6 col-xs-6 ">
+					<div class ="col-lg-6 col-xs-6 col-lg-offset-2 col-xs-offset-2">
 						<div class="input-group">
 							<input type="password" id="password" name="password" placeholder="password" class="form-control" required=""> 
 						</div>
@@ -71,7 +71,7 @@
 						<div class="input-group">
 							<button id="Submit" name="Submit" class="btn btn-primary">Submit</button>
 						</div>
-					</div class="col-lg-offset-1 col-xs-offset-1">
+					</div >
 				</div>
 
 				</fieldset>
