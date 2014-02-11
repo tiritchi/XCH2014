@@ -1,3 +1,3 @@
 RewriteEngine On
-RewriteRule    ^index.php?page=index$  /Acceuil
+RewriteRule    ^$  /XCH2014/index.php
 RewriteRule    ^test.html$	/XCH2014/test.php
