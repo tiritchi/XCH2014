@@ -1,5 +1,6 @@
 RewriteEngine On
 RewriteRule    ^$  /XCH2014/index.php?page=index
+RewriteRule    ^accueil$  /XCH2014/index.php?page=index
 RewriteRule    ^register$  /XCH2014/index.php?page=register
 RewriteRule    ^login$  /XCH2014/index.php?page=login
 RewriteRule    ^admin$  /XCH2014/index.php?page=admin
