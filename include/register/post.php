@@ -38,15 +38,15 @@
         $hash = $hasher->HashPassword($password);
         //password hashé
 
-		$nom = $_POST['Lname'];
-		$prenom =$_POST['Fname'];
-		$email =$_POST['Email'];
-		$phone = $_POST['Phone'];
-		$school = $_POST['School'];
-		$sexe = $_POST['Sexe'];
-		$adress = $_POST['Adress_a']."-".$_POST['Adress_pc']."-".$_POST['Adress_c'];
-		$date = $_POST['Bd_y']."-".$_POST['Bd_m']."-".$_POST['Bd_d'];
-		$nick = $_POST['Nn'];
+		$nom = mysql_real_escape_string($_POST['Lname']);
+		$prenom =mysql_real_escape_string($_POST['Fname']);
+		$email =mysql_real_escape_string($_POST['Email']);
+		$phone = intval($_POST['Phone']);
+		$school = mysql_real_escape_string($_POST['School']);
+		$sexe = mysql_real_escape_string($_POST['Sexe']);
+		$adress = mysql_real_escape_string($_POST['Adress_a']."-".$_POST['Adress_pc']."-".$_POST['Adress_c']);
+		$date = mysql_real_escape_string($_POST['Bd_y']."-".$_POST['Bd_m']."-".$_POST['Bd_d']);
+		$nick = mysql_real_escape_string($_POST['Nn']);
 		$psswd = $hash;
 
 
