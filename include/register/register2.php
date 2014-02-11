@@ -67,7 +67,7 @@
 							<input type="password" id="password" name="password" placeholder="password" class="form-control" required=""> 
 						</div>
 					</div>
-					<div >
+					<div class="col-xs-offset-1">
 						<div class="input-group">
 							<button id="Submit" name="Submit" class="btn btn-primary">Submit</button>
 						</div>
