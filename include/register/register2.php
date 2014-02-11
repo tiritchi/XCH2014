@@ -52,8 +52,8 @@
 				<!-- Text input-->
 				<div class="input-group">
 					<div class="row">
+					    <span class="input-group-addon">Birthday</span>
 						<div class="input-group">
-						    <span class="input-group-addon">Birthday</span>
 			    			<select class="selectpicker show-tick" multiple title='DD' name="Bd_d">
 								<option>1</option>
 								<option>2</option>
@@ -87,8 +87,6 @@
 								<option>30</option>
 								<option>31</option>
 							</select>
-						</div>
-						<div class="input-group">
 			    			<select class="selectpicker show-tick" multiple title='MM' name="Bd_m">
 								<option>1</option>
 								<option>2</option>
@@ -104,8 +102,6 @@
 								<option>12</option>
 
 							</select>
-						</div>
-						<div class="input-group">
 			    			<select class="selectpicker show-tick" multiple title='YY' name="BD_y">
 								<option>97</option>
 								<option>96</option>
