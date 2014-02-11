@@ -38,15 +38,15 @@
         $hash = $hasher->HashPassword($password);
         //password hashé
 
-		$nom = mysql_real_escape_string($_POST['Lname']);
-		$prenom =mysql_real_escape_string($_POST['Fname']);
-		$email =mysql_real_escape_string($_POST['Email']);
+		$nom = $bdd->quote($_POST['Lname']);
+		$prenom =$bdd->quote($_POST['Fname']);
+		$email =$bdd->quote($_POST['Email']);
 		$phone = intval($_POST['Phone']);
-		$school = mysql_real_escape_string($_POST['School']);
-		$sexe = mysql_real_escape_string($_POST['Sexe']);
-		$adress = mysql_real_escape_string($_POST['Adress_a']."-".$_POST['Adress_pc']."-".$_POST['Adress_c']);
-		$date = mysql_real_escape_string($_POST['Bd_y']."-".$_POST['Bd_m']."-".$_POST['Bd_d']);
-		$nick = mysql_real_escape_string($_POST['Nn']);
+		$school = $bdd->quote($_POST['School']);
+		$sexe = $bdd->quote($_POST['Sexe']);
+		$adress = $bdd->quote($_POST['Adress_a']."-".$_POST['Adress_pc']."-".$_POST['Adress_c']);
+		$date = $bdd->quote($_POST['Bd_y']."-".$_POST['Bd_m']."-".$_POST['Bd_d']);
+		$nick = $bdd->quote($_POST['Nn']);
 		$psswd = $hash;
 
 
