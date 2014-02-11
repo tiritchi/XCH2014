@@ -50,77 +50,79 @@
 				</div><br/>
 
 				<!-- Text input-->
-				<div class="row">
 					<div class="input-group">
-					    <span class="input-group-addon">Birthday</span>
-		    			<select class="selectpicker show-tick" title='DD' name="Bd_d">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-							<option>6</option>
-							<option>7</option>
-							<option>8</option>
-							<option>9</option>
-							<option>10</option>
-							<option>11</option>
-							<option>12</option>
-							<option>13</option>
-							<option>14</option>
-							<option>15</option>
-							<option>16</option>
-							<option>17</option>
-							<option>18</option>
-							<option>19</option>
-							<option>20</option>
-							<option>21</option>
-							<option>22</option>
-							<option>23</option>
-							<option>24</option>
-							<option>25</option>
-							<option>26</option>
-							<option>27</option>
-							<option>28</option>
-							<option>29</option>
-							<option>30</option>
-							<option>31</option>
-						</select>
-		    			<select class="selectpicker show-tick" title='MM' name="Bd_m">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-							<option>6</option>
-							<option>7</option>
-							<option>8</option>
-							<option>9</option>
-							<option>10</option>
-							<option>11</option>
-							<option>12</option>
+					<div class="row">
+						<div class="input-group">
+						    <span class="input-group-addon">Birthday</span>
+			    			<select class="selectpicker show-tick" title='DD' name="Bd_d">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+								<option>9</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+								<option>13</option>
+								<option>14</option>
+								<option>15</option>
+								<option>16</option>
+								<option>17</option>
+								<option>18</option>
+								<option>19</option>
+								<option>20</option>
+								<option>21</option>
+								<option>22</option>
+								<option>23</option>
+								<option>24</option>
+								<option>25</option>
+								<option>26</option>
+								<option>27</option>
+								<option>28</option>
+								<option>29</option>
+								<option>30</option>
+								<option>31</option>
+							</select>
+			    			<select class="selectpicker show-tick" title='MM' name="Bd_m">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+								<option>9</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
 
-						</select>
-		    			<select class="selectpicker show-tick" title='YY' name="BD_y">
-							<option>97</option>
-							<option>96</option>
-							<option>95</option>
-							<option>94</option>
-							<option>93</option>
-							<option>92</option>
-							<option>91</option>
-							<option>90</option>
-							<option>89</option>
-							<option>88</option>
-							<option>87</option>
-							<option>86</option>
-							<option>85</option>
-							<option>84</option>
-							<option>83</option>
-							<option>82</option>
-							<option>81</option>
-							<option>80</option>
-						</select>
+							</select>
+			    			<select class="selectpicker show-tick" title='YY' name="BD_y">
+								<option>97</option>
+								<option>96</option>
+								<option>95</option>
+								<option>94</option>
+								<option>93</option>
+								<option>92</option>
+								<option>91</option>
+								<option>90</option>
+								<option>89</option>
+								<option>88</option>
+								<option>87</option>
+								<option>86</option>
+								<option>85</option>
+								<option>84</option>
+								<option>83</option>
+								<option>82</option>
+								<option>81</option>
+								<option>80</option>
+							</select>
+						</div>
 					</div>
 				</div><br/>
 
