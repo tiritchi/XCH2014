@@ -22,7 +22,7 @@
 		$req=$bdd->prepare('SELECT * FROM users WHERE user_id=?');
 		$req->execute(array($user_id));
 		$donnees = $req->fetch();
-		$tab = array($donnees['pseudo'],$donnees['fname'],$donnees['lname'],$donnees['school'],$donnees['mail'],$donnees['sexe'],$donnees['date_naissance'],$donnees['phone'],$donnees['adresse']));
+		$tab = array($donnees['pseudo'],$donnees['fname'],$donnees['lname'],$donnees['school'],$donnees['mail'],$donnees['sexe'],$donnees['date_naissance'],$donnees['phone'],$donnees['adresse']);
 		return $tab;
 	}
 
