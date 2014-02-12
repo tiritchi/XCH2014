@@ -135,7 +135,7 @@
 				break;
 		}
 		$u_code.=rand(100,999);
-		$u_code.=substr((string)$Phone,(strlen((string)$Phone)-3),0);
+		$u_code.=substr((string)$Phone,-2);
 		$u_code.='XCH14';
 		return $u_code;
 	}

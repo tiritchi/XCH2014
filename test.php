@@ -5,5 +5,5 @@
 //		$req = $bdd->prepare('INSERT INTO contracts (contract_no,user_id,target_id,complete,exp_date,start_date) VALUES (?,?,?,?,?,NOW())');
 //		$req->execute(array('X32235C65H14','32','33','0','2014-06-12'));
 
-		echo gen_user_code('ENSEA','MALE','0621849218');
+		echo gen_user_code('ENSEA','MALE',"0621849218");
  ?> 
