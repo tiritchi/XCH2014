@@ -62,15 +62,20 @@ else
 						</div>
 						<div class="panel-body">
 						    <ul class="list-group">
-						        <li class="list-group-item">Nickname<?php echo('<span class="pull-right">'.$var[0].'</span>');?></li>
-						        <li class="list-group-item">School<?php echo('<span class="pull-right">'.$var[3].'</span>');?></li>
-						        <li class="list-group-item">First name<?php echo('<span class="pull-right">'.$var[1].'</span>');?></li>
-						        <li class="list-group-item">LAST NAME<?php echo('<span class="pull-right">'.$var[2].'</span>');?></li>
-						        <li class="list-group-item">AAAA/MM/JJ<?php echo('<span class="pull-right">'.$var[6].'</span>');?></li>
-						        <li class="list-group-item">Address<br /><?php echo('<span class="pull-right">'.$var[8].'</span>');?></li>
-						        <li class="list-group-item">e-mail<br /><?php echo('<span class="pull-right">'.$var[4].'</span>');?></li>
-						        <li class="list-group-item">Phone number<?php echo('<span class="pull-right">'.$var[7].'</span>');?></li>
-						        <li class="list-group-item">Sex<?php echo('<span class="pull-right">'.$var[5].'</span>');?></li>
+						        <div class="divst-group-item">Nickname<?php echo('<span class="pull-right">'.$var[0].'</span>');?></div>
+						        <div class="divst-group-item">School<?php echo('<span class="pull-right">'.$var[3].'</span>');?></div>
+						        <div class="divst-group-item">First name<?php echo('<span class="pull-right">'.$var[1].'</span>');?></div>
+						        <div class="divst-group-item">LAST NAME<?php echo('<span class="pull-right">'.$var[2].'</span>');?></div>
+						        <div class="divst-group-item">AAAA/MM/JJ<?php echo('<span class="pull-right">'.$var[6].'</span>');?></div>
+						        <div class="divst-group-item">
+						            <h4 class="divst-group-item-header">Address</h4>
+						            <p class="divst-group-item-text">
+						                <?php echo('<span class="pull-right">'.$var[8].'</span>');?>
+						            </p>
+						        </div>
+						        <div class="divst-group-item">e-mail<?php echo('<span class="pull-right">'.$var[4].'</span>');?></div>
+						        <div class="divst-group-item">Phone number<?php echo('<span class="pull-right">'.$var[7].'</span>');?></div>
+						        <div class="divst-group-item">Sex<?php echo('<span class="pull-right">'.$var[5].'</span>');?></div>
 						    </ul>
 						</div>
 					</div>
