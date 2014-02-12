@@ -49,9 +49,9 @@
 			                        <li class="dropdown">
 			                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><?php echo $_SESSION['user']?> <b class="caret"></b></a>
 			                            <ul class="dropdown-menu">
-			                                <li><span class="glyphicon glyphicon-cog"></span><a href="#">	Settings</a></li>
+			                                <li><a href="#"><span class="glyphicon glyphicon-cog"></span>	Settings</a></li>
 			                                <li class="divider"></li>
-			                                <li><div class="row"><span class="glyphicon glyphicon-log-out"></span><a href="logout">	Log out</a></div></li>
+			                                <li><a href="logout"><span class="glyphicon glyphicon-log-out"></span>	Log out</a></li>
 			                            </ul>
 			                        </li>
 			                    </ul>
