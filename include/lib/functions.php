@@ -76,7 +76,8 @@
 	function mark_as_complete ($bdd,$contract_id){
 		try 
 		{
-			$bdd->exec('UPDATE contracts SET complete = 1 WHERE id=$contract_id');
+			$req=$bdd->prepare('UPDATE contracts SET complete =? WHERE id=?');
+			$req->execute(array('1',$contract_id))
 		}
 		catch (Exception $e) 
 		{
