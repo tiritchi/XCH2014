@@ -9,7 +9,8 @@ else
 		include '../lib/db.php';
 		include 'header.php';
 		$bdd=db_init();
-		$stmt = $bdd->query("SELECT pseudo FROM users WHERE mail=\'$_SESSION['user']\'");
+		$mail = $_SESSION['user'];
+		$stmt = $bdd->query("SELECT pseudo FROM users WHERE mail='$mail'");
 		$data = $stmt->fetch();
 		$tmp = $data['pseudo'];
 		$user = substr($tmp,1,strlen($tmp));
