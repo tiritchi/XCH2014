@@ -115,10 +115,13 @@ else
                     <img src="ressources/profile.jpg" class="img-responsive" alt="Responsive image" style="height: 180px; width: 100%; display: block;"></img>
 			      </div>
 			      <div class="modal-footer">
-                    <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Enter target number here..." name="target-number"><button type="button" class="btn btn-primary">Send</button></input>
+                    <div class="input-group">
+                       <input class="form-control" type="text"></input>
+                          <span class="input-group-btn">
+                              <button class="btn btn-default" type="button">Go!</button>
+                       </span>
                     </div>
-			      </div>
+                  </div>
 			    </div>
 			  </div>
 			</div>
