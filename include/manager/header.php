@@ -11,7 +11,7 @@
             .bs-example{
                 margin: 20px;
             }
-        <?php require('../lib/events.php'); ?>  
+        <?php require('include/lib/db.php'); ?>  
         </style>
 		</head>
 		<body>
