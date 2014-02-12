@@ -59,7 +59,7 @@
             </div>
         </div>
             
-        <div class="jumbotron">
+<!--        <div class="jumbotron">-->
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
               <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -87,6 +87,6 @@
                     <span class="glyphicon glyphicon-chevron-right"></span>
                 </a>
             </div>
-        </div>
+       <!-- </div>-->
     </body>
 </html>
