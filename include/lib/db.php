@@ -62,15 +62,12 @@
 
 	function create_contract($bdd,$user_id,$target_id,$exp_date){
 		srand();
-		$cno='X'.rand(10000,99999).'C'.$target_id.'H14';
+		$cno='X'.rand(10000,99999).'C'.$target_id.'H14'.rand(10,99);
 		$uid = intval($user_id);
 		$tid = intval($target_id);
 		$req = $bdd->prepare('INSERT INTO contracts (contract_no,user_id,target_id,complete,exp_date,start_date) VALUES (?,?,?,?,?,NOW())');
 		$req->execute(array($cno,$user_id,$target_id,'0',$exp_date));
-//		$req = $bdd->prepare('INSERT INTO contracts (contract_no,user_id,target_id,complete,exp_date,start_date) VALUES (:contract_no,:uid,:tid,:complete,:expd,NOW()');
-//		$req->execute(array('uid'=>$uid,'tid'=>$tid,'complete'=>'0','expd'=>$exp_date,'contract_no'=>$contract_no));
-	    echo $contract_no;
-		return 0;
+		return $contract_no;
 	}
 
 	function mark_as_complete ($bdd,$contract_id){
