@@ -75,13 +75,13 @@
                         ...
                     </div>
                 </div>
-                <div class="item active">
+                <div class="item">
                 <img src="ressources/img_2.png" alt="pouet">
                     <div class="carousel-caption">
                         ...
                     </div>
                 </div>
-                <div class="item active">
+                <div class="item">
                 <img src="ressources/img_3.jpg" alt="pouet">
                     <div class="carousel-caption">
                         ...
