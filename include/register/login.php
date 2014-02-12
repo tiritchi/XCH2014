@@ -1,8 +1,8 @@
 <?php
 session_start(); // On démarre la session AVANT toute chose
-$_SESSION['user']=NULL;
 $_SESSION['connected']=FALSE;
 $_SESSION['admin']=FALSE;
+$_SESSION['user']=NULL;
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -47,34 +47,34 @@ $_SESSION['admin']=FALSE;
 //		echo $req['psswd'];
 		$req=$stat->fetch();
 		$password_correct = $req['psswd']; /* Le hash stocké précédemment */
-        $hasher = new PasswordHash(8, FALSE);
-        $check = $hasher->CheckPassword($psswd, $password_correct);
+                $hasher = new PasswordHash(8, FALSE);
+                $check = $hasher->CheckPassword($psswd, $password_correct);
          
-        if ($check) {
-        	$_SESSION['user']=$_POST['email'];
-        	$_SESSION['connected']=TRUE;
-        	echo "Redirecting ... ";
-        	if($req['group']=="admin")
-        	{
-        		$_SESSION['admin']=TRUE;
-        		echo '<meta http-equiv="refresh" content="1; url=admin">';
-        	}
-        	else if($req['group']=="user")
-        	{
-				echo '<meta http-equiv="refresh" content="1; url=board">';
-        	}
-        	else
-        	{
-        		echo 'erreur';
-        		echo '<meta http-equiv="refresh" content="2; url=.">';
-        	}
-        }
-        else {
-        session_destroy();
-        echo 'Password incorrect...<br/>';
-        echo 'redirection sur la page d\'accueil dans 2 sec';
-        echo '<meta http-equiv="refresh" content="2; url=.">'; 
-        }
+                if ($check) {
+                        $_SESSION['user'] = substr($req['pseudo'],1,strlen($req['pseudo']));
+                	$_SESSION['connected']=TRUE;
+                	echo "Redirecting ... ";
+                	if($req['group']=="admin")
+                	{
+                		$_SESSION['admin']=TRUE;
+                		echo '<meta http-equiv="refresh" content="1; url=admin">';
+                	}
+                	else if($req['group']=="user")
+                	{
+        				echo '<meta http-equiv="refresh" content="1; url=board">';
+                	}
+                	else
+                	{
+                		echo 'erreur';
+                		echo '<meta http-equiv="refresh" content="2; url=.">';
+                	}
+                }
+                else {
+                session_destroy();
+                echo 'Password incorrect...<br/>';
+                echo 'redirection sur la page d\'accueil dans 2 sec';
+                echo '<meta http-equiv="refresh" content="2; url=.">'; 
+                }
 	}
 ?>
 </html>

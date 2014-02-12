@@ -6,14 +6,7 @@ if(!(isset($_SESSION['connected']) && $_SESSION['connected']=TRUE))
 	}
 else
 	{
-		include 'include/lib/db.php';
 		include 'header.php';
-		$bdd=db_init();
-		$mail = $_SESSION['user'];
-		$stmt = $bdd->query("SELECT pseudo FROM users WHERE mail='$mail'");
-		$data = $stmt->fetch();
-		$tmp = $data['pseudo'];
-		$user = substr($tmp,1,strlen($tmp));
 		?>
 		<div class="row">
 			<div class="col-md-offset-1 col-md-5">
