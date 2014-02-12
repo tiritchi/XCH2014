@@ -37,7 +37,7 @@
 	function mark_as_read($bdd,$id)
 	{
 
-		$bdd->exec('UPDATE users_event SET r=1 WHERE id=$id');
+		$bdd->exec("UPDATE users_event SET r=1 WHERE id=\'$id\'");
 		
 		return 0;
 	}
