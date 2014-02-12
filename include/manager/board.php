@@ -39,10 +39,10 @@ else
 			            <div class="panel-body">
 			                <div class="list-group">
                                 <a href="#" class="list-group-item" data-toggle="modal" data-target="#myModal">Pseudo 1</a>
-                                <a href="#" class="list-group-item">Pseudo 2</a>
-                                <a href="#" class="list-group-item">Morbi leo risus</a>
-                                <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-                                <a href="#" class="list-group-item">Vestibulum at eros</a>
+                                <a href="#" class="list-group-item" data-toggle="modal" data-target="#myModal">Pseudo 2</a>
+                                <a href="#" class="list-group-item" data-toggle="modal" data-target="#myModal">Morbi leo risus</a>
+                                <a href="#" class="list-group-item" data-toggle="modal" data-target="#myModal">Porta ac consectetur ac</a>
+                                <a href="#" class="list-group-item" data-toggle="modal" data-target="#myModal">Vestibulum at eros</a>
                             </div>
 			            </div>
 			        </div>
@@ -112,12 +112,12 @@ else
 			    <div class="modal-content">
 			      <div class="modal-body">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <img src="ressources/profile.jpg" class="img-responsive" alt="Responsive image" style="height: 180px; width: 100%; display: block;"></img>
 			      </div>
 			      <div class="modal-footer">
                     <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Target number" name="target-number"></input>
+                        <input class="form-control" type="text" placeholder="Enter target number here..." name="target-number"><button type="button" class="btn btn-primary">Send</button></input>
                     </div>
-			        <button type="button" class="btn btn-primary">Send</button>
 			      </div>
 			    </div>
 			  </div>
