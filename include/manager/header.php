@@ -11,6 +11,7 @@
             .bs-example{
                 margin: 20px;
             }
+        <?php require('include/lib/events.php'); ?>  
         </style>
 		</head>
 		<body>
