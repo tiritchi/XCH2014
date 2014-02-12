@@ -71,12 +71,12 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     <div class="item active">
-                    <img src="..." alt="...">
+                    <img src="include/ressources/img_1.jpg" alt="pouet">
                         <div class="carousel-caption">
                         ...
                         </div>
                     </div>
-                ...
+                    ...
                 </div>
             
               <!-- Controls -->
