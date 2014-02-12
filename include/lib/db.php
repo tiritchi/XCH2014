@@ -24,11 +24,12 @@
 		$uid = intval($user_id);
 		$eventtmp = $bdd->quote($event);
 		$inf = $bdd->quote($infos);
-		$req = $bdd->prepare("INSERT INTO users_event (users_id,event,infos,read) VALUES (:uid,:event,:infos,\'\')");
+		$req = $bdd->prepare("INSERT INTO users_event (users_id,event,infos,read) VALUES (:uid,:event,:infos,:r)");
 		$req->execute(array(
 		    'uid'=>$uid,
 		    'event'=>$eventtmp,
-		    'infos'=>$inf
+		    'infos'=>$inf,
+		    ':r'=>0
 	    ));
 		return 0;
 	}
