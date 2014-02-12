@@ -19,7 +19,7 @@
 
 	function get_user_info($bdd,$user_id)
 	{
-		$req=$bdd->prepare('SELECT * FROM users WHERE user_id=?');
+		$req=$bdd->prepare('SELECT * FROM users WHERE id=?');
 		$req->execute(array($user_id));
 		$donnees = $req->fetch();
 		$tab = array($donnees['pseudo'],$donnees['fname'],$donnees['lname'],$donnees['school'],$donnees['mail'],$donnees['sexe'],$donnees['date_naissance'],$donnees['phone'],$donnees['adresse']);
