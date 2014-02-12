@@ -67,7 +67,7 @@
 		$tid = intval($target_id);
 		$req = $bdd->prepare('INSERT INTO contracts (contract_no,user_id,target_id,complete,exp_date,start_date) VALUES (?,?,?,?,?,NOW())');
 		$req->execute(array($cno,$user_id,$target_id,'0',$exp_date));
-		return $contract_no;
+		return $cno;
 	}
 
 	function mark_as_complete ($bdd,$contract_id){
