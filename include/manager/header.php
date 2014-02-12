@@ -2,6 +2,7 @@
 		<html lang="en">
 		<head>
 		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1" name="viewport"></meta>
 		<title>Board</title>
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
@@ -13,7 +14,7 @@
         </style>
 		</head>
 		<body>
-	        <nav id="myNavbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	        <div id="myNavbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
 	            <div class="container">
 	                <div class="navbar-header">
@@ -55,5 +56,5 @@
 
 	                </div>
 	            </div>
-	        </nav>
+	        </div>
 
