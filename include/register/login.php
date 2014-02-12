@@ -27,11 +27,11 @@ $_SESSION['user']=NULL;
 		die('Erreur : ' . $e->getMessage());
 		echo '<p> erreur DB</p>';
 	}
-	$user = $_POST['email'];
+	$mail = "'".$_POST['email']."'";
 	$psswd= $_POST['password'];
 	$stat=$bdd->prepare('SELECT * FROM users WHERE mail=:mail');
 	$stat->execute(array(
-		'mail'=>$user
+		'mail'=>$mail
 		));
 	$rcount=$stat->rowCount();
 	
