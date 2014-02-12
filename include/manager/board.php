@@ -6,7 +6,7 @@ if(!(isset($_SESSION['connected']) && $_SESSION['connected']=TRUE))
 	}
 else
 	{
-		include '../lib/db.php';
+		include 'include/lib/db.php';
 		include 'header.php';
 		$bdd=db_init();
 		$mail = $_SESSION['user'];
