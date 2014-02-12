@@ -62,15 +62,15 @@ else
 						</div>
 						<div class="panel-body">
 						    <ul class="list-group">
-						        <li class="list-group-item">Nickname <?php echo $var[0];?></li>
-						        <li class="list-group-item">School</li>
-						        <li class="list-group-item">First name</li>
-						        <li class="list-group-item">LAST NAME</li>
-						        <li class="list-group-item">JJ/MM/AAAA</li>
-						        <li class="list-group-item">Address</li>
-						        <li class="list-group-item">e-mail</li>
-						        <li class="list-group-item">Phone number</li>
-						        <li class="list-group-item">Sex</li>
+						        <li class="list-group-item">Nickname | <?php echo $var[0];?></li>
+						        <li class="list-group-item">School | <?php echo $var[3];?></li>
+						        <li class="list-group-item">First name | <?php echo $var[1];?></li>
+						        <li class="list-group-item">LAST NAME | <?php echo $var[2];?></li>
+						        <li class="list-group-item">JJ/MM/AAAA | <?php echo $var[6];?></li>
+						        <li class="list-group-item">Address | <?php echo $var[8];?></li>
+						        <li class="list-group-item">e-mail | <?php echo $var[4];?></li>
+						        <li class="list-group-item">Phone number | <?php echo $var[7];?></li>
+						        <li class="list-group-item">Sex | <?php echo $var[5];?></li>
 						    </ul>
 						</div>
 					</div>
