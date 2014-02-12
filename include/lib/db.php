@@ -21,11 +21,11 @@
 
 	function add_user_event()
 	{
-
+		return 0;
 	}
 
 	function mark_as_read()
 	{
-		
+		return 0;
 	}
 ?>

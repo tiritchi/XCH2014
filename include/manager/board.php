@@ -7,7 +7,7 @@ if(!(isset($_SESSION['connected']) && $_SESSION['connected']=TRUE))
 else
 	{
 		include 'include/lib/db.php'
-		include 'header.php';
+		include 'include/manager/header.php';
 		$bdd=db_init();
 		$stmt = $bdd->query("SELECT pseudo FROM users WHERE mail=\'$_SESSION['user']\'");
 		$data = $stmt->fetch();
@@ -32,7 +32,7 @@ else
 		</div>
 
 		<?php
-		include 'footer.php';
+		include 'include/manager/footer.php';
 		 
 
 				
