@@ -62,15 +62,15 @@ else
 						</div>
 						<div class="panel-body">
 						    <ul class="list-group">
-						        <li class="list-group-item">Nickname <?php echo $var[0];?></li>
-						        <li class="list-group-item">School</li>
-						        <li class="list-group-item">First name</li>
-						        <li class="list-group-item">LAST NAME</li>
-						        <li class="list-group-item">JJ/MM/AAAA</li>
-						        <li class="list-group-item">Address</li>
-						        <li class="list-group-item">e-mail</li>
-						        <li class="list-group-item">Phone number</li>
-						        <li class="list-group-item">Sex</li>
+						        <li class="list-group-item">Nickname<?php echo('<span class="pull-right">'.$var[0].'</span>');?></li>
+						        <li class="list-group-item">School<?php echo('<span class="pull-right">'.$var[3].'</span>');?></li>
+						        <li class="list-group-item">First name<?php echo('<span class="pull-right">'.$var[1].'</span>');?></li>
+						        <li class="list-group-item">LAST NAME<?php echo('<span class="pull-right">'.$var[2].'</span>');?></li>
+						        <li class="list-group-item">JJ/MM/AAAA<?php echo('<span class="pull-right">'.$var[6].'</span>');?></li>
+						        <li class="list-group-item">Address<?php echo('<span class="pull-right">'.$var[8].'</span>');?></li>
+						        <li class="list-group-item">e-mail<?php echo('<span class="pull-right">'.$var[4].'</span>');?></li>
+						        <li class="list-group-item">Phone number<?php echo('<span class="pull-right">'.$var[7].'</span>');?></li>
+						        <li class="list-group-item">Sex<?php echo('<span class="pull-right">'.$var[5].'</span>');?></li>
 						    </ul>
 						</div>
 					</div>
