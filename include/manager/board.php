@@ -62,7 +62,7 @@ else
 						</div>
 						<div class="panel-body">
 						    <ul class="list-group">
-						        <li class="list-group-item">Nickname | <?php echo $var[0];?></li>
+						        <li class="list-group-item">Nickname | <?php echo('<div class="align-right"> $var[0]</div>');?></li>
 						        <li class="list-group-item">School | <?php echo $var[3];?></li>
 						        <li class="list-group-item">First name | <?php echo $var[1];?></li>
 						        <li class="list-group-item">LAST NAME | <?php echo $var[2];?></li>
