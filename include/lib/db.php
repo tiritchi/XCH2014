@@ -66,14 +66,14 @@
 		$contract_no="kahdx515cec";
 		$uid = intval($user_id);
 		$tid = intval($target_id);
-		$req = $bdd->prepare('INSERT INTO contracts (contract_no,user_id,target_id,complete,exp_date,start_date) VALUES (:contract_no,:uid,:tid,:complete,:expd,NOW()');
-		$req->execute(array(
-		    'uid'=>$uid,
-		    'tid'=>$tid,
-		    'complete'=>0,
-		    'expd'=>$exp_date,
-		    'contract_no'=>$contract_no
-	    ));
+//		$req = $bdd->prepare('INSERT INTO contracts (contract_no,user_id,target_id,complete,exp_date,start_date) VALUES (:contract_no,:uid,:tid,:complete,:expd,NOW()');
+//		$req->execute(array(
+//		    'uid'=>$uid,
+//		    'tid'=>$tid,
+//		    'complete'=>0,
+//		    'expd'=>$exp_date,
+//		    'contract_no'=>$contract_no
+//	    ));
 	    echo 'test';
 		return 0;
 	}
