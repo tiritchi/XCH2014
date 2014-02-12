@@ -67,8 +67,13 @@ else
 						        <li class="list-group-item">First name<?php echo('<span class="pull-right">'.$var[1].'</span>');?></li>
 						        <li class="list-group-item">LAST NAME<?php echo('<span class="pull-right">'.$var[2].'</span>');?></li>
 						        <li class="list-group-item">AAAA/MM/JJ<?php echo('<span class="pull-right">'.$var[6].'</span>');?></li>
-						        <li class="list-group-item">Address<div><?php echo('<span class="pull-right">'.$var[8].'</span>');?></div></li>
-						        <li class="list-group-item">e-mail<div><?php echo('<span class="pull-right">'.$var[4].'</span>');?></div></li>
+						        <li class="list-group-item">
+						            <h4 class="list-group-item-header">Address</h4>
+						            <p class="list-group-item-text">
+						                <?php echo('<span class="pull-right">'.$var[8].'</span>');?>
+						            </p>
+						        </li>
+						        <li class="list-group-item">e-mail<?php echo('<span class="pull-right">'.$var[4].'</span>');?></li>
 						        <li class="list-group-item">Phone number<?php echo('<span class="pull-right">'.$var[7].'</span>');?></li>
 						        <li class="list-group-item">Sex<?php echo('<span class="pull-right">'.$var[5].'</span>');?></li>
 						    </ul>
