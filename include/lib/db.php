@@ -65,7 +65,7 @@
 		$contract_no='X'.rand(10000,99999).'C'.$target_id.'H14';
 		$uid = intval($user_id);
 		$tid = intval($target_id);
-		$req = $bdd->exec('INSERT INTO contracts (contract_no,user_id,target_id,complete,exp_date,start_date) VALUES ($contract_no,$uid,$tid,\'0\',$exp_date,NOW()');
+//		$req = $bdd->exec('INSERT INTO contracts (contract_no,user_id,target_id,complete,exp_date,start_date) VALUES ($contract_no,$uid,$tid,\'0\',$exp_date,NOW()');
 //		$req = $bdd->prepare('INSERT INTO contracts (contract_no,user_id,target_id,complete,exp_date,start_date) VALUES (:contract_no,:uid,:tid,:complete,:expd,NOW()');
 //		$req->execute(array('uid'=>$uid,'tid'=>$tid,'complete'=>'0','expd'=>$exp_date,'contract_no'=>$contract_no));
 	    echo $contract_no;
