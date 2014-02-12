@@ -12,7 +12,7 @@ else
 		<div class="jumbotron">
 			<div class="row">
 				<div class="col-md-offset-1 col-md-5">
-					<?php add_user_event($bdd,$_SESSION['user_id'],"test","test");?>
+					<?php mark_as_read($bdd,1);?>
 
 				</div>
 			
