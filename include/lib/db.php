@@ -19,13 +19,25 @@
 		return $bdd;
 	}
 
-	function add_user_event()
+	function add_user_event($bdd,$user_id,$event,$infos)
 	{
+		$uid = intval($user_id);
+		$eventtmp = $bdd->quote($event);
+		$inf = $bdd->quote($infos);
+		$req = $bdd->prepare('INSERT INTO users_event (users_id,event,infos,read) VALUES (:uid,:event,:infos,\'\')');
+		$req->execute(array(
+		    'uid'=>$uid,
+		    'event'=>$eventtmp,
+		    'infos'=>$inf
+	    ));
 		return 0;
 	}
 
-	function mark_as_read()
+	function mark_as_read($bdd,$id)
 	{
+
+		$bdd->exec('UPDATE users_event SET read=1 WHERE id=$id');
+		
 		return 0;
 	}
 ?>
