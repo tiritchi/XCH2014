@@ -18,11 +18,11 @@ else
 						</div>
 						<div class="panel-body">
 						    <ul class="list-group">
-						       <li class="list-group-item">Best player 1</li>
-						       <li class="list-group-item">Best player 2</li>
-						       <li class="list-group-item">Best player 3</li>
-						       <li class="list-group-item">Best player 4</li>
-						       <li class="list-group-item">Best player 5</li>
+						       <li class="list-group-item">Best player 1 <span class="badge">5 points</span></li>
+						       <li class="list-group-item">Best player 2 <span class="badge">4 points</span></li>
+						       <li class="list-group-item">Best player 3 <span class="badge">3 points</span></li>
+						       <li class="list-group-item">Best player 4 <span class="badge">2 points</span></li>
+						       <li class="list-group-item">Best player 5 <span class="badge">1 points</span></li>
 						    </ul>
 						</div>
 					</div>
@@ -37,11 +37,13 @@ else
 			                <h3 class="panel-title">Contracts</h3>
 			            </div>
 			            <div class="panel-body">
-			                <ul class="list-group">
-			                    <li class="list-group-item">pseudo1</li>
-			                    <li class="list-group-item">pseudo2</li>
-			                    <li class="list-group-item">pseudo3</li>
-			                </ul>
+			                <div class="list-group">
+                                <a href="#" class="list-group-item">Pseudo 1</a>
+                                <a href="#" class="list-group-item">Pseudo 2</a>
+                                <a href="#" class="list-group-item">Morbi leo risus</a>
+                                <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                                <a href="#" class="list-group-item">Vestibulum at eros</a>
+                            </div>
 			            </div>
 			        </div>
 			    </div>
