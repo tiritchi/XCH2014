@@ -124,10 +124,10 @@
 				break;
 		}
 		switch ($Sexe) {
-			case 'MALE':
+			case 'Male':
 				$u_code.='M';
 				break;
-			case 'FEMALE':
+			case 'Female':
 				$u_code.='F';
 				break;
 			default:
@@ -135,7 +135,7 @@
 				break;
 		}
 		$u_code.=rand(100,999);
-		$u_code.=substr($Phone,(strlen($Phone)-3),0);
+		$u_code.=substr((string)$Phone,(strlen((string)$Phone)-3),0);
 		$u_code.='XCH14';
 		return $u_code;
 	}
