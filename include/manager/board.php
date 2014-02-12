@@ -116,9 +116,9 @@ else
 			      </div>
 			      <div class="modal-footer">
                     <div class="input-group">
-                       <input class="form-control" type="text"></input>
+                       <input class="form-control" type="text" placeholder="Enter target number here..."></input>
                           <span class="input-group-btn">
-                              <button class="btn btn-default" type="button">Go!</button>
+                          <button class="btn btn-default" type="button">Go!</button>
                        </span>
                     </div>
                   </div>
