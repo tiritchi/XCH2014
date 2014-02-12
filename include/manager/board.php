@@ -51,6 +51,9 @@ else
 				</div-->
 			    
 			    
+			    <?php 
+			        $var=get_user_info($bdd,$_SESSION['user_id']);
+			    ?>
 			    
 				<div class="col-md-3">
 					<div class="panel panel-default">
@@ -59,7 +62,7 @@ else
 						</div>
 						<div class="panel-body">
 						    <ul class="list-group">
-						        <li class="list-group-item">Nickname</li>
+						        <li class="list-group-item">Nickname <?php echo $var[0];?></li>
 						        <li class="list-group-item">School</li>
 						        <li class="list-group-item">First name</li>
 						        <li class="list-group-item">LAST NAME</li>
