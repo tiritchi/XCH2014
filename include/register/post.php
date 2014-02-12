@@ -45,7 +45,7 @@
 		$school = $bdd->quote($_POST['School']);
 		$sexe = $bdd->quote($_POST['Sexe']);
 		$adress = $bdd->quote($_POST['Adress_a']."-".$_POST['Adress_pc']."-".$_POST['Adress_c']);
-		$date = $bdd->date($_POST['Bd_y']."-".$_POST['Bd_m']."-".$_POST['Bd_d']." 00:00:00");
+		$date = $bdd->quote($_POST['Bd_y']."-".$_POST['Bd_m']."-".$_POST['Bd_d']);
 		$nick = $bdd->quote($_POST['Nn']);
 		$psswd = $hash;
 
@@ -70,7 +70,7 @@
   				<strong>Successful signup ! thanks</strong> <br>
   				redirection sur la page d\'accueil dans quelques secondes ...
 			</div>';
-        echo '<meta http-equiv="refresh" content="5; url=.">'; 
+        echo '<meta http-equiv="refresh" content="10; url=.">'; 
 	}
 	else
 	{

@@ -169,7 +169,7 @@
 
 						<!-- Select Basic -->
 						<div class="input-group">
-						    <span class="input-group-addon">Sexe</span>
+						    <span class="input-group-addon">Sex</span>
 						    <select class="selectpicker show-tick" name="Sexe">
 								<option>Male</option>
 								<option>Female</option>
