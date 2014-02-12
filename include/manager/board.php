@@ -11,15 +11,10 @@ else
 		?>
 		<div class="jumbotron">
 			<div class="row">
-				<div class="col-md-offset-1 col-md-5">
-					<?php mark_as_read($bdd,1);?>
-
-				</div>
-			    
-			    <div class="col-md-6">
+				<div class="col-md-6">
 			        <div class="panel panel-default">
 			            <div class="panel-heading">
-			                <h3 class="panel-title">Contrats</h3>
+			                <h3 class="panel-title">Contracts</h3>
 			            </div>
 			            <div class="panel-body">
 			                <ul class="list-group">
@@ -30,14 +25,24 @@ else
 			            </div>
 			        </div>
 			    </div>
+			    <!--div class="col-md-offset-1 col-md-5">
+					<?php mark_as_read($bdd,1);?>
+
+				</div-->
 			    
-				<div class="col-md-5">
+			    
+			    
+				<div class="col-md-6">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-						    <h3 class="panel-title">Panel title</h3>
+						    <h3 class="panel-title">Profile</h3>
 						</div>
 						<div class="panel-body">
-						    Panel content
+						    <ul class="list-group">
+						        <li class="list-group-item">pseudo</li>
+						        <li class="list-group-item">10 avenue de la mer</li>
+						        <li class="list-group-item">CERGY</li>
+						    </ul>
 						</div>
 					</div>
 				</div>
