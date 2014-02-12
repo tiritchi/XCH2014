@@ -31,7 +31,7 @@
 
 			                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			                    <ul class="nav navbar-nav">
-			                        <li><a href="index.php?page=admin">Tableau de Bord</a></li>
+			                        <li><a href="admin">Tableau de Bord</a></li>
 			                        <li><a href="#">Profile  <span class="badge">42</span></a></li>
 			                        <li class="dropdown">
 			                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Messages <span class="badge">42</span><b class="caret"></b></a>
