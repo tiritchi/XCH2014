@@ -45,7 +45,7 @@
 		$school = $bdd->quote($_POST['School']);
 		$sexe = $bdd->quote($_POST['Sexe']);
 		$adress = $bdd->quote($_POST['Adress_a']."-".$_POST['Adress_pc']."-".$_POST['Adress_c']);
-		$date = $bdd->quote($_POST['Bd_y']."-".$_POST['Bd_m']."-".$_POST['Bd_d']);
+		$date = $_POST['Bd_y']."-".$_POST['Bd_m']."-".$_POST['Bd_d'];
 		$nick = $bdd->quote($_POST['Nn']);
 		$psswd = $hash;
 
