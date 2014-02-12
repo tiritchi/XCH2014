@@ -73,7 +73,7 @@
 //		    'expd'=>$exp_date,
 //		    'contract_no'=>$contract_no
 //	    ));
-	    echo '$contract_no';
+	    echo $contract_no;
 		return 0;
 	}
 
