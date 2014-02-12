@@ -15,7 +15,22 @@ else
 					<?php mark_as_read($bdd,1);?>
 
 				</div>
-			
+			    
+			    <div class="col-md-6">
+			        <div class="panel panel-default">
+			            <div class="panel-heading">
+			                <h3 class="panel-title">Contrats</h3>
+			            </div>
+			            <div class="panel-body">
+			                <ul class="list-group">
+			                    <li class="list-group-item">pseudo1</li>
+			                    <li class="list-group-item">pseudo2</li>
+			                    <li class="list-group-item">pseudo3</li>
+			                </ul>
+			            </div>
+			        </div>
+			    </div>
+			    
 				<div class="col-md-5">
 					<div class="panel panel-default">
 						<div class="panel-heading">
