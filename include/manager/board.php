@@ -38,7 +38,7 @@ else
 			            </div>
 			            <div class="panel-body">
 			                <div class="list-group">
-                                <a href="#" class="list-group-item">Pseudo 1</a>
+                                <a href="#myModal" class="list-group-item">Pseudo 1</a>
                                 <a href="#" class="list-group-item">Pseudo 2</a>
                                 <a href="#" class="list-group-item">Morbi leo risus</a>
                                 <a href="#" class="list-group-item">Porta ac consectetur ac</a>
