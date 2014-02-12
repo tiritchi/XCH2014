@@ -51,7 +51,7 @@
 			                            <ul class="dropdown-menu">
 			                                <li><span class="glyphicon glyphicon-cog"></span><a href="#">	Settings</a></li>
 			                                <li class="divider"></li>
-			                                <li><span class="glyphicon glyphicon-log-out"></span><a href="logout">	Log out</a></li>
+			                                <li><div class="row"><span class="glyphicon glyphicon-log-out"></span><a href="logout">	Log out</a></div></li>
 			                            </ul>
 			                        </li>
 			                    </ul>
