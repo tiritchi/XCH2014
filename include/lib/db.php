@@ -61,8 +61,9 @@
 	}
 
 	function create_contract($bdd,$user_id,$target_id,$exp_date){
-		srand();
-		$contract_no="X".rand(10000,99999)."C".$target_id."H14";
+//		srand();
+//		$contract_no='X'.rand(10000,99999).'C'.$target_id.'H14';
+		$contract_no="kahdx515cec"
 		$uid = intval($user_id);
 		$tid = intval($target_id);
 		$req = $bdd->prepare('INSERT INTO contracts (contract_no,user_id,target_id,complete,exp_date,start_date) VALUES (:contract_no,:uid,:tid,:complete,:expd,NOW()');
