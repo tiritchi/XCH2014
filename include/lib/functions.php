@@ -123,7 +123,7 @@
 				$s_code='XX';
 				break;
 		}
-		$u_code.=substr($Sexe,0,strlen($Sexe)-2);
+		$u_code.=substr($Sexe,0,strlen($Sexe)-1);
 		$u_code.=rand(100,999);
 		$u_code.=substr((string)$Phone,-2);
 		$u_code.='XCH14';
