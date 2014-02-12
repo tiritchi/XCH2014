@@ -114,24 +114,24 @@
 
 							</select>
 			    			<select class="selectpicker show-tick" title='YY' name="Bd_y">
-								<option>97</option>
-								<option>96</option>
-								<option>95</option>
-								<option>94</option>
-								<option>93</option>
-								<option>92</option>
-								<option>91</option>
-								<option>90</option>
-								<option>89</option>
-								<option>88</option>
-								<option>87</option>
-								<option>86</option>
-								<option>85</option>
-								<option>84</option>
-								<option>83</option>
-								<option>82</option>
-								<option>81</option>
-								<option>80</option>
+								<option>1997</option>
+								<option>1996</option>
+								<option>1995</option>
+								<option>1994</option>
+								<option>1993</option>
+								<option>1992</option>
+								<option>1991</option>
+								<option>1990</option>
+								<option>1989</option>
+								<option>1988</option>
+								<option>1987</option>
+								<option>1986</option>
+								<option>1985</option>
+								<option>1984</option>
+								<option>1983</option>
+								<option>1982</option>
+								<option>1981</option>
+								<option>1980</option>
 							</select>
 						</div><br/>
 

@@ -7,6 +7,10 @@ if(!(isset($_SESSION['connected']) && $_SESSION['connected']=TRUE && isset($_SES
 else
     {
         include 'header.php';
+        ?>
+        
+
+        <?php
         include 'footer.php';
          
 
