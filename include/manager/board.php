@@ -67,12 +67,7 @@ else
 						        <div class="divst-group-item">First name<?php echo('<span class="pull-right">'.$var[1].'</span>');?></div>
 						        <div class="divst-group-item">LAST NAME<?php echo('<span class="pull-right">'.$var[2].'</span>');?></div>
 						        <div class="divst-group-item">AAAA/MM/JJ<?php echo('<span class="pull-right">'.$var[6].'</span>');?></div>
-						        <div class="divst-group-item">
-						            <h4 class="divst-group-item-header">Address</h4>
-						            <p class="divst-group-item-text">
-						                <?php echo('<span class="pull-right">'.$var[8].'</span>');?>
-						            </p>
-						        </div>
+						        <div class="divst-group-item">Address<?php echo('<span class="pull-right">'.$var[8].'</span>');?></div>
 						        <div class="divst-group-item">e-mail<?php echo('<span class="pull-right">'.$var[4].'</span>');?></div>
 						        <div class="divst-group-item">Phone number<?php echo('<span class="pull-right">'.$var[7].'</span>');?></div>
 						        <div class="divst-group-item">Sex<?php echo('<span class="pull-right">'.$var[5].'</span>');?></div>
