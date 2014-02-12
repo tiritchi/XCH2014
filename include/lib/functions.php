@@ -73,20 +73,25 @@
 		return $cno;
 	}
 
-	function mark_as_complete ($bdd,$contract_id){
-		try 
-		{
-			$req=$bdd->exec("UPDATE contracts SET complete ='1' WHERE id=$contract_id");
-			//$req->execute(array('1',$contract_id));
+	function mark_as_complete ($bdd,$contract_id,$target_no){
+		$req=$bdd->exec("SELECT target_no FROM contracts WHERE id=$contract_id");
+		$data=$req->fetch();
+		if($data['target_no']==$target_no){
+			try 
+			{
+				$req=$bdd->exec("UPDATE contracts SET complete ='1' WHERE id=$contract_id");
+				//$req->execute(array('1',$contract_id));
+			}
+			catch (Exception $e) 
+			{
+				die('Erreur : ' . $e->getMessage());
+				return FALSE;
+			}
+			return TRUE;
 		}
-		catch (Exception $e) 
-		{
-			die('Erreur : ' . $e->getMessage());
-			return "FALSE";
+		else{
+			return FALSE;
 		}
-		return "TRUE";
-
-
 	}
 
 	function gen_user_code($School,$Sexe,$Phone){
