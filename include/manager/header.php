@@ -49,7 +49,7 @@
 			                        <li class="dropdown">
 			                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><?php echo $_SESSION['user']?> <b class="caret"></b></a>
 			                            <ul class="dropdown-menu">
-			                                <li><a href="#">Settings<span class="glyphicon glyphicon-cog"></span></a></li>
+			                                <li><a href="#">Settings<span class="glyphicon glyphicon-cog pull-right"></span></a></li>
 			                                <li class="divider"></li>
 			                                <li><a href="logout">Log out<span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
 			                            </ul>
