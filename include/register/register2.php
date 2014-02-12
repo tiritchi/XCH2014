@@ -41,11 +41,16 @@
 						    <select class="selectpicker" name="School">
 								<option>ENSEA</option>
 								<option>EISTI</option>
-								<option>FAC</option>
+								<option>UCP</option>
 								<option>EBI</option>
 								<option>ISTOM</option>
 								<option>ESSEC</option>
-								<option>OSTEO</option>
+								<option>ITIN</option>
+								<option>IUFM</option>
+								<option>COE</option>
+								<option>ILEPS</option>
+								<option>ENSAPC</option>
+								<option>ESCIA</option>
 								<option>EPMI</option>
 							</select>
 						</div><br/>
