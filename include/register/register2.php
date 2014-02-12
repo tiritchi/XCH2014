@@ -65,7 +65,7 @@
 						<!-- Text input-->
 						<div class="input-group">
 						    <span class="input-group-addon">Birthday</span>
-			    			<select class="selectpicker show-tick" multiple title='DD' name="Bd_d">
+			    			<select class="selectpicker show-tick" title='DD' name="Bd_d">
 								<option>1</option>
 								<option>2</option>
 								<option>3</option>
@@ -98,7 +98,7 @@
 								<option>30</option>
 								<option>31</option>
 							</select>
-			    			<select class="selectpicker show-tick" multiple title='MM' name="Bd_m">
+			    			<select class="selectpicker show-tick" title='MM' name="Bd_m">
 								<option>1</option>
 								<option>2</option>
 								<option>3</option>
@@ -113,7 +113,7 @@
 								<option>12</option>
 
 							</select>
-			    			<select class="selectpicker show-tick" multiple title='YY' name="Bd_y">
+			    			<select class="selectpicker show-tick" title='YY' name="Bd_y">
 								<option>97</option>
 								<option>96</option>
 								<option>95</option>
@@ -170,7 +170,7 @@
 						<!-- Select Basic -->
 						<div class="input-group">
 						    <span class="input-group-addon">Sexe</span>
-						    <select class="selectpicker" name="Sexe">
+						    <select class="selectpicker show-tick" name="Sexe">
 								<option>Male</option>
 								<option>Female</option>
 							</select>

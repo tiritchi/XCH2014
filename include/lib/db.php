@@ -42,4 +42,28 @@
 			));
 		return 0;
 	}
+
+	function get_contracts($bdd,$user_id)
+	{
+		$tab=array();
+		$req=$bdd->prepare('SELECT * FROM contracts WHERE user_id=?');
+		$req->execute(array($user_id));
+
+		while ($donnees = $req->fetch())
+		{
+			$tab->array_push(array($donnees['id'],$donnees['complete'],$donnees['target_id'],$donnees['contract_no'],$donnees['exp_date']));
+		}
+
+		return $tab;
+	}
+
+	function create_contrat($bdd,$user_id,$target_id,$exp_date)
+	{
+
+	}
+
+	function mark_as_complete ($bdd,$contract_id)
+	{
+
+	}
 ?>
