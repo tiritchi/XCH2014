@@ -53,15 +53,15 @@ $_SESSION['user']=NULL;
                 if ($check) {
                         $_SESSION['user'] = substr($req['pseudo'],1,(strlen($req['pseudo'])-2));
                 	$_SESSION['connected']=TRUE;
-                	echo "Redirecting ... ";
+//                	echo "Redirecting ... ";
                 	if($req['group']=="admin")
                 	{
                 		$_SESSION['admin']=TRUE;
-                		echo '<meta http-equiv="refresh" content="1; url=admin">';
+                		echo '<meta http-equiv="refresh" content="0; url=admin">';
                 	}
                 	else if($req['group']=="user")
                 	{
-        				echo '<meta http-equiv="refresh" content="1; url=board">';
+        				echo '<meta http-equiv="refresh" content="0; url=board">';
                 	}
                 	else
                 	{
