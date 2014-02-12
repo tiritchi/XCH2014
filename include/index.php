@@ -17,67 +17,76 @@
     </head>
     
     <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
-        <div class="container">
-            <div class="navbar-header">
-                <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
-                    <span class="sr-only">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+                        <span class="sr-only">
 
-                        Toggle navigation
+                            Toggle navigation
 
-                    </span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">
+                        </span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
 
-                    XTrem Cergy Hunting
+                        XTrem Cergy Hunting
 
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <form class="navbar-form navbar-right" action="login" method="post">
+                        <div class="form-group">
+                            <input class="form-control" name='email' type="text" placeholder="Email"></input>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name='password' type="password" placeholder="Password"></input>
+                        </div>
+                        <button class="btn btn-success" type="submit">
+                            Sign in
+                        </button>
+                        <a class="btn btn-primary btn-sm" role="button" href="register">Sign up !</a>
+                    </form>
+                </div>
+                <!--
+
+                /.navbar-collapse 
+
+                -->
+            </div>
+        </div>
+            
+        <div class="jumbotron">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                    <img src="..." alt="...">
+                        <div class="carousel-caption">
+                        ...
+                        </div>
+                    </div>
+                ...
+                </div>
+            
+              <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
                 </a>
             </div>
-            <div class="navbar-collapse collapse">
-                <form class="navbar-form navbar-right" action="login" method="post">
-                    <div class="form-group">
-                        <input class="form-control" name='email' type="text" placeholder="Email"></input>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" name='password' type="password" placeholder="Password"></input>
-                    </div>
-                    <button class="btn btn-success" type="submit">
-                        Sign in
-                    </button>
-                    <a class="btn btn-primary btn-sm" role="button" href="register">Sign up !</a>
-                </form>
-            </div>
-            <!--
-
-            /.navbar-collapse 
-
-            -->
         </div>
-    </div>
-        
-    <div class="jumbotron">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-                <div class="item active">
-                <img src="..." alt="...">
-                    <div class="carousel-caption">
-                    ...
-                    </div>
-                </div>
-            ...
-            </div>
-        </div>    
     </body>
 </html>
