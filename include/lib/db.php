@@ -17,12 +17,11 @@
 		return $bdd;
 	}
 
-	function get_user_info($bdd,$user_id)
-	{
+	function get_user_info($bdd,$user_id){
 		$req=$bdd->prepare('SELECT * FROM users WHERE id=?');
 		$req->execute(array($user_id));
 		$donnees = $req->fetch();
-		$tab = array(substr($donnees['pseudo'],1,(strlen($donnees['pseudo'])-2)),substr($donnees['fname'],1,(strlen($donnees['fname'])-2)),substr($donnees['lname'],1,(strlen($donnees['lname'])-2)),substr($donnees['school'],1,(strlen($donnees['school'])-2)),substr($donnees['mail'],1,(strlen($donnees['mail'])-2)),substr($donnees['sexe'],1,(strlen($donnees['sexe'])-2)),substr($donnees['date_naissance'],1,(strlen($donnees['date_naissance'])-2)),substr($donnees['phone'],1,(strlen($donnees['phone'])-2)),substr($donnees['adresse'],1,(strlen($donnees['adresse'])-2)));
+		$tab = array(substr($donnees['pseudo'],1,(strlen($donnees['pseudo'])-2)),substr($donnees['fname'],1,(strlen($donnees['fname'])-2)),substr($donnees['lname'],1,(strlen($donnees['lname'])-2)),substr($donnees['school'],1,(strlen($donnees['school'])-2)),substr($donnees['mail'],1,(strlen($donnees['mail'])-2)),substr($donnees['sexe'],1,(strlen($donnees['sexe'])-2)),$donnees['date_naissance'],"0".$donnees['phone'],substr($donnees['adresse'],1,(strlen($donnees['adresse'])-2)));
 		return $tab;
 	}
 
@@ -62,7 +61,17 @@
 	}
 
 	function create_contrat($bdd,$user_id,$target_id,$exp_date){
-
+		$uid = intval($user_id);
+		$target = $bdd->quote($target);
+		$inf = $bdd->quote($infos);
+		$req = $bdd->prepare("INSERT INTO users_event (users_id,event,infos,r) VALUES (:uid,:event,:infos,:r)");
+		$req->execute(array(
+		    'uid'=>$uid,
+		    'event'=>$eventtmp,
+		    'infos'=>$inf,
+		    ':r'=>0
+	    ));
+		return 0;
 	}
 
 	function mark_as_complete ($bdd,$contract_id){
