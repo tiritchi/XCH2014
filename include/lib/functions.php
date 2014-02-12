@@ -81,62 +81,62 @@
 		srand();
 		switch ($School) {
 			case 'UCP':
-				$u_code=01;
+				$u_code='01';
 				break;
 			case 'IUFM':
-				$u_code=02;
+				$u_code='02';
 				break;
 			case 'EISTI':
-				$u_code=03;
+				$u_code='03';
 				break;
 			case 'ENSEA':
-				$u_code=04;
+				$u_code='04';
 				break;
 			case 'ESSEC':
-				$u_code=05;
+				$u_code='05';
 				break;
 			case 'ESCIA':
-				$u_code=06;
+				$u_code='06';
 				break;
 			case 'ENSAPC':
-				$u_code=07;
+				$u_code='07';
 				break;
 			case 'ITIN':
-				$u_code=08;
+				$u_code='08';
 				break;
 			case 'EBI':
-				$u_code=09;
+				$u_code='09';
 				break;
 			case 'EPMI':
-				$u_code=10;
+				$u_code='10';
 				break;
 			case 'ISTOM':
-				$u_code=11;
+				$u_code='11';
 				break;
 			case 'ILEPS':
-				$u_code=12;
+				$u_code='12';
 				break;
 			case 'COE':
-				$u_code=13;
+				$u_code='13';
 				break;
 			default:
-				$s_code=XX;
+				$s_code='XX';
 				break;
 		}
 		switch ($Sexe) {
 			case 'MALE':
-				$u_code.=M;
+				$u_code.='M';
 				break;
 			case 'FEMALE':
-				$u_code.=F;
+				$u_code.='F';
 				break;
 			default:
-				$u_code.=X;
+				$u_code.='X';
 				break;
 		}
 		$u_code.=rand(100,999);
 		$u_code.=substr($Phone,(strlen($Phone)-3),0);
-		$u_code.=XCH14;
+		$u_code.='XCH14';
 		return $u_code;
 	}
 ?>
