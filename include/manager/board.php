@@ -31,7 +31,7 @@ else
 				
 				
 				
-				<div class="col-md-6">
+				<div class="col-md-5">
 			        <div class="panel panel-default">
 			            <div class="panel-heading">
 			                <h3 class="panel-title">Contracts</h3>
@@ -57,7 +57,7 @@ else
 			        $var=get_user_info($bdd,$_SESSION['user_id']);
 			    ?>
 			    
-				<div class="col-md-3">
+				<div class="col-md-4">
 					<div class="panel panel-default">
 						<div class="panel-heading">
 						    <h3 class="panel-title">Profile</h3>
