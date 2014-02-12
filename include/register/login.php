@@ -51,7 +51,7 @@ $_SESSION['user']=NULL;
                 $check = $hasher->CheckPassword($psswd, $password_correct);
          
                 if ($check) {
-                        $_SESSION['user'] = substr($req['pseudo'],1,(strlen($req['pseudo'])-1));
+                        $_SESSION['user'] = substr($req['pseudo'],1,(strlen($req['pseudo'])-2));
                 	$_SESSION['connected']=TRUE;
                 	echo "Redirecting ... ";
                 	if($req['group']=="admin")
