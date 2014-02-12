@@ -116,8 +116,7 @@ else
 			      </div>
 			      <div class="modal-footer">
                     <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Enter target number here... name="target-number"></input>
-                        <button type="button" class="btn btn-primary">Send</button>
+                        <input class="form-control" type="text" placeholder="Enter target number here..." name="target-number"><button type="button" class="btn btn-primary">Send</button></input>
                     </div>
 			      </div>
 			    </div>
