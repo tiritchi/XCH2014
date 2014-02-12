@@ -9,6 +9,7 @@ else
 		include 'header.php';
 		$bdd=db_init();
 		?>
+		<div class="jumbotron">
 			<div class="row">
 				<div class="col-md-offset-1 col-md-5">
 					<div class="panel panel-default">
