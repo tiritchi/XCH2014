@@ -25,7 +25,7 @@
 </head>
 
 <body>
-	<div class="col-lg-4 col-lg-offset-4">
+	<div class="col-lg-6 col-lg-offset-3">
 		<div class="panel panel-primary">
 			<div class="panel-heading">
 				<ul class="pager">
