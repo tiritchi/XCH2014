@@ -38,7 +38,7 @@
 	{
 		$req=$bdd->prepare('UPDATE users_event SET r = 1 WHERE id=:id');
 		$req->execute(array(
-			':id'=>$id;
+			':id'=>$id
 			));
 		return 0;
 	}
