@@ -13,7 +13,7 @@
             .bs-example{
                 margin: 20px;
             }
-            body { padding-top: 70px; }
+            body { padding-top: 50px; }
         </style>
     </head>
     
