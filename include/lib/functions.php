@@ -123,17 +123,7 @@
 				$s_code='XX';
 				break;
 		}
-		switch ($Sexe) {
-			case 'Male':
-				$u_code.='M';
-				break;
-			case 'Female':
-				$u_code.='F';
-				break;
-			default:
-				$u_code.='X';
-				break;
-		}
+		$u_code.=substr($Sexe,1);
 		$u_code.=rand(100,999);
 		$u_code.=substr((string)$Phone,-2);
 		$u_code.='XCH14';
