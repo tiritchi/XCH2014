@@ -31,7 +31,7 @@ else
 				
 				
 				
-				<div class="col-md-6">
+				<div class="col-md-5">
 			        <div class="panel panel-default">
 			            <div class="panel-heading">
 			                <h3 class="panel-title">Contracts</h3>
@@ -57,7 +57,7 @@ else
 			        $var=get_user_info($bdd,$_SESSION['user_id']);
 			    ?>
 			    
-				<div class="col-md-3">
+				<div class="col-md-4">
 					<div class="panel panel-default">
 						<div class="panel-heading">
 						    <h3 class="panel-title">Profile</h3>
@@ -116,13 +116,13 @@ else
 			    <div class="modal-content">
 			      <div class="modal-body">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <img src="ressources/profile.jpg" class="img-responsive" alt="Responsive image" style="height: 180px; width: 100%; display: block;"></img>
+                    <img src="ressources/profile.jpg" alt="100%x180" style="height: 180px; width: 100%; display: block;"></img>
 			      </div>
 			      <div class="modal-footer">
                     <div class="input-group">
                        <input class="form-control" type="text" placeholder="Enter target number here..."></input>
                           <span class="input-group-btn">
-                          <button class="btn btn-default" type="button">Go!</button>
+                          <button class="btn btn-default" type="button">Submit</button>
                        </span>
                     </div>
                   </div>
