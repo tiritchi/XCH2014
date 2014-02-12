@@ -77,7 +77,7 @@
 		try 
 		{
 			$req=$bdd->prepare('UPDATE contracts SET complete =? WHERE id=?');
-			$req->execute(array('1',$contract_id))
+			$req->execute(array('1',$contract_id));
 		}
 		catch (Exception $e) 
 		{
