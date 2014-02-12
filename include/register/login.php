@@ -14,20 +14,11 @@ $_SESSION['user_id']=NULL;
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="signin.css"></link>
         <?php require('include/lib/PasswordHash.php'); ?>
+        <?php require('include/lib/functions.php');?>
 </head>
 <?php
 //	echo 'test';
-	try 
-	{
-		$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
-		$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//		echo '<p> connected to DB</p>';
-	} 
-	catch (Exception $e) 
-	{
-		die('Erreur : ' . $e->getMessage());
-		echo '<p> erreur DB</p>';
-	}
+	$bdd=db_init();
 	$mail = "'".$_POST['email']."'";
 	$psswd= $_POST['password'];
 	$stat=$bdd->prepare('SELECT * FROM users WHERE mail=:mail');

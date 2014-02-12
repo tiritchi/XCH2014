@@ -69,6 +69,10 @@ else
 						            <td><?php echo('<span class="pull-right">'.$var[0].'</span>');?></td>
 						        </tr>
 						        <tr>
+						            <th>User code</th>
+						            <td><?php echo('<span class="pull-right">'.$var[9].'</span>');?></td>
+						        </tr>
+						        <tr>
 						            <th>School</th>
 						            <td><?php echo('<span class="pull-right">'.$var[3].'</span>');?></t>
 						        </tr>

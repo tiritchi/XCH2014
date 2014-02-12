@@ -5,18 +5,10 @@
 	<meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
     <?php require('include/lib/PasswordHash.php'); ?>
+    <?php require('include/lib/functions.php');?>
 </head>
 <?php
-	try 
-	{
-		$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
-//		echo '<p> connected to DB</p>';
-	} 
-	catch (Exception $e) 
-	{
-		die('Erreur : ' . $e->getMessage());
-		echo '<p> erreur DB</p>';
-	}
+	$bdd=db_init();
 	
 	$row_count = '0';
 	$stmt = $bdd->prepare('SELECT mail FROM users WHERE mail=?');
@@ -48,11 +40,12 @@
 		$date = $_POST['Bd_y']."-".$_POST['Bd_m']."-".$_POST['Bd_d'];
 		$nick = $bdd->quote($_POST['Nn']);
 		$psswd = $hash;
+		$ucode = gen_user_code($_POST['School'],$_POST['Sexe'],$_POST['Phone']);
 
 
 		//envoie des informations à la DB
 
-		$req = $bdd->prepare('INSERT INTO users (fname,lname,school,mail,phone,sexe,adresse,date_naissance,pseudo,psswd,reg_date) VALUES (:prenom,:nom,:ecole,:email,:phone,:sexe,:adresse,:date_n,:pseudo,:psswd,NOW())');
+		$req = $bdd->prepare('INSERT INTO users (fname,lname,school,mail,phone,sexe,adresse,date_naissance,pseudo,psswd,user_no,reg_date) VALUES (:prenom,:nom,:ecole,:email,:phone,:sexe,:adresse,:date_n,:pseudo,:psswd,:ucode,NOW())');
 		$req->execute(array(
 		    'nom' => $nom,
 		    'prenom' => $prenom,
@@ -63,7 +56,8 @@
 		    'adresse'=>$adress,
 		    'date_n'=>$date,
 		    'pseudo'=>$nick,
-		    'psswd'=>$psswd
+		    'psswd'=>$psswd,
+		    'ucode'=>$ucode
 	    ));
    		echo '
    			<div class="alert alert-success">
