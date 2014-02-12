@@ -74,6 +74,17 @@
 	}
 
 	function mark_as_complete ($bdd,$contract_id){
+		try 
+		{
+			$bdd->exec('UPDATE contracts SET complete = 1 WHERE id=$contract_id');
+		}
+		catch (Exception $e) 
+		{
+			die('Erreur : ' . $e->getMessage());
+			return FALSE;
+		}
+		return TRUE;
+
 
 	}
 

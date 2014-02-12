@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- test -->
 <html>
     <head>
         <meta charset="utf-8">
@@ -32,7 +31,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href=".">
 
                         XTrem Cergy Hunting
 
