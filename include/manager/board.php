@@ -61,30 +61,42 @@ else
 						    <h3 class="panel-title">Profile</h3>
 						</div>
 						<table class="table">
-						    <thead>
-						        <tr>
-						            <td>Nickname</td>
-						            <td>School</td>
-						            <td>First name</td>
-						            <td>Last name</td>
-						            <td>AAAA/MM/JJ</td>
-						            <td>Address</td>
-						            <td>eMail</td>
-						            <td>Phone number</td>
-						            <td>Sex</td>
-						        </tr>
-						    </thead>
 						    <tbody>
 						        <tr>
-						            <th><?php echo('<span class="pull-right">'.$var[0].'</span>');?></th>
-						            <th><?php echo('<span class="pull-right">'.$var[3].'</span>');?></th>
-						            <th><?php echo('<span class="pull-right">'.$var[1].'</span>');?></th>
-						            <th><?php echo('<span class="pull-right">'.$var[2].'</span>');?></th>
-						            <th><?php echo('<span class="pull-right">'.$var[6].'</span>');?></th>
-						            <th><?php echo('<span class="pull-right">'.$var[8].'</span>');?></th>
-						            <th><?php echo('<span class="pull-right">'.$var[4].'</span>');?></th>
-						            <th><?php echo('<span class="pull-right">'.$var[7].'</span>');?></th>
-						            <th><?php echo('<span class="pull-right">'.$var[5].'</span>');?></th>
+						            <th>Nickname</th>
+						            <td><?php echo('<span class="pull-right">'.$var[0].'</span>');?></td>
+						        </tr>
+						        <tr>
+						            <th>School</th>
+						            <td><?php echo('<span class="pull-right">'.$var[3].'</span>');?></t>
+						        </tr>
+						        <tr>
+						            <th>First name</th>
+						            <td><?php echo('<span class="pull-right">'.$var[1].'</span>');?></td>
+						        </tr>
+						        <tr>
+						            <th>Last name</th>
+						            <td><?php echo('<span class="pull-right">'.$var[2].'</span>');?></td>
+						        </tr>
+						        <tr>
+						            <th>Date of birth</th>
+						            <td><?php echo('<span class="pull-right">'.$var[6].'</span>');?></td>
+						        </tr>
+						        <tr>
+						            <th>Address</th>
+						            <td><?php echo('<span class="pull-right">'.$var[8].'</span>');?></td>
+						        </tr>
+						        <tr>
+						            <th>eMail</th>
+						            <td><?php echo('<span class="pull-right">'.$var[4].'</span>');?></td>
+						        </tr>
+						        <tr>
+						            <th>Phone number</th>
+						            <td><?php echo('<span class="pull-right">'.$var[7].'</span>');?></td>
+						        </tr>
+						        <tr>
+						            <th>Sex</th>
+						            <td><?php echo('<span class="pull-right">'.$var[5].'</span>');?></td>
 						        </tr>
 						    </tbody>
 						</table>
