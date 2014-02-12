@@ -46,7 +46,7 @@
 			                    </ul>
 			                    <ul class="nav navbar-nav navbar-right">
 			                        <li class="dropdown">
-			                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><?php echo $_SESSION['pseudo']?> <b class="caret"></b></a>
+			                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><?php echo $_SESSION['user']?> <b class="caret"></b></a>
 			                            <ul class="dropdown-menu">
 			                                <li><a href="#">Action</a></li>
 			                                <li><a href="#">Another action</a></li>
