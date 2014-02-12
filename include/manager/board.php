@@ -11,7 +11,27 @@ else
 		?>
 		<div class="jumbotron">
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-3">
+				    <div class="panel panel-default">
+						<div class="panel-heading">
+						    <h3 class="panel-title">Top 5 players</h3>
+						</div>
+						<div class="panel-body">
+						    <ul class="list-group">
+						       <li class="list-group-item">Best player 1</li>
+						       <li class="list-group-item">Best player 2</li>
+						       <li class="list-group-item">Best player 3</li>
+						       <li class="list-group-item">Best player 4</li>
+						       <li class="list-group-item">Best player 5</li>
+						    </ul>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				
+				<div class="col-md-6">
 			        <div class="panel panel-default">
 			            <div class="panel-heading">
 			                <h3 class="panel-title">Contracts</h3>
@@ -32,7 +52,7 @@ else
 			    
 			    
 			    
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<div class="panel panel-default">
 						<div class="panel-heading">
 						    <h3 class="panel-title">Profile</h3>
@@ -45,8 +65,6 @@ else
 						        <li class="list-group-item">LAST NAME</li>
 						        <li class="list-group-item">JJ/MM/AAAA</li>
 						        <li class="list-group-item">Address</li>
-						        <li class="list-group-item">Post code</li>
-						        <li class="list-group-item">CITY</li>
 						        <li class="list-group-item">e-mail</li>
 						        <li class="list-group-item">Phone number</li>
 						        <li class="list-group-item">Sex</li>
