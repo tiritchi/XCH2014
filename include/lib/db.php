@@ -60,16 +60,18 @@
 		return $tab;
 	}
 
-	function create_contrat($bdd,$user_id,$target_id,$exp_date){
+	function create_contract($bdd,$user_id,$target_id,$exp_date){
+		srand();
+		$contract_no="X".rand(10000,99999)."C".$target_id."H14";
 		$uid = intval($user_id);
-		$target = $bdd->quote($target);
-		$inf = $bdd->quote($infos);
-		$req = $bdd->prepare("INSERT INTO users_event (users_id,event,infos,r) VALUES (:uid,:event,:infos,:r)");
+		$tid = intval($target_id);
+		$req = $bdd->prepare("INSERT INTO contracts (contract_no,user_id,target_id,complete,exp_date,start_date) VALUES (:contract_no,:uid,:tid,:complete,:expd,NOW()");
 		$req->execute(array(
 		    'uid'=>$uid,
-		    'event'=>$eventtmp,
-		    'infos'=>$inf,
-		    ':r'=>0
+		    'tid'=>$tid,
+		    'complete'=>0,
+		    'expd'=>$exp_date,
+		    'contract_no'=>$contract_no
 	    ));
 		return 0;
 	}
