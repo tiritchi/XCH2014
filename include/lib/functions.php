@@ -82,9 +82,9 @@
 		catch (Exception $e) 
 		{
 			die('Erreur : ' . $e->getMessage());
-			return "FALSE";
+			return FALSE;
 		}
-		return "TRUE";
+		return TRUE;
 
 
 	}
