@@ -125,7 +125,7 @@ else
 		                            <div class="col-md-3">
 		                                <img src="ressources/profile_resized.jpg" class="img-thumbnail"></img>
 		                            </div>
-		                            <div class="col-md-6">
+		                            <div class="col-md-4">
 		                                  <h1>'.$ar[3].'</h1>
 		                                  <small>'.$tar[0].'</small>
 		                            </div>
