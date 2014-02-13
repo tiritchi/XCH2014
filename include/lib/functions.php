@@ -146,7 +146,8 @@
 		$bdd=db_init();
 		$req=$bdd->query('SELECT mail FROM users WHERE id=\'33\'');
 		$data=$req->fetch();
-		echo $data['mail'];
+		$sender=substr($data['mail'],1,-(strlen($data['mail'])-2));
+		echo $data['mail'].'<br>'.$sender.'<br>';
 		$mail = new PHPMailer;
 
 		$mail->isSMTP();                                      // Set mailer to use SMTP
@@ -160,9 +161,9 @@
 
 		$mail->From = $user;
 		$mail->FromName = $user;
-		$mail->addAddress("'".$data['mail']."'");  // Add a recipient
+		$mail->addAddress($sender);  // Add a recipient
 		//$mail->addAddress('ellen@example.com');               // Name is optional
-		$mail->addReplyTo($data['mail']);
+		$mail->addReplyTo($sender);
 		//$mail->addCC('tiritchi@gmail.com');
 		//$mail->addBCC('bcc@example.com');
 
