@@ -60,8 +60,8 @@
 			        	...
 					    </div>
 					    <div class="modal-footer">
-					        <button type="button" class="btn btn-default label-danger pull-left" data-dismiss="modal">Cancel</button>
-					        <button type="button" class="btn btn-primary">Send <span class="glyphicon glyphicon-send pull-right"></span> </button>
+					        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+					        <button type="button" class="btn btn-primary"><div class"row"> <div>Send</div> <div> <span class="glyphicon glyphicon-send pull-right"></span></div> </div></button>
 					    </div>
 			    	</div>
 				</div>
