@@ -158,7 +158,7 @@
 //		$mail->SMTPDebug = 1;                            // Enable encryption, 'ssl' also accepted
 
 		$mail->From = $user;
-		$mail->FromName = $dest;
+		$mail->FromName = $user;
 		$mail->addAddress($data['mail']);  // Add a recipient
 		//$mail->addAddress('ellen@example.com');               // Name is optional
 //		$mail->addReplyTo('');
