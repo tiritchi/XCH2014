@@ -8,6 +8,7 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrap/css/bootstrap-select.js"></script>
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-select.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/extend/css/jasny-bootstrap.min.css">
 
     <!-- 3.0 -->
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
