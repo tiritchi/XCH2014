@@ -187,7 +187,7 @@
                         
                         <div class="fileinput fileinput-new" data-provides="fileinput">
                             <span class="btn btn-default btn-file"><span class="fileinput-new">Upload your profile picture</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
-                            <span class="fileinput-filename"></span>
+                            <span class="fileinput-filename" required=""></span>
                             <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
                         </div><br />
                         
