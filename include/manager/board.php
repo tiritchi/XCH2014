@@ -121,8 +121,15 @@ else
 					    <div class="modal-content">
 					      <div class="modal-body">
 		                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		                    <!--<img src="ressources/profile.jpg" alt="100%x180" style="height: 180px; width: 100%; display: block;"></img>-->
-		                    	<strong>'.$tar[0].'</strong>
+		                        <div class="row">
+		                            <div class="col-md-3">
+		                                <img src="ressources/profile_resized.jpg" class="img-thumbnail"></img>
+		                            </div>
+		                            <div class="col-md-3">
+		                                  <h1>'.$ar[3].'   <small>'.$tar[0].'</small><br /></h1>
+		                                  
+		                            </div>
+                                </div>
 					      </div>
 					      <div class="modal-footer">
 		                    <div class="input-group">

@@ -8,10 +8,13 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrap/css/bootstrap-select.js"></script>
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-select.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/extend/css/jasny-bootstrap.min.css">
 
     <!-- 3.0 -->
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <!--script type="text/javascript" src="bootstrap/js/jquery.min.js"></script-->
+    <script type="text/javascript" src="bootstrap/extend/js/jasny-bootstrap.min.js"></script>
 
     <script type="text/javascript">
         $(window).on('load', function () {
@@ -181,6 +184,26 @@
 							</select>
 						</div><br/>
 
+                        <script type="text/javascript">
+                        $(document).ready(function() {
+                            $('#upload').bind("click",function() 
+                            { 
+                                var imgVal = $('#uploadfile').val(); 
+                                if(imgVal=='') 
+                                { 
+                                    alert("empty input file"); 
+                                    return false; 
+                                } 
+                            }); 
+                        });
+                        </script> 
+                        
+                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                            <span class="btn btn-default btn-file"><span class="fileinput-new">Upload your profile picture</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                            <span class="fileinput-filename"></span>
+                            <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div><br />
+                        
 						<!-- Button -->
 						<div class="row">
 							<div class ="col-lg-6 col-xs-6 col-lg-offset-3 col-xs-offset-3">
