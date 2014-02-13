@@ -113,7 +113,7 @@ else
 			</div>
 			<?php
 				foreach ($array as $ar) {
-					$tar=get_user_info($bdd,$_SESSION['user_id']);
+					$tar=get_user_info($bdd,$ar[2]);
 					echo '
 				<!-- Modal -->
 					<div class="modal fade" id="'.$ar[3].'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
