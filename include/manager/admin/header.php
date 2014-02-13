@@ -61,7 +61,7 @@
 					    </div>
 					    <div class="modal-footer">
 					        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
-					        <button type="button" class="btn btn-primary">Send<i class="glyphicon glyphicon-send pull-right"></i></button>
+					        <button type="button" class="btn btn-primary"> Send <i class="glyphicon glyphicon-send"></i></button>
 					    </div>
 			    	</div>
 				</div>
