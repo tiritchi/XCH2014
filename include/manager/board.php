@@ -41,7 +41,7 @@ else
 			                	<?php
 			                		$array=get_contracts($bdd,$_SESSION['user_id']);
 									foreach ($array as $ar) {
-										echo '<a href="#" class="list-group-item" data-toggle="modal" data-target="#'.ar[3].'">';
+										echo '<a href="#" class="list-group-item" data-toggle="modal" data-target="#'.$ar[3].'">';
 										echo $ar[3].'</a>';
 									}
 								?>
