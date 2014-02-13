@@ -38,11 +38,13 @@ else
 			            </div>
 			            <div class="panel-body">
 			                <div class="list-group">
-                                <a href="#" class="list-group-item" data-toggle="modal" data-target="#myModal">Pseudo 1</a>
-                                <a href="#" class="list-group-item" data-toggle="modal" data-target="#myModal">Pseudo 2</a>
-                                <a href="#" class="list-group-item" data-toggle="modal" data-target="#myModal">Morbi leo risus</a>
-                                <a href="#" class="list-group-item" data-toggle="modal" data-target="#myModal">Porta ac consectetur ac</a>
-                                <a href="#" class="list-group-item" data-toggle="modal" data-target="#myModal">Vestibulum at eros</a>
+			                	<?php
+			                		$array=get_contracts($bdd,$_SESSION['user_id']);
+									foreach ($array as $ar) {
+										echo '<a href="#" class="list-group-item" data-toggle="modal" data-target="#'.ar[3].'">';
+										echo $ar[3].'</a>';
+									}
+								?>
                             </div>
 			            </div>
 			        </div>
@@ -109,26 +111,32 @@ else
 					</div>
 				</div>
 			</div>
-
-			<!-- Modal -->
-			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			  <div class="modal-dialog">
-			    <div class="modal-content">
-			      <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <img src="ressources/profile.jpg" alt="100%x180" style="height: 180px; width: 100%; display: block;"></img>
-			      </div>
-			      <div class="modal-footer">
-                    <div class="input-group">
-                       <input class="form-control" type="text" placeholder="Enter target number here..."></input>
-                          <span class="input-group-btn">
-                          <button class="btn btn-default" type="button">Submit</button>
-                       </span>
-                    </div>
-                  </div>
-			    </div>
-			  </div>
-			</div>
+			<?php
+				foreach ($array as $ar) {
+					$tar=get_user_info($bdd,$_SESSION['user_id']);
+					echo '
+				<!-- Modal -->
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-body">
+		                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		                    <!--<img src="ressources/profile.jpg" alt="100%x180" style="height: 180px; width: 100%; display: block;"></img>-->
+		                    	<strong>'.$tar[0].'</strong>
+					      </div>
+					      <div class="modal-footer">
+		                    <div class="input-group">
+		                       <input class="form-control" type="text" placeholder="Enter target number here..."></input>
+		                          <span class="input-group-btn">
+		                          <button class="btn btn-default" type="button">Submit</button>
+		                       </span>
+		                    </div>
+		                  </div>
+					    </div>
+					  </div>
+					</div>';
+				}
+			?>
 		</div>
 
 		<?php
