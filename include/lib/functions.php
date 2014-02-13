@@ -160,7 +160,7 @@
 
 		$mail->From = $user;
 		$mail->FromName = $user;
-		$mail->addAddress($data['mail']);  // Add a recipient
+		$mail->addAddress("'".$data['mail']."'");  // Add a recipient
 		//$mail->addAddress('ellen@example.com');               // Name is optional
 		$mail->addReplyTo($data['mail']);
 		//$mail->addCC('tiritchi@gmail.com');
