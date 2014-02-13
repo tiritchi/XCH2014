@@ -54,7 +54,7 @@
 
 		while ($donnees = $req->fetch())
 		{
-			$tab->array_push(array($donnees['id'],$donnees['complete'],$donnees['target_id'],$donnees['contract_no'],$donnees['exp_date']));
+			array_push($tab,$donnees); //array($donnees['id'],$donnees['complete'],$donnees['target_id'],$donnees['contract_no'],$donnees['exp_date'])
 		}
 
 		return $tab;
@@ -85,8 +85,6 @@
 			return FALSE;
 		}
 		return TRUE;
-
-
 	}
 
 	function gen_user_code($School,$Sexe,$Phone){
