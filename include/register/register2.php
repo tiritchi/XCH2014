@@ -12,7 +12,7 @@
     <!-- 3.0 -->
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-filestyle.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.file-input.js"></script>
 
     <script type="text/javascript">
         $(window).on('load', function () {
