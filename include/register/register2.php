@@ -12,6 +12,7 @@
     <!-- 3.0 -->
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.file-input.js"></script>
 
     <script type="text/javascript">
         $(window).on('load', function () {
@@ -165,6 +166,11 @@
 						    <span class="input-group-addon">Nickname</span>
 						    <input id="Nickname" name="Nn" placeholder="Nickname" class="form-control" required="" type="text">
 						</div><br/>
+
+                        <a class="file-input-wrapper btn">
+                            Upload your profile picture here
+                            <input type="file" title="Upload your profile picture here" style="left: -79.5px; top: 6px;"></input>
+                        </a>
 
 						<!-- Text input-->
 						<div class="input-group">
