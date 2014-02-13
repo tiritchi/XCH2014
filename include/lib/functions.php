@@ -74,7 +74,6 @@
 	}
 
 	function mark_as_complete ($bdd,$contract_no,$target_no){
-		$cno=substr($contract_no, 1,-1);
 		$req=$bdd->query("SELECT target_no FROM contracts WHERE contract_no=$cno");
 //		$req->execute(array($contract_no));
 		$data=$req->fetch();
