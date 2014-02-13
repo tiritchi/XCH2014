@@ -17,7 +17,7 @@ email: "A valid email will help us get in touch with you.",
 },
 submitHandler: function(form) {
 // do other stuff for a valid form
-$.post('include/manager/mailer.php', $("#myform").serialize(), function(data) {
+$.post('mailer.php', $("#myform").serialize(), function(data) {
 $('#results').html(data);
 });
 }
