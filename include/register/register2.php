@@ -169,13 +169,6 @@
 						    <input id="Nickname" name="Nn" placeholder="Nickname" class="form-control" required="" type="text">
 						</div><br/>
 
-                        <div class="fileinput fileinput-new" data-provides="fileinput">
-                            <span class="btn btn-default btn-file"><span class="fileinput-new">Select file</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
-                            <span class="fileinput-filename"></span>
-                            <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
-                        </div>
-
-
 						<!-- Text input-->
 						<div class="input-group">
 						    <span class="input-group-addon">Password</span>
@@ -191,6 +184,13 @@
 							</select>
 						</div><br/>
 
+                        
+                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                            <span class="btn btn-default btn-file"><span class="fileinput-new">Upload your profile picture</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                            <span class="fileinput-filename"></span>
+                            <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div><br />
+                        
 						<!-- Button -->
 						<div class="row">
 							<div class ="col-lg-6 col-xs-6 col-lg-offset-3 col-xs-offset-3">
