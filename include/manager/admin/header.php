@@ -63,12 +63,11 @@
 								<span class="input-group-addon">To</span>
 								<input type="text" class="form-control" placeholder="Nickname">
 							</div>
-							<div class="controls">
-							    <textarea id="textarea" class="input-xlarge" rows="3"></textarea>
-							    <p>Vous pouvez agrandir la fenêtre</p>
+							<div class="input-group">
+							    <div class="controls">                     
+    								<textarea id="textarea" name="textarea">default text</textarea>
+  								</div>
 							</div>
-
-			        	...
 					    </div>
 					    <div class="modal-footer">
 					        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
