@@ -2,7 +2,7 @@
 
 	$bdd=NULL;
 
-	function db_init(){
+	function db_init(){//initialise l'accès à la base de donnée et renvoie la ref vers l'objet créé 
 		global $bdd;
 		try 
 		{
@@ -17,12 +17,12 @@
 		return $bdd;
 	}
 
-	function get_user_info($bdd,$user_id){
+	function get_user_info($bdd,$user_id){ // get_user_info(ref base de donnée, clef primaire table users)  Cette fonction renvoi un tableau (array) contenant dans l'orde le pseudo, prénom, nom, école, mail, sexe, date de naissance, téléphone, adresse, identifiant 
 		$req=$bdd->prepare('SELECT * FROM users WHERE id=?');
 		$req->execute(array($user_id));
 		$donnees = $req->fetch();
 		$tab = array(substr($donnees['pseudo'],1,(strlen($donnees['pseudo'])-2)),substr($donnees['fname'],1,(strlen($donnees['fname'])-2)),substr($donnees['lname'],1,(strlen($donnees['lname'])-2)),substr($donnees['school'],1,(strlen($donnees['school'])-2)),substr($donnees['mail'],1,(strlen($donnees['mail'])-2)),substr($donnees['sexe'],1,(strlen($donnees['sexe'])-2)),$donnees['date_naissance'],"0".$donnees['phone'],substr($donnees['adresse'],1,(strlen($donnees['adresse'])-2)),$donnees['user_no']);
-		return $tab;
+		return $tab; 
 	}
 
 	function add_user_event($bdd,$user_id,$event,$infos){
@@ -47,7 +47,7 @@
 		return 0;
 	}
 
-	function get_contracts($bdd,$user_id){
+	function get_contracts($bdd,$user_id){//get_contracts(ref base de donnée, clef primaire table users) cette fonction renvoie un tableau 2D (array(array())) chaque ligne correspond à un contrat et les colonnes sont clef primaire contrat, contrat honoré (0,1), 'clef primaire user cible', numéro de contrat, date d'expiration du contrat   accès via $tableau[ligne][colonne]
 		$tab=array();
 		$req=$bdd->prepare('SELECT * FROM contracts WHERE user_id=?');
 		$req->execute(array($user_id));
@@ -61,7 +61,7 @@
 		return $tab;
 	}
 
-	function create_contract($bdd,$user_id,$target_id,$exp_date){
+	function create_contract($bdd,$user_id,$target_id,$exp_date){ //create_contract(ref bdd, clef primaire du joueur concerné, clef primaire du joueur cible, date d'expiration du contrat (YYYY-MM-DD)) rajoute un contrat dans la table contrats et renvoie le numéro de contrat
 		$req=$bdd->query("SELECT user_no FROM users WHERE id=$target_id");
 		$target_no=$req->fetch();
 		$req->closeCursor();
@@ -74,7 +74,7 @@
 		return $cno;
 	}
 
-	function mark_as_complete ($bdd,$contract_id){
+	function mark_as_complete ($bdd,$contract_id){// mark_as_complete(ref bdd, clef primaire du contrat) marque à 1 le champ 'complete' et renvoie true ou false si l'action à été effectuée
 		try 
 		{
 			$req=$bdd->exec("UPDATE contracts SET complete ='1' WHERE id=$contract_id");
@@ -85,10 +85,10 @@
 			die('Erreur : ' . $e->getMessage());
 			return FALSE;
 		}
-		return TRUE;
+		return TRUE; 
 	}
 
-	function gen_user_code($School,$Sexe,$Phone){
+	function gen_user_code($School,$Sexe,$Phone){// génère l'identifiant unique d'un utilisateur sous la forme (ecole*2,sexe,rdm()*3,2 dernier tel, XCH14)
 		srand();
 		switch ($School) {
 			case 'UCP':
