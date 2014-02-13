@@ -36,7 +36,7 @@ else
 			                <h3 class="panel-title">Contracts</h3>
 			            </div>
 			            <div class="panel-body">
-			            	<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mail">
+
 							Launch demo modal
 							</button>
 			            </div>
