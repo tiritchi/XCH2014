@@ -121,7 +121,7 @@ else
 					    <div class="modal-content">
 					      <div class="modal-body">
 		                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		                    <!--<img src="ressources/profile.jpg" alt="100%x180" style="height: 180px; width: 100%; display: block;"></img>-->
+		                    <img src="ressources/profile-resized.jpg"></img>
 		                    	<strong>'.$tar[0].'</strong>
 					      </div>
 					      <div class="modal-footer">
