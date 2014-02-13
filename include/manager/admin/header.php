@@ -31,16 +31,8 @@
 	                    <ul class="nav navbar-nav">
 	                        <li><a href="#">Home</a></li>
 	                        <li><a href="#">Profile</a></li>
-	                        <li class="dropdown">
-	                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Messages <b class="caret"></b></a>
-	                            <ul class="dropdown-menu">
-	                                <li><a href="#">Inbox</a></li>
-	                                <li><a href="#">Drafts</a></li>
-	                                <li><a href="#">Sent Items</a></li>
-	                                <li class="divider"></li>
-	                                <li><a href="#">Trash</a></li>
-	                            </ul>
-	                        </li>
+	                        <li><a href="#" data-toggle="dropdown" class="dropdown-toggle" data-toggle="modal" data-target="mail">Mail</b></a></li>
+	                        
 	                    </ul>
 	                    <ul class="nav navbar-nav navbar-right">
 	                        <li class="dropdown">
@@ -56,3 +48,23 @@
 	                </div>
 	            </div>
 	        </div>
+
+    		<!-- Modal -->
+			<div class="modal fade" id="mail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <input class="form-control" type="text" placeholder="Enter target number here..."></input> 
+			      </div>
+			      <div class="modal-footer">
+                    <div class="input-group">
+                       
+                          <span class="input-group-btn">
+                          <button class="btn btn-default" type="button">Submit</button>
+                       </span>
+                    </div>
+                  </div>
+			    </div>
+			  </div>
+			</div>

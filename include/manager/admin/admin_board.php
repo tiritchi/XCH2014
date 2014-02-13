@@ -8,7 +8,105 @@ else
     {
         include 'header.php';
         ?>
-        
+        $bdd=db_init();
+		?>
+		<div class="jumbotron">
+			<div class="row">
+				<div class="col-md-3">
+				    <div class="panel panel-default">
+						<div class="panel-heading">
+						    <h3 class="panel-title">Top 5 players</h3>
+						</div>
+						<div class="panel-body">
+						    <ul class="list-group">
+						       <li class="list-group-item">Best player 1 <span class="badge">5 points</span></li>
+						       <li class="list-group-item">Best player 2 <span class="badge">4 points</span></li>
+						       <li class="list-group-item">Best player 3 <span class="badge">3 points</span></li>
+						       <li class="list-group-item">Best player 4 <span class="badge">2 points</span></li>
+						       <li class="list-group-item">Best player 5 <span class="badge">1 points</span></li>
+						    </ul>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+			    <div class="col-md-5">
+			        <div class="panel panel-default">
+			            <div class="panel-heading">
+			                <h3 class="panel-title">Contracts</h3>
+			            </div>
+			            <div class="panel-body">
+			                <div class="list-group">
+			                	<?php
+			                		$array=get_contracts($bdd,$_SESSION['user_id']);
+									foreach ($array as $ar) {
+										echo '<a href="#" class="list-group-item" data-toggle="modal" data-target="#'.$ar[3].'">';
+										echo $ar[3].'</a>';
+									}
+								?>
+                            </div>
+			            </div>
+			        </div>
+			    </div>
+			    
+			    <?php 
+			        $var=get_user_info($bdd,$_SESSION['user_id']);
+			    ?>
+			    
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+						    <h3 class="panel-title">Profile</h3>
+						</div>
+						<table class="table">
+						    <tbody>
+						        <tr>
+						            <th>Nickname</th>
+						            <td><?php echo('<span class="pull-right">'.$var[0].'</span>');?></td>
+						        </tr>
+						        <tr>
+						            <th>User code</th>
+						            <td><?php echo('<span class="pull-right">'.$var[9].'</span>');?></td>
+						        </tr>
+						        <tr>
+						            <th>School</th>
+						            <td><?php echo('<span class="pull-right">'.$var[3].'</span>');?></t>
+						        </tr>
+						        <tr>
+						            <th>First name</th>
+						            <td><?php echo('<span class="pull-right">'.$var[1].'</span>');?></td>
+						        </tr>
+						        <tr>
+						            <th>Last name</th>
+						            <td><?php echo('<span class="pull-right">'.$var[2].'</span>');?></td>
+						        </tr>
+						        <tr>
+						            <th>Date of birth</th>
+						            <td><?php echo('<span class="pull-right">'.$var[6].'</span>');?></td>
+						        </tr>
+						        <tr>
+						            <th>Address</th>
+						            <td><?php echo('<span class="pull-right">'.$var[8].'</span>');?></td>
+						        </tr>
+						        <tr>
+						            <th>eMail</th>
+						            <td><?php echo('<span class="pull-right">'.$var[4].'</span>');?></td>
+						        </tr>
+						        <tr>
+						            <th>Phone number</th>
+						            <td><?php echo('<span class="pull-right">'.$var[7].'</span>');?></td>
+						        </tr>
+						        <tr>
+						            <th>Sex</th>
+						            <td><?php echo('<span class="pull-right">'.$var[5].'</span>');?></td>
+						        </tr>
+						    </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
 
         <?php
         include 'footer.php';
