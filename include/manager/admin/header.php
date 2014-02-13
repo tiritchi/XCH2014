@@ -42,7 +42,7 @@
 	                            <ul class="dropdown-menu btn-toolbar">
 	                                <li><a href="#"><i class="glyphicon glyphicon-cog"></i>Settings</a></li>
 	                                <li class="divider"></li>
-	                                <li><div class="row"><div><i class="glyphicon glyphicon-log-out "></i></div><div><a href="logout">Log out</a></div></div></li>
+	                                <li><a href="logout"><i class="glyphicon glyphicon-log-out "></i>Log out</a></li>
 	                            </ul>
 	                        </li>
 	                    </ul>
@@ -59,6 +59,15 @@
 			        		<h4 class="modal-title" id="myModalLabel">Send a mail</h4>
 			    		</div>
 			    		<div class="modal-body">
+				    		<div class="input-group">
+								<span class="input-group-addon">To</span>
+								<input type="text" class="form-control" placeholder="Nickname">
+							</div>
+							<div class="controls">
+							    <textarea id="textarea" class="input-xlarge" rows="3"></textarea>
+							    <p>Vous pouvez agrandir la fenêtre</p>
+							</div>
+
 			        	...
 					    </div>
 					    <div class="modal-footer">
