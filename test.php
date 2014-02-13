@@ -12,10 +12,10 @@
 //	echo $n;
 //	print_r($array);
 	foreach ($array as $ar) {
-		echo
+		echo $ar[0]."-".$ar[1]."-".$ar[2]."-".$ar[3]."-".$ar[4];
 		echo '<br/>';
 	}
 //	for($i=0;$i<=$n;$i++){
-//		echo array[$i][0]."-".array[$i][1]."-".array[$i][2]."-".array[$i][3]."-".array[$i][4];
+//		
 //	}
  ?> 
