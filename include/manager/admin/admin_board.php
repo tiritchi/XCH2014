@@ -36,15 +36,9 @@ else
 			                <h3 class="panel-title">Contracts</h3>
 			            </div>
 			            <div class="panel-body">
-			                <div class="list-group">
-			                	<?php
-			                		$array=get_contracts($bdd,$_SESSION['user_id']);
-									foreach ($array as $ar) {
-										echo '<a href="#" class="list-group-item" data-toggle="modal" data-target="#'.$ar[3].'">';
-										echo $ar[3].'</a>';
-									}
-								?>
-                            </div>
+			            	<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mail">
+							Launch demo modal
+							</button>
 			            </div>
 			        </div>
 			    </div>
