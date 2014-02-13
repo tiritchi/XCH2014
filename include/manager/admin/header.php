@@ -37,9 +37,9 @@
 	                        
 	                    </ul>
 	                    <ul class="nav navbar-nav navbar-right">
-	                    	<div class="btn-toolbar">
-	                        <li class="dropdown">
+	                    	<li class="dropdown">
 	                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="glyphicon glyphicon-user"></i> <?php echo $_SESSION['user']?>		<b class="caret"></b></a>
+	                        	<div class="btn-toolbar">
 	                            <ul class="dropdown-menu pagination-centered">
 	                                <li><a href="#"><i class="glyphicon glyphicon-cog"></i>Settings</a></li>
 	                                <li class="divider"></li>
