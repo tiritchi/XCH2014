@@ -31,7 +31,7 @@
 	                    <ul class="nav navbar-nav">
 	                        <li><a href="#">Home</a></li>
 	                        <li><a href="#">Profile</a></li>
-	                        <li><a href="#" data-toggle="dropdown" data-toggle="modal" data-target="#mail">Mail</b></a></li>
+	                        <li><a href="#" data-toggle="dropdown" data-toggle="modal" data-target="#mail">Mail</a></li>
 	                        
 	                    </ul>
 	                    <ul class="nav navbar-nav navbar-right">
@@ -48,8 +48,7 @@
 	                </div>
 	            </div>
 	        </div>
-
-    		<!-- Modal -->
+	        <!-- Modal -->
 			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
 			    	<div class="modal-content">
