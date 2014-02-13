@@ -74,8 +74,8 @@
 	}
 
 	function mark_as_complete ($bdd,$contract_no,$target_no){
-		$req=$bdd->prepare("SELECT target_no FROM contracts WHERE contract_no=?");
-		$req->execute(array($contract_no));
+		$req=$bdd->prepare("SELECT target_no FROM contracts WHERE contract_no=:cno");
+		$req->execute(array('cno'=>$contract_no));
 		$data=$req->fetch();
 		if($data['target_no']==$target_no){
 			try 
