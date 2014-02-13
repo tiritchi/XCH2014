@@ -37,8 +37,6 @@ else
 			            </div>
 			            <div class="panel-body">
 
-							Launch demo modal
-							</button>
 			            </div>
 			        </div>
 			    </div>
