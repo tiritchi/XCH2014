@@ -156,13 +156,13 @@
 		$mail->Password = $pass;                           // SMTP password
 		$mail->SMTPSecure = 'tls';
 		$mail->Port = 587;
-//		$mail->SMTPDebug = 1;                            // Enable encryption, 'ssl' also accepted
+		$mail->SMTPDebug = 1;                            // Enable encryption, 'ssl' also accepted
 
 		$mail->From = $user;
 		$mail->FromName = $user;
 		$mail->addAddress($data['mail']);  // Add a recipient
 		//$mail->addAddress('ellen@example.com');               // Name is optional
-//		$mail->addReplyTo('');
+		$mail->addReplyTo($data['mail']);
 		//$mail->addCC('tiritchi@gmail.com');
 		//$mail->addBCC('bcc@example.com');
 
