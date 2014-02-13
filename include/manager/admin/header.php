@@ -42,7 +42,7 @@
 	                            <ul class="dropdown-menu btn-toolbar">
 	                                <li><a href="#"><i class="glyphicon glyphicon-cog"></i>Settings</a></li>
 	                                <li class="divider"></li>
-	                                <li><a href="logout"><i class="glyphicon glyphicon-log-out "></i>Log out</a></li>
+	                                <li><div class="row"><div><i class="glyphicon glyphicon-log-out "></i></div><div><a href="logout">Log out</a><div></li>
 	                            </ul>
 	                        </li>
 	                    </ul>
