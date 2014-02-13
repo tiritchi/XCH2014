@@ -6,5 +6,5 @@
 //		$req->execute(array('X32235C65H14','32','33','0','2014-06-12'));
 
 //		echo gen_user_code('ENSEA','Male',"0621849218");
-	mark_as_complete($bdd,13,"03X90724XCH14");
+	mark_as_complete($bdd,'13',"03X90724XCH14");
  ?> 
