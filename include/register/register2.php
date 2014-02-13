@@ -12,8 +12,8 @@
     <!-- 3.0 -->
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <!--script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.file-input.js"></script-->
+    <!--script type="text/javascript" src="bootstrap/js/jquery.min.js"></script-->
+    <script type="text/javascript" src="bootstrap/extend/js/jasny-bootstrap.min.js"></script>
 
     <script type="text/javascript">
         $(window).on('load', function () {
@@ -168,13 +168,12 @@
 						    <input id="Nickname" name="Nn" placeholder="Nickname" class="form-control" required="" type="text">
 						</div><br/>
 
-                        <div class="bootstrap-filestyle" style="display: inline;" tabindex="0">
-                            <input class="input-large" type="text" disabled=""></input>
-                            <label class="btn" for="filestyle-2">
-                                <i class="icon-folder-open"></i>
-                                <span>Find file</span>
-                            </label>
+                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                            <span class="btn btn-default btn-file"><span class="fileinput-new">Select file</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                            <span class="fileinput-filename"></span>
+                            <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
                         </div>
+
 
 						<!-- Text input-->
 						<div class="input-group">
