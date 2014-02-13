@@ -122,7 +122,7 @@ else
 					      <div class="modal-body">
 		                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 		                        <div class="bs-example bs-example-images">
-		                            <img src="ressources/profile_resized.jpg"></img>
+		                            <img src="ressources/profile_resized.jpg" class="img-thumbnail"></img>
 		                    	    <strong>'.$tar[0].'</strong>
 		                    	</div>
 					      </div>
