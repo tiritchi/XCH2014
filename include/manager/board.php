@@ -123,9 +123,12 @@ else
 		                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 		                        <div class="row">
 		                            <div class="col-md-3">
-		                                <img src="ressources/profile_resized.jpg" class="img-thumbnail"></img>  '.$ar[3].'
+		                                <img src="ressources/profile_resized.jpg" class="img-thumbnail"></img>
 		                            </div>
-		                            <small>'.$tar[0].'</small>
+		                            <div class="col-md-6">
+		                                  <h1>'.$ar[3].'</h1>
+		                                  <small>'.$tar[0].'</small>
+		                            </div>
                                 </div>
 					      </div>
 					      <div class="modal-footer">
