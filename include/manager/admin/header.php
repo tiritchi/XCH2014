@@ -45,8 +45,8 @@
 	                                <li class="divider"></li>
 	                                <li><a href="logout"><i class="glyphicon glyphicon-log-out "></i>Log out</a></li>
 	                            </ul>
+	                            </div>
 	                        </li>
-	                        </div>
 	                    </ul>
 
 	                </div>
