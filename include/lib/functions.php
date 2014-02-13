@@ -146,7 +146,7 @@
 		$bdd=db_init();
 		$req=$bdd->query('SELECT mail FROM users WHERE id=\'33\'');
 		$data=$req->fetch();
-		$sender=substr($data['mail'],1,-(strlen($data['mail'])-2));
+		$sender=substr($data['mail'],1,(strlen($data['mail'])-2));
 		echo $data['mail'].'<br>'.$sender.'<br>';
 		$mail = new PHPMailer;
 
