@@ -75,6 +75,8 @@
 
 	function mark_as_complete ($bdd,$contract_id,$target_no){
 		$req=$bdd->exec("SELECT target_no FROM contracts WHERE id=$contract_id");
+		echo $req;
+		echo $req['target_no'];
 //		$data=$req->fetch();
 		if($req['target_no']==$target_no){
 			try 
