@@ -8,36 +8,12 @@
         <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
         <script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
-        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
-    	<link href="bootstrap/css/style.css" rel="stylesheet" type="text/css">
-    	<script src="http://code.jquery.com/jquery.js"></script>
         <style type="text/css">
             body { padding-top: 50px; }
         	.btn-toolbar {text-align:center;}
 
         <?php require('include/lib/functions.php'); ?>  
         </style>
-        <script>
-			    $(document).ready(function(){
-				    var left = 140
-				    $('#text_counter').text('Characters left: ' + left);
-				  
-				        $('#status').keyup(function () {
-				  
-				        left = 140 - $(this).val().length;
-				  
-				        if(left < 0){
-				            $('#text_counter').addClass("overlimit");
-				             $('#posting').attr("disabled", true);
-				        }else{
-				            $('#text_counter').removeClass("overlimit");
-				            $('#posting').attr("disabled", false);
-				        }
-				  
-				        $('#text_counter').text('Characters left: ' + left);
-				    });
-				});
-			</script>
 		</head>
 		<body>
 	        <div id="myNavbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
