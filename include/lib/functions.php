@@ -144,7 +144,7 @@
 	function send_mail($ident,$pass,$user,$to_user_id,$subject,$body){
 		require 'include/lib/phpmailer/PHPMailerAutoload.php';
 		$bdd=db_init();
-		$req=$bdd->query('SELECT mail FROM users WHERE id='.$to_user_id.'');
+		$req=$bdd->query('SELECT * FROM users WHERE id='.$to_user_id.'');
 		$req->fetch();
 		$dest=$req['mail'];
 		$mail = new PHPMailer;
