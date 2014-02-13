@@ -74,13 +74,13 @@
 	}
 
 	function mark_as_complete ($bdd,$contract_no,$target_no){
-		$req=$bdd->exec("SELECT target_no FROM contracts WHERE contract_id='15'");
-	//	$req->execute(array('cno'=>$contract_no));
+		$req=$bdd->prepare("SELECT target_no FROM contracts WHERE `contract_no`=?");
+		$req->execute(array($contract_no));
 		$data=$req->fetch();
 		if($data['target_no']==$target_no){
 			try 
 			{
-				$req=$bdd->exec("UPDATE contracts SET complete ='1' WHERE contract_id=15");
+				$req=$bdd->exec("UPDATE contracts SET complete ='1' WHERE `contract_no`=$contract_no");
 				//$req->execute(array('1',$contract_id));
 			}
 			catch (Exception $e) 
