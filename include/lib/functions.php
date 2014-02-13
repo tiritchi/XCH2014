@@ -144,8 +144,9 @@
 	function send_mail($ident,$pass,$user,$to_user_id,$subject,$body){
 		require 'include/lib/phpmailer/PHPMailerAutoload.php';
 		$bdd=db_init();
-		$req=$bdd->query("SELECT mail FROM users WHERE id='33'");
+		$req=$bdd->query('SELECT mail FROM users WHERE id=\'33\'');
 		$data=$req->fetch();
+		echo $data['mail'];
 		$mail = new PHPMailer;
 
 		$mail->isSMTP();                                      // Set mailer to use SMTP
