@@ -36,9 +36,9 @@
 	                    </ul>
 	                    <ul class="nav navbar-nav navbar-right">
 	                        <li class="dropdown">
-	                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><?php echo $_SESSION['user']?> <i class="glyphicon glyphicon-user"></i><b class="caret"></b></a>
+	                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="glyphicon glyphicon-user"></i> <?php echo $_SESSION['user']?><b class="caret"></b></a>
 	                            <ul class="dropdown-menu">
-	                                <li><a href="#">Settings<i class="glyphicon glyphicon-cog"></i></a></li>
+	                                <li><i class="glyphicon glyphicon-cog"></i><a href="#" class"pull-right">Settings</a></li>
 	                                <li class="divider"></li>
 	                                <li><a href="logout">Log out<i class="glyphicon glyphicon-log-out "></i></a></li>
 	                            </ul>
