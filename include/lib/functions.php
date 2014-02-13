@@ -141,7 +141,7 @@
 		return $u_code;
 	}
 
-	function send_mail($ident,$pass,$user,$for_who){
+	function send_mail($ident,$pass,$user,$for_who,$subject,$body){
 		require 'include/lib/phpmailer/PHPMailerAutoload.php';
 
 		$mail = new PHPMailer;
