@@ -68,20 +68,20 @@
 		$cno='X'.rand(10000,99999).'C'.$target_id.'H14'.rand(10,99);
 		$uid = intval($user_id);
 		$tid = intval($target_id);
-		$req = $bdd->prepare('INSERT INTO contracts (contract_no,user_id,target_id,target_no,complete,exp_date,start_date) VALUES (?,?,?,?,?,?,NOW())');
+		$req = $bdd->prepare('INSERT INTO contracts (contractno,user_id,target_id,target_no,complete,exp_date,start_date) VALUES (?,?,?,?,?,?,NOW())');
 		$req->execute(array($cno,$user_id,$target_id,$target_no['user_no'],'0',$exp_date));
 		return $cno;
 	}
 
 	function mark_as_complete ($bdd,$contract_no,$target_no){
 //		$cno="\'".$contract_no."'";
-		$req=$bdd->query("SELECT target_no FROM contracts HAVING contract_no='$contract_no'");
+		$req=$bdd->query("SELECT target_no FROM contracts HAVING contractno='$contract_no'");
 //		$req->execute(array($contract_no));
 		$data=$req->fetch();
 		if($data['target_no']==$target_no){
 			try 
 			{
-				$req=$bdd->exec("UPDATE contracts SET complete ='1' WHERE contract_no=$contract_no");
+				$req=$bdd->exec("UPDATE contracts SET complete ='1' WHERE contractno=$contract_no");
 				//$req->execute(array('1',$contract_id));
 			}
 			catch (Exception $e) 
