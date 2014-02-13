@@ -121,10 +121,10 @@ else
 					    <div class="modal-content">
 					      <div class="modal-body">
 		                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		                        <div class="bs-example bs-example-images">
+		                        <div class="page-header">
 		                            <img src="ressources/profile_resized.jpg" class="img-thumbnail"></img>
-		                    	    <strong>'.$tar[0].'</strong>
-		                    	</div>
+                                    <h1>'.$tar[0].'</h1>
+                                </div>
 					      </div>
 					      <div class="modal-footer">
 		                    <div class="input-group">
