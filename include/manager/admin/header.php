@@ -36,11 +36,11 @@
 	                    </ul>
 	                    <ul class="nav navbar-nav navbar-right">
 	                        <li class="dropdown">
-	                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="glyphicon glyphicon-user-white"></i> <?php echo $_SESSION['user']?><b class="caret"></b></a>
-	                            <ul class="dropdown-menu">
-	                                <li><a href="#"><i class="glyphicon glyphicon-cog"></i><span style="text-align:center">Settings</span></a></li>
+	                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="glyphicon glyphicon-user"></i> <?php echo $_SESSION['user']?><b class="caret"></b></a>
+	                            <ul class="dropdown-menu pagination-centered">
+	                                <li><a href="#"><i class="glyphicon glyphicon-cog"></i>Settings</a></li>
 	                                <li class="divider"></li>
-	                                <li><a href="logout"><i class="glyphicon glyphicon-log-out "></i><span style="text-align:center">Log out</span></a></li>
+	                                <li><a href="logout"><i class="glyphicon glyphicon-log-out "></i>Log out</a></li>
 	                            </ul>
 	                        </li>
 	                    </ul>
