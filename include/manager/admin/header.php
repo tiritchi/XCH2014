@@ -64,13 +64,12 @@
 								<input type="text" class="form-control" placeholder="Nickname">
 							</div>
 							<div class="input-group">
-							    <div class="controls">                     
-    								<textarea id="textarea" name="textarea">default text</textarea>
-  								</div>
+							    <textarea id="status" rows="5" style="width:485px"></textarea>
+    							<span id="text_counter"></span>
 							</div>
 					    </div>
 					    <div class="modal-footer">
-					        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+					        <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cancel</button>
 					        <button type="button" class="btn btn-primary"> Send <i class="glyphicon glyphicon-send"></i></button>
 					    </div>
 			    	</div>
