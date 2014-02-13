@@ -69,7 +69,7 @@
 		$uid = intval($user_id);
 		$tid = intval($target_id);
 		$req = $bdd->prepare('INSERT INTO contracts (contract_no,user_id,target_id,target_no,complete,exp_date,start_date) VALUES (?,?,?,?,?,?,NOW())');
-		$req->execute(array($cno,$user_id,$target_id,$target_no,'0',$exp_date));
+		$req->execute(array($cno,$user_id,$target_id,$target_no['user_no'],'0',$exp_date));
 		return $cno;
 	}
 
