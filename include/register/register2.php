@@ -167,10 +167,13 @@
 						    <input id="Nickname" name="Nn" placeholder="Nickname" class="form-control" required="" type="text">
 						</div><br/>
 
-                        <a class="file-input-wrapper btn">
-                            Upload your profile picture here
-                            <input type="file" title="Upload your profile picture here" style="left: -79.5px; top: 6px;"></input>
-                        </a>
+                        <div class="bootstrap-filestyle" style="display: inline;" tabindex="0">
+                            <input class="input-large" type="text" disabled=""></input>
+                            <label class="btn" for="filestyle-2">
+                                <i class="icon-folder-open"></i>
+                                <span>Find file</span>
+                            </label>
+                        </div>
 
 						<!-- Text input-->
 						<div class="input-group">
