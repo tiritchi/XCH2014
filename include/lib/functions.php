@@ -147,7 +147,8 @@
 		$bdd=db_init();
 		$req=$bdd->query("SELECT mail FROM users WHERE pseudo='".$to_user_pseudo."'");
 		$data=$req->fetch();
-		$sender=substr($data['mail'],1,(strlen($data['mail'])-2));
+		$to_mail=substr($data['mail'],1,(strlen($data['mail'])-2));
+		echo $to_mail.'<br>'.$to_user_pseudo;
 		$mail = new PHPMailer;
 		
 		$mail->isSMTP();                 
@@ -162,8 +163,8 @@
 
 		$mail->From = $user;
 		$mail->FromName = $user;
-		$mail->addAddress($sender);  // Add a recipient $mail->addAddress('ellen@example.com');
-		$mail->addReplyTo($sender);
+		$mail->addAddress($to_mail);  // Add a recipient $mail->addAddress('ellen@example.com');
+		$mail->addReplyTo($to_mail);
 //		$mail->addBCC('XCH2014@ensea.fr');
 
 		$mail->WordWrap = 50;                                
