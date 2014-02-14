@@ -49,7 +49,7 @@ else
 											        </a>
     											</h4>
     										</div>
-    										<div id="collapse.'$i.'" class="panel-collapse collapse">
+    										<div id="collapse'.$i.'" class="panel-collapse collapse">
       											<div class="panel-body">
         											blabla
       											</div>
