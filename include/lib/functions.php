@@ -148,7 +148,7 @@
 		}
 		$bdd=db_init();
 		$pseudo="'".$to_user_pseudo."'";
-		$req=$bdd->query("SELECT mail,pseudo FROM users WHERE pseudo='".$pseudo."'");
+		$req=$bdd->query("SELECT mail,pseudo FROM users WHERE pseudo=".$pseudo."");
 		$data=$req->fetch();
 		$to_mail=substr($data['mail'],1,(strlen($data['mail'])-2));
 		echo $to_mail.'<br>'.$data['pseudo'];
