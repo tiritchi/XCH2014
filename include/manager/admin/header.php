@@ -12,8 +12,8 @@
             body { padding-top: 50px; }
         	.btn-toolbar {text-align:center;}
 
-        <?php require('include/lib/functions.php'); ?>  
         </style>
+		<?php require('include/lib/functions.php'); ?> 
 		</head>
 		<body>
 	        <div id="myNavbar" class="navbar navbar-default navbar-fixed-top" role="navigation">

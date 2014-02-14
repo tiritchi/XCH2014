@@ -158,6 +158,7 @@
 		$mail->Username = $ident;                            
 		$mail->Password = $pass;
 		$mail->Port = 587;
+		$mail->SMTPDebug=1;
 
 		$mail->From = $user;
 		$mail->FromName = $user;
