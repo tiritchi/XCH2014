@@ -147,6 +147,8 @@
 			$subject='test';
 		}
 		$bdd=db_init();
+		$test= substr($to_user_pseudo, 1,(strlen($to_user_pseudo)-2));
+		echo '$test';
 		$req=$bdd->query("SELECT mail,pseudo FROM users WHERE pseudo='"."'".$to_user_pseudo."");
 		$req2=$bdd->query("SELECT mail,pseudo FROM users WHERE id='".$user_id."'");
 		$data=$req->fetch();
