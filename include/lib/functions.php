@@ -147,7 +147,7 @@
 			$subject='test';
 		}
 		$bdd=db_init();
-		$req=$bdd->query('SELECT mail,pseudo FROM users WHERE pseudo LIKE '.$to_user_pseudo.'');
+		$req=$bdd->query("SELECT mail,pseudo FROM users WHERE pseudo LIKE ".$to_user_pseudo."");
 		$req2=$bdd->query("SELECT mail,pseudo FROM users WHERE id='".$user_id."'");
 		$data=$req->fetch();
 		$data2=$req2->fetch();
@@ -184,5 +184,10 @@
 		   return 'Mailer Error: ' . $mail->ErrorInfo;
 		}
 		return SUCCESS;
+	}
+
+	function get_users_list($bdd){
+		$req=$bdd->query("SELECT * FROM users");
+		return $req;
 	}
 ?>

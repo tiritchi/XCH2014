@@ -36,7 +36,29 @@ else
 			                <h3 class="panel-title">Contracts</h3>
 			            </div>
 			            <div class="panel-body">
+			            <div class="panel-group" id="accordion">
+			            <?php $req=get_users_list($bdd);
+			            	foreach ($data=$req->fetch()){
+			            		echo '
+			            				<div class="panel panel-default">
+    										<div class="panel-heading">
+      											<h4 class="panel-title">
+											        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+											          '.$data['pseudo'].'
+											        </a>
+    											</h4>
+    										</div>
+    										<div id="collapse" class="panel-collapse collapse">
+      											<div class="panel-body">
+        											blabla
+      											</div>
+    										</div>
+										</div>
+			            		';
 
+			            	}
+			            	?>
+			            </div>
 			            </div>
 			        </div>
 			    </div>
