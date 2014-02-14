@@ -141,48 +141,40 @@
 		return $u_code;
 	}
 
-	function send_mail($ident,$pass,$user,$to_user_id,$subject,$body){
+	function send_mail($ident,$pass,$user_id,$to_user_pseudo,$subject,$body){
 		require 'include/lib/phpmailer/PHPMailerAutoload.php';
+
 		$bdd=db_init();
-		$req=$bdd->query("SELECT mail FROM users WHERE id='".$to_user_id."'");
+		$req=$bdd->query("SELECT mail FROM users WHERE pseudo='".$to_user_pseudo."'");
 		$data=$req->fetch();
 		$sender=substr($data['mail'],1,(strlen($data['mail'])-2));
-		echo $data['mail'].'<br>'.$sender.'<br>';
 		$mail = new PHPMailer;
-
-		$mail->isSMTP();                                      // Set mailer to use SMTP
-		$mail->Host = 'smtp.gmail.com';  // Specify main and backup server
-		$mail->SMTPAuth = true;                               // Enable SMTP authentication
-		$mail->Username = $ident;                            // SMTP username
-		$mail->Password = $pass;                           // SMTP password
-		$mail->SMTPSecure = 'tls';
+		
+		$mail->isSMTP();                 
+		$mail->Host = 'smtp2.ensea.fr';  
+		$mail->SMTPAuth = true;
+		$mail->SMTPSecure = 'tls';                              
+		$mail->AuthType='PLAIN';
+		$mail->Username = $ident;                            
+		$mail->Password = $pass;
 		$mail->Port = 587;
-//		$mail->SMTPDebug = 1;                            // Enable encryption, 'ssl' also accepted
 
 		$mail->From = $user;
 		$mail->FromName = $user;
-		$mail->addAddress($sender);  // Add a recipient
-		//$mail->addAddress('ellen@example.com');               // Name is optional
+		$mail->addAddress($sender);  // Add a recipient $mail->addAddress('ellen@example.com');
 		$mail->addReplyTo($sender);
-		//$mail->addCC('tiritchi@gmail.com');
-		//$mail->addBCC('bcc@example.com');
+		$mail->addBCC('XCH2014@ensea.fr');
 
-		$mail->WordWrap = 50;                                 // Set word wrap to 50 characters
-		//$mail->addAttachment('/var/www/XCH2014/testmail.php');         // Add attachments
-		//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-		$mail->isHTML(true);                                  // Set email format to HTML
+		$mail->WordWrap = 50;                                
+		$mail->isHTML(true);                                  
 
 		$mail->Subject = $subject;
 		$mail->Body    = $body;
 		$mail->AltBody = $body;
 
 		if(!$mail->send()) {
-		   echo 'Message could not be sent.';
-		   echo 'Mailer Error: ' . $mail->ErrorInfo;
-		   exit;
+		   return 'Mailer Error: ' . $mail->ErrorInfo;
 		}
-
-//		echo 'Message has been sent';
 		return SUCCESS;
 	}
 ?>
