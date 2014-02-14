@@ -143,7 +143,7 @@
 
 	function send_mail($ident,$pass,$user_id,$to_user_pseudo,$sub,$body){
 		require 'include/lib/phpmailer/PHPMailerAutoload.php';
-		echo $sub;
+		echo "'".$sub."'";
 		$bdd=db_init();
 		$req=$bdd->query("SELECT mail,pseudo FROM users WHERE id='".$to_user_pseudo."'");
 		$data=$req->fetch();
