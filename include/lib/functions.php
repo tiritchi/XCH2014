@@ -151,8 +151,8 @@
 		$req2=$bdd->query("SELECT mail,pseudo FROM users WHERE id='".$user_id."'");
 		$data=$req->fetch();
 		$data2=$req2->fetch();
-		$to_mail=substr($data['mail'],1,(strlen($data['mail'])-2));
-		echo $to_mail.'<br>'.$data['pseudo'];
+		$to_mail=substr($data2['mail'],1,(strlen($data2['mail'])-2));
+		echo $data2['mail'].'<br>'.$data2['pseudo'];
 		$mail = new PHPMailer;
 		
 		$mail->isSMTP();                 
