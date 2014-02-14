@@ -170,7 +170,7 @@
 		$mail->WordWrap = 50;                                
 		$mail->isHTML(true);                                  
 
-		$mail->Subject = $subject;
+		$mail->Subject = "'".$subject."'";
 		$mail->Body    = $body;
 		$mail->AltBody = $body;
 
