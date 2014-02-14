@@ -141,7 +141,7 @@
 		return $u_code;
 	}
 
-	function send_mail($ident,$pass,$user_id,$to_user_pseudo,$subject,$body){
+	function send_mail($ident,$pass,$user_id,$to_user_pseudo,$sub,$body){
 		require 'include/lib/phpmailer/PHPMailerAutoload.php';
 
 		$bdd=db_init();
@@ -159,7 +159,7 @@
 		$mail->Username = $ident;                            
 		$mail->Password = $pass;
 		$mail->Port = 587;
-		$mail->SMTPDebug=true;
+//		$mail->SMTPDebug=true;
 
 		$mail->From = 'XCH2014@ensea.fr';
 		$mail->FromName = $data['pseudo'];
@@ -170,7 +170,7 @@
 		$mail->WordWrap = 50;                                
 		$mail->isHTML(true);                                  
 
-		$mail->Subject = "'".$subject."'";
+		$mail->Subject = $sub;
 		$mail->Body    = $body;
 		$mail->AltBody = $body;
 
