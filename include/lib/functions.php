@@ -147,14 +147,13 @@
 			$subject='test';
 		}
 		$bdd=db_init();
-		$req=$bdd->prepare('SELECT mail,pseudo FROM users WHERE pseudo=?');
-		$test = $to_user_pseudo;
-		$req->bindParam(1,$test);
+		$req=$bdd->query("SELECT mail,pseudo FROM users WHERE pseudo='". mysql_real_escape_string($to_user_pseudo) ."'");
 		$req2=$bdd->query("SELECT mail,pseudo FROM users WHERE id='".$user_id."'");
 		$data=$req->fetch();
 		$data2=$req2->fetch();
 		$to_mail=substr($data['mail'],1,(strlen($data['mail'])-2));
 		$reply_mail=substr($data2['mail'],1,(strlen($data2['mail'])-2));
+		echo $data['mail'].'<br>'.$data['pseudo'];
 		echo $data2['mail'].'<br>'.$data2['pseudo'];
 		$mail = new PHPMailer;
 		
