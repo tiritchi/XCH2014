@@ -157,7 +157,7 @@
 		$mail->Password = $pass;                           // SMTP password
 		$mail->SMTPSecure = 'tls';
 		$mail->Port = 587;
-		$mail->SMTPDebug = 1;                            // Enable encryption, 'ssl' also accepted
+//		$mail->SMTPDebug = 1;                            // Enable encryption, 'ssl' also accepted
 
 		$mail->From = $user;
 		$mail->FromName = $user;
@@ -182,7 +182,7 @@
 		   exit;
 		}
 
-		echo 'Message has been sent';
-
+//		echo 'Message has been sent';
+		return SUCCESS;
 	}
 ?>

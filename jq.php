@@ -4,13 +4,7 @@ JQuery Form Example
 $(document).ready(function(){
 $("#myform").validate({
 debug: false,
-rules: {
-name: "required",
-email: {
-required: true,
-email: true
-}
-},
+rules: {name: "required",email: {required: true,email: true}},
 messages: {
 name: "Please let us know who you are.",
 email: "A valid email will help us get in touch with you.",
