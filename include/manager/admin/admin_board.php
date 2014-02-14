@@ -38,7 +38,7 @@ else
 			            <div class="panel-body">
 			            <div class="panel-group" id="accordion">
 			            <?php $req=get_users_list($bdd);
-			            	foreach ($data=$req->fetch()){
+			            	foreach ($data=$req->fetch();){
 			            		echo '
 			            				<div class="panel panel-default">
     										<div class="panel-heading">
