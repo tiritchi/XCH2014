@@ -45,7 +45,7 @@ else
     										<div class="panel-heading">
       											<h4 class="panel-title">
 											        <a data-toggle="collapse" data-parent="#accordion" href="#collapse'.$i.'">
-											          '.substr($data['pseudo'],1,2-strlen($data['pseudo'])).'
+											          '.substr($data['pseudo'],1,(strlen($data['pseudo'])-2)).'
 											        </a>
     											</h4>
     										</div>
