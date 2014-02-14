@@ -148,7 +148,7 @@
 		}
 		$bdd=db_init();
 		$req=$bdd->prepare('SELECT mail,pseudo FROM users WHERE pseudo=?');
-		$test = "'".$to_user_pseudo."'";
+		$test = $to_user_pseudo;
 		$req->bindParam(1,$test);
 		$req2=$bdd->query("SELECT mail,pseudo FROM users WHERE id='".$user_id."'");
 		$data=$req->fetch();
