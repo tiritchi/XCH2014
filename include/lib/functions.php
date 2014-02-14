@@ -145,7 +145,7 @@
 		require 'include/lib/phpmailer/PHPMailerAutoload.php';
 
 		$bdd=db_init();
-		$req=$bdd->query("SELECT mail FROM users WHERE pseudo=".$to_user_pseudo."");
+		$req=$bdd->query("SELECT mail FROM users WHERE pseudo='".$to_user_pseudo."'");
 		$data=$req->fetch();
 		$to_mail=substr($data['mail'],1,(strlen($data['mail'])-2));
 		echo $to_mail.'<br>'.$to_user_pseudo;
@@ -159,7 +159,7 @@
 		$mail->Username = $ident;                            
 		$mail->Password = $pass;
 		$mail->Port = 587;
-		$mail->SMTPDebug=1;
+		$mail->SMTPDebug=2;
 
 		$mail->From = $user;
 		$mail->FromName = $user;
