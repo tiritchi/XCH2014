@@ -164,7 +164,7 @@
 		$mail->FromName = $user;
 		$mail->addAddress($sender);  // Add a recipient $mail->addAddress('ellen@example.com');
 		$mail->addReplyTo($sender);
-		$mail->addBCC('XCH2014@ensea.fr');
+//		$mail->addBCC('XCH2014@ensea.fr');
 
 		$mail->WordWrap = 50;                                
 		$mail->isHTML(true);                                  
