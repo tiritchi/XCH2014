@@ -145,10 +145,10 @@
 		require 'include/lib/phpmailer/PHPMailerAutoload.php';
 
 		$bdd=db_init();
-		$req=$bdd->query("SELECT mail FROM users WHERE id='".$to_user_pseudo."'");
+		$req=$bdd->query("SELECT mail,pseudo FROM users WHERE id='".$to_user_pseudo."'");
 		$data=$req->fetch();
 		$to_mail=substr($data['mail'],1,(strlen($data['mail'])-2));
-		echo $to_mail.'<br>'.$to_user_pseudo;
+		echo $to_mail.'<br>'.$data['pseudo'];
 		$mail = new PHPMailer;
 		
 		$mail->isSMTP();                 
@@ -161,8 +161,8 @@
 		$mail->Port = 587;
 		$mail->SMTPDebug=true;
 
-		$mail->From = $user;
-		$mail->FromName = $user;
+		$mail->From = 'XCH2014@ensea.fr';
+		$mail->FromName = $data['pseudo'];
 		$mail->addAddress($to_mail);  // Add a recipient $mail->addAddress('ellen@example.com');
 		$mail->addReplyTo($to_mail);
 //		$mail->addBCC('XCH2014@ensea.fr');
