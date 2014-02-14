@@ -141,11 +141,14 @@
 		return $u_code;
 	}
 
-	function send_mail($ident,$pass,$user_id,$to_user_pseudo,$sub,$body){
+	function send_mail($ident,$pass,$user_id,$to_user_pseudo,$subject,$body){
 		require 'include/lib/phpmailer/PHPMailerAutoload.php';
-		$sub='test';
+		if($subject==NULL){
+			$subject='test';
+		}
 		$bdd=db_init();
-		$req=$bdd->query("SELECT mail,pseudo FROM users WHERE id='".$to_user_pseudo."'");
+		$pseudo="'".$to_user_pseudo."'";
+		$req=$bdd->query("SELECT mail,pseudo FROM users WHERE pseudo='".$pseudo."'");
 		$data=$req->fetch();
 		$to_mail=substr($data['mail'],1,(strlen($data['mail'])-2));
 		echo $to_mail.'<br>'.$data['pseudo'];
@@ -170,7 +173,7 @@
 		$mail->WordWrap = 50;                                
 		$mail->isHTML(true);                                  
 
-		$mail->Subject = $sub;
+		$mail->Subject = $subject;
 		$mail->Body    = $body;
 		$mail->AltBody = $body;
 
