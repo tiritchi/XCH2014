@@ -166,7 +166,7 @@
 		$mail->Username = $ident;                            
 		$mail->Password = $pass;
 		$mail->Port = 587;
-//		$mail->SMTPDebug=true;
+		$mail->SMTPDebug=true;
 
 		$mail->From = 'XCH2014@ensea.fr';
 		$mail->FromName = $data2['pseudo'];
