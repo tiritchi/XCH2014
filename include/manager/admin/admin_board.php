@@ -39,16 +39,17 @@ else
 			            <div class="panel-group" id="accordion">
 			            <?php $req=get_users_list($bdd);
 			            	while ($data=$req->fetch()){
+			            		$i++;
 			            		echo '
 			            				<div class="panel panel-default">
     										<div class="panel-heading">
       											<h4 class="panel-title">
-											        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-											          '.$data['pseudo'].'
+											        <a data-toggle="collapse" data-parent="#accordion" href="#collapse'.$i.'">
+											          '.substr($data['pseudo'],1,(strlen($data['pseudo']-2))).'
 											        </a>
     											</h4>
     										</div>
-    										<div id="collapse" class="panel-collapse collapse">
+    										<div id="collapse.'$i.'" class="panel-collapse collapse">
       											<div class="panel-body">
         											blabla
       											</div>
