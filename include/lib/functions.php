@@ -147,8 +147,7 @@
 			$subject='test';
 		}
 		$bdd=db_init();
-		$pseudo="'".$to_user_pseudo."'";
-		$req=$bdd->query("SELECT mail,pseudo FROM users WHERE id='".$pseudo."'");
+		$req=$bdd->query("SELECT mail,pseudo FROM users WHERE id='".$to_user_pseudo."'");
 		$req2=$bdd->query("SELECT mail,pseudo FROM users WHERE id='".$user_id."'");
 		$data=$req->fetch();
 		$data2=$req2->fetch();
