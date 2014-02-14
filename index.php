@@ -1,4 +1,3 @@
-<link rel="icon" type="image/png" href="/ressources/favicon.png" />
 <?php
  
 if (isset($_GET['page']) && $_GET['page'] != "")

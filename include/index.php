@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="ressources/favicon.png" />
         <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
         <title>xTremCergyHunting</title>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
