@@ -39,9 +39,9 @@
 		mkdir('ressources/1/', 0777, true);
 		 
 		//Créer un identifiant difficile à deviner
-		$nom = md5(uniqid(rand(), true));
+		//$nom = md5(uniqid(rand(), true));
 
-		$nom = "avatars/{$_POST['Nn']}.{$extension_upload}";
+		$nom = "ressources/1/{$_POST['Nn']}.{$extension_upload}";
 		$resultat = move_uploaded_file($_FILES['profile']['tmp_name'],$nom);
 		if ($resultat) echo "Transfert réussi";
 
