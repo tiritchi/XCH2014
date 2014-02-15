@@ -50,43 +50,43 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 						                            <tbody>
 						                                <tr>
 						                                    <th>Nickname</th>
-						                                    <td><span class="pull-right">'.$data['pseudo'].'</span>)</td>
+						                                    <td><span class="pull-right">'.substr($data['pseudo'],1,(strlen($data['pseudo'])-2)).'</span>)</td>
 						                                </tr>
 						                                <tr>
 						                                    <th>User code</th>
-						                                    <td><span class="pull-right">'.$data['user_no'].'</span></td>
+						                                    <td><span class="pull-right">'.substr($data['user_no'],1,(strlen($data['user_no'])-2)).'</span></td>
 						                                </tr>
 						                                <tr>
 						                                    <th>School</th>
-						                                    <td><span class="pull-right">'.$data['school'].'</span></t>
+						                                    <td><span class="pull-right">'.substr($data['school'],1,(strlen($data['school'])-2)).'</span></t>
 						                                </tr>
 						                                <tr>
 						                                    <th>First name</th>
-						                                    <td><span class="pull-right">'.$data['fname'].'</span></td>
+						                                    <td><span class="pull-right">'.substr($data['fname'],1,(strlen($data['fname'])-2)).'</span></td>
 						                                </tr>
 						                                <tr>
 						                                    <th>Last name</th>
-						                                    <td><span class="pull-right">'.$data['lname'].'</span></td>
+						                                    <td><span class="pull-right">'.substr($data['lname'],1,(strlen($data['lname'])-2)).'</span></td>
 						                                </tr>
 						                                <tr>
 						                                    <th>Date of birth</th>
-						                                    <td><span class="pull-right">'.$data['date_naissance'].'</span></td>
+						                                    <td><span class="pull-right">'.substr($data['date_naissance'],1,(strlen($data['date_naissance'])-2)).'</span></td>
 						                                </tr>
 						                                <tr>
 						                                    <th>Address</th>
-						                                    <td><span class="pull-right">'.$data['adress'].'</span></td>
+						                                    <td><span class="pull-right">'.substr($data['adresse'],1,(strlen($data['adresse'])-2)).'</span></td>
 						                                </tr>
 						                                <tr>
 						                                    <th>eMail</th>
-						                                    <td><span class="pull-right">'.$data['mail'].'</span></td>
+						                                    <td><span class="pull-right">'.substr($data['mail'],1,(strlen($data['mail'])-2)).'</span></td>
 						                                </tr>
 						                                <tr>
 						                                    <th>Phone number</th>
-						                                    <td><span class="pull-right">'.$data['phone'].'</span></td>
+						                                    <td><span class="pull-right">'.substr($data['phone'],1,(strlen($data['phone'])-2)).'</span></td>
 						                                </tr>
 						                                <tr>
 						                                    <th>Sex</th>
-						                                    <td><span class="pull-right">'.$data['sexe'].'</span></td>
+						                                    <td><span class="pull-right">'.substr($data['sexe'],1,(strlen($data['sexe'])-2)).'</span></td>
 						                                </tr>
 						                            </tbody>
 						                        </table>
