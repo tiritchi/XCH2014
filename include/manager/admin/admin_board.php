@@ -50,9 +50,17 @@ else
     											</h4>
     										</div>
     										<div id="collapse'.$i.'" class="panel-collapse collapse">
-      											<div class="panel-body">
-        											blabla
-      											</div>
+      											<table class="table">
+						                            <tbody>
+						                                <tr>
+						                                    <th>Nickname</th>
+						                                    <td><span class="pull-right">'.$var[0].'</span>)</td>
+						                                </tr>
+						                            </tbody>
+						                        </table>
+      											<!--div class="panel-body">
+        											
+      											</div-->
     										</div>
 										</div>
 			            		';
