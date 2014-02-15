@@ -147,6 +147,7 @@
 
 							<!-- Text input-->
 							<div class="input-group">
+							    <img src="ressources/profile_resized.jpg" class="img-thumbnail"></img>
 							    <span class="input-group-addon">Position </span>
 				    			<select class="selectpicker" multiple data-selected-text-format="count>3" title='Position 0/5' name="place">
 									<option>A1</option>
