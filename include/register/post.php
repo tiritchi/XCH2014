@@ -29,6 +29,7 @@
 
 		$extensions_valides = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
 		$extension_upload = strtolower(  substr(  strrchr($_FILES['profile']['name'], '.')  ,1)  );
+		echo $extension_upload;
 		if ( !in_array($extension_upload,$extensions_valides) ) echo "Extension incorrecte";
 
 		$image_sizes = getimagesize($_FILES['profile']['tmp_name']);
