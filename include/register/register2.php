@@ -147,8 +147,8 @@
 
 							<!-- Text input-->
 							<div class="input-group">
-							    <span class="input-group-addon">Birthday</span>
-				    			<select class="selectpicker" multiple data-selected-text-format="count>3" title='DD' name="Bd_d">
+							    <span class="input-group-addon">Position </span>
+				    			<select class="selectpicker" multiple data-selected-text-format="count>3" title='Position 0/5' name="place">
 									<option>A1</option>
 									<option>A2</option>
 									<option>A3</option>
@@ -234,6 +234,7 @@
 									<option>G11</option>
 									<option>G12</option>
 								</select>
+								Please select 5 positions
 							</div><br/>
 
 							<!-- Text input-->
