@@ -3,6 +3,7 @@
 		<head>
 		<meta charset="UTF-8">
 		<meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+		<link rel="icon" type="image/png" href="ressources/favicon.png" />
 		<title>Board</title>
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">

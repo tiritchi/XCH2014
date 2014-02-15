@@ -4,6 +4,7 @@
 	<title>Register</title>
 	<meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+    <link rel="icon" type="image/png" href="ressources/favicon.png" />
     
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrap/css/bootstrap-select.js"></script>

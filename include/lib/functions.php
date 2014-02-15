@@ -190,7 +190,7 @@
 	}
 
 	function get_users_list($bdd){
-		$req=$bdd->query("SELECT * FROM users ORDER by pseudo ASC");
+		$req=$bdd->query("SELECT * FROM users WHERE group=\'user\' ORDER by pseudo ASC");
 		return $req;
 	}
 ?>
