@@ -294,9 +294,9 @@
 	                            }); 
 	                        });
 	                        </script> 
-	                        
+	                        <input type="hidden" name="MAX_FILE_SIZE" value="409600" />
 	                        <div class="fileinput fileinput-new" data-provides="fileinput">
-	                            <span class="btn btn-default btn-file"><span class="fileinput-new">Upload your profile picture</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+	                            <span class="btn btn-default btn-file"><span class="fileinput-new">Upload your profile picture</span><span class="fileinput-exists">Change</span><input type="file" name="profile"></span>
 	                            <span class="fileinput-filename"></span>
 	                            <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
 	                        </div><br />
