@@ -18,11 +18,17 @@
 	}
 
 	function get_user_info($bdd,$user_id){ // get_user_info(ref base de donnée, clef primaire table users)  Cette fonction renvoi un tableau (array) contenant dans l'orde le pseudo, prénom, nom, école, mail, sexe, date de naissance, téléphone, adresse, identifiant 
-		$req=$bdd->prepare('SELECT * FROM users WHERE id=?');
-		$req->execute(array($user_id));
-		$donnees = $req->fetch();
-		$tab = array(substr($donnees['pseudo'],1,(strlen($donnees['pseudo'])-2)),substr($donnees['fname'],1,(strlen($donnees['fname'])-2)),substr($donnees['lname'],1,(strlen($donnees['lname'])-2)),substr($donnees['school'],1,(strlen($donnees['school'])-2)),substr($donnees['mail'],1,(strlen($donnees['mail'])-2)),substr($donnees['sexe'],1,(strlen($donnees['sexe'])-2)),$donnees['date_naissance'],"0".$donnees['phone'],substr($donnees['adresse'],1,(strlen($donnees['adresse'])-2)),$donnees['user_no']);
-		return $tab; 
+		if($user_id=="all"){
+			$req=$bdd->query("SELECT * FROM users ORDER by pseudo ASC");
+			return $req;
+		}
+		else{
+			$req=$bdd->prepare('SELECT * FROM users WHERE id=?');
+			$req->execute(array($user_id));
+			$donnees = $req->fetch();
+			$tab = array(substr($donnees['pseudo'],1,(strlen($donnees['pseudo'])-2)),substr($donnees['fname'],1,(strlen($donnees['fname'])-2)),substr($donnees['lname'],1,(strlen($donnees['lname'])-2)),substr($donnees['school'],1,(strlen($donnees['school'])-2)),substr($donnees['mail'],1,(strlen($donnees['mail'])-2)),substr($donnees['sexe'],1,(strlen($donnees['sexe'])-2)),$donnees['date_naissance'],"0".$donnees['phone'],substr($donnees['adresse'],1,(strlen($donnees['adresse'])-2)),$donnees['user_no']);
+			return $tab; 
+		}
 	}
 
 	function add_user_event($bdd,$user_id,$event,$infos){
@@ -191,7 +197,7 @@
 
 	function get_users_list($bdd){
 		$group="user";
-		$req=$bdd->query("SELECT * FROM users WHERE group='$group' ORDER by pseudo ASC");
+		$req=$bdd->query("SELECT * FROM users ORDER by pseudo ASC");
 		return $req;
 	}
 ?>

@@ -37,7 +37,7 @@ else
 			            </div>
 			            <div class="panel-body">
 			            <div class="panel-group" id="accordion">
-			            <?php $req=get_users_list($bdd);
+			            <?php $req=get_user_info($bdd,"all");
 			            	while ($data=$req->fetch()){
 			            		$i++;
 			            		echo '
