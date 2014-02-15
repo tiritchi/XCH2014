@@ -295,6 +295,8 @@
 	                        });
 	                        </script> 
 	                        <input type="hidden" name="MAX_FILE_SIZE" value="409600" />
+	                            <label for="icone">(JPG, PNG ou GIF | max. 400 Ko | max 170x180) :</label><br />
+     							<input type="file" name="icone" id="icone" />
 	                        <div class="fileinput fileinput-new" data-provides="fileinput">
 	                            <span class="btn btn-default btn-file"><span class="fileinput-new">Upload your profile picture</span><span class="fileinput-exists">Change</span><input type="file" name="profile"></span>
 	                            <span class="fileinput-filename"></span>
