@@ -49,7 +49,7 @@
 			$nom = "ressources/1/{$_POST['Nn']}.{$extension_upload}";
 			$resultat = move_uploaded_file($_FILES['profile']['tmp_name'],$nom);
 			echo $_POST['place'];
-	//	    register($bdd,$_POST['userpsswd'],$_POST['Lname'],$_POST['Fname'],$_POST['Email'],$_POST['Phone'],$_POST['School'],$_POST['Sexe'],$_POST['Adress_a'],$_POST['Adress_pc'],$_POST['Adress_c'],$_POST['Bd_y'],$_POST['Bd_m'],$_POST['Bd_d'],$_POST['Nn'],$_POST['pos1'],$_POST['pos2'],$_POST['pos3'],$_POST['pos4'],$_POST['pos5']);
+		    register($bdd,$_POST['userpsswd'],$_POST['Lname'],$_POST['Fname'],$_POST['Email'],$_POST['Phone'],$_POST['School'],$_POST['Sexe'],$_POST['Adress_a'],$_POST['Adress_pc'],$_POST['Adress_c'],$_POST['Bd_y'],$_POST['Bd_m'],$_POST['Bd_d'],$_POST['Nn'],'','','','','');
    			echo '
    				<div class="alert alert-success">
   					<strong>Successful signup ! thanks</strong> <br>
