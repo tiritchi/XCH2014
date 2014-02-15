@@ -27,16 +27,16 @@
 		if ($_FILES['profile']['error'] > 0){
 			$erreur = array("Erreur lors du transfert");
 		} 
-		elseif ($_FILES['profile']['size'] > 409600){
+		if ($_FILES['profile']['size'] > 409600){
 			array_push($erreur, "Le fichier est trop gros") ;
 		} 
 		$extensions_valides = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
 		$extension_upload = strtolower(  substr(  strrchr($_FILES['profile']['name'], '.')  ,1)  );
-		elseif ( !in_array($extension_upload,$extensions_valides) ){
+		if ( !in_array($extension_upload,$extensions_valides) ){
 			array_push($erreur, "extension invalide") ;
 		} 
 		$image_sizes = getimagesize($_FILES['profile']['tmp_name']);
-		elseif ($image_sizes[0] > '170' OR $image_sizes[1] > '180'){
+		if ($image_sizes[0] > '170' OR $image_sizes[1] > '180'){
 			array_push($erreur ,"Image trop grande");
 		}
 
@@ -45,7 +45,7 @@
 		 
 		//Créer un identifiant difficile à deviner
 		//$nom = md5(uniqid(rand(), true));
-		elseif($erreur==NULL){
+		if($erreur==NULL){
 			$nom = "ressources/1/{$_POST['Nn']}.{$extension_upload}";
 			$resultat = move_uploaded_file($_FILES['profile']['tmp_name'],$nom);
 			echo $_POST['place'];
