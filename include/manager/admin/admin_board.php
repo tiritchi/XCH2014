@@ -50,7 +50,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 						                            <tbody>
 						                                <tr>
 						                                    <th>Nickname</th>
-						                                    <td><span class="pull-right">'.substr($data['pseudo'],1,(strlen($data['pseudo'])-2)).'</span>)</td>
+						                                    <td><span class="pull-right">'.substr($data['pseudo'],1,(strlen($data['pseudo'])-2)).'</span></td>
 						                                </tr>
 						                                <tr>
 						                                    <th>User code</th>
