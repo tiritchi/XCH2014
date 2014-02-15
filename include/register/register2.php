@@ -235,7 +235,7 @@
 									<option>G12</option>
 								</select>
 								Please select your 5 most visited place
-								<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content=<img src="ressources/map.jpg" class="img-thumbnail"></img>>
+								<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="test">
   									MAP RIGHT HERE
 								</button>
 							</div><br/>
