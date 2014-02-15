@@ -36,7 +36,7 @@
 		if ($image_sizes[0] > '170' OR $image_sizes[1] > '180') $erreur = "Image trop grande";
 
 		//Créer un dossier 'fichiers/1/'
-		mkdir('ressources/1/', 0777, true);
+		mkdir('../../ressources/1/', 0777, true);
 		 
 		//Créer un identifiant difficile à deviner
 		$nom = md5(uniqid(rand(), true));
