@@ -25,31 +25,21 @@
 	                        <span class="icon-bar"></span>
 	                        <span class="icon-bar"></span>
 	                    </button>
-	                    <a class="navbar-brand" href="board">XCH 2014</a>
+	                    <a class="navbar-brand" href="admin">XCH 2014</a>
 	                </div>
 
 	                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	                    <ul class="nav navbar-nav">
-	                        <li><a href="#">Home</a></li>
-	                        <li><a href="#">Profile</a></li>
-	                        <li class="dropdown">
-	                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Messages <b class="caret"></b></a>
-	                            <ul class="dropdown-menu">
-	                                <li><a href="#">Inbox</a></li>
-	                                <li><a href="#">Drafts</a></li>
-	                                <li><a href="#">Sent Items</a></li>
-	                                <li class="divider"></li>
-	                                <li><a href="#">Trash</a></li>
-	                            </ul>
-	                        </li>
+	                        <li><a href="" data-toggle="modal" data-toggle="modal" data-target="#mail">Mail</a></li>
+	                        
 	                    </ul>
 	                    <ul class="nav navbar-nav navbar-right">
-	                        <li class="dropdown">
-	                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><?php echo $_SESSION['user']?> <b class="caret"></b></a>
-	                            <ul class="dropdown-menu">
-	                                <li><a href="#">Settings<span class="glyphicon glyphicon-cog pull-right"></span></a></li>
+	                    	<li class="dropdown">
+	                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="glyphicon glyphicon-user"></i> <?php echo $_SESSION['user']?>		<b class="caret"></b></a>
+	                            <ul class="dropdown-menu btn-toolbar">
+	                                <li><a href="#"><i class="glyphicon glyphicon-cog"></i>Settings</a></li>
 	                                <li class="divider"></li>
-	                                <li><a href="logout">Log out<span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
+	                                <li><a href="logout"><i class="glyphicon glyphicon-log-out "></i>Log out</a></li>
 	                            </ul>
 	                        </li>
 	                    </ul>
@@ -57,4 +47,35 @@
 	                </div>
 	            </div>
 	        </div>
+	        <!-- Modal -->
+			<form class="form-horizontal" action="mailer" method="post">
+				<div class="modal fade" id="mail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+				    	<div class="modal-content">
+			    		
+				    		<div class="modal-header">
+				        		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				        		<h4 class="modal-title" id="myModalLabel">Send a mail</h4>
+				    		</div>
+				    		<div class="modal-body">
+								<div class="input-group">
+									<span class="input-group-addon">To</span>
+									<input id="to" name="to" type="text" class="form-control" placeholder="Nickname">
+								</div>
+								<div class="input-group">
+									<span class="input-group-addon">subject</span>
+									<input id="subject" name="subject" type="text" class="form-control" placeholder="subject">
+								</div>
+								<div class="input-group">
+								    <textarea id="body" name="body" rows="5" style="width:485px"></textarea>
+								</div>
+						    </div>
+						    <div class="modal-footer">
+						        <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cancel</button>
+					        	<button id="Submit" value="SUBMIT" type="submit" class="btn btn-primary"> Send <i class="glyphicon glyphicon-send"></i></button>	
+						    </div>
+					    </div>
+					</div>
+				</div>
+			</form>
 
