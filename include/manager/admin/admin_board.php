@@ -54,7 +54,7 @@ else
 						                            <tbody>
 						                                <tr>
 						                                    <th>Nickname</th>
-						                                    <td><span class="pull-right">'.$var[0].'</span>)</td>
+						                                    <td><span class="pull-right">'.$data['pseudo'].'</span>)</td>
 						                                </tr>
 						                            </tbody>
 						                        </table>
