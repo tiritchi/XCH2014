@@ -145,9 +145,10 @@
 								</select>
 							</div><br/>
 
+							<img src="ressources/map.jpg" class="img-thumbnail"></img><br />
+							
 							<!-- Text input-->
 							<div class="input-group">
-							    <img src="ressources/map.jpg" class="img-thumbnail"></img><br />
 							    <span class="input-group-addon">Position </span>
 				    			<select class="selectpicker" multiple data-selected-text-format="count>3" title='Position 0/5' name="place">
 									<option>A1</option>
