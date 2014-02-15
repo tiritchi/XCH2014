@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE'))
+if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SESSION['admin']) && $_SESSION['admin']=='FALSE')
 	{
 		include 'header.php';
 		$bdd=db_init();
