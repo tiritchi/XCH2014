@@ -33,7 +33,7 @@ else
 			    <div class="col-md-5">
 			        <div class="panel panel-default">
 			            <div class="panel-heading">
-			                <h3 class="panel-title">Contracts</h3>
+			                <h3 class="panel-title">Players</h3>
 			            </div>
 			            <div class="panel-body">
 			            <div class="panel-group" id="accordion">

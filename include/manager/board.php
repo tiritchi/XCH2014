@@ -34,12 +34,12 @@ else
 				<div class="col-md-5">
 			        <div class="panel panel-default">
 			            <div class="panel-heading">
-			                <h3 class="panel-title">Players</h3>
+			                <h3 class="panel-title">Contracts</h3>
 			            </div>
 			            <div class="panel-body">
 			                <div class="list-group">
 			                	<?php
-			                		$array=get_users_list($bdd);
+			                		$array=get_contracts($bdd,$_SESSION['user_id']);
 									foreach ($array as $ar) {
 										echo '<a href="#" class="list-group-item" data-toggle="modal" data-target="#'.$ar[3].'">';
 										echo $ar[3].'</a>';
