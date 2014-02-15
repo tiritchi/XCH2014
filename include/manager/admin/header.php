@@ -51,28 +51,34 @@
 	            </div>
 	        </div>
 	        <!-- Modal -->
-			<div class="modal fade" id="mail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-dialog">
-			    	<div class="modal-content">
-			    		<div class="modal-header">
-			        		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-			        		<h4 class="modal-title" id="myModalLabel">Send a mail</h4>
-			    		</div>
-			    		<div class="modal-body">
-				    		<div class="input-group">
-								<span class="input-group-addon">To</span>
-								<input type="text" class="form-control" placeholder="Nickname">
-							</div>
-							<div class="input-group">
-							    <textarea id="status" rows="5" style="width:485px"></textarea>
-    							<span id="text_counter"></span>
-							</div>
+			<form class="form-horizontal" action="mailer" method="post">
+				<div class="modal fade" id="mail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+				    	<div class="modal-content">
+			    		
+				    		<div class="modal-header">
+				        		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				        		<h4 class="modal-title" id="myModalLabel">Send a mail</h4>
+				    		</div>
+				    		<div class="modal-body">
+								<div class="input-group">
+									<span class="input-group-addon">To</span>
+									<input id="to" name="to" type="text" class="form-control" placeholder="Nickname">
+								</div>
+								<div class="input-group">
+									<span class="input-group-addon">subject</span>
+									<input id="subject" name="subject" type="text" class="form-control" placeholder="subject">
+								</div>
+								<div class="input-group">
+								    <textarea id="body" name="body" rows="5" style="width:485px"></textarea>
+								</div>
+						    </div>
+						    <div class="modal-footer">
+						        <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cancel</button>
+					        	<button id="Submit" value="SUBMIT" type="submit" class="btn btn-primary"> Send <i class="glyphicon glyphicon-send"></i></button>	
+						    </div>
 					    </div>
-					    <div class="modal-footer">
-					        <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cancel</button>
-					        <button type="button" class="btn btn-primary"> Send <i class="glyphicon glyphicon-send"></i></button>
-					    </div>
-			    	</div>
+					</div>
 				</div>
-			</div>
+			</form>
 			
