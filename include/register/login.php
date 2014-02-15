@@ -50,12 +50,14 @@ $_SESSION['user_id']=NULL;
                 	if($req['group']=="admin")
                 	{
                 		$_SESSION['admin']='TRUE';
-                		echo '<meta http-equiv="refresh" content="0; url=admin">';
+                		echo '<meta http-equiv="refresh" content="2; url=admin">';
+                                echo $_SESSION['admin'];
                 	}
                 	else if($req['group']=="user")
                 	{
                                 $_SESSION['admin']='FALSE';
-        			echo '<meta http-equiv="refresh" content="0; url=board">';
+        			echo '<meta http-equiv="refresh" content="2; url=board">';
+                                echo $_SESSION['admin'];
                 	}
                 	else
                 	{
