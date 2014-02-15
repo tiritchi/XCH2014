@@ -39,7 +39,7 @@
 					</ul>				
 	  			</div>
 	  			<div class="panel-body">
-	  				<form class="form-horizontal" action="post" method="post">
+	  				<form class="form-horizontal" enctype="multipart/form-data" action="post" method="post">
 						<fieldset>
 							<div class="input-group">
 							    <span class="input-group-addon">School</span>
