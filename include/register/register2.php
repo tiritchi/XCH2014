@@ -319,7 +319,7 @@
 		</div>
 		<div class="col-lg-6">
 			<div class="thumnail">
-				<img data-src="lib/map.jpg" alt="...">
+				<img data-src="ressources/map.jpg" alt="...">
 			</div>
 		</div>
 	</div>
