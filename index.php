@@ -26,7 +26,7 @@ if (isset($_GET['page']) && $_GET['page'] != "")
 	case "admin":
 		include($basepath."manager/admin/admin_board.php");
 		break;
-	case "mail"
+	case "mail":
 		include($basepath."lib/mailer.php");
 		break;
 	default:
