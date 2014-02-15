@@ -1,7 +1,7 @@
 <?php
 session_start(); // On démarre la session AVANT toute chose
-$_SESSION['connected']=FALSE;
-$_SESSION['admin']=FALSE;
+$_SESSION['connected']=NULL;
+$_SESSION['admin']=NULL;
 $_SESSION['user']=NULL;
 $_SESSION['user_id']=NULL;
 ?>
@@ -44,7 +44,7 @@ $_SESSION['user_id']=NULL;
          
                 if ($check) {
                         $_SESSION['user'] = substr($req['pseudo'],1,(strlen($req['pseudo'])-2));
-                	$_SESSION['connected']=TRUE;
+                	$_SESSION['connected']='TRUE';
                         $_SESSION['user_id'] = $req['id'];
 //                	echo "Redirecting ... ";
                 	if($req['group']=="admin")
