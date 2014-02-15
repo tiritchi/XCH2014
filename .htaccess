@@ -7,4 +7,3 @@ RewriteRule    ^board$  /XCH2014/index.php?page=board
 RewriteRule    ^logout$  /XCH2014/index.php?page=logout
 RewriteRule    ^post$  /XCH2014/index.php?page=post
 RewriteRule    ^mailer$	/XCH2014/index.php?page=mail
-
