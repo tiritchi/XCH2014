@@ -1,0 +1,24 @@
+<?php
+session_start();
+if(!(isset($_SESSION['connected']) && $_SESSION['connected']=TRUE))
+    {
+        echo '<meta http-equiv="refresh" content="0; url=.">';
+    }
+else
+    {
+		require('include/lib/functions.php');
+
+		$return=send_mail('cedrpill','zcaD03cb',$_SESSION['user_id'],$_POST['to'],$_POST['subject'],$_POST['body']);
+		if($return=='SUCCESS'){
+			if($_SESSION['admin']==TRUE){
+				echo '<meta http-equiv="refresh" content="0; url=admin">';
+			}
+			else{
+				echo '<meta http-equiv="refresh" content="0; url=board">';
+			}
+		}
+		else{
+			return '$return';
+		}
+	}
+?>
