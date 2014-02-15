@@ -122,7 +122,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 		                                <img src="ressources/profile_resized.jpg" class="img-thumbnail"></img>
 		                            </div>
 		                            <div class="col-md-3">
-		                                  <h1>'.$ar[3].'   <small>'.$tar[0].'</small><br /></h1>
+		                                  <h2>'.$ar[3].'   <small>'.$tar[0].'</small><br /></h2>
 		                                  
 		                            </div>
                                 </div>
