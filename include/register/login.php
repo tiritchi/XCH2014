@@ -17,7 +17,7 @@ $_SESSION['user_id']=NULL;
         <?php require('include/lib/functions.php');?>
 </head>
 <?php
-//	echo 'test';
+
 	$bdd=db_init();
 	$mail = "'".$_POST['email']."'";
 	$psswd= $_POST['password'];
@@ -27,7 +27,7 @@ $_SESSION['user_id']=NULL;
 		));
 	$rcount=$stat->rowCount();
 	
-//	echo '<p> DB reached</p>';
+
 	if(!$rcount==1)
 	{
 		echo '<p> Vous n êtes pas inscrit</p>';
@@ -36,7 +36,6 @@ $_SESSION['user_id']=NULL;
 	}
 	else
 	{
-//		echo $req['psswd'];
 		$req=$stat->fetch();
 		$password_correct = $req['psswd']; /* Le hash stocké précédemment */
                 $hasher = new PasswordHash(8, FALSE);
@@ -46,18 +45,15 @@ $_SESSION['user_id']=NULL;
                         $_SESSION['user'] = substr($req['pseudo'],1,(strlen($req['pseudo'])-2));
                 	$_SESSION['connected']='TRUE';
                         $_SESSION['user_id'] = $req['id'];
-//                	echo "Redirecting ... ";
                 	if($req['group']=="admin")
                 	{
                 		$_SESSION['admin']='TRUE';
-                		echo '<meta http-equiv="refresh" content="2; url=admin">';
-                                echo $_SESSION['admin'];
+                		echo '<meta http-equiv="refresh" content="0; url=admin">';
                 	}
                 	else if($req['group']=="user")
                 	{
                                 $_SESSION['admin']='FALSE';
-        			echo '<meta http-equiv="refresh" content="2; url=board">';
-                                echo $_SESSION['admin'];
+        			echo '<meta http-equiv="refresh" content="0; url=board">';
                 	}
                 	else
                 	{
