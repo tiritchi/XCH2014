@@ -1,12 +1,9 @@
 <?php
 session_start();
-if(!(isset($_SESSION['connected']) && $_SESSION['connected']=TRUE))
+if(!(isset($_SESSION['connected']) && $_SESSION['connected']=TRUE && $_SESSION['admin']=TRUE))
 	{
 		echo '<meta http-equiv="refresh" content="0; url=.">';
 	}
-elseif(isset($_SESSION['connected']) && $_SESSION['connected']=TRUE && $_SESSION['admin']=TRUE){
-	echo '<meta http-equiv="refresh" content="0; url=admin">';
-}
 else
 	{
 		include 'header.php';
