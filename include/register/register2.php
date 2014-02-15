@@ -234,7 +234,7 @@
 									<option>G11</option>
 									<option>G12</option>
 								</select>
-								Please select 5 positions
+								Please select your 5 most visited place
 							</div><br/>
 
 							<!-- Text input-->
