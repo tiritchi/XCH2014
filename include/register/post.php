@@ -24,8 +24,8 @@
 	}
 	elseif (isset($_POST['password']) AND $_POST['password'] == "test" AND $row_count==0)
 	{	
-
-	    register($bdd,$_POST['userpsswd'],$_POST['Lname'],$_POST['Fname'],$_POST['Email'],$_POST['Phone'],$_POST['School'],$_POST['Sexe'],$_POST['Adress_a'],$_POST['Adress_pc'],$_POST['Adress_c'],$_POST['Bd_y'],$_POST['Bd_m'],$_POST['Bd_d'],$_POST['Nn'],$_POST['pos1'],$_POST['pos2'],$_POST['pos3'],$_POST['pos4'],$_POST['pos5']);
+		echo $_POST['place'];
+//	    register($bdd,$_POST['userpsswd'],$_POST['Lname'],$_POST['Fname'],$_POST['Email'],$_POST['Phone'],$_POST['School'],$_POST['Sexe'],$_POST['Adress_a'],$_POST['Adress_pc'],$_POST['Adress_c'],$_POST['Bd_y'],$_POST['Bd_m'],$_POST['Bd_d'],$_POST['Nn'],$_POST['pos1'],$_POST['pos2'],$_POST['pos3'],$_POST['pos4'],$_POST['pos5']);
    		echo '
    			<div class="alert alert-success">
   				<strong>Successful signup ! thanks</strong> <br>
