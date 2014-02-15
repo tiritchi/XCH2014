@@ -238,13 +238,6 @@
 								<button type="button" class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg">
   									MAP RIGHT HERE
 								</button>
-								<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-									<div class="modal-dialog modal-lg">
-								    	<div class="modal-content">
-								    	<img src="ressources/map.jpg"></img>
-								    	</div>
-									</div>
-								</div>
 							</div><br/>
 
 							<!-- Text input-->
@@ -331,6 +324,13 @@
 			<div class="thumnail">
 				<img src="ressources/map.jpg" class="img-thumbnail"></img><br />
 			</div>
+		</div>
+	</div>
+	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+	    	<div class="modal-content">
+	    	<img src="ressources/map.jpg"></img>
+	    	</div>
 		</div>
 	</div>
 </body>
