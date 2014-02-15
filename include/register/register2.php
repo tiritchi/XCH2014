@@ -235,9 +235,16 @@
 									<option>G12</option>
 								</select>
 								Please select your 5 most visited place
-								<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="test">
+								<button type="button" class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg">
   									MAP RIGHT HERE
 								</button>
+								<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+								    	<div class="modal-content">
+								    		<img src="ressources/map.jpg" class="img-thumbnail"></img>
+								    	</div>
+									</div>
+								</div>
 							</div><br/>
 
 							<!-- Text input-->
