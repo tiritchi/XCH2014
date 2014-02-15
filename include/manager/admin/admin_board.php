@@ -56,6 +56,42 @@ else
 						                                    <th>Nickname</th>
 						                                    <td><span class="pull-right">'.$data['pseudo'].'</span>)</td>
 						                                </tr>
+						                                <tr>
+						                                    <th>User code</th>
+						                                    <td><span class="pull-right">'.$var[9].'</span></td>
+						                                </tr>
+						                                <tr>
+						                                    <th>School</th>
+						                                    <td><span class="pull-right">'.$var[3].'</span></t>
+						                                </tr>
+						                                <tr>
+						                                    <th>First name</th>
+						                                    <td><span class="pull-right">'.$var[1].'</span></td>
+						                                </tr>
+						                                <tr>
+						                                    <th>Last name</th>
+						                                    <td><span class="pull-right">'.$var[2].'</span></td>
+						                                </tr>
+						                                <tr>
+						                                    <th>Date of birth</th>
+						                                    <td><span class="pull-right">'.$var[6].'</span></td>
+						                                </tr>
+						                                <tr>
+						                                    <th>Address</th>
+						                                    <td><span class="pull-right">'.$var[8].'</span></td>
+						                                </tr>
+						                                <tr>
+						                                    <th>eMail</th>
+						                                    <td><span class="pull-right">'.$var[4].'</span></td>
+						                                </tr>
+						                                <tr>
+						                                    <th>Phone number</th>
+						                                    <td><span class="pull-right">'.$var[7].'</span></td>
+						                                </tr>
+						                                <tr>
+						                                    <th>Sex</th>
+						                                    <td><span class="pull-right">'.$var[5].'</span></td>
+						                                </tr>
 						                            </tbody>
 						                        </table>
       											<!--div class="panel-body">
