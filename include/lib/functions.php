@@ -151,13 +151,13 @@
 		$req = $bdd->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 		$req->execute(array(':pseudo' => '\''.$to_user_pseudo.'\''));
 		$data=$req->fetch();
-		echo $data['mail'].'<br>'.$data['pseudo'];
+//		echo $data['mail'].'<br>'.$data['pseudo'];
 		$req2=$bdd->query("SELECT mail,pseudo FROM users WHERE id='".$user_id."'");
 		$data2=$req2->fetch();
 		$to_mail=substr($data['mail'],1,(strlen($data['mail'])-2));
 		$reply_mail=substr($data2['mail'],1,(strlen($data2['mail'])-2));
-		echo $data['mail'].'<br>'.$data['pseudo'];
-		echo $data2['mail'].'<br>'.$data2['pseudo'];
+//		echo $data['mail'].'<br>'.$data['pseudo'];
+//		echo $data2['mail'].'<br>'.$data2['pseudo'];
 		$mail = new PHPMailer;
 		
 		$mail->isSMTP();                 
@@ -168,7 +168,7 @@
 		$mail->Username = $ident;                            
 		$mail->Password = $pass;
 		$mail->Port = 587;
-		$mail->SMTPDebug=true;
+//		$mail->SMTPDebug=true;
 
 		$mail->From = 'XCH2014@ensea.fr';
 		$mail->FromName = $data2['pseudo'];
