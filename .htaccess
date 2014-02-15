@@ -6,4 +6,5 @@ RewriteRule    ^admin$  /XCH2014/index.php?page=admin
 RewriteRule    ^board$  /XCH2014/index.php?page=board
 RewriteRule    ^logout$  /XCH2014/index.php?page=logout
 RewriteRule    ^post$  /XCH2014/index.php?page=post
-RewriteRule    ^test.html$	/XCH2014/test.php
+RewriteRule    ^mail$	/XCH2014/index.php?page=mail
+
