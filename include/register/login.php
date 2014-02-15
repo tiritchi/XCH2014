@@ -49,12 +49,12 @@ $_SESSION['user_id']=NULL;
 //                	echo "Redirecting ... ";
                 	if($req['group']=="admin")
                 	{
-                		$_SESSION['admin']=TRUE;
+                		$_SESSION['admin']='TRUE';
                 		echo '<meta http-equiv="refresh" content="0; url=admin">';
                 	}
                 	else if($req['group']=="user")
                 	{
-                                $_SESSION['admin']=FALSE;
+                                $_SESSION['admin']='FALSE';
         			echo '<meta http-equiv="refresh" content="0; url=board">';
                 	}
                 	else
