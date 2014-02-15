@@ -157,13 +157,13 @@
 		$req = $bdd->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 		$req->execute(array(':pseudo' => '\''.$to_user_pseudo.'\''));
 		$data=$req->fetch();
-//		echo $data['mail'].'<br>'.$data['pseudo'];
+		//echo $data['mail'].'<br>'.$data['pseudo'];
 		$req2=$bdd->query("SELECT mail,pseudo FROM users WHERE id='".$user_id."'");
 		$data2=$req2->fetch();
 		$to_mail=substr($data['mail'],1,(strlen($data['mail'])-2));
 		$reply_mail=substr($data2['mail'],1,(strlen($data2['mail'])-2));
-//		echo $data['mail'].'<br>'.$data['pseudo'];
-//		echo $data2['mail'].'<br>'.$data2['pseudo'];
+		//echo $data['mail'].'<br>'.$data['pseudo'];
+		//echo $data2['mail'].'<br>'.$data2['pseudo'];
 		$mail = new PHPMailer;
 		
 		$mail->isSMTP();                 
@@ -174,13 +174,13 @@
 		$mail->Username = $ident;                            
 		$mail->Password = $pass;
 		$mail->Port = 587;
-//		$mail->SMTPDebug=true;
+		//$mail->SMTPDebug=true;
 
 		$mail->From = 'XCH2014@ensea.fr';
 		$mail->FromName = $data2['pseudo'];
 		$mail->addAddress($to_mail);  // Add a recipient $mail->addAddress('ellen@example.com');
 		$mail->addReplyTo($reply_mail);
-//		$mail->addBCC('XCH2014@ensea.fr');
+		//$mail->addBCC('XCH2014@ensea.fr');
 
 		$mail->WordWrap = 50;                                
 		$mail->isHTML(true);                                  
@@ -197,12 +197,14 @@
 
 	function register($bdd,$psswd,$lname,$fname,$email,$phone,$school,$sex,$addA,$addB,$addC,$bd_y,$bd_m,$bd_d,$nn,$pos1,$pos2,$pos3,$pos4,$pos5){
 		srand();
-				//hashage du password
+
+		//hashage du password
 		$password = $_POST['userpsswd'];
         $hasher = new PasswordHash(8, FALSE);
         $hash = $hasher->HashPassword($password);
         //password hashé
 
+        //préparation des données
 		$nom = $bdd->quote($_POST['Lname']);
 		$prenom =$bdd->quote($_POST['Fname']);
 		$email =$bdd->quote($_POST['Email']);
@@ -216,10 +218,12 @@
 		$ucode = gen_user_code($_POST['School'],$_POST['Sexe'],$_POST['Phone']);
 		$position = $pos1."-".$pos2."-".$pos3."-".$pos4."-".$pos5;
 
-
+		//génération du code de confirmation 
+		$alfa='abcdefghijklmnpqrstuvwxyzABCDEFGHIJKLMNPQRSTUVWXYZ123456789';
+		$confirmation_code=substr(str_shuffle($alfa),0,30);
 		//envoie des informations à la DB
 
-		$req = $bdd->prepare('INSERT INTO users (fname,lname,school,mail,phone,sexe,adresse,date_naissance,pseudo,psswd,user_no,reg_date) VALUES (:prenom,:nom,:ecole,:email,:phone,:sexe,:adresse,:date_n,:pseudo,:psswd,:ucode,NOW())');
+		$req = $bdd->prepare('INSERT INTO users (fname,lname,school,mail,phone,sexe,adresse,date_naissance,pseudo,psswd,user_no,position,confirmation_code,confirmed,reg_date) VALUES (:prenom,:nom,:ecole,:email,:phone,:sexe,:adresse,:date_n,:pseudo,:psswd,:ucode,:pos,:conf,:stat,NOW())');
 		$req->execute(array(
 		    'nom' => $nom,
 		    'prenom' => $prenom,
@@ -231,7 +235,10 @@
 		    'date_n'=>$date,
 		    'pseudo'=>$nick,
 		    'psswd'=>$psswd,
-		    'ucode'=>$ucode
+		    'ucode'=>$ucode,
+		    'pos'=>$position,
+		    'conf'=>$confirmation_code,
+		    'stat'=>''
 	    ));
 	}
 ?>
