@@ -144,9 +144,7 @@
 									<option>1980</option>
 								</select>
 							</div><br/>
-
-							<img src="ressources/map.jpg" class="img-thumbnail"></img><br />
-							
+	
 							<!-- Text input-->
 							<div class="input-group">
 							    <span class="input-group-addon">Position </span>
@@ -321,7 +319,7 @@
 		</div>
 		<div class="col-lg-6">
 			<div class="thumnail">
-				<img data-src="ressources/map.jpg" alt="...">
+				<img src="ressources/map.jpg" class="img-thumbnail"></img><br />
 			</div>
 		</div>
 	</div>
