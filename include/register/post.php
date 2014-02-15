@@ -24,35 +24,46 @@
 	}
 	elseif (isset($_POST['password']) AND $_POST['password'] == "test" AND $row_count==0)
 	{	
-		if ($_FILES['profile']['error'] > 0) $erreur = "Erreur lors du transfert";
-		if ($_FILES['profile']['size'] > 409600) $erreur = "Le fichier est trop gros";
-
+		if ($_FILES['profile']['error'] > 0){
+			$erreur = array("Erreur lors du transfert");
+		} 
+		elseif ($_FILES['profile']['size'] > 409600){
+			array_push($erreur, "Le fichier est trop gros") ;
+		} 
 		$extensions_valides = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
 		$extension_upload = strtolower(  substr(  strrchr($_FILES['profile']['name'], '.')  ,1)  );
-		echo $extension_upload;
-		if ( !in_array($extension_upload,$extensions_valides) ) echo "Extension incorrecte";
-
+		elseif ( !in_array($extension_upload,$extensions_valides) ){
+			array_push($erreur, "extension invalide") ;
+		} 
 		$image_sizes = getimagesize($_FILES['profile']['tmp_name']);
-		if ($image_sizes[0] > '170' OR $image_sizes[1] > '180') $erreur = "Image trop grande";
+		elseif ($image_sizes[0] > '170' OR $image_sizes[1] > '180'){
+			array_push($erreur ,"Image trop grande");
+		}
 
 		//Créer un dossier 'fichiers/1/'
 		mkdir('ressources/1/', 0777, true);
 		 
 		//Créer un identifiant difficile à deviner
 		//$nom = md5(uniqid(rand(), true));
+		elseif($erreur==NULL){
+			$nom = "ressources/1/{$_POST['Nn']}.{$extension_upload}";
+			$resultat = move_uploaded_file($_FILES['profile']['tmp_name'],$nom);
+			echo $_POST['place'];
+	//	    register($bdd,$_POST['userpsswd'],$_POST['Lname'],$_POST['Fname'],$_POST['Email'],$_POST['Phone'],$_POST['School'],$_POST['Sexe'],$_POST['Adress_a'],$_POST['Adress_pc'],$_POST['Adress_c'],$_POST['Bd_y'],$_POST['Bd_m'],$_POST['Bd_d'],$_POST['Nn'],$_POST['pos1'],$_POST['pos2'],$_POST['pos3'],$_POST['pos4'],$_POST['pos5']);
+   			echo '
+   				<div class="alert alert-success">
+  					<strong>Successful signup ! thanks</strong> <br>
+  					redirection sur la page d\'accueil dans quelques secondes ...
+				</div>';
+        	echo '<meta http-equiv="refresh" content="10; url=.">';
+		}
+		else{
+			foreach ($erreur as $er) {
+				echo $er;
+			}
+		}
 
-		$nom = "ressources/1/{$_POST['Nn']}.{$extension_upload}";
-		$resultat = move_uploaded_file($_FILES['profile']['tmp_name'],$nom);
-		if ($resultat) echo "Transfert réussi";
-
-		echo $_POST['place'];
-//	    register($bdd,$_POST['userpsswd'],$_POST['Lname'],$_POST['Fname'],$_POST['Email'],$_POST['Phone'],$_POST['School'],$_POST['Sexe'],$_POST['Adress_a'],$_POST['Adress_pc'],$_POST['Adress_c'],$_POST['Bd_y'],$_POST['Bd_m'],$_POST['Bd_d'],$_POST['Nn'],$_POST['pos1'],$_POST['pos2'],$_POST['pos3'],$_POST['pos4'],$_POST['pos5']);
-   		echo '
-   			<div class="alert alert-success">
-  				<strong>Successful signup ! thanks</strong> <br>
-  				redirection sur la page d\'accueil dans quelques secondes ...
-			</div>';
-        echo '<meta http-equiv="refresh" content="10; url=.">'; 
+ 
 	}
 	else
 	{
