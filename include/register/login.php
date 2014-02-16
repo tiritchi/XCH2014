@@ -42,24 +42,29 @@ $_SESSION['user_id']=NULL;
                 $check = $hasher->CheckPassword($psswd, $password_correct);
          
                 if ($check) {
-                        $_SESSION['user'] = substr($req['pseudo'],1,(strlen($req['pseudo'])-2));
-                	$_SESSION['connected']='TRUE';
-                        $_SESSION['user_id'] = $req['id'];
-                	if($req['group']=="admin")
-                	{
-                		$_SESSION['admin']='TRUE';
-                		echo '<meta http-equiv="refresh" content="0; url=admin">';
-                	}
-                	else if($req['group']=="user")
-                	{
-                                $_SESSION['admin']='FALSE';
-        			echo '<meta http-equiv="refresh" content="0; url=board">';
-                	}
-                	else
-                	{
-                		echo 'erreur';
-                		echo '<meta http-equiv="refresh" content="2; url=.">';
-                	}
+                        if(&& $req['confirmed']=='1'){
+                                $_SESSION['user'] = substr($req['pseudo'],1,(strlen($req['pseudo'])-2));
+                        	$_SESSION['connected']='TRUE';
+                                $_SESSION['user_id'] = $req['id'];
+                        	if($req['group']=="admin")
+                        	{
+                        		$_SESSION['admin']='TRUE';
+                        		echo '<meta http-equiv="refresh" content="0; url=admin">';
+                        	}
+                        	else if($req['group']=="user")
+                        	{
+                                        $_SESSION['admin']='FALSE';
+                			echo '<meta http-equiv="refresh" content="0; url=board">';
+                        	}
+                        	else
+                        	{
+                        		echo 'erreur';
+                        		echo '<meta http-equiv="refresh" content="2; url=.">';
+                        	}
+                        }
+                        else{
+                                echo 'Merci de confirmer votre compte avant de pouvoir accéder à cette page';
+                        }
                 }
                 else {
                 session_destroy();
