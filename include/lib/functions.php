@@ -273,7 +273,7 @@
 		$subject='Confirmation code';
 		$body='Please confirm your account : <br/>your confirmation code :'.$confirmation_code.'<br/><a href="'.$url.'confirm">Follow this link<a/><br/><br/> Thanks for your registration, Have a good game !';
 
-		send_mail($to_user_mail,,$subject,$body)
+		send_mail(NULL,$to_user_mail,NULL,$subject,$body);
 
 		return TRUE;
 	}

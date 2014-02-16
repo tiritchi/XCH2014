@@ -8,7 +8,7 @@ else
     {
 		require('include/lib/functions.php');
 
-		$return=send_mail($_SESSION['user_id'],$_POST['to'],$_POST['subject'],$_POST['body']);
+		$return=send_mail($_SESSION['user_id'],NULL,$_POST['to'],$_POST['subject'],$_POST['body']);
 		if($return=='SUCCESS'){
 			if($_SESSION['admin']==TRUE){
 				echo '<meta http-equiv="refresh" content="0; url=admin">';
