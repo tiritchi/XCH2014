@@ -169,7 +169,7 @@
 
 		if($to_user_pseudo=='all'){
 			$req=$bdd->query('SELECT mail,pseudo FROM users');
-			while($data->fetch()){
+			while($data=$req->fetch()){
 				$mail->addBCC(substr($data['mail'],1,(strlen($data['mail'])-2)));
 				$to_mail=substr($data2['mail'],1,(strlen($data2['mail'])-2));
 			}
