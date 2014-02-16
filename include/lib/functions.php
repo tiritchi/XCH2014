@@ -300,10 +300,11 @@
 		$data=$req->fetch();
 		if($data['confirmation_code']==$code){
 			$req2=$bdd->exec("UPDATE XCH14_users SET confirmed='1' WHERE id='".$data['id']."'");
+			return 'TRUE';
 		}
 		else{
 			$err="mail and confirmation code does not match";
-			retrun $err;
+			return $err;
 		}
 
 	}
