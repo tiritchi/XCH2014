@@ -4,9 +4,13 @@
 
 	function db_init(){//initialise l'accès à la base de donnée et renvoie la ref vers l'objet créé 
 		global $bdd;
+		global $ident_bdd;
+		global $pass_bdd;
+		global $base_bdd;
+		
 		try 
 		{
-			$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'raspberry');
+			$bdd = new PDO('mysql:host=localhost;dbname='.$base_bdd.'', $ident_bdd, $pass_bdd);
 			$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		} 
 		catch (Exception $e) 
@@ -148,6 +152,10 @@
 	}
 
 	function send_mail($user_id,$direct_mail,$to_user_pseudo,$subject,$body){
+		global $ident_mail;
+		global $pass_mail;
+		
+
 		require 'include/lib/phpmailer/PHPMailerAutoload.php';
 
 		$mail = new PHPMailer;
