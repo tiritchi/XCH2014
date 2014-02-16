@@ -174,6 +174,9 @@
 				$to_mail=substr($data2['mail'],1,(strlen($data2['mail'])-2));
 			}
 		}
+		elseif($to_user_pseudo==NULL){
+			$to_mail='XCH2014@ensea.fr';
+		}
 		else{
 			$sql = 'SELECT mail,pseudo FROM XCH14_users WHERE pseudo=:pseudo';
 			$req = $bdd->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
