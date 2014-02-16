@@ -36,7 +36,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 			                <div class="list-group">
 			                	<?php
 			                		$array=get_contracts($bdd,$_SESSION['user_id']);
-			                		if (array==NULL) {
+			                		if ($array==NULL) {
 			                		    echo 'pas de contrats';
 			                		}
 			                		else {
