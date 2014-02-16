@@ -50,11 +50,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 			            </div>
 			        </div>
 			    </div>
-			    <!--div class="col-md-offset-1 col-md-5">
-					<?php mark_as_read($bdd,1);?>
-
-				</div-->
-			    
+	    
 			    
 			    <?php 
 			        $var=get_user_info($bdd,$_SESSION['user_id']);
