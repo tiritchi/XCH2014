@@ -302,7 +302,8 @@
 			$req2=$bdd->exec("UPDATE XCH14_users SET confirmed='1' WHERE id='".$data['id']."'");
 		}
 		else{
-			retrun "mail and confirmation code doesn\'t match";
+			$err="mail and confirmation code does not match";
+			retrun $err;
 		}
 
 	}
