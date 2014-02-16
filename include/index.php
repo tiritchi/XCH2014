@@ -38,7 +38,7 @@
 
                     </a>
                 </div>
-                <div class="navbar-collapse collapse pull-right">
+                <div class="navbar-collapse collapse">
                     <form class="navbar-form navbar-right" action="login" method="post">
                         <div class="form-group">
                             <input class="form-control" name='email' type="text" placeholder="Email"></input>
