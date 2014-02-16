@@ -225,7 +225,7 @@
 		if(!$mail->send()) {
 		   return 'Mailer Error: ' . $mail->ErrorInfo;
 		}
-		return SUCCESS;
+		return 'sent';
 	}
 
 	function register($bdd,$psswd,$lname,$fname,$email,$phone,$school,$sex,$addA,$addB,$addC,$bd_y,$bd_m,$bd_d,$nn,$pos1,$pos2,$pos3,$pos4,$pos5){
@@ -274,7 +274,8 @@
 		    'stat'=>'0'
 	    ));
 
-		send_conf_code($email,$confirmation_code);
+		$sent=send_conf_code($_POST['Email'],$confirmation_code);
+		echo $sent;
 	}
 
 	function send_conf_code($to_user_mail,$confirmation_code){
@@ -282,8 +283,12 @@
 		$subject='Confirmation code';
 		$body='Please confirm your account : <br/>your confirmation code :'.$confirmation_code.'<br/><a href="'.$url.'confirm">Follow this link<a/><br/><br/> Thanks for your registration, Have a good game !';
 
-		send_mail(NULL,$to_user_mail,NULL,$subject,$body);
-
-		return TRUE;
+		$status=send_mail(NULL,$to_user_mail,NULL,$subject,$body);
+		if($status=='sent'){
+			return 'confirmation code has been sent to your email';
+		}
+		else{
+			$status;
+		}
 	}
 ?>
