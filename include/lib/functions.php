@@ -291,4 +291,19 @@
 			$status;
 		}
 	}
+
+	function confirm_account($mail,$code){
+		$bdd=db_init();
+		$sql='SELECT id,confirmation_code FROM XCH14_users WHERE mail=:mail';
+		$req = $bdd->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+		$req->execute(array(':mail' => '\''.$mail.'\''));
+		$data=$req->fetch();
+		if($data['confirmation_code']==$code){
+			$req2=$bdd->exec("UPDATE XCH14_users SET confirmed='1' WHERE id='".$data['id']."'");
+		}
+		else{
+			retrun 'mail and confirmation code doesn\'t match';
+		}
+
+	}
 ?>
