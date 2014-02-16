@@ -149,21 +149,7 @@
 
 	function send_mail($ident,$pass,$user_id,$to_user_pseudo,$subject,$body){
 		require 'include/lib/phpmailer/PHPMailerAutoload.php';
-		if($subject==NULL){
-			$subject='test';
-		}
-		$bdd=db_init();
-		$sql = 'SELECT mail,pseudo FROM users WHERE pseudo=:pseudo';
-		$req = $bdd->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
-		$req->execute(array(':pseudo' => '\''.$to_user_pseudo.'\''));
-		$data=$req->fetch();
-		//echo $data['mail'].'<br>'.$data['pseudo'];
-		$req2=$bdd->query("SELECT mail,pseudo FROM users WHERE id='".$user_id."'");
-		$data2=$req2->fetch();
-		$to_mail=substr($data['mail'],1,(strlen($data['mail'])-2));
-		$reply_mail=substr($data2['mail'],1,(strlen($data2['mail'])-2));
-		//echo $data['mail'].'<br>'.$data['pseudo'];
-		//echo $data2['mail'].'<br>'.$data2['pseudo'];
+
 		$mail = new PHPMailer;
 		
 		$mail->isSMTP();                 
@@ -176,12 +162,34 @@
 		$mail->Port = 587;
 		//$mail->SMTPDebug=true;
 
+
+		$bdd=db_init();
+		$req2=$bdd->query("SELECT mail,pseudo FROM users WHERE id='".$user_id."'");
+		$data2=$req2->fetch();
+
+		if($to_user_pseudo=='all'){
+			$req=$bdd->query('SELECT mail,pseudo FROM users');
+			while($data->fetch()){
+				$mail->addBCC(substr($data['mail'],1,(strlen($data['mail'])-2)));
+				$to_mail=substr($data2['mail'],1,(strlen($data2['mail'])-2));
+			}
+		}
+		else{
+			$sql = 'SELECT mail,pseudo FROM users WHERE pseudo=:pseudo';
+			$req = $bdd->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+			$req->execute(array(':pseudo' => '\''.$to_user_pseudo.'\''));
+			$data=$req->fetch();
+			$to_mail=substr($data['mail'],1,(strlen($data['mail'])-2));
+		}
+
+		
+
+		$reply_mail=substr($data2['mail'],1,(strlen($data2['mail'])-2));
+
 		$mail->From = 'XCH2014@ensea.fr';
 		$mail->FromName = $data2['pseudo'];
 		$mail->addAddress($to_mail);  // Add a recipient $mail->addAddress('ellen@example.com');
 		$mail->addReplyTo($reply_mail);
-		//$mail->addBCC('XCH2014@ensea.fr');
-
 		$mail->WordWrap = 50;                                
 		$mail->isHTML(true);                                  
 
