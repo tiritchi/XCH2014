@@ -36,9 +36,14 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 			                <div class="list-group">
 			                	<?php
 			                		$array=get_contracts($bdd,$_SESSION['user_id']);
-									foreach ($array as $ar) {
-										echo '<a href="#" class="list-group-item" data-toggle="modal" data-target="#'.$ar[3].'">';
-										echo $ar[3].'</a>';
+			                		if (array==NULL) {
+			                		    pas de contrats
+			                		}
+			                		else {
+									    foreach ($array as $ar) {
+										    echo '<a href="#" class="list-group-item" data-toggle="modal" data-target="#'.$ar[3].'">';
+										    echo $ar[3].'</a>';
+										}
 									}
 								?>
                             </div>
