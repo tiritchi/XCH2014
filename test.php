@@ -1,6 +1,7 @@
 <?php
-    $alfa='abcdefghijklmnpqrstuvwxyzABCDEFGHIJKLMNPQRSTUVWXYZ123456789';
-    echo substr(str_shuffle($alfa),0,30);
+	$file = 'ressources/1/profile.jpg';
+	$type = 'image/jpeg';
+	header('Content-Type:'.$type);
+	header('Content-Length: ' . filesize($file));
+	readfile($file);
 ?>
-<!DOCTYPE html>
-<html><body><img data-src="ressources/map.jpg" alt="..."></body></html>
