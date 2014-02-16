@@ -42,7 +42,7 @@ $_SESSION['user_id']=NULL;
                 $check = $hasher->CheckPassword($psswd, $password_correct);
          
                 if ($check) {
-                        if(&& $req['confirmed']=='1'){
+                        if($req['confirmed']=='1'){
                                 $_SESSION['user'] = substr($req['pseudo'],1,(strlen($req['pseudo'])-2));
                         	$_SESSION['connected']='TRUE';
                                 $_SESSION['user_id'] = $req['id'];
