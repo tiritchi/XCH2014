@@ -21,7 +21,7 @@ $_SESSION['user_id']=NULL;
 	$bdd=db_init();
 	$mail = "'".$_POST['email']."'";
 	$psswd= $_POST['password'];
-	$stat=$bdd->prepare('SELECT * FROM users WHERE mail=:mail');
+	$stat=$bdd->prepare('SELECT * FROM XCH14_users WHERE mail=:mail');
 	$stat->execute(array(
 		'mail'=>$mail
 		));

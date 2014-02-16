@@ -19,11 +19,11 @@
 
 	function get_user_info($bdd,$user_id){ // get_user_info(ref base de donnée, clef primaire table users)  Cette fonction renvoi un tableau (array) contenant dans l'orde le pseudo, prénom, nom, école, mail, sexe, date de naissance, téléphone, adresse, identifiant 
 		if($user_id=="all"){
-			$req=$bdd->query("SELECT * FROM users ORDER by pseudo ASC");
+			$req=$bdd->query("SELECT * FROM XCH14_users ORDER by pseudo ASC");
 			return $req;
 		}
 		else{
-			$req=$bdd->prepare('SELECT * FROM users WHERE id=?');
+			$req=$bdd->prepare('SELECT * FROM XCH14_users WHERE id=?');
 			$req->execute(array($user_id));
 			$donnees = $req->fetch();
 			$tab = array(substr($donnees['pseudo'],1,(strlen($donnees['pseudo'])-2)),substr($donnees['fname'],1,(strlen($donnees['fname'])-2)),substr($donnees['lname'],1,(strlen($donnees['lname'])-2)),substr($donnees['school'],1,(strlen($donnees['school'])-2)),substr($donnees['mail'],1,(strlen($donnees['mail'])-2)),substr($donnees['sexe'],1,(strlen($donnees['sexe'])-2)),$donnees['date_naissance'],"0".$donnees['phone'],substr($donnees['adresse'],1,(strlen($donnees['adresse'])-2)),$donnees['user_no']);
@@ -55,7 +55,7 @@
 
 	function get_contracts($bdd,$user_id){//get_contracts(ref base de donnée, clef primaire table users) cette fonction renvoie un tableau 2D (array(array())) chaque ligne correspond à un contrat et les colonnes sont clef primaire contrat, contrat honoré (0,1), 'clef primaire user cible', numéro de contrat, date d'expiration du contrat   accès via $tableau[ligne][colonne]
 		$tab=array();
-		$req=$bdd->prepare('SELECT * FROM contracts WHERE user_id=?');
+		$req=$bdd->prepare('SELECT * FROM XCH14_contracts WHERE user_id=?');
 		$req->execute(array($user_id));
 
 		while ($donnees = $req->fetch())
@@ -68,14 +68,14 @@
 	}
 
 	function create_contract($bdd,$user_id,$target_id,$exp_date){ //create_contract(ref bdd, clef primaire du joueur concerné, clef primaire du joueur cible, date d'expiration du contrat (YYYY-MM-DD)) rajoute un contrat dans la table contrats et renvoie le numéro de contrat
-		$req=$bdd->query("SELECT user_no FROM users WHERE id=$target_id");
+		$req=$bdd->query("SELECT user_no FROM XCH14_users WHERE id=$target_id");
 		$target_no=$req->fetch();
 		$req->closeCursor();
 		srand();
 		$cno='X'.rand(10000,99999).'C'.$target_id.'H14'.rand(10,99);
 		$uid = intval($user_id);
 		$tid = intval($target_id);
-		$req = $bdd->prepare('INSERT INTO contracts (contract_no,user_id,target_id,target_no,complete,exp_date,start_date) VALUES (?,?,?,?,?,?,NOW())');
+		$req = $bdd->prepare('INSERT INTO XCH14_contracts (contract_no,user_id,target_id,target_no,complete,exp_date,start_date) VALUES (?,?,?,?,?,?,NOW())');
 		$req->execute(array($cno,$user_id,$target_id,$target_no['user_no'],'0',$exp_date));
 		return $cno;
 	}
@@ -83,7 +83,7 @@
 	function mark_as_complete ($bdd,$contract_id){// mark_as_complete(ref bdd, clef primaire du contrat) marque à 1 le champ 'complete' et renvoie true ou false si l'action à été effectuée
 		try 
 		{
-			$req=$bdd->exec("UPDATE contracts SET complete ='1' WHERE id=$contract_id");
+			$req=$bdd->exec("UPDATE XCH14_contracts SET complete ='1' WHERE id=$contract_id");
 			//$req->execute(array('1',$contract_id));
 		}
 		catch (Exception $e) 
@@ -164,18 +164,18 @@
 
 
 		$bdd=db_init();
-		$req2=$bdd->query("SELECT mail,pseudo FROM users WHERE id='".$user_id."'");
+		$req2=$bdd->query("SELECT mail,pseudo FROM XCH14_users WHERE id='".$user_id."'");
 		$data2=$req2->fetch();
 
 		if($to_user_pseudo=='all'){
-			$req=$bdd->query('SELECT mail,pseudo FROM users');
+			$req=$bdd->query('SELECT mail,pseudo FROM XCH14_users');
 			while($data=$req->fetch()){
 				$mail->addBCC(substr($data['mail'],1,(strlen($data['mail'])-2)));
 				$to_mail=substr($data2['mail'],1,(strlen($data2['mail'])-2));
 			}
 		}
 		else{
-			$sql = 'SELECT mail,pseudo FROM users WHERE pseudo=:pseudo';
+			$sql = 'SELECT mail,pseudo FROM XCH14_users WHERE pseudo=:pseudo';
 			$req = $bdd->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 			$req->execute(array(':pseudo' => '\''.$to_user_pseudo.'\''));
 			$data=$req->fetch();
@@ -231,7 +231,7 @@
 		$confirmation_code=substr(str_shuffle($alfa),0,30);
 		//envoie des informations à la DB
 
-		$req = $bdd->prepare('INSERT INTO users (fname,lname,school,mail,phone,sexe,adresse,date_naissance,pseudo,psswd,user_no,position,confirmation_code,confirmed,score,reg_date) VALUES (:prenom,:nom,:ecole,:email,:phone,:sexe,:adresse,:date_n,:pseudo,:psswd,:ucode,:pos,:conf,:stat,:score,NOW())');
+		$req = $bdd->prepare('INSERT INTO XCH14_users (fname,lname,school,mail,phone,sexe,adresse,date_naissance,pseudo,psswd,user_no,position,confirmation_code,confirmed,score,reg_date) VALUES (:prenom,:nom,:ecole,:email,:phone,:sexe,:adresse,:date_n,:pseudo,:psswd,:ucode,:pos,:conf,:stat,:score,NOW())');
 		$req->execute(array(
 		    'nom' => $nom,
 		    'prenom' => $prenom,
