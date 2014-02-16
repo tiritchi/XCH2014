@@ -151,7 +151,7 @@
 							<!-- Text input-->
 							<div class="input-group">
 							    <span class="input-group-addon">Position </span>
-				    			<select class="selectpicker" data-live-search="true" title='Pos 1/5' name="p1" required="">
+				    			<select class="selectpicker" data-live-search="true" data-width="auto" title='Pos 1/5' name="p1" required="">
 									<option>A1</option>
 									<option>A2</option>
 									<option>A3</option>
@@ -164,6 +164,7 @@
 									<option>A10</option>
 									<option>A11</option>
 									<option>A12</option>
+									<option data-divider="true"></option>
 									<option>B1</option>
 									<option>B2</option>
 									<option>B3</option>
@@ -176,6 +177,7 @@
 									<option>B10</option>
 									<option>B11</option>
 									<option>B12</option>
+									<option data-divider="true"></option>
 									<option>C1</option>
 									<option>C2</option>
 									<option>C3</option>
@@ -188,6 +190,7 @@
 									<option>C10</option>
 									<option>C11</option>
 									<option>C12</option>
+									<option data-divider="true"></option>
 									<option>D1</option>
 									<option>D2</option>
 									<option>D3</option>
@@ -200,6 +203,7 @@
 									<option>D10</option>
 									<option>D11</option>
 									<option>D12</option>
+									<option data-divider="true"></option>
 									<option>E1</option>
 									<option>E2</option>
 									<option>E3</option>
@@ -212,6 +216,7 @@
 									<option>E10</option>
 									<option>E11</option>
 									<option>E12</option>
+									<option data-divider="true"></option>
 									<option>F1</option>
 									<option>F2</option>
 									<option>F3</option>
@@ -224,6 +229,7 @@
 									<option>F10</option>
 									<option>F11</option>
 									<option>F12</option>
+									<option data-divider="true"></option>
 									<option>G1</option>
 									<option>G2</option>
 									<option>G3</option>
@@ -237,7 +243,7 @@
 									<option>G11</option>
 									<option>G12</option>
 								</select>
-								<select class="selectpicker" data-live-search="true" title='Pos 2/5' name="p2" required="">
+								<select class="selectpicker" data-live-search="true" data-width="auto" title='Pos 2/5' name="p2" required="">
 									<option>A1</option>
 									<option>A2</option>
 									<option>A3</option>
@@ -250,6 +256,7 @@
 									<option>A10</option>
 									<option>A11</option>
 									<option>A12</option>
+									<option data-divider="true"></option>
 									<option>B1</option>
 									<option>B2</option>
 									<option>B3</option>
@@ -262,6 +269,7 @@
 									<option>B10</option>
 									<option>B11</option>
 									<option>B12</option>
+									<option data-divider="true"></option>
 									<option>C1</option>
 									<option>C2</option>
 									<option>C3</option>
@@ -274,6 +282,7 @@
 									<option>C10</option>
 									<option>C11</option>
 									<option>C12</option>
+									<option data-divider="true"></option>
 									<option>D1</option>
 									<option>D2</option>
 									<option>D3</option>
@@ -286,6 +295,7 @@
 									<option>D10</option>
 									<option>D11</option>
 									<option>D12</option>
+									<option data-divider="true"></option>
 									<option>E1</option>
 									<option>E2</option>
 									<option>E3</option>
@@ -298,6 +308,7 @@
 									<option>E10</option>
 									<option>E11</option>
 									<option>E12</option>
+									<option data-divider="true"></option>
 									<option>F1</option>
 									<option>F2</option>
 									<option>F3</option>
@@ -310,6 +321,7 @@
 									<option>F10</option>
 									<option>F11</option>
 									<option>F12</option>
+									<option data-divider="true"></option>
 									<option>G1</option>
 									<option>G2</option>
 									<option>G3</option>
@@ -323,7 +335,7 @@
 									<option>G11</option>
 									<option>G12</option>
 								</select>
-								<select class="selectpicker" data-live-search="true" title='Pos 3/5' name="p3" required="">
+								<select class="selectpicker" data-live-search="true" data-width="auto" title='Pos 3/5' name="p3" required="">
 									<option>A1</option>
 									<option>A2</option>
 									<option>A3</option>
@@ -336,6 +348,7 @@
 									<option>A10</option>
 									<option>A11</option>
 									<option>A12</option>
+									<option data-divider="true"></option>
 									<option>B1</option>
 									<option>B2</option>
 									<option>B3</option>
@@ -348,6 +361,7 @@
 									<option>B10</option>
 									<option>B11</option>
 									<option>B12</option>
+									<option data-divider="true"></option>
 									<option>C1</option>
 									<option>C2</option>
 									<option>C3</option>
@@ -360,6 +374,7 @@
 									<option>C10</option>
 									<option>C11</option>
 									<option>C12</option>
+									<option data-divider="true"></option>
 									<option>D1</option>
 									<option>D2</option>
 									<option>D3</option>
@@ -372,6 +387,7 @@
 									<option>D10</option>
 									<option>D11</option>
 									<option>D12</option>
+									<option data-divider="true"></option>
 									<option>E1</option>
 									<option>E2</option>
 									<option>E3</option>
@@ -384,6 +400,7 @@
 									<option>E10</option>
 									<option>E11</option>
 									<option>E12</option>
+									<option data-divider="true"></option>
 									<option>F1</option>
 									<option>F2</option>
 									<option>F3</option>
@@ -396,6 +413,100 @@
 									<option>F10</option>
 									<option>F11</option>
 									<option>F12</option>
+									<option data-divider="true"></option>
+									<option>G1</option>
+									<option>G2</option>
+									<option>G3</option>
+									<option>G4</option>
+									<option>G5</option>
+									<option>G6</option>
+									<option>G7</option>
+									<option>G8</option>
+									<option>G9</option>
+									<option>G10</option>
+									<option>G11</option>
+									<option>G12</option>
+									<option>G12</option>
+								</select>
+								<select class="selectpicker" data-live-search="true" data-width="auto" title='Pos 4/5' name="p4" required="">
+									<option>A1</option>
+									<option>A2</option>
+									<option>A3</option>
+									<option>A4</option>
+									<option>A5</option>
+									<option>A6</option>
+									<option>A7</option>
+									<option>A8</option>
+									<option>A9</option>
+									<option>A10</option>
+									<option>A11</option>
+									<option>A12</option>
+									<option data-divider="true"></option>
+									<option>B1</option>
+									<option>B2</option>
+									<option>B3</option>
+									<option>B4</option>
+									<option>B5</option>
+									<option>B6</option>
+									<option>B7</option>
+									<option>B8</option>
+									<option>B9</option>
+									<option>B10</option>
+									<option>B11</option>
+									<option>B12</option>
+									<option data-divider="true"></option>
+									<option>C1</option>
+									<option>C2</option>
+									<option>C3</option>
+									<option>C4</option>
+									<option>C5</option>
+									<option>C6</option>
+									<option>C7</option>
+									<option>C8</option>
+									<option>C9</option>
+									<option>C10</option>
+									<option>C11</option>
+									<option>C12</option>
+									<option data-divider="true"></option>
+									<option>D1</option>
+									<option>D2</option>
+									<option>D3</option>
+									<option>D4</option>
+									<option>D5</option>
+									<option>D6</option>
+									<option>D7</option>
+									<option>D8</option>
+									<option>D9</option>
+									<option>D10</option>
+									<option>D11</option>
+									<option>D12</option>
+									<option data-divider="true"></option>
+									<option>E1</option>
+									<option>E2</option>
+									<option>E3</option>
+									<option>E4</option>
+									<option>E5</option>
+									<option>E6</option>
+									<option>E7</option>
+									<option>E8</option>
+									<option>E9</option>
+									<option>E10</option>
+									<option>E11</option>
+									<option>E12</option>
+									<option data-divider="true"></option>
+									<option>F1</option>
+									<option>F2</option>
+									<option>F3</option>
+									<option>F4</option>
+									<option>F5</option>
+									<option>F6</option>
+									<option>F7</option>
+									<option>F8</option>
+									<option>F9</option>
+									<option>F10</option>
+									<option>F11</option>
+									<option>F12</option>
+									<option data-divider="true"></option>
 									<option>G1</option>
 									<option>G2</option>
 									<option>G3</option>
@@ -409,7 +520,7 @@
 									<option>G11</option>
 									<option>G12</option>
 								</select>
-								<select class="selectpicker" data-live-search="true" title='Pos 4/5' name="p4" required="">
+								<select class="selectpicker" data-live-search="true" data-width="auto" title='Pos 5/5' name="p5" required="">
 									<option>A1</option>
 									<option>A2</option>
 									<option>A3</option>
@@ -422,6 +533,7 @@
 									<option>A10</option>
 									<option>A11</option>
 									<option>A12</option>
+									<option data-divider="true"></option>
 									<option>B1</option>
 									<option>B2</option>
 									<option>B3</option>
@@ -434,6 +546,7 @@
 									<option>B10</option>
 									<option>B11</option>
 									<option>B12</option>
+									<option data-divider="true"></option>
 									<option>C1</option>
 									<option>C2</option>
 									<option>C3</option>
@@ -446,6 +559,7 @@
 									<option>C10</option>
 									<option>C11</option>
 									<option>C12</option>
+									<option data-divider="true"></option>
 									<option>D1</option>
 									<option>D2</option>
 									<option>D3</option>
@@ -458,6 +572,7 @@
 									<option>D10</option>
 									<option>D11</option>
 									<option>D12</option>
+									<option data-divider="true"></option>
 									<option>E1</option>
 									<option>E2</option>
 									<option>E3</option>
@@ -470,6 +585,7 @@
 									<option>E10</option>
 									<option>E11</option>
 									<option>E12</option>
+									<option data-divider="true"></option>
 									<option>F1</option>
 									<option>F2</option>
 									<option>F3</option>
@@ -482,92 +598,7 @@
 									<option>F10</option>
 									<option>F11</option>
 									<option>F12</option>
-									<option>G1</option>
-									<option>G2</option>
-									<option>G3</option>
-									<option>G4</option>
-									<option>G5</option>
-									<option>G6</option>
-									<option>G7</option>
-									<option>G8</option>
-									<option>G9</option>
-									<option>G10</option>
-									<option>G11</option>
-									<option>G12</option>
-								</select>
-								<select class="selectpicker" data-live-search="true" title='Pos 5/5' name="p5" required="">
-									<option>A1</option>
-									<option>A2</option>
-									<option>A3</option>
-									<option>A4</option>
-									<option>A5</option>
-									<option>A6</option>
-									<option>A7</option>
-									<option>A8</option>
-									<option>A9</option>
-									<option>A10</option>
-									<option>A11</option>
-									<option>A12</option>
-									<option>B1</option>
-									<option>B2</option>
-									<option>B3</option>
-									<option>B4</option>
-									<option>B5</option>
-									<option>B6</option>
-									<option>B7</option>
-									<option>B8</option>
-									<option>B9</option>
-									<option>B10</option>
-									<option>B11</option>
-									<option>B12</option>
-									<option>C1</option>
-									<option>C2</option>
-									<option>C3</option>
-									<option>C4</option>
-									<option>C5</option>
-									<option>C6</option>
-									<option>C7</option>
-									<option>C8</option>
-									<option>C9</option>
-									<option>C10</option>
-									<option>C11</option>
-									<option>C12</option>
-									<option>D1</option>
-									<option>D2</option>
-									<option>D3</option>
-									<option>D4</option>
-									<option>D5</option>
-									<option>D6</option>
-									<option>D7</option>
-									<option>D8</option>
-									<option>D9</option>
-									<option>D10</option>
-									<option>D11</option>
-									<option>D12</option>
-									<option>E1</option>
-									<option>E2</option>
-									<option>E3</option>
-									<option>E4</option>
-									<option>E5</option>
-									<option>E6</option>
-									<option>E7</option>
-									<option>E8</option>
-									<option>E9</option>
-									<option>E10</option>
-									<option>E11</option>
-									<option>E12</option>
-									<option>F1</option>
-									<option>F2</option>
-									<option>F3</option>
-									<option>F4</option>
-									<option>F5</option>
-									<option>F6</option>
-									<option>F7</option>
-									<option>F8</option>
-									<option>F9</option>
-									<option>F10</option>
-									<option>F11</option>
-									<option>F12</option>
+									<option data-divider="true"></option>
 									<option>G1</option>
 									<option>G2</option>
 									<option>G3</option>
