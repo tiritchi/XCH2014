@@ -154,6 +154,7 @@
 	function send_mail($user_id,$direct_mail,$to_user_pseudo,$subject,$body){
 		global $ident_mail;
 		global $pass_mail;
+		global $game_mail;
 		
 
 		require 'include/lib/phpmailer/PHPMailerAutoload.php';
@@ -174,7 +175,7 @@
 		$bdd=db_init();
 		if($user_id==NULL){
 			$mail->FromName = 'Webmaester';
-			$reply_mail='XCH2014@ensea.fr';
+			$reply_mail=$game_mail;
 		}
 		else{
 			$req2=$bdd->query("SELECT mail,pseudo FROM XCH14_users WHERE id='".$user_id."'");
@@ -193,7 +194,7 @@
 		}
 		elseif($to_user_pseudo==NULL){
 			if($direct_mail==NULL){
-				$to_mail='XCH2014@ensea.fr';
+				$to_mail=$game_mail;
 			}
 			else{
 				$to_mail=$direct_mail;
@@ -211,7 +212,7 @@
 
 		
 
-		$mail->From = 'XCH2014@ensea.fr';
+		$mail->From = $game_mail;
 		$mail->addAddress($to_mail);  // Add a recipient $mail->addAddress('ellen@example.com');
 		$mail->addReplyTo($reply_mail);
 		$mail->WordWrap = 50;                                
