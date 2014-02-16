@@ -34,6 +34,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 			            <div class="panel-body">
 			            <div class="panel-group" id="accordion">
 			            <?php $req=get_user_info($bdd,"all");
+			            	$i='0';
 			            	while ($data=$req->fetch()){
 			            		$i++;
 			            		echo '

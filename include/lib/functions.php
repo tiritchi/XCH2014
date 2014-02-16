@@ -231,7 +231,7 @@
 		$confirmation_code=substr(str_shuffle($alfa),0,30);
 		//envoie des informations à la DB
 
-		$req = $bdd->prepare('INSERT INTO users (fname,lname,school,mail,phone,sexe,adresse,date_naissance,pseudo,psswd,user_no,position,confirmation_code,confirmed,reg_date) VALUES (:prenom,:nom,:ecole,:email,:phone,:sexe,:adresse,:date_n,:pseudo,:psswd,:ucode,:pos,:conf,:stat,NOW())');
+		$req = $bdd->prepare('INSERT INTO users (fname,lname,school,mail,phone,sexe,adresse,date_naissance,pseudo,psswd,user_no,position,confirmation_code,confirmed,score,reg_date) VALUES (:prenom,:nom,:ecole,:email,:phone,:sexe,:adresse,:date_n,:pseudo,:psswd,:ucode,:pos,:conf,:stat,:score,NOW())');
 		$req->execute(array(
 		    'nom' => $nom,
 		    'prenom' => $prenom,
@@ -246,7 +246,8 @@
 		    'ucode'=>$ucode,
 		    'pos'=>$position,
 		    'conf'=>$confirmation_code,
-		    'stat'=>''
+		    'score'=>'0',
+		    'stat'=>'0'
 	    ));
 	}
 ?>
