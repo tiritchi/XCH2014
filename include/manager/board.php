@@ -37,7 +37,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 			                	<?php
 			                		$array=get_contracts($bdd,$_SESSION['user_id']);
 			                		if (array==NULL) {
-			                		    pas de contrats
+			                		    echo 'pas de contrats';
 			                		}
 			                		else {
 									    foreach ($array as $ar) {
