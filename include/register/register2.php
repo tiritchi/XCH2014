@@ -151,7 +151,7 @@
 							<!-- Text input-->
 							<div class="input-group">
 							    <span class="input-group-addon">Position </span>
-				    			<select class="selectpicker show-tick"  title='Pos 1/5' name="p1" required="">
+				    			<select class="selectpicker" data-live-search="true" title='Pos 1/5' name="p1" required="">
 									<option>A1</option>
 									<option>A2</option>
 									<option>A3</option>
@@ -237,7 +237,7 @@
 									<option>G11</option>
 									<option>G12</option>
 								</select>
-								<select class="selectpicker show-tick"  title='Pos 2/5' name="p2" required="">
+								<select class="selectpicker" data-live-search="true" title='Pos 2/5' name="p2" required="">
 									<option>A1</option>
 									<option>A2</option>
 									<option>A3</option>
@@ -323,7 +323,7 @@
 									<option>G11</option>
 									<option>G12</option>
 								</select>
-								<select class="selectpicker show-tick"  title='Pos 3/5' name="p3" required="">
+								<select class="selectpicker" data-live-search="true" title='Pos 3/5' name="p3" required="">
 									<option>A1</option>
 									<option>A2</option>
 									<option>A3</option>
@@ -409,7 +409,7 @@
 									<option>G11</option>
 									<option>G12</option>
 								</select>
-								<select class="selectpicker show-tick"  title='Pos 4/5' name="p4" required="">
+								<select class="selectpicker" data-live-search="true" title='Pos 4/5' name="p4" required="">
 									<option>A1</option>
 									<option>A2</option>
 									<option>A3</option>
@@ -495,7 +495,7 @@
 									<option>G11</option>
 									<option>G12</option>
 								</select>
-								<select class="selectpicker show-tick"  title='Pos 5/5' name="p5" required="">
+								<select class="selectpicker" data-live-search="true" title='Pos 5/5' name="p5" required="">
 									<option>A1</option>
 									<option>A2</option>
 									<option>A3</option>
