@@ -58,12 +58,14 @@ $_SESSION['user_id']=NULL;
                         	}
                         	else
                         	{
-                        		echo 'erreur';
+                        		echo 'erreur<br/>';
+                                        echo 'redirection sur la page d\'accueil dans 2 sec';
                         		echo '<meta http-equiv="refresh" content="2; url=.">';
                         	}
                         }
                         else{
-                                echo 'Merci de confirmer votre compte avant de pouvoir accéder à cette page';
+                                echo 'Merci de confirmer votre compte avant de pouvoir accéder à cette page<br/>';
+                                echo 'redirection sur la page d\'accueil dans 2 sec';
                                 echo '<meta http-equiv="refresh" content="2; url=.">';
                         }
                 }
