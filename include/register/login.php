@@ -64,6 +64,7 @@ $_SESSION['user_id']=NULL;
                         }
                         else{
                                 echo 'Merci de confirmer votre compte avant de pouvoir accéder à cette page';
+                                echo '<meta http-equiv="refresh" content="2; url=.">';
                         }
                 }
                 else {
