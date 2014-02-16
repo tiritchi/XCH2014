@@ -11,6 +11,7 @@
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <style type="text/css">
             body { padding-top: 50px; }
+            .btn-toolbar {text-align:center;}
         <?php require('include/lib/functions.php'); ?>  
         </style>
 		</head>
