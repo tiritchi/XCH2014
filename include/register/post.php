@@ -11,7 +11,7 @@
 	$bdd=db_init();
 	
 	$row_count = '0';
-	$stmt = $bdd->prepare('SELECT mail FROM users WHERE mail=?');
+	$stmt = $bdd->prepare('SELECT mail FROM XCH14_users WHERE mail=?');
 	$stmt->execute(array($_POST['Email']));
 	$row_count = $stmt->rowCount();
 	if($row_count>=1)
