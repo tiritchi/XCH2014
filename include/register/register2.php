@@ -667,11 +667,6 @@
 	  			</div>
 			</div>
 		</div>
-		<div class="col-lg-6">
-			<div class="thumnail">
-				<img src="ressources/map.jpg" class="img-thumbnail"></img><br />
-			</div>
-		</div>
 	</div>
 	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
