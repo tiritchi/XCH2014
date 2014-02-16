@@ -279,7 +279,7 @@
 	}
 
 	function send_conf_code($to_user_mail,$confirmation_code){
-
+		global $url;
 		$subject='Confirmation code';
 		$body='Please confirm your account : <br/>your confirmation code :'.$confirmation_code.'<br/><a href="'.$url.'confirm">Follow this link<a/><br/><br/> Thanks for your registration, Have a good game !';
 
