@@ -1,5 +1,5 @@
 <?php
-
+	require 'include/lib/config.php';
 	$bdd=NULL;
 
 	function db_init(){//initialise l'accès à la base de donnée et renvoie la ref vers l'objet créé 
@@ -147,7 +147,7 @@
 		return $u_code;
 	}
 
-	function send_mail($ident,$pass,$user_id,$to_user_pseudo,$subject,$body){
+	function send_mail($user_id,$direct_mail,$to_user_pseudo,$subject,$body){
 		require 'include/lib/phpmailer/PHPMailerAutoload.php';
 
 		$mail = new PHPMailer;
@@ -157,25 +157,39 @@
 		$mail->SMTPAuth = true;
 		$mail->SMTPSecure = 'tls';                              
 		$mail->AuthType='PLAIN';
-		$mail->Username = $ident;                            
-		$mail->Password = $pass;
+		$mail->Username = $ident_mail;                            
+		$mail->Password = $pass_mail;
 		$mail->Port = 587;
 		//$mail->SMTPDebug=true;
 
 
 		$bdd=db_init();
-		$req2=$bdd->query("SELECT mail,pseudo FROM XCH14_users WHERE id='".$user_id."'");
-		$data2=$req2->fetch();
+		if($user_id==NULL){
+			$mail->FromName = 'Webmaester';
+			$reply_mail='XCH2014@ensea.fr';
+		}
+		else{
+			$req2=$bdd->query("SELECT mail,pseudo FROM XCH14_users WHERE id='".$user_id."'");
+			$data2=$req2->fetch();
+			$mail->FromName = $data2['pseudo'];
+			$reply_mail=substr($data2['mail'],1,(strlen($data2['mail'])-2));
+		}
+		
 
 		if($to_user_pseudo=='all'){
 			$req=$bdd->query('SELECT mail,pseudo FROM XCH14_users');
 			while($data=$req->fetch()){
 				$mail->addBCC(substr($data['mail'],1,(strlen($data['mail'])-2)));
-				$to_mail=substr($data2['mail'],1,(strlen($data2['mail'])-2));
 			}
+			$to_mail=substr($data2['mail'],1,(strlen($data2['mail'])-2));
 		}
 		elseif($to_user_pseudo==NULL){
-			$to_mail='XCH2014@ensea.fr';
+			if($direct_mail==NULL){
+				$to_mail='XCH2014@ensea.fr';
+			}
+			else{
+				$to_mail=$direct_mail;
+			}
 		}
 		else{
 			$sql = 'SELECT mail,pseudo FROM XCH14_users WHERE pseudo=:pseudo';
@@ -187,10 +201,9 @@
 
 		
 
-		$reply_mail=substr($data2['mail'],1,(strlen($data2['mail'])-2));
+		
 
 		$mail->From = 'XCH2014@ensea.fr';
-		$mail->FromName = $data2['pseudo'];
 		$mail->addAddress($to_mail);  // Add a recipient $mail->addAddress('ellen@example.com');
 		$mail->addReplyTo($reply_mail);
 		$mail->WordWrap = 50;                                
@@ -232,7 +245,6 @@
 		//génération du code de confirmation 
 		$alfa='abcdefghijklmnpqrstuvwxyzABCDEFGHIJKLMNPQRSTUVWXYZ123456789';
 		$confirmation_code=substr(str_shuffle($alfa),0,30);
-		//envoie des informations à la DB
 
 		$req = $bdd->prepare('INSERT INTO XCH14_users (fname,lname,school,mail,phone,sexe,adresse,date_naissance,pseudo,psswd,user_no,position,confirmation_code,confirmed,score,reg_date) VALUES (:prenom,:nom,:ecole,:email,:phone,:sexe,:adresse,:date_n,:pseudo,:psswd,:ucode,:pos,:conf,:stat,:score,NOW())');
 		$req->execute(array(
@@ -252,5 +264,17 @@
 		    'score'=>'0',
 		    'stat'=>'0'
 	    ));
+
+		send_conf_code($email,$confirmation_code);
+	}
+
+	function send_conf_code($to_user_mail,$confirmation_code){
+
+		$subject='Confirmation code';
+		$body='Please confirm your account : <br/>your confirmation code :'.$confirmation_code.'<br/><a href="'.$url.'confirm">Follow this link<a/><br/><br/> Thanks for your registration, Have a good game !';
+
+		send_mail($to_user_mail,,$subject,$body)
+
+		return TRUE;
 	}
 ?>
