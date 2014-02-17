@@ -38,8 +38,6 @@
 	                    	<li class="dropdown">
 	                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="glyphicon glyphicon-user"></i> <?php echo $_SESSION['user']?>		<b class="caret"></b></a>
 	                            <ul class="dropdown-menu btn-toolbar">
-	                                <li><a href="#"><i class="glyphicon glyphicon-cog"></i>Settings</a></li>
-	                                <li class="divider"></li>
 	                                <li><a href="logout"><i class="glyphicon glyphicon-log-out "></i>Log out</a></li>
 	                            </ul>
 	                        </li>
