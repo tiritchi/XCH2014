@@ -37,15 +37,17 @@
                     
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav nav-tabs">
+                    <ul class="nav navbar-nav">
                         <li><a href="#regles" data-toggle="tab">Règles</a></li>
+                        <li><a href="#organisation" data-toggle="tab">Organisation</a></li>
                         <li><a href="#jeu" data-toggle="tab">Le jeu</a></li>
                         <li><a href="#news" data-toggle="tab">News</a></li>
-                        <li><a href="#news" data-toggle="tab">Contact</a></li>
+                        <li><a href="#contact" data-toggle="tab">Contact</a></li>
+                        <li><a href="#remerciements" data-toggle="tab">Remerciements</a></li>
                     </ul>
                     <div class="navbar-form navbar-right">
                         <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Connexion</button>
-                        <a class="btn btn-primary btn-sm" role="button" href="register">Insciption</a>
+                        <a class="btn btn-primary btn-sm" role="button" href="register">Sign up !</a>
                     </div>
                 </div>
             </div>
@@ -58,7 +60,7 @@
             </div>
             <div class="col-lg-8">
                 <div class="page-header">
-                    <h1>XTrem Cergy Hunting<small>    1ère édition</small></h1>
+                    <h1>Example page header <small>Subtext for header</small></h1>
                 </div>
                 <div class="row">
                     <div class="col-lg-8">
@@ -71,6 +73,45 @@
                             </div>
                         </div>
                     </div>
+                    <div class="tab-content">
+                        <div id="regles" class="tab-pane fade in active">
+                            <h3>Règles</h3>
+                            <h4>Conditions</h4>
+                            <p>Afin de participer au jeu Xtrem Cergy Hunting, vous devez : 
+                                <ul>
+                                    <li>Habiter et travailler dans la zone pour vous trouverez ici (<= lien vers la carte)</li>
+                                    <li>Être présent dans la zone de jeu durant la période de jeu. Les absences sont tolérées dans la mesure où elles ne dépassent pas 2 jours consécutifs et au maximum 2 jours par semaine.</li>
+                                    <li>Être majeur (âgé de 18 ans ou plus)</li>
+                                    <li>Fournir une photo en couleur, non modifiée ou truquée, datant de moins de 3 mois montrant distinctement votre visage de face et sans accessoire : pas de lunettes, chapeau, foulard, etc. La photo doit être prise pour montrer clairement votre visage (pas de flou, couleur des yeux visible). Les organisateurs se réservent le droit de refuser les photos proposées par les joueurs si elles ne correspondent pas aux critères, elles devront être changées avant la validation de l’inscription.</li>
+                                    <li>Fournir des renseignements exacts et précis lors de votre inscription</li>
+                                    <li>Signaler tout changement d'information aux organisateurs via le système de tickets mis à votre disposition dans votre espace personnel.</li>
+                                    <li>Accepter sans réserve le présent règlement.</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div id="organisation" class="tab-pane fade in active">
+                            <h3>Organisation</h3>
+                            <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
+                        </div>
+                        <div id="jeu" class="tab-pane fade">
+                            <h3>Le jeu</h3>
+                            <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
+                        </div>
+                        <div id="news" class="tab-pane fade">
+                            <h3>News</h3>
+                            <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
+                        </div>
+                        <div id="contact" class="tab-pane fade in active">
+                            <h3>Contact</h3>
+                            <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
+                        </div>
+                        <div id="remerciements" class="tab-pane fade in active">
+                            <h3>Remerciements</h3>
+                            <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
                     <div class="col-lg-4">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -86,6 +127,7 @@
                                 </ul>
                             </div>
                         </div>
+>>>>>>> 9cb957af09b4765345594caadbf81facb1b64b58
                     </div>
 
             </div>
