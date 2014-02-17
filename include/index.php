@@ -40,7 +40,7 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
-                        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target=".bs-example-modal-sm">Connexion</button>
+                        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Connexion</button>
                         <a class="btn btn-primary btn-sm" role="button" href="register">Sign up !</a>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
 
         <!-- modal-->
         <form class="form-horizontal" action="login" method="post">
-            <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-sm">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -86,7 +86,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button class="btn btn-success" type="submit">Sign in</button>
+                            <button class="btn btn-success" type="submit">Connexion</button>
                         </div>
                     </div>
                 </div>
