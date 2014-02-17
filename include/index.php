@@ -73,15 +73,10 @@
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
                     
                     <div class="col-lg-8">
                         <div class="tab-content">
                         <div id="regles" class="tab-pane fade in active">
-=======
-                    <div class="tab-content">
-                        <div id="regles" class="tab-pane fade">
->>>>>>> 729a6b92e6cddf2bb3b4952026005ca297172199
                             <h3>Règles</h3>
                             <h4>Conditions</h4>
                             <p>Afin de participer au jeu Xtrem Cergy Hunting, vous devez : 
@@ -96,7 +91,7 @@
                                 </ul>
                             </p>
                         </div>
-                        <div id="organisation" class="tab-pane fade">
+                        <div id="organisation" class="tab-pane fade in active">
                             <h3>Organisation</h3>
                             <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
                         </div>
@@ -108,16 +103,15 @@
                             <h3>News</h3>
                             <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
                         </div>
-                        <div id="contact" class="tab-pane fade">
+                        <div id="contact" class="tab-pane fade in active">
                             <h3>Contact</h3>
                             <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
                         </div>
-                        <div id="remerciements" class="tab-pane fade">
+                        <div id="remerciements" class="tab-pane fade in active">
                             <h3>Remerciements</h3>
                             <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
                         </div>
                     </div>
-<<<<<<< HEAD
                     </div>
                     <div class="col-lg-4">
                         <div class="panel panel-default">
@@ -135,25 +129,6 @@
                             </div>
                         </div>
                     </div>
-=======
-                    <div class="panel-body">
-                        <div class="col-lg-4">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Top 5 players</h3>
-                                </div>
-                                <div class="panel-body">
-                                    <ul class="list-group">
-                                       <li class="list-group-item">Best player 1 <span class="badge">5 points</span></li>
-                                       <li class="list-group-item">Best player 2 <span class="badge">4 points</span></li>
-                                       <li class="list-group-item">Best player 3 <span class="badge">3 points</span></li>
-                                       <li class="list-group-item">Best player 4 <span class="badge">2 points</span></li>
-                                       <li class="list-group-item">Best player 5 <span class="badge">1 points</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
->>>>>>> 729a6b92e6cddf2bb3b4952026005ca297172199
 
             </div>
         </div>
