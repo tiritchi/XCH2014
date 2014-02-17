@@ -74,7 +74,7 @@
                         </div>
                     </div>
                     <div class="tab-content">
-                        <div id="regles" class="tab-pane fade in active">
+                        <div id="regles" class="tab-pane fade">
                             <h3>Règles</h3>
                             <h4>Conditions</h4>
                             <p>Afin de participer au jeu Xtrem Cergy Hunting, vous devez : 
@@ -89,7 +89,7 @@
                                 </ul>
                             </p>
                         </div>
-                        <div id="organisation" class="tab-pane fade in active">
+                        <div id="organisation" class="tab-pane fade">
                             <h3>Organisation</h3>
                             <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
                         </div>
