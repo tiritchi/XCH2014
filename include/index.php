@@ -43,7 +43,7 @@
                         <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
                             Connexion
                         </button>
-                        
+                        <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Connexion</button>
                         <button class="btn btn-primary btn-sm" role="button" href="register">Sign up !</button>
                     </form>
                 </div>
