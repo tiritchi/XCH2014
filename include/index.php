@@ -54,18 +54,26 @@
                 </div>
             </div>
         </div>
-        <div class="jumbotron">
-            <div class="row">
-                <div class=" col-lg-4">
-                    <a class="thumbnail">
-                        <img src="ressources/home.jpg" alt="...">
-                    </a>
+        <div class="row">
+            <div class=" col-lg-4">
+                <a class="thumbnail">
+                    <img src="ressources/home.jpg" alt="...">
+                </a>
+            </div>
+            <div class="col-lg-8">
+                <div class="page-header">
+                    <h1>Example page header <small>Subtext for header</small></h1>
                 </div>
-                <div class="col-lg-8">
-                    <div class="page-header">
-                        <h1>Example page header <small>Subtext for header</small></h1>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
                     </div>
                 </div>
+
             </div>
         </div>
     </body>
