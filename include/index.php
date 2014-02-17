@@ -40,11 +40,8 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
-                        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
-                            Connexion
-                        </button>
-                        <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Connexion</button>
-                        <button class="btn btn-primary btn-sm" role="button" href="register">Sign up !</button>
+                        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target=".bs-example-modal-sm">Connexion</button>
+                        <a class="btn btn-primary btn-sm" role="button" href="register">Sign up !</a>
                     </div>
                 </div>
             </div>
