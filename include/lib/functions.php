@@ -312,7 +312,7 @@
 
 	function get_alives(){
 		$bdd=db_init();
-		$req=$bdd->query('SELECT alive FROM XCH14_users WHERE group=''user''');
+		$req=$bdd->query("SELECT alive FROM XCH14_users WHERE group='user'");
 		$alive='0';
 		$all='0';
 		while ($data=$req->fetch()){
