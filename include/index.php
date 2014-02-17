@@ -53,6 +53,7 @@
                     </form>
                 </div>
             </div>
+        </div>
         <div class="jumbotron">
             <div class="row">
                 <div class=" col-lg-6">
