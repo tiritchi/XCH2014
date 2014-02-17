@@ -241,7 +241,7 @@
 		$nom = $bdd->quote($_POST['Lname']);
 		$prenom =$bdd->quote($_POST['Fname']);
 		$email =$bdd->quote($_POST['Email']);
-		$phone = intval($_POST['Phone']);
+		$phone = '0'.intval($_POST['Phone']);
 		$school = $bdd->quote($_POST['School']);
 		$sexe = $bdd->quote($_POST['Sexe']);
 		$adress = $bdd->quote($_POST['Adress_a']."-".$_POST['Adress_pc']."-".$_POST['Adress_c']);
