@@ -37,15 +37,14 @@
                     
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav nav-tabs">
+                    <ul class="nav navbar-nav">
                         <li><a href="#regles" data-toggle="tab">Règles</a></li>
                         <li><a href="#jeu" data-toggle="tab">Le jeu</a></li>
                         <li><a href="#news" data-toggle="tab">News</a></li>
-                        <li><a href="#news" data-toggle="tab">Contact</a></li>
                     </ul>
                     <div class="navbar-form navbar-right">
                         <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Connexion</button>
-                        <a class="btn btn-primary btn-sm" role="button" href="register">Insciption</a>
+                        <a class="btn btn-primary btn-sm" role="button" href="register">Sign up !</a>
                     </div>
                 </div>
             </div>
@@ -58,12 +57,18 @@
             </div>
             <div class="col-lg-8">
                 <div class="page-header">
-                    <h1>XTrem Cergy Hunting<small>    1ère édition</small></h1>
+                    <h1>Example page header <small>Subtext for header</small></h1>
                 </div>
 
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="tab-content">
+                        <div id="sectionA" class="tab-pane fade in active">
+                            <h3>Section A</h3>
+                            <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
+                        </div>
                     </div>
                     <div class="panel-body">
                         Panel content
