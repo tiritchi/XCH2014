@@ -53,18 +53,16 @@
                     </form>
                 </div>
             </div>
-      
-        <div class="row">
-            <div class=" col-lg-6">
-                <div class="jumbotron">
+        <div class="jumbotron">
+            <div class="row">
+                <div class=" col-lg-6">
                     <a class="thumbnail">
                         <img src="ressources/home.jpg" alt="...">
                     </a>
-                </div>    
-            </div>
-            <div class=" col-lg-6">
-                <div class="jumbotron">
-                    blabla
+                </div>
+                <div class="col-lg-6">
+                blabla
+
                 </div>
             </div>
         </div>
