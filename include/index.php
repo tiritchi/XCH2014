@@ -56,12 +56,12 @@
         </div>
         <div class="jumbotron">
             <div class="row">
-                <div class=" col-lg-6">
+                <div class=" col-lg-3">
                     <a class="thumbnail">
                         <img src="ressources/home.jpg" alt="...">
                     </a>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-9">
                 blabla
 
                 </div>
