@@ -111,24 +111,22 @@
                         </div>
                     </div>
                     <div class="panel-body">
-                        Panel content
-                    <div class="col-lg-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Top 5 players</h3>
-                            </div>
-                            <div class="panel-body">
-                                <ul class="list-group">
-                                   <li class="list-group-item">Best player 1 <span class="badge">5 points</span></li>
-                                   <li class="list-group-item">Best player 2 <span class="badge">4 points</span></li>
-                                   <li class="list-group-item">Best player 3 <span class="badge">3 points</span></li>
-                                   <li class="list-group-item">Best player 4 <span class="badge">2 points</span></li>
-                                   <li class="list-group-item">Best player 5 <span class="badge">1 points</span></li>
-                                </ul>
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Top 5 players</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <ul class="list-group">
+                                       <li class="list-group-item">Best player 1 <span class="badge">5 points</span></li>
+                                       <li class="list-group-item">Best player 2 <span class="badge">4 points</span></li>
+                                       <li class="list-group-item">Best player 3 <span class="badge">3 points</span></li>
+                                       <li class="list-group-item">Best player 4 <span class="badge">2 points</span></li>
+                                       <li class="list-group-item">Best player 5 <span class="badge">1 points</span></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
->>>>>>> 9cb957af09b4765345594caadbf81facb1b64b58
-                    </div>
 
             </div>
         </div>
