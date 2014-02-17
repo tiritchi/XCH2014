@@ -42,7 +42,6 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#accueil" data-toggle="tab">Accueil</a></li>
                         <li><a href="#regles" data-toggle="tab">Règles</a></li>
-                        <li><a href="#organisation" data-toggle="tab">Organisation</a></li>
                         <li><a href="#jeu" data-toggle="tab">Le jeu</a></li>
                         <li><a href="#news" data-toggle="tab">News</a></li>
                         <li><a href="#contact" data-toggle="tab">Contact</a></li>
@@ -79,23 +78,7 @@
                             </div>
                         </div>
                         <div id="regles" class="tab-pane fade">
-                            <h3>Règles</h3>
-                            <h4>Conditions</h4>
-                            <p>Afin de participer au jeu Xtrem Cergy Hunting, vous devez : 
-                                <ul>
-                                    <li>Habiter et travailler dans la zone pour vous trouverez ici (<= lien vers la carte)</li>
-                                    <li>Être présent dans la zone de jeu durant la période de jeu. Les absences sont tolérées dans la mesure où elles ne dépassent pas 2 jours consécutifs et au maximum 2 jours par semaine.</li>
-                                    <li>Être majeur (âgé de 18 ans ou plus)</li>
-                                    <li>Fournir une photo en couleur, non modifiée ou truquée, datant de moins de 3 mois montrant distinctement votre visage de face et sans accessoire : pas de lunettes, chapeau, foulard, etc. La photo doit être prise pour montrer clairement votre visage (pas de flou, couleur des yeux visible). Les organisateurs se réservent le droit de refuser les photos proposées par les joueurs si elles ne correspondent pas aux critères, elles devront être changées avant la validation de l’inscription.</li>
-                                    <li>Fournir des renseignements exacts et précis lors de votre inscription</li>
-                                    <li>Signaler tout changement d'information aux organisateurs via le système de tickets mis à votre disposition dans votre espace personnel.</li>
-                                    <li>Accepter sans réserve le présent règlement.</li>
-                                </ul>
-                            </p>
-                        </div>
-                        <div id="organisation" class="tab-pane fade">
-                            <h3>Organisation</h3>
-                            <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
+                            <?php include 'include/regles.html';?>
                         </div>
                         <div id="jeu" class="tab-pane fade">
                             <h3>Le jeu</h3>
