@@ -68,33 +68,22 @@
                     <div class="col-lg-8">
                         <div class="tab-content">
                         <div id="accueil" class="tab-pane fade in active">
-                            <div class="panel panel-default ">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Présentation</h3>
-                                </div>
-                                <div class="panel-body">
-                                    <center>Xtrem Cergy Hunting<br>Inscrivez-vous et participez au premier streetwar de Cergy !<br>Tous les étudiants de Cergy sont invités à la plus grande chasse de l’année<br>Arrosez votre cible et gagnez des points<br><br>Soyez le dernier survivant !</center>
-                                </div>
-                            </div>
+                            <?php include 'include/accueil.html';?>
                         </div>
                         <div id="regles" class="tab-pane fade">
                             <?php include 'include/regles.html';?>
                         </div>
                         <div id="jeu" class="tab-pane fade">
-                            <h3>Le jeu</h3>
-                            <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
+                            <?php include 'include/le_jeu.html';?>
                         </div>
                         <div id="news" class="tab-pane fade">
-                            <h3>News</h3>
-                            <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
+                            <?php include 'include/news.html';?>
                         </div>
                         <div id="contact" class="tab-pane fade">
-                            <h3>Contact</h3>
-                            <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
+                            <?php include 'include/contact.html';?>
                         </div>
                         <div id="remerciements" class="tab-pane fade">
-                            <h3>Remerciements</h3>
-                            <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
+                            <?php include 'include/remerciements.html';?> 
                         </div>
                     </div>
                     </div>
