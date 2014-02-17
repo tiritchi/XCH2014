@@ -33,12 +33,15 @@
                         <span class="icon-bar"></span>
                     </button>
                     
-                    <li class="active"><a class="navbar-brand" href=".">XTrem Cergy Hunting</a></li>
-                    <li><a href="#regles" data-toggle="tab">Règles</a></li>
-                    <li><a href="#jeu" data-toggle="tab">Le jeu</a></li>
-                    <li><a href="#news" data-toggle="tab">News</a></li>
+                    <a class="navbar-brand" href=".">XTrem Cergy Hunting</a>
+                    
                 </div>
                 <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#regles" data-toggle="tab">Règles</a></li>
+                        <li><a href="#jeu" data-toggle="tab">Le jeu</a></li>
+                        <li><a href="#news" data-toggle="tab">News</a></li>
+                    </ul>
                     <div class="navbar-form navbar-right">
                         <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Connexion</button>
                         <a class="btn btn-primary btn-sm" role="button" href="register">Sign up !</a>
