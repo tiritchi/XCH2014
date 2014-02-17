@@ -310,7 +310,7 @@
 
 	}
 
-	function get_survivors(){
+	function get_alives(){
 		$bdd=db_init();
 		$req=$bdd->exec('SELECT alive FROM XCH14_users');
 		$alive='0';
