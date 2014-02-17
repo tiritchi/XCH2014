@@ -32,11 +32,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href=".">
-
-                        XTrem Cergy Hunting
-
-                    </a>
+                    
+                    <li class="active"><a class="navbar-brand" href=".">XTrem Cergy Hunting</a></li>
+                    <li><a href="#regles" data-toggle="tab">Règles</a></li>
+                    <li><a href="#jeu" data-toggle="tab">Le jeu</a></li>
+                    <li><a href="#news" data-toggle="tab">News</a></li>
                 </div>
                 <div class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
