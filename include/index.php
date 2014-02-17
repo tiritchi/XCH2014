@@ -60,15 +60,31 @@
                 <div class="page-header">
                     <h1>XTrem Cergy Hunting<small>    1ère édition</small></h1>
                 </div>
-
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Panel title</h3>
+                <div class="row">
+                    <div class="panel panel-default col-lg-8">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Présentation</h3>
+                        </div>
+                        <div class="panel-body">
+                            Xtrem Cergy Hunting<br>Inscrivez-vous et participez au premier streetwar de Cergy !<br>Tous les étudiants de Cergy sont invités à la plus grande chasse de l’année<br>Arrosez votre cible et gagnez des points<br><br>Soyez le dernier survivant !
+                        </div>
                     </div>
-                    <div class="panel-body">
-                        Panel content
+                    <div class="col-lg-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Top 5 players</h3>
+                            </div>
+                            <div class="panel-body">
+                                <ul class="list-group">
+                                   <li class="list-group-item">Best player 1 <span class="badge">5 points</span></li>
+                                   <li class="list-group-item">Best player 2 <span class="badge">4 points</span></li>
+                                   <li class="list-group-item">Best player 3 <span class="badge">3 points</span></li>
+                                   <li class="list-group-item">Best player 4 <span class="badge">2 points</span></li>
+                                   <li class="list-group-item">Best player 5 <span class="badge">1 points</span></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
             </div>
         </div>
