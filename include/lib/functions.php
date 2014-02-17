@@ -312,7 +312,9 @@
 
 	function get_alives(){
 		$bdd=db_init();
-		$req=$bdd->query("SELECT alive FROM XCH14_users WHERE group=\'user\'");
+		$sql='SELECT alive FROM XCH14_users WHERE group=:group';
+		$req = $bdd->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+		$req->execute(array(':group' => 'user'));
 		$alive='0';
 		$all='0';
 		while ($data=$req->fetch()){
