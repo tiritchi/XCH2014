@@ -61,12 +61,14 @@
                     <h1>XTrem Cergy Hunting<small>    1ère édition</small></h1>
                 </div>
                 <div class="row">
-                    <div class="panel panel-default col-lg-8">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Présentation</h3>
-                        </div>
-                        <div class="panel-body">
-                            Xtrem Cergy Hunting<br>Inscrivez-vous et participez au premier streetwar de Cergy !<br>Tous les étudiants de Cergy sont invités à la plus grande chasse de l’année<br>Arrosez votre cible et gagnez des points<br><br>Soyez le dernier survivant !
+                    <div class="col-lg-8">
+                        <div class="panel panel-default ">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Présentation</h3>
+                            </div>
+                            <div class="panel-body">
+                                Xtrem Cergy Hunting<br>Inscrivez-vous et participez au premier streetwar de Cergy !<br>Tous les étudiants de Cergy sont invités à la plus grande chasse de l’année<br>Arrosez votre cible et gagnez des points<br><br>Soyez le dernier survivant !
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
