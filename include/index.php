@@ -58,7 +58,7 @@
             </div>
             <div class="col-lg-8">
                 <div class="page-header">
-                    <h1>XTrem Cergy Hunting<small>1ère édition</small></h1>
+                    <h1>XTrem Cergy Hunting<small>    1ère édition</small></h1>
                 </div>
 
                 <div class="panel panel-default">
