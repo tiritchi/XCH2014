@@ -128,7 +128,7 @@
                                 <input class="form-control" name='password' type="password" placeholder="Password"></input>
                             </div>
                         </div>
-                        <div>
+                        <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                             <button class="btn btn-success" type="submit">Connexion</button>
                         </div>
