@@ -37,7 +37,7 @@
                     
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav nav-tabs">
                         <li><a href="#regles" data-toggle="tab">Règles</a></li>
                         <li><a href="#jeu" data-toggle="tab">Le jeu</a></li>
                         <li><a href="#news" data-toggle="tab">News</a></li>
