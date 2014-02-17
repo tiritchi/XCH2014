@@ -15,13 +15,14 @@
 		} 
 		catch (Exception $e) 
 		{
+            echo '<p> erreur DB</p>';
 			die('Erreur : ' . $e->getMessage());
-			echo '<p> erreur DB</p>';
+
 		}
 		return $bdd;
 	}
 
-	function get_user_info($bdd,$user_id){ // get_user_info(ref base de donnée, clef primaire table users)  Cette fonction renvoi un tableau (array) contenant dans l'orde le pseudo, prénom, nom, école, mail, sexe, date de naissance, téléphone, adresse, identifiant 
+	function get_user_info(PDO $bdd,$user_id){ // get_user_info(ref base de donnée, clef primaire table users)  Cette fonction renvoi un tableau (array) contenant dans l'orde le pseudo, prénom, nom, école, mail, sexe, date de naissance, téléphone, adresse, identifiant
 		if($user_id=="all"){
 			$req=$bdd->query("SELECT * FROM XCH14_users ORDER by pseudo ASC");
 			return $req;
@@ -35,7 +36,7 @@
 		}
 	}
 
-	function add_user_event($bdd,$user_id,$event,$infos){
+	function add_user_event(PDO $bdd,$user_id,$event,$infos){
 		$uid = intval($user_id);
 		$eventtmp = $bdd->quote($event);
 		$inf = $bdd->quote($infos);
@@ -49,7 +50,7 @@
 		return 0;
 	}
 
-	function mark_as_read($bdd,$id){
+	function mark_as_read(PDO $bdd,$id){
 		$req=$bdd->prepare('UPDATE users_event SET r = 1 WHERE id=:id');
 		$req->execute(array(
 			':id'=>$id
@@ -57,7 +58,7 @@
 		return 0;
 	}
 
-	function get_contracts($bdd,$user_id){//get_contracts(ref base de donnée, clef primaire table users) cette fonction renvoie un tableau 2D (array(array())) chaque ligne correspond à un contrat et les colonnes sont clef primaire contrat, contrat honoré (0,1), 'clef primaire user cible', numéro de contrat, date d'expiration du contrat   accès via $tableau[ligne][colonne]
+	function get_contracts(PDO $bdd,$user_id){//get_contracts(ref base de donnée, clef primaire table users) cette fonction renvoie un tableau 2D (array(array())) chaque ligne correspond à un contrat et les colonnes sont clef primaire contrat, contrat honoré (0,1), 'clef primaire user cible', numéro de contrat, date d'expiration du contrat   accès via $tableau[ligne][colonne]
 		$tab=array();
 		$req=$bdd->prepare('SELECT * FROM XCH14_contracts WHERE user_id=?');
 		$req->execute(array($user_id));
@@ -71,7 +72,7 @@
 		return $tab;
 	}
 
-	function create_contract($bdd,$user_id,$target_id,$exp_date){ //create_contract(ref bdd, clef primaire du joueur concerné, clef primaire du joueur cible, date d'expiration du contrat (YYYY-MM-DD)) rajoute un contrat dans la table contrats et renvoie le numéro de contrat
+	function create_contract(PDO $bdd,$user_id,$target_id,$exp_date){ //create_contract(ref bdd, clef primaire du joueur concerné, clef primaire du joueur cible, date d'expiration du contrat (YYYY-MM-DD)) rajoute un contrat dans la table contrats et renvoie le numéro de contrat
 		$req=$bdd->query("SELECT user_no FROM XCH14_users WHERE id=$target_id");
 		$target_no=$req->fetch();
 		$req->closeCursor();
@@ -84,7 +85,7 @@
 		return $cno;
 	}
 
-	function mark_as_complete ($bdd,$contract_id){// mark_as_complete(ref bdd, clef primaire du contrat) marque à 1 le champ 'complete' et renvoie true ou false si l'action à été effectuée
+	function mark_as_complete (PDO $bdd,$contract_id){// mark_as_complete(ref bdd, clef primaire du contrat) marque à 1 le champ 'complete' et renvoie true ou false si l'action à été effectuée
 		try 
 		{
 			$req=$bdd->exec("UPDATE XCH14_contracts SET complete ='1' WHERE id=$contract_id");
@@ -93,7 +94,6 @@
 		catch (Exception $e) 
 		{
 			die('Erreur : ' . $e->getMessage());
-			return FALSE;
 		}
 		return TRUE; 
 	}
@@ -141,7 +141,7 @@
 				$u_code='13';
 				break;
 			default:
-				$s_code='XX';
+				$u_code='XX';
 				break;
 		}
 		$u_code.=substr($Sexe,0,-(strlen($Sexe)-1));
@@ -174,7 +174,7 @@
 
 		$bdd=db_init();
 		if($user_id==NULL){
-			$mail->FromName = 'Webmaester';
+			$mail->FromName = 'Webmaster';
 			$reply_mail=$game_mail;
 		}
 		else{
@@ -228,7 +228,7 @@
 		return 'sent';
 	}
 
-	function register($bdd,$psswd,$lname,$fname,$email,$phone,$school,$sex,$addA,$addB,$addC,$bd_y,$bd_m,$bd_d,$nn,$pos1,$pos2,$pos3,$pos4,$pos5){
+	function register(PDO $bdd,$psswd,$lname,$fname,$email,$phone,$school,$sex,$addA,$addB,$addC,$bd_y,$bd_m,$bd_d,$nn,$pos1,$pos2,$pos3,$pos4,$pos5){
 		srand();
 
 		//hashage du password
@@ -288,7 +288,7 @@
 			return 'confirmation code has been sent to your email';
 		}
 		else{
-			$status;
+			return $status;
 		}
 	}
 
