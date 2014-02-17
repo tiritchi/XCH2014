@@ -255,8 +255,9 @@
 		$alfa='abcdefghijklmnpqrstuvwxyzABCDEFGHIJKLMNPQRSTUVWXYZ123456789';
 		$confirmation_code=substr(str_shuffle($alfa),0,30);
 
-		$req = $bdd->prepare('INSERT INTO XCH14_users (fname,lname,school,mail,phone,sexe,adresse,date_naissance,pseudo,psswd,user_no,position,confirmation_code,confirmed,score,reg_date) VALUES (:prenom,:nom,:ecole,:email,:phone,:sexe,:adresse,:date_n,:pseudo,:psswd,:ucode,:pos,:conf,:stat,:score,NOW())');
+		$req = $bdd->prepare('INSERT INTO XCH14_users (alive,fname,lname,school,mail,phone,sexe,adresse,date_naissance,pseudo,psswd,user_no,position,confirmation_code,confirmed,score,reg_date) VALUES (:alive,:prenom,:nom,:ecole,:email,:phone,:sexe,:adresse,:date_n,:pseudo,:psswd,:ucode,:pos,:conf,:stat,:score,NOW())');
 		$req->execute(array(
+			'alive'=>'1',
 		    'nom' => $nom,
 		    'prenom' => $prenom,
 		    'email' => $email,
@@ -307,5 +308,20 @@
 			return $err;
 		}
 
+	}
+
+	function get_survivors(){
+		$bdd=db_init();
+		$req=$bdd->exec('SELECT alive FROM XCH14_users');
+		$alive='0';
+		$all='0';
+		while ($data=$req->fetch()){
+			$all++;
+			if($data['alive']=='1'){
+				$alive++;
+			}
+		}
+		$retrn=array($all,$alive);
+		return $retrn;
 	}
 ?>
