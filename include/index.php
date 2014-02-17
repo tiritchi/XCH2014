@@ -128,8 +128,10 @@
                                 <input class="form-control" name='password' type="password" placeholder="Password"></input>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <div>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                             <button class="btn btn-success" type="submit">Connexion</button>
+                        </div>
                     </div>
                 </div>
             </div>
