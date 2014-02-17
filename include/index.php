@@ -15,10 +15,10 @@
             }
             body { padding-top: 50px; }
         </style>
+        <?php require('include/lib/functions.php'); ?> 
     </head>
     
     <body>
-        <?php require 'include/lib/function.php';?>
 
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
