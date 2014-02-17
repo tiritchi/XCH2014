@@ -18,6 +18,8 @@
     </head>
     
     <body>
+        <?php require 'include/lib/function.php';?>
+
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
             <div class="container">
@@ -124,6 +126,10 @@
                                        <li class="list-group-item">Best player 4 <span class="badge">2 points</span></li>
                                        <li class="list-group-item">Best player 5 <span class="badge">1 points</span></li>
                                     </ul>
+                                    <?php 
+                                        $arr=get_alives();
+                                        echo '<div class="pull-left">Participants: '.$arr[0].'</div><div class="pull-right"> Toujours en vie:'.$arr[1].'';
+                                    ?>
                                 </div>
                             </div>
                         </div>
