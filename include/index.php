@@ -39,13 +39,13 @@
                     </a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <form class="navbar-form navbar-right" action="login" method="post">
+                    <div class="navbar-form navbar-right">
                         <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
                             Connexion
                         </button>
                         <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Connexion</button>
                         <button class="btn btn-primary btn-sm" role="button" href="register">Sign up !</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
