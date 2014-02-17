@@ -78,7 +78,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="regles" class="tab-pane fade in">
+                        <div id="regles" class="tab-pane fade">
                             <h3>Règles</h3>
                             <h4>Conditions</h4>
                             <p>Afin de participer au jeu Xtrem Cergy Hunting, vous devez : 
@@ -93,7 +93,7 @@
                                 </ul>
                             </p>
                         </div>
-                        <div id="organisation" class="tab-pane fade in">
+                        <div id="organisation" class="tab-pane fade">
                             <h3>Organisation</h3>
                             <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
                         </div>
@@ -105,11 +105,11 @@
                             <h3>News</h3>
                             <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
                         </div>
-                        <div id="contact" class="tab-pane fade in ">
+                        <div id="contact" class="tab-pane fade">
                             <h3>Contact</h3>
                             <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
                         </div>
-                        <div id="remerciements" class="tab-pane fade in">
+                        <div id="remerciements" class="tab-pane fade">
                             <h3>Remerciements</h3>
                             <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
                         </div>
