@@ -61,7 +61,7 @@
                     <img src="ressources/home.jpg" alt="...">
                 </a>
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-8">
                 <div class="page-header">
                     <h1>XTrem Cergy Hunting <small>     1ère édition</small></h1>
                 </div>
@@ -114,7 +114,7 @@
                             <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title">Top 5 players</h3>
@@ -134,7 +134,7 @@
                             </div>
                         </div>
                     </div>
-
+                </div>
             </div>
         </div>
 
