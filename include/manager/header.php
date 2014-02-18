@@ -31,14 +31,14 @@
 
 	                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	                    <ul class="nav navbar-nav">
-	                        <li><a href="" data-toggle="modal" data-toggle="modal" data-target="#mail">Mail</a></li>
+	                        <li><a href="" data-toggle="modal" data-toggle="modal" data-target="#mail">Contact</a></li>
 	                        
 	                    </ul>
 	                    <ul class="nav navbar-nav navbar-right">
 	                    	<li class="dropdown">
 	                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="glyphicon glyphicon-user"></i> <?php echo $_SESSION['user']?>		<b class="caret"></b></a>
 	                            <ul class="dropdown-menu btn-toolbar">
-	                                <li><a href="logout"><i class="glyphicon glyphicon-log-out "></i>Log out</a></li>
+	                                <li><a href="logout"><i class="glyphicon glyphicon-log-out "></i>Déconnexion</a></li>
 	                            </ul>
 	                        </li>
 	                    </ul>
@@ -54,11 +54,11 @@
 			    		
 				    		<div class="modal-header">
 				        		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				        		<h4 class="modal-title" id="myModalLabel">Send a mail</h4>
+				        		<h4 class="modal-title" id="myModalLabel">Envoyer un eMail</h4>
 				    		</div>
 				    		<div class="modal-body">
 								<div class="input-group">
-									<span class="input-group-addon">subject</span>
+									<span class="input-group-addon">Objet</span>
 									<input id="subject" name="subject" type="text" class="form-control" placeholder="subject">
 								</div>
 								<div class="input-group">
@@ -66,8 +66,8 @@
 								</div>
 						    </div>
 						    <div class="modal-footer">
-						        <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cancel</button>
-					        	<button id="Submit" value="SUBMIT" type="submit" class="btn btn-primary"> Send <i class="glyphicon glyphicon-send"></i></button>	
+						        <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Annuler</button>
+					        	<button id="Submit" value="SUBMIT" type="submit" class="btn btn-primary"> Envoyer <i class="glyphicon glyphicon-send"></i></button>	
 						    </div>
 					    </div>
 					</div>
