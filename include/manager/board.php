@@ -13,14 +13,20 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 						    <h3 class="panel-title">Top 5 players</h3>
 						</div>
 						<div class="panel-body">
-						    <ul class="list-group">
-						       <li class="list-group-item">Best player 1 <span class="badge">5 points</span></li>
-						       <li class="list-group-item">Best player 2 <span class="badge">4 points</span></li>
-						       <li class="list-group-item">Best player 3 <span class="badge">3 points</span></li>
-						       <li class="list-group-item">Best player 4 <span class="badge">2 points</span></li>
-						       <li class="list-group-item">Best player 5 <span class="badge">1 points</span></li>
-						    </ul>
-						</div>
+                            <ul class="list-group">
+                                <?php
+                                    $arr=array();
+                                    $arr=get_hs();
+                                    foreach ($arr as $data) {
+                                        echo '<li class="list-group-item">'.$data[0].' <span class="badge">'.$data[1].' points</span></li>';
+                                    }
+                                ?>
+                            </ul>
+                            <?php 
+                                $arr=get_alives();
+                                echo '<div class="pull-left">Participants: '.$arr[0].'</div><div class="pull-right"> Toujours en vie:'.$arr[1].'';
+                            ?>
+                        </div>
 					</div>
 				</div>
 				
