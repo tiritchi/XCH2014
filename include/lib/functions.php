@@ -220,9 +220,9 @@
 		$mail->WordWrap = 50;                                
 		$mail->isHTML(true);                                  
 
-		$mail->Subject = $subject;
-		$mail->Body    = $body;
-		$mail->AltBody = $body;
+		$mail->Subject = utf8_encode($subject);
+		$mail->Body    = utf8_encode($body);
+		$mail->AltBody = utf8_encode($body);
 
 		if(!$mail->send()) {
 		   return 'Mailer Error: ' . $mail->ErrorInfo;
