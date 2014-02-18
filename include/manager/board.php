@@ -9,7 +9,6 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 			<div class="row">
 				<div class="col-md-3">
 				    <?php include 'include/top5.php';?>
-				</div>
 				</div>		
 				<div class="col-md-5">
 			        <div class="panel panel-default">
