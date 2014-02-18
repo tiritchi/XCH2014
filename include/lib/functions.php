@@ -330,7 +330,7 @@
 		$req=$bdd->query('SELECT pseudo,score FROM XCH14_users ORDER BY score DESC');
 		$arr=array();
 		while($data=$req->fetch()){
-			if($data!=0){
+			if($data['score']!=0){
 				array_push($arr, array(substr($data['pseudo'], 1,strlen($data['pseudo'])-2),$data['score']));
 			}
 		}
