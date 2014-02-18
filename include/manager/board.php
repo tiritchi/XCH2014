@@ -44,7 +44,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 						<div class="panel-heading">
 						    <h3 class="panel-title">Profile</h3>
 						</div>
-						<?php include 'include/lib/get_pic.php?user='.$var[0];?>
+						<?php include 'get_pic.php?user='.$var[0];?>
 						<table class="table">
 						    <tbody>
 						        <tr>
