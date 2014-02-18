@@ -324,4 +324,18 @@
 		$retrn=array($all,$alive);
 		return $retrn;
 	}
+
+	function get_hs(){
+		$bdd=db_init();
+		$req=$bdd->query('SELECT pseudo,score FROM XCH14_users ORDER BY score DESC');
+		$data=$req->fetch();
+		$taille=count($data);
+		$arr=array();
+		if($taille<5){
+			return $data;
+		}
+		else{
+			return array_slice($data, $taille-5);
+		}
+	}
 ?>
