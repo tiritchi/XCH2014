@@ -330,10 +330,9 @@
 		$req=$bdd->query('SELECT pseudo,score FROM XCH14_users ORDER BY score DESC');
 		$arr=array();
 		while($data=$req->fetch()){
-			array_push($arr, array($data['pseudo'],$data['score']));
+			array_push($arr, array(substr($data['pseudo'], 1,strlen($data['pseudo'])-2),$data['score']));
 		}
 		$taille=count($arr);
-		echo $taille;
 
 		if($taille<5){
 			return $arr;
