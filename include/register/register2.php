@@ -42,7 +42,7 @@
 	  				<form class="form-horizontal" enctype="multipart/form-data" action="post" method="post">
 						<fieldset>
 							<div class="input-group">
-							    <span class="input-group-addon">School</span>
+							    <span class="input-group-addon">Ecole</span>
 							    <select class="selectpicker" name="School">
 									<option>ENSEA</option>
 									<option>EISTI</option>
@@ -62,19 +62,19 @@
 
 							<!-- Text input-->
 							<div class="input-group">
-								<span class="input-group-addon">First name</span>
+								<span class="input-group-addon">Prénom</span>
 							    <input id="First name" name="Fname" placeholder="First name" class="form-control" required="" type="text">
 							</div><br/>
 
 							<!-- Text input-->
 							<div class="input-group">
-							    <span class="input-group-addon">Last name</span>
+							    <span class="input-group-addon">Nom</span>
 							    <input id="Last name" name="Lname" placeholder="Last name" class="form-control" required="" type="text">
 							</div><br/>
 
 							<!-- Text input-->
 							<div class="input-group">
-							    <span class="input-group-addon">Birthday</span>
+							    <span class="input-group-addon">Date de naissance</span>
 				    			<select class="selectpicker show-tick" title='DD' name="Bd_d">
 									<option>01</option>
 									<option>02</option>
@@ -146,7 +146,10 @@
 							</div><br/>
 							
 							<div>
-								Please select your 5 most visited place
+								Choisir 5 endroit fréquement visités sur cette carte >>
+								<button type="button" class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg">
+  									MAP RIGHT HERE
+								</button>
 							</div><br/>
 							<!-- Text input-->
 							<div class="input-group">
@@ -612,14 +615,11 @@
 									<option>G11</option>
 									<option>G12</option>
 								</select>
-								<button type="button" class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg">
-  									MAP RIGHT HERE
-								</button>
 							</div><br/>
 
 							<!-- Text input-->
 							<div class="input-group">
-							    <span class="input-group-addon">Address</span>
+							    <span class="input-group-addon">Addresse</span>
 							    <input id="Adress" name="Adress_a" placeholder="Adress" class="form-control" required="" type="text">
 							    <input id="Adress" name="Adress_pc" placeholder="Post code" class="form-control" required="" type="text">
 							    <input id="Adress" name="Adress_c" placeholder="City" class="form-control" required="" type="text">
@@ -633,28 +633,28 @@
 
 							<!-- Text input-->
 							<div class="input-group">
-							    <span class="input-group-addon">Phone N°</span>
+							    <span class="input-group-addon">N° Tel</span>
 							    <input id="Phone N°" name="Phone" placeholder="XXXXXXXXXX" class="form-control" required="" type="text">
 							</div><br/>
 
 							<!-- Text input-->
 							<div class="input-group">
-							    <span class="input-group-addon">Nickname</span>
+							    <span class="input-group-addon">Pseudo</span>
 							    <input id="Nickname" name="Nn" placeholder="Nickname" class="form-control" required="" type="text">
 							</div><br/>
 
 							<!-- Text input-->
 							<div class="input-group">
-							    <span class="input-group-addon">Password</span>
+							    <span class="input-group-addon">Mot de passe</span>
 							    <input type="password" id="userpsswd" name="userpsswd" placeholder="password" class="form-control" required="">
 							</div><br/>
 
 							<!-- Select Basic -->
 							<div class="input-group">
-							    <span class="input-group-addon">Sex</span>
+							    <span class="input-group-addon">Sexe</span>
 							    <select class="selectpicker show-tick" name="Sexe">
-									<option>Male</option>
-									<option>Female</option>
+									<option>Homme</option>
+									<option>Femme</option>
 								</select>
 							</div><br/>
 
@@ -688,7 +688,7 @@
 								</div>
 								<div >
 									<div class="input-group">
-										<button id="Submit" name="Submit" class="btn btn-primary">Submit</button>
+										<button id="Submit" name="Submit" class="btn btn-primary">S'inscrire</button>
 									</div>
 								</div >
 							</div>
