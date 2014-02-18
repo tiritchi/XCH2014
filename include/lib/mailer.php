@@ -12,7 +12,7 @@ else
 			$to=$_POST['to'];
 		}
 		else{
-			$to=NULL
+			$to=NULL;
 		}
 		$return=send_mail($_SESSION['user_id'],NULL,$to,$_POST['subject'],$_POST['body']);
 		if($return=='sent'){
