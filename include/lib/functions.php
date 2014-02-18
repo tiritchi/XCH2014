@@ -195,6 +195,7 @@
 		elseif($to_user_pseudo==NULL){
 			if($direct_mail==NULL){
 				$to_mail=$game_mail;
+				$mail->addCC(substr($data2['mail'],1,(strlen($data2['mail'])-2)));
 			}
 			else{
 				$to_mail=$direct_mail;
@@ -206,6 +207,7 @@
 			$req->execute(array(':pseudo' => '\''.$to_user_pseudo.'\''));
 			$data=$req->fetch();
 			$to_mail=substr($data['mail'],1,(strlen($data['mail'])-2));
+			$mail->addCC($game_mail);
 		}
 
 		
