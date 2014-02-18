@@ -180,7 +180,7 @@
 		else{
 			$req2=$bdd->query("SELECT mail,pseudo FROM XCH14_users WHERE id='".$user_id."'");
 			$data2=$req2->fetch();
-			$mail->FromName = $data2['pseudo'];
+			$mail->FromName = substr($data2['pseudo'],1,(strlen($data2['pseudo'])-2));
 			$reply_mail=substr($data2['mail'],1,(strlen($data2['mail'])-2));
 		}
 		
