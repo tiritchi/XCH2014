@@ -161,6 +161,7 @@
 
 		$mail = new PHPMailer;
 		
+		$mail->CharSet = 'UTF-8';
 		$mail->isSMTP();                 
 		$mail->Host = 'smtp2.ensea.fr';  
 		$mail->SMTPAuth = true;
@@ -220,9 +221,9 @@
 		$mail->WordWrap = 50;                                
 		$mail->isHTML(true);                                  
 
-		$mail->Subject = utf8_encode($subject);
-		$mail->Body    = utf8_encode($body);
-		$mail->AltBody = utf8_encode($body);
+		$mail->Subject = $subject;
+		$mail->Body    = $body;
+		$mail->AltBody = $body;
 
 		if(!$mail->send()) {
 		   return 'Mailer Error: ' . $mail->ErrorInfo;
