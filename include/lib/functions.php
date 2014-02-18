@@ -328,15 +328,18 @@
 	function get_hs(){
 		$bdd=db_init();
 		$req=$bdd->query('SELECT pseudo,score FROM XCH14_users ORDER BY score DESC');
-		$data=$req->fetch();
-		$taille=count($data);
-		echo $taille;
 		$arr=array();
+		while($data=$req->fetch()){
+			array_push($arr, array($data['pseudo'],$data['score']));
+		}
+		$taille=count($arr);
+		echo $taille;
+
 		if($taille<5){
-			return $data;
+			return $arr;
 		}
 		else{
-			return array_slice($data, $taille-5);
+			return array_slice($arr, $taille-5);
 		}
 	}
 ?>
