@@ -94,11 +94,13 @@
                             </div>
                             <div class="panel-body">
                                 <ul class="list-group">
-                                   <li class="list-group-item">Best player 1 <span class="badge">5 points</span></li>
-                                   <li class="list-group-item">Best player 2 <span class="badge">4 points</span></li>
-                                   <li class="list-group-item">Best player 3 <span class="badge">3 points</span></li>
-                                   <li class="list-group-item">Best player 4 <span class="badge">2 points</span></li>
-                                   <li class="list-group-item">Best player 5 <span class="badge">1 points</span></li>
+                                    <?php
+                                        $arr=array();
+                                        $arr=get_hs();
+                                        foreach ($arr as $data) {
+                                            echo '<li class="list-group-item">'.$data[0].' <span class="badge">'.$data[1].' points</span></li>';
+                                        }
+                                    ?>
                                 </ul>
                                 <?php 
                                     $arr=get_alives();
