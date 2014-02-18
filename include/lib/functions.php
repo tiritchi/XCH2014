@@ -329,7 +329,7 @@
 		$bdd=db_init();
 		$req=$bdd->query('SELECT pseudo,score FROM XCH14_users ORDER BY score DESC');
 		$data=$req->fetch();
-		$taille=count($req);
+		$taille=count($data);
 		echo $taille;
 		$arr=array();
 		if($taille<5){
