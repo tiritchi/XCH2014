@@ -339,8 +339,7 @@
 		}
 		$taille=count($arr);
 
-		$arr[0]=$arr[0]-1;
-		$arr[1]=$arr[1]-1;
+
 		if($taille<5){
 			return $arr;
 		}
