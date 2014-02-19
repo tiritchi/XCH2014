@@ -14,7 +14,7 @@
         </ul>
         <?php 
             $arr=get_alives();
-            echo '<div class="pull-left">Participants: '.$arr[0].'</div><div class="pull-right"> Toujours en vie:'.$arr[1].'</div>';
+            echo '<div class="pull-left">Participants: '.$arr[0]-1.'</div><div class="pull-right"> Toujours en vie:'.$arr[1]-1.'</div>';
         ?>
     </div>
 </div>

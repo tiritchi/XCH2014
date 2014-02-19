@@ -49,7 +49,7 @@
                     </ul>
                     <div class="navbar-form navbar-right">
                         <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Connexion</button>
-                        <a class="btn btn-primary btn-sm" role="button" href="register">Sign up !</a>
+                        <a class="btn btn-primary btn-sm" role="button" href="register">>> Inscrivez vous <<</a>
                     </div>
                 </div>
             </div>
