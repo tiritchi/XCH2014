@@ -62,7 +62,7 @@
 									<input id="subject" name="subject" type="text" class="form-control" placeholder="subject">
 								</div>
 								<div class="input-group">
-								    <textarea class="form-control" id="body" name="body" rows="5" style="width:585px; resize: none;""></textarea>
+								    <textarea class="form-control" id="body" name="body" rows="5" style="width:555px; resize: none;""></textarea>
 								</div>
 						    </div>
 						    <div class="modal-footer">
