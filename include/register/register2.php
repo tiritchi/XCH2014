@@ -658,7 +658,7 @@
 								</select>
 							</div><br/>
 
-	                        <script type="text/javascript">
+	                        <!--script type="text/javascript">
 	                        $(document).ready(function() {
 	                            $('#upload').bind("click",function() 
 	                            { 
@@ -669,8 +669,8 @@
 	                                    return false; 
 	                                } 
 	                            }); 
-	                        });-->
-	                        <!--/script> 
+	                        });
+	                        </script--> 
 	                        <input type="hidden" name="MAX_FILE_SIZE" value="409600" />
 	                        <label for="icone">(JPG, PNG ou GIF | max. 400 Ko | max. 170x180) :</label><br />
 	                        <div class="fileinput fileinput-new" data-provides="fileinput">
