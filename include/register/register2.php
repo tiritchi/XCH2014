@@ -680,18 +680,12 @@
 	                        </div><br /-->
 	                        
 							<!-- Button -->
-							<div class="row">
-								<div class ="col-lg-6 col-xs-6 col-lg-offset-3 col-xs-offset-3">
-									<div class="input-group">
-										<input type="password" id="password" name="password" placeholder="password" class="form-control" required=""> 
-									</div>
-								</div>
-								<div >
+
+								<div class="pull-right">
 									<div class="input-group">
 										<button id="Submit" name="Submit" class="btn btn-primary">S'inscrire</button>
 									</div>
 								</div >
-							</div>
 
 						</fieldset>
 					</form>

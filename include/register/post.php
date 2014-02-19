@@ -22,7 +22,7 @@
 			</div>';
         echo '<meta http-equiv="refresh" content="2; url=.">';
 	}
-	elseif (isset($_POST['password']) AND $_POST['password'] == "test" AND $row_count==0)
+	else //if (isset($_POST['password']) AND $_POST['password'] == "test" AND $row_count==0)
 	{	
 		//
 		//la partie grisée correspond à l'upload d'image qui à été désactivée dans cette version de site
@@ -70,10 +70,10 @@
 
  
 	}
-	else
-	{
-		echo '<p> wrong password</p>';
-		echo 'vous n\'êtes pas autorisé à vous inscrire';
-	}
+//	else
+//	{
+//		echo '<p> wrong password</p>';
+//		echo 'vous n\'êtes pas autorisé à vous inscrire';
+//	}
 ?>
 </html>
