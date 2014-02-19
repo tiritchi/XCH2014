@@ -330,7 +330,7 @@
 
 	function get_hs(){
 		$bdd=db_init();
-		$req=$bdd->query('SELECT pseudo,score FROM XCH14_users WHERE `XCH14_users`.`group`<>"admin" ORDER BY score DESC');
+		$req=$bdd->query('SELECT pseudo,score FROM XCH14_users WHERE `XCH14_users`.`group`<>"user" ORDER BY score DESC');
 		$arr=array();
 		while($data=$req->fetch()){
 			if($data['score']!=0){
