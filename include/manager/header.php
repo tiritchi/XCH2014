@@ -60,10 +60,9 @@
 								<div class="input-group">
 									<span class="input-group-addon">Objet</span>
 									<input id="subject" name="subject" type="text" class="form-control" placeholder="subject">
-									<textarea id="body" name="body" rows="5" style="width:485px"></textarea>
 								</div>
 								<div class="input-group">
-								    <textarea id="body" name="body" rows="5" style="width:485px"></textarea>
+								    <textarea class="form-control" id="body" name="body" rows="5" style="width:557px; resize: none;""></textarea>
 								</div>
 						    </div>
 						    <div class="modal-footer">
