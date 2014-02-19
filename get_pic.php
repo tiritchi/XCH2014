@@ -2,12 +2,12 @@
 session_start();
 if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SESSION['admin']) && $_SESSION['admin']=='FALSE')
 	{
+		$pseudo=$_GET['pseudo'];
 		if(isset($_GET['pseudo']) && $_GET['pseudo'] != ""){
 			if(!file_exists($pseudo.'.jpg')){
 				$pseudo='profil_resized';
 			}
 			else{
-				$pseudo=$_GET['pseudo'];
 				$file = 'ressources/1/'.$pseudo.'.jpg';
 				$type = 'image/jpeg';
 				header('Content-Type:'.$type);
