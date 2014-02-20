@@ -42,7 +42,7 @@
 			array_push($erreur, "extension invalide") ;
 		} 
 		$image_sizes = getimagesize($_FILES['profile']['tmp_name']);
-		if ($image_sizes[0] > 170 OR $image_sizes[1] > 180){
+		if ($image_sizes[0] > 300 OR $image_sizes[1] > 350){
 			array_push($erreur ,"Image trop grande");
 		}
 
