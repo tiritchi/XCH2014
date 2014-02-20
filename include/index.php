@@ -56,9 +56,9 @@
         </div>
         <div class="row">
             <div class=" col-lg-4">
-                <a class="thumbnail">
+                <div class="thumbnail">
                     <img src="ressources/home.jpg" alt="...">
-                </a>
+                </div>
             </div>
             <div class="col-lg-8">
                 <div class="page-header">
@@ -122,7 +122,7 @@
 
 
         <div class="pull-right">
-            <strong>Un évènement proposé par enseaventure               </strong> <a href="http://enseaventure.asso-ensea.net" src="ressources/enseaventure.jpg" width="50"/>
+            <strong>Un évènement proposé par enseaventure               </strong> <a href="http://enseaventure.asso-ensea.net"> <img src="ressources/enseaventure.jpg" width="50"/> </a>
         </div>
 
     </body>
