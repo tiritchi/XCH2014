@@ -16,20 +16,22 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 			                <h3 class="panel-title">Contracts</h3>
 			            </div>
 			            <div class="panel-body">
-			                <div class="list-group">
-			                	<?php
-			                		$array=get_contracts($bdd,$_SESSION['user_id']);
-			                		if ($array==NULL) {
-			                		    echo 'pas de contrats';
-			                		}
-			                		else {
-									    foreach ($array as $ar) {
-										    echo '<a href="#" class="list-group-item" data-toggle="modal" data-target="#'.$ar[3].'">';
-										    echo $ar[3].'</a>';
+			            	<form class="form-horizontal" action="contrat_pdf" method="post">
+				                <div class="list-group">
+				                	<?php
+				                		$array=get_contracts($bdd,$_SESSION['user_id']);
+				                		if ($array==NULL) {
+				                		    echo 'pas de contrats';
+				                		}
+				                		else {
+										    foreach ($array as $ar) {
+											    echo '<a href="#" class="list-group-item" data-toggle="modal" data-target="#'.$ar[3].'"><i class="pull-right glyphicon glyphicon-file"/>';
+											    echo $ar[3].'</a>';
+											}
 										}
-									}
-								?>
-                            </div>
+									?>
+	                            </div>
+                           </form>
 			            </div>
 			        </div>
 			    </div>
@@ -97,6 +99,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 					$tar=get_user_info($bdd,$ar[2]);
 					echo '
 				<!-- Modal -->
+				<form class="form-horizontal" action="contrat_pdf" method="post">
 					<div class="modal fade" id="'.$ar[3].'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					  <div class="modal-dialog">
 					    <div class="modal-content">
@@ -122,7 +125,8 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 		                  </div>
 					    </div>
 					  </div>
-					</div>';
+					</div>
+				</form>';
 				}
 			?>
 		</div>
