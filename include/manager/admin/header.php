@@ -62,7 +62,7 @@
 				    		<div class="modal-body">
 								<div class="input-group">
 									<span class="input-group-addon">To</span>
-									<input id="to" name="to" type="text" class="form-control" placeholder="Nickname">
+									<input id="to" name="to" type="text" class="form-control" placeholder="Nickname" value="prout">
 								</div>
 								<div class="input-group">
 									<span class="input-group-addon">subject</span>
