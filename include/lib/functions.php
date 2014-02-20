@@ -73,17 +73,18 @@
 	}
 
 	function create_contract(PDO $bdd,$user_id,$target_id,$exp_date){ //create_contract(ref bdd, clef primaire du joueur concerné, clef primaire du joueur cible, date d'expiration du contrat (YYYY-MM-DD)) rajoute un contrat dans la table contrats et renvoie le numéro de contrat
-		$req=$bdd->query("SELECT user_no,position FROM XCH14_users WHERE id=$target_id");
+		$req=$bdd->query("SELECT user_no,position,school FROM XCH14_users WHERE id=$target_id");
 		$data=$req->fetch();
 		$target_no=$data['user_no'];
 		$pos=$data['position'];
+		$school=$data['school'];
 		$req->closeCursor();
 		srand();
 		$cno='X'.rand(10000,99999).'C'.$target_id.'H14'.rand(10,99);
 		$uid = intval($user_id);
 		$tid = intval($target_id);
-		$req = $bdd->prepare('INSERT INTO XCH14_contracts (contract_no,user_id,target_id,target_no,position,complete,exp_date,start_date) VALUES (?,?,?,?,?,?,?,NOW())');
-		$req->execute(array($cno,$user_id,$target_id,$target_no['user_no'],$pos,'0',$exp_date));
+		$req = $bdd->prepare('INSERT INTO XCH14_contracts (contract_no,user_id,target_id,target_no,position,school,complete,exp_date,start_date) VALUES (?,?,?,?,?,?,?,?,NOW())');
+		$req->execute(array($cno,$user_id,$target_id,$target_no['user_no'],$pos,$school,'0',$exp_date));
 		return $cno;
 	}
 
