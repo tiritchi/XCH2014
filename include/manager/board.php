@@ -25,7 +25,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 			                		else {
 									    foreach ($array as $ar) {
 										    echo '<a href="" class="list-group-item" data-toggle="modal" data-target="#'.$ar[3].'">';
-										    echo $ar[3].'<a href=contrat_pdf.php?cno='.$ar[3].' class=" glyphicon glyphicon-file"></a></a>';
+										    echo $ar[3].'</a>';
 										}
 									}
 								?>
@@ -109,7 +109,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 		                            </div>
 		                            <div class="col-md-3">
 		                                  <h2>'.$ar[3].'   <small>'.$tar[0].'</small><br /></h2>
-		                                  
+		                                  <a href=contrat_pdf.php?cno='.$ar[3].' class=" glyphicon glyphicon-file"></a>
 		                            </div>
                                 </div>
 					      </div>
