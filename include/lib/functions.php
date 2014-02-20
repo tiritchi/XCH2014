@@ -279,7 +279,8 @@
 	    ));
 
 		$sent=send_conf_code($_POST['Email'],$confirmation_code);
-		echo $sent;
+		echo $sent
+		return $ucode;
 	}
 
 	function send_conf_code($to_user_mail,$confirmation_code){
