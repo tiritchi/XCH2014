@@ -109,7 +109,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 		                            </div>
 		                            <div class="col-md-3">
 		                                  <h2>'.$ar[3].'   <small>'.$tar[0].'</small><br /></h2>
-		                                  Votre contrat (pdf) >>> <a href=contrat_pdf.php?cno='.$ar[3].' class=" glyphicon glyphicon-file"></a>
+		                                  Votre contrat (pdf) >>> <a href="contrat_pdf.php?cno='.$ar[0].'&pseudo='.$tar[0].'" class=" glyphicon glyphicon-file"></a>
 		                            </div>
                                 </div>
 					      </div>
