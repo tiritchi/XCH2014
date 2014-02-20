@@ -2,18 +2,18 @@
 session_start();
 if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE')
 	{
-		if(isset($_GET['pseudo']) && $_GET['pseudo'] != ""){
-			$pseudo=$_GET['pseudo'];
-			if(!file_exists('ressources/1/'.$pseudo.'.jpg')){
-				$pseudo='profile_resized';
-				$file = 'ressources/1/'.$pseudo.'.jpg';
+		if(isset($_GET['code']) && $_GET['code'] != ""){
+			$code=$_GET['code'];
+			if(!file_exists('ressources/1/'.$code.'.jpg')){
+				$code='profile_resized';
+				$file = 'ressources/1/'.$code.'.jpg';
 				$type = 'image/jpeg';
 				header('Content-Type:'.$type);
 				header('Content-Length: ' . filesize($file));
 				readfile($file);
 			}
 			else{
-				$file = 'ressources/1/'.$pseudo.'.jpg';
+				$file = 'ressources/1/'.$code.'.jpg';
 				$type = 'image/jpeg';
 				header('Content-Type:'.$type);
 				header('Content-Length: ' . filesize($file));
