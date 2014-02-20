@@ -35,7 +35,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     
-                    <a href="."> <img src="ressources/xch.jpg" height="50"/> </a>
+                    <a class="navbar-brand" href=".">XTrem Cergy Hunting</a>
                     
                 </div>
                 <div class="navbar-collapse collapse">
