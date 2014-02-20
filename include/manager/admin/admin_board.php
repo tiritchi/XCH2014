@@ -31,6 +31,9 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 											        <a data-toggle="collapse" data-parent="#accordion" href="#collapse'.$i.'">
 											          '.substr($data['pseudo'],1,(strlen($data['pseudo'])-2)).'
 											        </a>
+											        <a class="pull-right" href="" data-toggle="modal" data-target="#mail">
+											        <i class="glyphicon glyphicon-enveloppe"></i>
+											        </a>
     											</h4>
     										</div>
     										<div id="collapse'.$i.'" class="panel-collapse collapse">
