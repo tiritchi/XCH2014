@@ -18,7 +18,7 @@
         <?php require('include/lib/functions.php'); ?> 
     </head>
     
-    <body>
+    <body bgcolor="#FF6600">
 
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
