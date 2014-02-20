@@ -29,8 +29,9 @@
 		//
 
 		//test des caractéristiques de l'image
+		$erreur=array();
 		if ($_FILES['profile']['error'] > 0){
-			$erreur = array("Erreur lors du transfert");
+			array_push($erreur,"Erreur lors du transfert");
 		} 
 		if ($_FILES['profile']['size'] > 409600){
 			array_push($erreur, "Le fichier est trop gros") ;
@@ -64,7 +65,7 @@
 		}
 		else{
 			foreach ($erreur as $er) {
-				echo $er;
+				echo $er.'<br>';
 			}
 		}
 
