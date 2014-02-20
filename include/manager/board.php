@@ -44,7 +44,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 						<div class="panel-heading">
 						    <h3 class="panel-title">Profile</h3>
 						</div>
-						<?php echo '<a class="thumbnail"><img src="get_pic.php?pseudo='.$var[0].'" WIDTH=170 HEIGHT=180/></a>';?>
+						<?php echo '<div class="thumbnail"><img src="get_pic.php?pseudo='.$var[0].'" WIDTH=170 HEIGHT=180/></div>';?>
 						<table class="table">
 						    <tbody>
 						        <tr>
