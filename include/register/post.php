@@ -64,6 +64,8 @@
 
 		}
 		else{
+			echo '<strong>! Votre inscription n\'a pas étée prise en compte !</strong><br>';
+			echo '<meta http-equiv="refresh" content="2; url=register">';
 			foreach ($erreur as $er) {
 				echo $er.'<br>';
 			}
