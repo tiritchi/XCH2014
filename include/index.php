@@ -13,12 +13,14 @@
             .bs-example{
                 margin: 20px;
             }
-            body { padding-top: 50px; }
+            body { padding-top: 50px;
+                background-color: #FF9900;
+            }
         </style>
         <?php require('include/lib/functions.php'); ?> 
     </head>
     
-    <body bgcolor="#FF6600">
+    <body>
 
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
