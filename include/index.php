@@ -122,7 +122,7 @@
 
 
         <div class="pull-right">
-            <strong>Un évènement proposé par enseaventure               </strong> <img href="http://enseaventure.asso-ensea.net" src="ressources/enseaventure.jpg" width="50"/>
+            <strong>Un évènement proposé par enseaventure               </strong> <a href="http://enseaventure.asso-ensea.net" src="ressources/enseaventure.jpg" width="50"/>
         </div>
 
     </body>
