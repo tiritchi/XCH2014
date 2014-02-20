@@ -24,7 +24,7 @@
 
 	function get_user_info(PDO $bdd,$user_id){ // get_user_info(ref base de donnée, clef primaire table users)  Cette fonction renvoi un tableau (array) contenant dans l'orde le pseudo, prénom, nom, école, mail, sexe, date de naissance, téléphone, adresse, identifiant
 		if($user_id=="all"){
-			$req=$bdd->query("SELECT * FROM XCH14_users WHERE group=\'user\' ORDER by pseudo ASC");
+			$req=$bdd->query('SELECT * FROM XCH14_users WHERE group="user" ORDER by pseudo ASC');
 			return $req;
 		}
 		else{
