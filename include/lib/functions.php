@@ -77,7 +77,7 @@
 		$data=$req->fetch();
 		$target_no=$data['user_no'];
 		$pos=$data['position'];
-		$school=$data['school'];
+		$school=substr($data['school'],1,strlen($data['school'])-2);
 		$req->closeCursor();
 		srand();
 		$cno='X'.rand(10000,99999).'C'.$target_id.'H14'.rand(10,99);
