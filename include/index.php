@@ -122,7 +122,7 @@
 
 
         <div class="pull-right">
-            <strong>Un évènement proposé par ENSEAventure</strong> <img src="ressources/enseaventure.jpg" width="30"/>
+            <strong>Un évènement proposé par enseaventure               </strong> <img src="ressources/enseaventure.jpg" width="50"/>
         </div>
 
     </body>
