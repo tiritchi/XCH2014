@@ -121,7 +121,9 @@
         </form>
 
 
-
+        <div class="pull-right">
+            <strong>Un évènement proposé par ENSEAventure</strong> <img src="ressources/enseaventure.jpg" width="30"/>
+        </div>
 
     </body>
 </html>
