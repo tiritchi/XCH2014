@@ -16,22 +16,20 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 			                <h3 class="panel-title">Contracts</h3>
 			            </div>
 			            <div class="panel-body">
-			            	<form class="form-horizontal" action="contrat_pdf" method="post">
-				                <div class="list-group">
-				                	<?php
-				                		$array=get_contracts($bdd,$_SESSION['user_id']);
-				                		if ($array==NULL) {
-				                		    echo 'pas de contrats';
-				                		}
-				                		else {
-										    foreach ($array as $ar) {
-											    echo '<a href="#" class="list-group-item" data-toggle="modal" data-target="#'.$ar[3].'">';
-											    echo $ar[3].'<i class="pull-right glyphicon glyphicon-file"></i></a>';
-											}
+			                <div class="list-group">
+			                	<?php
+			                		$array=get_contracts($bdd,$_SESSION['user_id']);
+			                		if ($array==NULL) {
+			                		    echo 'pas de contrats';
+			                		}
+			                		else {
+									    foreach ($array as $ar) {
+										    echo '<a href="#" class="list-group-item" data-toggle="modal" data-target="#'.$ar[3].'">';
+										    echo $ar[3].'<a href=contrat_pdf.php?cno='.$ar[3]' class="pull-right glyphicon glyphicon-file"></a></a>';
 										}
-									?>
-	                            </div>
-                           </form>
+									}
+								?>
+                            </div>
 			            </div>
 			        </div>
 			    </div>
