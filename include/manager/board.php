@@ -26,7 +26,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 				                		else {
 										    foreach ($array as $ar) {
 											    echo '<a href="#" class="list-group-item" data-toggle="modal" data-target="#'.$ar[3].'">';
-											    echo $ar[3].'<i class="glyphicon glyphicon-file"></i></a>';
+											    echo $ar[3].'<i class="pull-right glyphicon glyphicon-file"></i></a>';
 											}
 										}
 									?>
