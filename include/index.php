@@ -14,7 +14,7 @@
                 margin: 20px;
             }
             body { padding-top: 50px;
-                background-color: #FF9900;
+                background-color: #F5F5F5;
             }
         </style>
         <?php require('include/lib/functions.php'); ?> 
