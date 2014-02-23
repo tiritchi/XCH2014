@@ -121,7 +121,7 @@
                 </div>
             </div>
         </form>
-        <div class="pull-left">
+        <div class="pull-right">
             <a href="http://www.compteurdevisite.com" target="_Blank" title="compteur de visite pour blog gratuit">compteur de visite pour blog gratuit</a><br/>
             <script type="text/javascript" src="http://counter2.statcounterfree.com/private/counter.js?c=6fca70db8a996bc46702e0f7df77e3d0"></script>
             <noscript><a href="http://www.compteurdevisite.com" title="compteur de visite pour blog gratuit"><img src="http://counter2.statcounterfree.com/private/compteurdevisite.php?c=6fca70db8a996bc46702e0f7df77e3d0" border="0" title="compteur de visite pour blog gratuit" alt="compteur de visite pour blog gratuit"></a>
