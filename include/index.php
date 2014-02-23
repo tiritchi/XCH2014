@@ -122,7 +122,7 @@
             </div>
         </form>
 <!-- DEBUT CODE compteur-gratuit.org -->
-        <script language="JavaScript" src="http://www.compteur-gratuit.org/count/c.js?id=9941895&t=3&d=31&n=8&s=0"></script><noscript>un <a target="_blank" href="http://www.compteur-gratuit.org">compteur gratuit</a> pour votre site web</noscript>
+        <script language="JavaScript" src="http://www.compteur-gratuit.org/count/c.js?id=9941895&t=3&d=31&n=8&s=0"></script>
 <!-- FIN CODE compteur-gratuit.org -->
 
         <div class="pull-right">
