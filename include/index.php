@@ -121,10 +121,9 @@
                 </div>
             </div>
         </form>
-            <a href="http://www.compteurdevisite.com" target="_Blank" title="compteur de visite pour blog gratuit">compteur de visite pour blog gratuit</a><br/>
-            <script type="text/javascript" src="http://counter2.statcounterfree.com/private/counter.js?c=6fca70db8a996bc46702e0f7df77e3d0"></script>
-            <noscript><a href="http://www.compteurdevisite.com" title="compteur de visite pour blog gratuit"><img src="http://counter2.statcounterfree.com/private/compteurdevisite.php?c=6fca70db8a996bc46702e0f7df77e3d0" border="0" title="compteur de visite pour blog gratuit" alt="compteur de visite pour blog gratuit"></a>
-            </noscript>     
+<!-- DEBUT CODE compteur-gratuit.org -->
+        <script language="JavaScript" src="http://www.compteur-gratuit.org/count/c.js?id=9941895&t=3&d=31&n=8&s=0"></script><noscript>un <a target="_blank" href="http://www.compteur-gratuit.org">compteur gratuit</a> pour votre site web</noscript>
+<!-- FIN CODE compteur-gratuit.org -->
 
         <div class="pull-right">
             <strong>Un évènement proposé par ENSEAventure</strong> <tab><a href="http://enseaventure.asso-ensea.net"> <img src="ressources/enseaventure.jpg" width="50"/> </a>
