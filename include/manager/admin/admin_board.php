@@ -37,7 +37,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
     											</h4>
     										</div>
     										<div id="collapse'.$i.'" class="panel-collapse collapse">
-    											<div class="thumbnail"><img src="get_pic.php?pseudo='.substr($data['pseudo'],1,(strlen($data['pseudo'])-2)).'" WIDTH=170 HEIGHT=180/></div>
+    											<div class="thumbnail"><img src="get_pic.php?code='.substr($data['user_no'],3,3).'" WIDTH=170 HEIGHT=180/></div>
       											<table class="table">
 						                            <tbody>
 						                                <tr>
@@ -46,7 +46,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 						                                </tr>
 						                                <tr>
 						                                    <th>User code</th>
-						                                    <td><span class="pull-right">'.substr($data['user_no'],1,(strlen($data['user_no'])-2)).'</span></td>
+						                                    <td><span class="pull-right">'.$data['user_no'].'</span></td>
 						                                </tr>
 						                                <tr>
 						                                    <th>School</th>

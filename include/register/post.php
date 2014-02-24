@@ -51,10 +51,10 @@
 		 
 		//test si erreur annule l'inscription
 		if($erreur==NULL){
-			$nom = "ressources/1/{$_POST['Nn']}.{$extension_upload}";
+		    $ucode=register($bdd,$_POST['userpsswd'],$_POST['Lname'],$_POST['Fname'],$_POST['Email'],$_POST['Phone'],$_POST['School'],$_POST['Sexe'],$_POST['Adress_a'],$_POST['Adress_pc'],$_POST['Adress_c'],$_POST['Bd_y'],$_POST['Bd_m'],$_POST['Bd_d'],$_POST['Nn'],$_POST['p1'],$_POST['p2'],$_POST['p3'],$_POST['p4'],$_POST['p5']);
+   			$rep=substr($ucode,3,3);
+   			$nom = "ressources/1/{$rep}.{$extension_upload}";
 			$resultat = move_uploaded_file($_FILES['profile']['tmp_name'],$nom);
-
-		    register($bdd,$_POST['userpsswd'],$_POST['Lname'],$_POST['Fname'],$_POST['Email'],$_POST['Phone'],$_POST['School'],$_POST['Sexe'],$_POST['Adress_a'],$_POST['Adress_pc'],$_POST['Adress_c'],$_POST['Bd_y'],$_POST['Bd_m'],$_POST['Bd_d'],$_POST['Nn'],$_POST['p1'],$_POST['p2'],$_POST['p3'],$_POST['p4'],$_POST['p5']);
    			echo '
    				<div class="alert alert-success">
   					<strong>Successful signup ! thanks</strong> <br>

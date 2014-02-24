@@ -13,7 +13,9 @@
             .bs-example{
                 margin: 20px;
             }
-            body { padding-top: 50px; }
+            body { padding-top: 50px;
+                background-color: #F5F5F5;
+            }
         </style>
         <?php require('include/lib/functions.php'); ?> 
     </head>
@@ -49,16 +51,16 @@
                     </ul>
                     <div class="navbar-form navbar-right">
                         <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Connexion</button>
-                        <a class="btn btn-primary btn-sm" role="button" href="register">>> Inscrivez vous <<</a>
+                        <a class="btn  btn-danger btn-sm" role="button" href="register">>> Inscrivez vous <<</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class=" col-lg-4">
-                <a class="thumbnail">
+                <div class="thumbnail">
                     <img src="ressources/home.jpg" alt="...">
-                </a>
+                </div>
             </div>
             <div class="col-lg-8">
                 <div class="page-header">
@@ -119,9 +121,13 @@
                 </div>
             </div>
         </form>
+<!-- DEBUT CODE compteur-gratuit.org -->
+        <script language="JavaScript" src="http://www.compteur-gratuit.org/count/c.js?id=9941895&t=3&d=31&n=8&s=0"></script>
+<!-- FIN CODE compteur-gratuit.org -->
 
-
-
+        <div class="pull-right">
+            <strong>Un évènement proposé par ENSEAventure</strong> <tab><a href="http://enseaventure.asso-ensea.net"> <img src="ressources/enseaventure.jpg" width="50"/> </a>
+        </div>
 
     </body>
 </html>

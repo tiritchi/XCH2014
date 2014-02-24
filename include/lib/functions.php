@@ -24,7 +24,7 @@
 
 	function get_user_info(PDO $bdd,$user_id){ // get_user_info(ref base de donnée, clef primaire table users)  Cette fonction renvoi un tableau (array) contenant dans l'orde le pseudo, prénom, nom, école, mail, sexe, date de naissance, téléphone, adresse, identifiant
 		if($user_id=="all"){
-			$req=$bdd->query("SELECT * FROM XCH14_users ORDER by pseudo ASC");
+			$req=$bdd->query('SELECT * FROM XCH14_users WHERE `group`=\'user\' ORDER by pseudo ASC');
 			return $req;
 		}
 		else{
@@ -73,15 +73,18 @@
 	}
 
 	function create_contract(PDO $bdd,$user_id,$target_id,$exp_date){ //create_contract(ref bdd, clef primaire du joueur concerné, clef primaire du joueur cible, date d'expiration du contrat (YYYY-MM-DD)) rajoute un contrat dans la table contrats et renvoie le numéro de contrat
-		$req=$bdd->query("SELECT user_no FROM XCH14_users WHERE id=$target_id");
-		$target_no=$req->fetch();
+		$req=$bdd->query("SELECT user_no,position,school FROM XCH14_users WHERE id=$target_id");
+		$data=$req->fetch();
+		$target_no=$data['user_no'];
+		$pos=$data['position'];
+		$school=substr($data['school'],1,strlen($data['school'])-2);
 		$req->closeCursor();
 		srand();
 		$cno='X'.rand(10000,99999).'C'.$target_id.'H14'.rand(10,99);
 		$uid = intval($user_id);
 		$tid = intval($target_id);
-		$req = $bdd->prepare('INSERT INTO XCH14_contracts (contract_no,user_id,target_id,target_no,complete,exp_date,start_date) VALUES (?,?,?,?,?,?,NOW())');
-		$req->execute(array($cno,$user_id,$target_id,$target_no['user_no'],'0',$exp_date));
+		$req = $bdd->prepare('INSERT INTO XCH14_contracts (contract_no,user_id,target_id,target_no,position,school,complete,exp_date,start_date) VALUES (?,?,?,?,?,?,?,?,NOW())');
+		$req->execute(array($cno,$user_id,$target_id,$target_no['user_no'],$pos,$school,'0',$exp_date));
 		return $cno;
 	}
 
@@ -280,6 +283,7 @@
 
 		$sent=send_conf_code($_POST['Email'],$confirmation_code);
 		echo $sent;
+		return $ucode;
 	}
 
 	function send_conf_code($to_user_mail,$confirmation_code){

@@ -24,7 +24,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 			                		}
 			                		else {
 									    foreach ($array as $ar) {
-										    echo '<a href="#" class="list-group-item" data-toggle="modal" data-target="#'.$ar[3].'">';
+										    echo '<a href="" class="list-group-item" data-toggle="modal" data-target="#'.$ar[3].'">';
 										    echo $ar[3].'</a>';
 										}
 									}
@@ -44,35 +44,35 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 						<div class="panel-heading">
 						    <h3 class="panel-title">Profile</h3>
 						</div>
-						<?php echo '<div class="thumbnail"><img src="get_pic.php?pseudo='.$var[0].'" WIDTH=170 HEIGHT=180/></div>';?>
+						<?php echo '<div class="thumbnail"><img src="get_pic.php?code='.substr($var[9],3,3).'" WIDTH=170 HEIGHT=180/></div>';?>
 						<table class="table">
 						    <tbody>
 						        <tr>
-						            <th>Nickname</th>
+						            <th>Pseudo</th>
 						            <td><?php echo('<span class="pull-right">'.$var[0].'</span>');?></td>
 						        </tr>
 						        <tr>
-						            <th>User code</th>
+						            <th>Code joueur</th>
 						            <td><?php echo('<span class="pull-right">'.$var[9].'</span>');?></td>
 						        </tr>
 						        <tr>
-						            <th>School</th>
+						            <th>Ecole</th>
 						            <td><?php echo('<span class="pull-right">'.$var[3].'</span>');?></t>
 						        </tr>
 						        <tr>
-						            <th>First name</th>
+						            <th>Prénom</th>
 						            <td><?php echo('<span class="pull-right">'.$var[1].'</span>');?></td>
 						        </tr>
 						        <tr>
-						            <th>Last name</th>
+						            <th>Nom</th>
 						            <td><?php echo('<span class="pull-right">'.$var[2].'</span>');?></td>
 						        </tr>
 						        <tr>
-						            <th>Date of birth</th>
+						            <th>Date de naissance</th>
 						            <td><?php echo('<span class="pull-right">'.$var[6].'</span>');?></td>
 						        </tr>
 						        <tr>
-						            <th>Address</th>
+						            <th>Addresse</th>
 						            <td><?php echo('<span class="pull-right">'.$var[8].'</span>');?></td>
 						        </tr>
 						        <tr>
@@ -80,11 +80,11 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 						            <td><?php echo('<span class="pull-right">'.$var[4].'</span>');?></td>
 						        </tr>
 						        <tr>
-						            <th>Phone number</th>
+						            <th>N° Tel</th>
 						            <td><?php echo('<span class="pull-right">'.$var[7].'</span>');?></td>
 						        </tr>
 						        <tr>
-						            <th>Sex</th>
+						            <th>Sexe</th>
 						            <td><?php echo('<span class="pull-right">'.$var[5].'</span>');?></td>
 						        </tr>
 						    </tbody>
@@ -97,6 +97,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 					$tar=get_user_info($bdd,$ar[2]);
 					echo '
 				<!-- Modal -->
+				<form class="form-horizontal" action="contrat_pdf" method="post">
 					<div class="modal fade" id="'.$ar[3].'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					  <div class="modal-dialog">
 					    <div class="modal-content">
@@ -104,11 +105,11 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 		                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 		                        <div class="row">
 		                            <div class="col-md-3">
-		                                <img src="ressources/profile_resized.jpg" class="img-thumbnail"></img>
+		                                <img src="get_pic.php?code='.substr($tar[9],3,3).'" WIDTH=170 HEIGHT=180 class="img-thumbnail"></img>
 		                            </div>
 		                            <div class="col-md-3">
 		                                  <h2>'.$ar[3].'   <small>'.$tar[0].'</small><br /></h2>
-		                                  
+		                                  Votre contrat (pdf) >>> <a href="contrat_pdf.php?cno='.$ar[3].'&pseudo='.$tar[0].'" class=" glyphicon glyphicon-file"></a>
 		                            </div>
                                 </div>
 					      </div>
@@ -122,7 +123,8 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 		                  </div>
 					    </div>
 					  </div>
-					</div>';
+					</div>
+				</form>';
 				}
 			?>
 		</div>
