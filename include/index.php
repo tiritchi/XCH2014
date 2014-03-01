@@ -69,23 +69,24 @@
                 <div class="row">                    
                     <div class="col-lg-8">
                         <div class="tab-content">
-                        <div id="accueil" class="tab-pane fade in active">
-                            <?php include 'include/accueil.html';?>
-                        </div>
-                        <div id="regles" class="tab-pane fade">
-                            <?php include 'include/regles.html';?>
-                        </div>
-                        <div id="jeu" class="tab-pane fade">
-                            <?php include 'include/le_jeu.html';?>
-                        </div>
-                        <div id="news" class="tab-pane fade">
-                            <?php include 'include/news.html';?>
-                        </div>
-                        <div id="contact" class="tab-pane fade">
-                            <?php include 'include/contact.html';?>
-                        </div>
-                        <div id="remerciements" class="tab-pane fade">
-                            <?php include 'include/remerciements.html';?> 
+                            <div id="accueil" class="tab-pane fade in active">
+                                <?php include 'include/accueil.html';?>
+                            </div>
+                            <div id="regles" class="tab-pane fade">
+                                <?php include 'include/regles.html';?>
+                            </div>
+                            <div id="jeu" class="tab-pane fade">
+                                <?php include 'include/le_jeu.html';?>
+                            </div>
+                            <div id="news" class="tab-pane fade">
+                                <?php include 'include/news.html';?>
+                            </div>
+                            <div id="contact" class="tab-pane fade">
+                                <?php include 'include/contact.html';?>
+                            </div>
+                            <div id="remerciements" class="tab-pane fade">
+                                <?php include 'include/remerciements.html';?> 
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
