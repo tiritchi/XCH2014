@@ -88,7 +88,6 @@
                             <?php include 'include/remerciements.html';?> 
                         </div>
                     </div>
-                    </div>
                     <div class="col-lg-4">
                         <?php include 'include/top5.php';?>
                     </div>
@@ -121,9 +120,9 @@
                 </div>
             </div>
         </form>
-<!-- DEBUT CODE compteur-gratuit.org -->
-        <script language="JavaScript" src="http://www.compteur-gratuit.org/count/c.js?id=9941895&t=3&d=31&n=8&s=0"></script>
-<!-- FIN CODE compteur-gratuit.org -->
+        <!-- Webdezign.tutoriaux.free.fr® Compteur de visiteurs -->
+        <script src="http://webdezign.tutoriaux.free.fr/services/compteur_page.php?client=70592&Af=6"></script>
+        <!-- Fin Compteur de visiteurs® -->
 
         <div class="pull-right">
             <strong>Un évènement proposé par ENSEAventure</strong> <tab><a href="http://enseaventure.asso-ensea.net"> <img src="ressources/enseaventure.jpg" width="50"/> </a>
