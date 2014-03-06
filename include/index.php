@@ -43,9 +43,9 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#accueil" data-toggle="tab">Accueil</a></li>
+                        <li><a href="#news" data-toggle="tab">News</a></li>
                         <li><a href="#regles" data-toggle="tab">Règles</a></li>
                         <li><a href="#jeu" data-toggle="tab">Le jeu</a></li>
-                        <li><a href="#news" data-toggle="tab">News</a></li>
                         <li><a href="#contact" data-toggle="tab">Contact</a></li>
                         <li><a href="#remerciements" data-toggle="tab">Remerciements</a></li>
                     </ul>
