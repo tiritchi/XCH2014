@@ -72,14 +72,14 @@
                             <div id="accueil" class="tab-pane fade in active">
                                 <?php include 'include/accueil.html';?>
                             </div>
+                            <div id="news" class="tab-pane fade">
+                                <?php include 'include/news.html';?>
+                            </div>
                             <div id="regles" class="tab-pane fade">
                                 <?php include 'include/regles.html';?>
                             </div>
                             <div id="jeu" class="tab-pane fade">
                                 <?php include 'include/le_jeu.html';?>
-                            </div>
-                            <div id="news" class="tab-pane fade">
-                                <?php include 'include/news.html';?>
                             </div>
                             <div id="contact" class="tab-pane fade">
                                 <?php include 'include/contact.html';?>
