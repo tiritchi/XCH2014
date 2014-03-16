@@ -62,7 +62,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 						                                </tr>
 						                                <tr>
 						                                    <th>Date of birth</th>
-						                                    <td><span class="pull-right">'.substr($data['date_naissance'],1,(strlen($data['date_naissance'])-2)).'</span></td>
+						                                    <td><span class="pull-right">'.$data['date_naissance'].'</span></td>
 						                                </tr>
 						                                <tr>
 						                                    <th>Address</th>
