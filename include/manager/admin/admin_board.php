@@ -74,7 +74,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 						                                </tr>
 						                                <tr>
 						                                    <th>Phone number</th>
-						                                    <td><span class="pull-right">'.substr($data['phone'],1,(strlen($data['phone'])-2)).'</span></td>
+						                                    <td><span class="pull-right">'.$data['phone'].'</span></td>
 						                                </tr>
 						                                <tr>
 						                                    <th>Sex</th>
