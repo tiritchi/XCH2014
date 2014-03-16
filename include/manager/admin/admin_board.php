@@ -37,7 +37,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
     											</h4>
     										</div>
     										<div id="collapse'.$i.'" class="panel-collapse collapse">
-    											<div class="thumbnail"><img src="get_pic.php?code='.substr($data['user_no'],3,3).'" WIDTH=170 HEIGHT=180/></div>
+    											<div class="thumbnail"><img src="get_pic.php?code='.substr($data['user_no'],3,5).'" WIDTH=170 HEIGHT=180/></div>
       											<table class="table">
 						                            <tbody>
 						                                <tr>
