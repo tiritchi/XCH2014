@@ -24,10 +24,15 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 							<tbody>
 								<?php
 									foreach($contrats as $contrat){
+										$tabc=get_user_info($bdd,$contrat[2]);
+										$cible=$tabc[0];
+										$tabt=get_user_info($bdd,$contrat[0]);
+										$tueur=$tabc[0];
+										
 										echo '
 										<tr>
-											<td>'.$contrat[2].'</td>
-											<td>'.$contrat[0].'</td>
+											<td>'.$cible.'</td>
+											<td>'.$tueur.'</td>
 											<td></td>
 										</tr>';
 									}
