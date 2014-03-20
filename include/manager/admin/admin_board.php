@@ -32,7 +32,9 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 											          '.substr($data['pseudo'],1,(strlen($data['pseudo'])-2));
 											          if ($data['confirmed']==0){
 												          		echo '<i class="glyphicon glyphicon-remove"></i>';
-											          }.'
+											          }
+
+											          echo '
 											        	<a class="pull-right" href="" data-toggle="modal" data-target="#mail">
 											        		<i class="glyphicon glyphicon-envelope"></i>
 												        </a>
