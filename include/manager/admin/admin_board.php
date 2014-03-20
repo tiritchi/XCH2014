@@ -34,7 +34,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 											          	echo '<a class="pull-right" href="" data-toggle="modal" data-target="#mail">
 												        	<i class="glyphicon glyphicon-remove"></i>
 												        </a>'
-											          }
+											          };
 											          '
 											        	<a class="pull-right" href="" data-toggle="modal" data-target="#mail">
 												        	<i class="glyphicon glyphicon-envelope"></i>
