@@ -26,7 +26,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 									foreach($contrats as $contrat){
 										$tabc=get_user_info($bdd,$contrat[2]);
 										$cible=$tabc[0];
-										$tabt=get_user_info($bdd,$contrat[0]);
+										$tabt=get_user_info($bdd,"6");
 										$tueur=$tabt[0];
 										
 										echo '
