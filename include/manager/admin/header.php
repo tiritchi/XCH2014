@@ -33,14 +33,12 @@
 	                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	                    <ul class="nav navbar-nav">
 	                        <li><a href="" data-toggle="modal" data-toggle="modal" data-target="#mail">Mail</a></li>
-	                        
+	                        <li><a href="contrat" data-toggle="modal">Gestionnaire de contrats</a></li>
 	                    </ul>
 	                    <ul class="nav navbar-nav navbar-right">
 	                    	<li class="dropdown">
 	                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="glyphicon glyphicon-user"></i> <?php echo $_SESSION['user']?>		<b class="caret"></b></a>
 	                            <ul class="dropdown-menu btn-toolbar">
-	                                <li><a href="#"><i class="glyphicon glyphicon-cog"></i>Settings</a></li>
-	                                <li class="divider"></li>
 	                                <li><a href="logout"><i class="glyphicon glyphicon-log-out "></i>Log out</a></li>
 	                            </ul>
 	                        </li>

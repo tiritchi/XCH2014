@@ -29,6 +29,9 @@ if (isset($_GET['page']) && $_GET['page'] != "")
 	case "mail":
 		include($basepath."lib/mailer.php");
 		break;
+	case "contrat":
+		include($basepath."manager/admin/contrat.php");
+		break;
 	default:
 		include($basepath."index.php");
     }
