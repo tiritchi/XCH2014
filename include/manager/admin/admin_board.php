@@ -29,7 +29,13 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
     										<div class="panel-heading">
       											<h4 class="panel-title">
 											        <a data-toggle="collapse" data-parent="#accordion" href="#collapse'.$i.'">
-											          '.substr($data['pseudo'],1,(strlen($data['pseudo'])-2)).'
+											          '.substr($data['pseudo'],1,(strlen($data['pseudo'])-2)).
+											          if ($data['confirmed']==0){
+											          	.'<a class="pull-right" href="" data-toggle="modal" data-target="#mail">
+												        	<i class="glyphicon glyphicon-remove"></i>
+												        </a>'.
+											          }
+											          '
 											        	<a class="pull-right" href="" data-toggle="modal" data-target="#mail">
 												        	<i class="glyphicon glyphicon-envelope"></i>
 												        </a>
