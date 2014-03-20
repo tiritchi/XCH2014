@@ -28,7 +28,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 										<tr>
 											<td>'.$contrat[2].'</td>
 											<td>'.$contrat[0].'</td>
-											<td>'..'</td>
+											<td></td>
 										</tr>';
 									}
 								?>
