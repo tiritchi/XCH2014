@@ -33,7 +33,7 @@
 	                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	                    <ul class="nav navbar-nav">
 	                        <li><a href="" data-toggle="modal" data-toggle="modal" data-target="#mail">Mail</a></li>
-	                        <li><a href="contrat" data-toggle="modal">Gestionnaire de contrats</a></li>
+	                        <li><a href="contrat">Gestionnaire de contrats</a></li>
 	                    </ul>
 	                    <ul class="nav navbar-nav navbar-right">
 	                    	<li class="dropdown">
