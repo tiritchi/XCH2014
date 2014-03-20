@@ -31,7 +31,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 											        <a data-toggle="collapse" data-parent="#accordion" href="#collapse'.$i.'">
 											          '.substr($data['pseudo'],1,(strlen($data['pseudo'])-2));
 											          if ($data['confirmed']==0){
-												          		echo '<a class="pull-right" href="" data-toggle="modal" data-target="del'.$i.'"' '>
+												          		echo '<a class="pull-right" href="" data-toggle="modal" data-target="del'.$i.'">
 												          				<i class="glyphicon glyphicon-remove"></i>
 												          			  </a>';
 											          }
