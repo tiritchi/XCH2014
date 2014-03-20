@@ -69,7 +69,7 @@
 		}
 		while ($donnees = $req->fetch())
 		{
-			$ar=array($donnees['id'],$donnees['complete'],$donnees['target_id'],$donnees['contract_no'],$donnees['exp_date']);
+			$ar=array($donnees['user_id'],$donnees['complete'],$donnees['target_id'],$donnees['contract_no'],$donnees['exp_date']);
 			array_push($tab,$ar); //array($donnees['id'],$donnees['complete'],$donnees['target_id'],$donnees['contract_no'],$donnees['exp_date'])
 		}
 
