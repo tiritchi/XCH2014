@@ -33,7 +33,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 										<tr>
 											<td>'.$cible.'</td>
 											<td>'.$tueur.'</td>
-											<td></td>
+											<td><a href="contrat_pdf.php?cno='.$contrat[3].'&pseudo='.$tueur.'" class=" glyphicon glyphicon-file"></a></td>
 										</tr>';
 									}
 								?>
