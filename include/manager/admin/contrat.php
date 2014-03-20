@@ -8,7 +8,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 		?>
 		<div class="jumbotron">
 			<div class="row">
-				<div class="col-md-5">
+				<div class="col-md-3">
 					<div class="panel panel-default">
 						<!-- Default panel contents -->
 						<div class="panel-heading">Tous les Contrats</div>
