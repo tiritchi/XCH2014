@@ -66,7 +66,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE')
 	
 	$exp=$data['exp_date'];
 	$pseudo=$_GET['pseudo'];
-	$tcode= substr($data['target_no'], 3,3);
+	$tcode= substr($data['target_no'], 3,5);
 	$cno=$data['contract_no'];
 	$pos=$data['position'];
 	$school=$data['school'];
