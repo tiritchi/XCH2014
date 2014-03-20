@@ -61,7 +61,7 @@
 	function get_contracts(PDO $bdd,$user_id){//get_contracts(ref base de donnée, clef primaire table users) cette fonction renvoie un tableau 2D (array(array())) chaque ligne correspond à un contrat et les colonnes sont clef primaire contrat, contrat honoré (0,1), 'clef primaire user cible', numéro de contrat, date d'expiration du contrat   accès via $tableau[ligne][colonne]
 		$tab=array();
 		if($user_id=="all"){
-			$req=$bdd->exec('SELECT * FROM XCH14_contracts');
+			$req=$bdd->query('SELECT * FROM XCH14_contracts');
 		}
 		else{
 			$req=$bdd->prepare('SELECT * FROM XCH14_contracts WHERE user_id=?');
