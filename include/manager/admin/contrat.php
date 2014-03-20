@@ -59,9 +59,9 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 									foreach($req as $user){							
 										echo '
 										<tr>
-											<td>'.$user[0].'</td>
-											<td>'.$user[3].'</td>
-											<td>'.$user[8].'</td>
+											<td>'.$user[12].'</td>
+											<td>'.$user[6].'</td>
+											<td>'.$user[15].'</td>
 										</tr>';
 									}
 								?>
