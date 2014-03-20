@@ -27,7 +27,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 										$tabc=get_user_info($bdd,$contrat[2]);
 										$cible=$tabc[0];
 										$tabt=get_user_info($bdd,$contrat[0]);
-										$tueur=$tabc[0];
+										$tueur=$tabt[0];
 										
 										echo '
 										<tr>
