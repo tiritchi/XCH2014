@@ -40,7 +40,35 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 							</tbody>
 						</table>
 					</div>
-
+				</div>
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<!-- Default panel contents -->
+						<div class="panel-heading">Tous les joueurs</div>
+						<!-- Table -->
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Pseudo</th>
+									<th>Ecole</th>
+									<th>Positions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php $req=get_user_info($bdd,"all");
+									foreach($req as $user){							
+										echo '
+										<tr>
+											<td>'.$user[0].'</td>
+											<td>'.$user[3].'</td>
+											<td>'.$user[8].'</td>
+										</tr>';
+									}
+								?>
+							</tbody>
+						</table>
+					</div>
+					
 				</div>
 			</div>
 		</div>
