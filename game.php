@@ -20,6 +20,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 				fclose($monfichier);
 			}
 		}
+		echo '<meta http-equiv="refresh" content="0; url=admin">';
     }
 elseif(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SESSION['admin']) && $_SESSION['admin']=='FALSE')
     {               
