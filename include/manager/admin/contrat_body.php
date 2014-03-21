@@ -24,7 +24,7 @@
 										
 										echo '
 										<tr>
-											<td><a href="'.$contrat[3].'"><i class="glyphicon glyphicon-log-out "></i></a></td>
+											<td><a href="'.$contrat[3].'"><i class="glyphicon glyphicon-remove "></i></a></td>
 											<td>'.$cible.'</td>
 											<td>'.$tueur.'</td>
 											<td><a href="contrat_pdf.php?cno='.$contrat[3].'&pseudo='.$tueur.'" class=" glyphicon glyphicon-file"></a></td>
