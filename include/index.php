@@ -57,7 +57,7 @@
                             echo $var;
                         ?>
                         <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Connexion</button>
-                        <a class=<?php if($var=="1"){echo '"btn  btn-danger btn-sm"';} else {echo '"btn  btn-danger btn-sm disabled"';} ?> role="button" href="register">>> Inscrivez vous <<</a>
+                        <a class=<?php echo $var; if($var=="1"){echo '"btn  btn-danger btn-sm"';} else {echo '"btn  btn-danger btn-sm disabled"';} ?> role="button" href="register">>> Inscrivez vous <<</a>
                     </div>
                 </div>
             </div>
