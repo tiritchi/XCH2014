@@ -4,158 +4,96 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
     {
     	include 'header.php';
         $bdd=db_init();
+        $contrats=get_contracts($bdd,"all");
 		?>
 		<div class="jumbotron">
 			<div class="row">
 				<div class="col-md-3">
-				    <?php include 'include/top5.php';?>
+					<div class="panel panel-default">
+						<!-- Default panel contents -->
+						<div class="panel-heading">Tous les Contrats</div>
+						<!-- Table -->
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Cible</th>
+									<th>Tueur</th>
+									<th>PDF</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php
+									foreach($contrats as $contrat){
+										$tabc=get_user_info($bdd,$contrat[2]);
+										$cible=$tabc[0];
+										$tabt=get_user_info($bdd,$contrat[0]);
+										$tueur=$tabt[0];
+										
+										echo '
+										<tr>
+											<td>'.$cible.'</td>
+											<td>'.$tueur.'</td>
+											<td><a href="contrat_pdf.php?cno='.$contrat[3].'&pseudo='.$tueur.'" class=" glyphicon glyphicon-file"></a></td>
+										</tr>';
+									}
+								?>
+							</tbody>
+						</table>
+					</div>
 				</div>
-				
-				
-				
-			    <div class="col-md-5">
-			        <div class="panel panel-default">
-			            <div class="panel-heading">
-			                <h3 class="panel-title">Players</h3>
-			            </div>
-			            <div class="panel-body">
-			            <div class="panel-group" id="accordion">
-			            <?php $req=get_user_info($bdd,"all");
-			            	$i='0';
-			            	while ($data=$req->fetch()){
-			            		$i++;
-			            		echo '
-			            				<div class="panel panel-default">
-    										<div class="panel-heading">
-      											<h4 class="panel-title">
-											        <a data-toggle="collapse" data-parent="#accordion" href="#collapse'.$i.'">
-											          '.substr($data['pseudo'],1,(strlen($data['pseudo'])-2));
-											          if ($data['confirmed']==0){
-												          		echo '<a class="pull-right">
-												          				<i class="glyphicon glyphicon-remove"></i>
-												          			  </a>';
-											          }
-
-											          echo '
-											        	<a class="pull-right" href="" data-toggle="modal" data-target="#mail">
-											        		<i class="glyphicon glyphicon-envelope"></i>
-												        </a>
-											        </a>
-    											</h4>
-    										</div>
-    										<div id="collapse'.$i.'" class="panel-collapse collapse">
-    											<div class="thumbnail"><img src="get_pic.php?code='.substr($data['user_no'],3,5).'" WIDTH=170 HEIGHT=180/></div>
-      											<table class="table">
-						                            <tbody>
-						                                <tr>
-						                                    <th>Nickname</th>
-						                                    <td><span class="pull-right">'.substr($data['pseudo'],1,(strlen($data['pseudo'])-2)).'</span></td>
-						                                </tr>
-						                                <tr>
-						                                    <th>User code</th>
-						                                    <td><span class="pull-right">'.$data['user_no'].'</span></td>
-						                                </tr>
-						                                <tr>
-						                                    <th>School</th>
-						                                    <td><span class="pull-right">'.substr($data['school'],1,(strlen($data['school'])-2)).'</span></t>
-						                                </tr>
-						                                <tr>
-						                                    <th>First name</th>
-						                                    <td><span class="pull-right">'.substr($data['fname'],1,(strlen($data['fname'])-2)).'</span></td>
-						                                </tr>
-						                                <tr>
-						                                    <th>Last name</th>
-						                                    <td><span class="pull-right">'.substr($data['lname'],1,(strlen($data['lname'])-2)).'</span></td>
-						                                </tr>
-						                                <tr>
-						                                    <th>Date of birth</th>
-						                                    <td><span class="pull-right">'.$data['date_naissance'].'</span></td>
-						                                </tr>
-						                                <tr>
-						                                    <th>Address</th>
-						                                    <td><span class="pull-right">'.substr($data['adresse'],1,(strlen($data['adresse'])-2)).'</span></td>
-						                                </tr>
-						                                <tr>
-						                                    <th>eMail</th>
-						                                    <td><span class="pull-right">'.substr($data['mail'],1,(strlen($data['mail'])-2)).'</span></td>
-						                                </tr>
-						                                <tr>
-						                                    <th>Phone number</th>
-						                                    <td><span class="pull-right">'.$data['phone'].'</span></td>
-						                                </tr>
-						                                <tr>
-						                                    <th>Sex</th>
-						                                    <td><span class="pull-right">'.substr($data['sexe'],1,(strlen($data['sexe'])-2)).'</span></td>
-						                                </tr>
-						                            </tbody>
-						                        </table>
-      											<!--div class="panel-body">
-        											
-      											</div-->
-    										</div>
-										</div>
-			            		';
-
-			            	};
-			            	?>
-			            </div>
-			            </div>
-			        </div>
-			    </div>
-			    
-			    <?php 
-			        $var=get_user_info($bdd,$_SESSION['user_id']);
-			    ?>
-			    
+				<div class="col-md-5">
+					<div class="panel panel-default">
+						<!-- Default panel contents -->
+						<div class="panel-heading">Tous les joueurs</div>
+						<!-- Table -->
+						<table class="table">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>Pseudo</th>
+									<th>Ecole</th>
+									<th>Positions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php $req=get_user_info($bdd,"all");
+									foreach($req as $user){							
+										echo '
+										<tr>
+											<td>'.$user[0].'</td>
+											<td>'.$user[11].'</td>
+											<td>'.$user[5].'</td>
+											<td>'.$user[14].'</td>
+										</tr>';
+									}
+								?>
+							</tbody>
+						</table>
+					</div>
+				</div>
 				<div class="col-md-4">
 					<div class="panel panel-default">
-						<div class="panel-heading">
-						    <h3 class="panel-title">Profile</h3>
-						</div>
-						<table class="table">
-						    <tbody>
-						        <tr>
-						            <th>Nickname</th>
-						            <td><?php echo('<span class="pull-right">'.$var[0].'</span>');?></td>
-						        </tr>
-						        <tr>
-						            <th>User code</th>
-						            <td><?php echo('<span class="pull-right">'.$var[9].'</span>');?></td>
-						        </tr>
-						        <tr>
-						            <th>School</th>
-						            <td><?php echo('<span class="pull-right">'.$var[3].'</span>');?></t>
-						        </tr>
-						        <tr>
-						            <th>First name</th>
-						            <td><?php echo('<span class="pull-right">'.$var[1].'</span>');?></td>
-						        </tr>
-						        <tr>
-						            <th>Last name</th>
-						            <td><?php echo('<span class="pull-right">'.$var[2].'</span>');?></td>
-						        </tr>
-						        <tr>
-						            <th>Date of birth</th>
-						            <td><?php echo('<span class="pull-right">'.$var[6].'</span>');?></td>
-						        </tr>
-						        <tr>
-						            <th>Address</th>
-						            <td><?php echo('<span class="pull-right">'.$var[8].'</span>');?></td>
-						        </tr>
-						        <tr>
-						            <th>eMail</th>
-						            <td><?php echo('<span class="pull-right">'.$var[4].'</span>');?></td>
-						        </tr>
-						        <tr>
-						            <th>Phone number</th>
-						            <td><?php echo('<span class="pull-right">'.$var[7].'</span>');?></td>
-						        </tr>
-						        <tr>
-						            <th>Sex</th>
-						            <td><?php echo('<span class="pull-right">'.$var[5].'</span>');?></td>
-						        </tr>
-						    </tbody>
-						</table>
+						<!-- Default panel contents -->
+						<div class="panel-heading">Créer un contrat</div>
+						<form class="form-horizontal" action="createc" method="post">
+							<div>
+								<div class="input-group">
+									<span class="input-group-addon">ID cible</span>
+									<input id="subject" name="idc" type="text" class="form-control" placeholder="">
+								</div>
+								<div class="input-group">
+									<span class="input-group-addon">ID tueur</span>
+									<input id="subject" name="idt" type="text" class="form-control" placeholder="subject">
+								</div>
+								<div class="input-group">
+									<span class="input-group-addon">date d'expiration</span>
+									<input id="subject" name="date" type="text" class="form-control" placeholder="">
+								</div>
+								<div class="modal-footer">
+						        	<button id="Submit" value="SUBMIT" type="submit" class="btn btn-primary"> Create </button>	
+							    </div>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
