@@ -34,6 +34,13 @@
 	                    <ul class="nav navbar-nav">
 	                        <li><a href="" data-toggle="modal" data-toggle="modal" data-target="#mail">Mail</a></li>
 	                        <li><a href="contrat">Gestionnaire de contrats</a></li>
+	                        <li class="dropdown">
+	                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Inscriptions<b class="caret"></b></a>
+	                            <ul class="dropdown-menu btn-toolbar">
+	                                <li><a href="game.php?action=register&do=1"><i class="glyphicon glyphicon-log-out "></i>Ouvrir</a></li>
+	                                <li><a href="game.php?action=register&do=0"><i class="glyphicon glyphicon-log-out "></i>Fermer</a></li>
+	                            </ul>
+	                        </li>
 	                    </ul>
 	                    <ul class="nav navbar-nav navbar-right">
 	                    	<li class="dropdown">
