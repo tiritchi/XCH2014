@@ -41,7 +41,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 						</table>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-5">
 					<div class="panel panel-default">
 						<!-- Default panel contents -->
 						<div class="panel-heading">Tous les joueurs</div>
@@ -49,6 +49,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 						<table class="table">
 							<thead>
 								<tr>
+									<th>ID</th>
 									<th>Pseudo</th>
 									<th>Ecole</th>
 									<th>Positions</th>
@@ -59,6 +60,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 									foreach($req as $user){							
 										echo '
 										<tr>
+											<td>'.$user[0].'</td>
 											<td>'.$user[11].'</td>
 											<td>'.$user[5].'</td>
 											<td>'.$user[14].'</td>
@@ -68,7 +70,12 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 							</tbody>
 						</table>
 					</div>
-					
+				</div>
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<!-- Default panel contents -->
+						<div class="panel-heading">Créer un contrat</div>
+					</div>
 				</div>
 			</div>
 		</div>
