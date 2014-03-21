@@ -51,7 +51,7 @@
                     </ul>
                     <div class="navbar-form navbar-right">
                         <?php 
-                            $monfichier = fopen('lib/register.txt', 'r+');
+                            $monfichier = fopen('include/lib/register.txt', 'r+');
                             $var=fgets($monfichier);
                             fclose($monfichier);
                             echo $var;
