@@ -88,7 +88,7 @@
 		$uid = intval($user_id);
 		$tid = intval($target_id);
 		$req = $bdd->prepare('INSERT INTO XCH14_contracts (contract_no,user_id,target_id,target_no,position,school,complete,exp_date,start_date) VALUES (?,?,?,?,?,?,?,?,NOW())');
-		$req->execute(array($cno,$user_id,$target_id,$target_no['user_no'],$pos,$school,'0',$exp_date));
+		$req->execute(array($cno,$user_id,$target_id,$target_no,$pos,$school,'0',$exp_date));
 		return $cno;
 	}
 
