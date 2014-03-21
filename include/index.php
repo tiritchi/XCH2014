@@ -50,8 +50,13 @@
                         <li><a href="#remerciements" data-toggle="tab">Remerciements</a></li>
                     </ul>
                     <div class="navbar-form navbar-right">
+                        <?php 
+                            $monfichier = fopen('lib/register.txt', 'r+');
+                            $var=fgets($monfichier);
+                            fclose($monfichier);
+                        ?>
                         <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Connexion</button>
-                        <a class="btn  btn-danger btn-sm disabled" role="button" href="register">>> Inscrivez vous <<</a>
+                        <a class=<?php if($var==1){echo '"btn  btn-danger btn-sm disabled"';} else {echo '"btn  btn-danger btn-sm"';} ?> role="button" href="register">>> Inscrivez vous <<</a>
                     </div>
                 </div>
             </div>
