@@ -7,6 +7,9 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
         $contrats=get_contracts($bdd,"all");
 		?>
 		<div class="jumbotron">
+			<div class="alert alert-warning">
+				<a class="alert-link">Création du crontrat en cours ... </a>
+			</div>
 			<div class="row">
 				<div class="col-md-3">
 					<div class="panel panel-default">
@@ -101,7 +104,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 
         <?php
         include 'footer.php';
-        echo '<meta http-equiv="refresh" content="0; url=admin">';
+        echo '<meta http-equiv="refresh" content="0; url=contrat">';
     }
 elseif(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SESSION['admin']) && $_SESSION['admin']=='FALSE')
     {               
