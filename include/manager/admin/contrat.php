@@ -83,11 +83,11 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 								</div>
 								<div class="input-group">
 									<span class="input-group-addon">ID tueur</span>
-									<input id="subject" name="idt" type="text" class="form-control" placeholder="subject">
+									<input id="subject" name="idt" type="text" class="form-control" placeholder="">
 								</div>
 								<div class="input-group">
 									<span class="input-group-addon">date d'expiration</span>
-									<input id="subject" name="date" type="text" class="form-control" placeholder="">
+									<input id="subject" name="date" type="text" class="form-control" placeholder="AAAA-MM-JJ">
 								</div>
 								<div class="modal-footer">
 						        	<button id="Submit" value="SUBMIT" type="submit" class="btn btn-primary"> Create </button>	
