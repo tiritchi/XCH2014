@@ -8,3 +8,4 @@ RewriteRule    ^logout$  /XCH2014/index.php?page=logout
 RewriteRule    ^post$  /XCH2014/index.php?page=post
 RewriteRule    ^mailer$	/XCH2014/index.php?page=mail
 RewriteRule    ^contrat$	/XCH2014/index.php?page=contrat
+RewriteRule    ^createc$	/XCH2014/index.php?page=createc

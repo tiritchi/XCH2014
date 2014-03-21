@@ -32,6 +32,9 @@ if (isset($_GET['page']) && $_GET['page'] != "")
 	case "contrat":
 		include($basepath."manager/admin/contrat.php");
 		break;
+	case "createc":
+		include($basepath."manager/admin/createc.php");
+		break;
 	default:
 		include($basepath."index.php");
     }

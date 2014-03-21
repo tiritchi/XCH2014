@@ -75,6 +75,25 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 					<div class="panel panel-default">
 						<!-- Default panel contents -->
 						<div class="panel-heading">Créer un contrat</div>
+						<form class="form-horizontal" action="createc" method="post">
+							<div>
+								<div class="input-group">
+									<span class="input-group-addon">ID cible</span>
+									<input id="subject" name="idc" type="text" class="form-control" placeholder="">
+								</div>
+								<div class="input-group">
+									<span class="input-group-addon">ID tueur</span>
+									<input id="subject" name="idt" type="text" class="form-control" placeholder="subject">
+								</div>
+								<div class="input-group">
+									<span class="input-group-addon">date d'expiration</span>
+									<input id="subject" name="date" type="text" class="form-control" placeholder="">
+								</div>
+								<div class="modal-footer">
+						        	<button id="Submit" value="SUBMIT" type="submit" class="btn btn-primary"> Create </button>	
+							    </div>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
