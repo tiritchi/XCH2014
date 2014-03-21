@@ -37,8 +37,8 @@
 	                        <li class="dropdown">
 	                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Inscriptions<b class="caret"></b></a>
 	                            <ul class="dropdown-menu btn-toolbar">
-	                                <li><a href="game.php?action=register&do=1"><i class="glyphicon glyphicon-log-out "></i>Ouvrir</a></li>
-	                                <li><a href="game.php?action=register&do=0"><i class="glyphicon glyphicon-log-out "></i>Fermer</a></li>
+	                                <li><a href="game.php?action=register&do=1">Ouvrir</a></li>
+	                                <li><a href="game.php?action=register&do=0">Fermer</a></li>
 	                            </ul>
 	                        </li>
 	                    </ul>
