@@ -100,12 +100,12 @@
 	function mark_as_complete (PDO $bdd,$contract_no,$target_no){// mark_as_complete(ref bdd, clef primaire du contrat) marque à 1 le champ 'complete' et renvoie true ou false si l'action à été effectuée
 		try 
 		{
-			$req2=$bdd->query("SELECT XCH14_contracts WHERE contract_no=$contract_no");
+			$req2=$bdd->query("SELECT * FROM XCH14_contracts WHERE contract_no=$contract_no");
 			$contrat=$req2->fetch();
-			if($contrat[4]==$target_no){
+			if($contrat['target_no']==$target_no){
 				$req=$bdd->exec("UPDATE XCH14_contracts SET complete ='1' WHERE contract_no=$contract_no");
 				//$req->execute(array('1',$contract_id));
-				$req3=$bdd->query("SELECT XCH14_users WHERE id=$contrat[0]");
+				$req3=$bdd->query("SELECT * FROM XCH14_users WHERE id=$contrat[0]");
 			}
 
 		}

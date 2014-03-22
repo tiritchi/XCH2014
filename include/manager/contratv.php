@@ -10,9 +10,9 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 
 		<?php
 		include 'footer.php';
-		mark_as_complete ($bdd,'"'.$_POST['cno'].'"',$_POST['tno']);
+		mark_as_complete ($bdd,$_POST['cno'],$_POST['tno']);
  		?>
-		<?php 	echo $_POST['cno'];	//echo '<meta http-equiv="refresh" content="0; url=board">'; 
+		<?php 	echo '<meta http-equiv="refresh" content="0; url=board">'; 
 				
 	
 	}
