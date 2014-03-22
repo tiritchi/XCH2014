@@ -22,7 +22,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 			elseif ($_GET['action']=="score") {
 				require('include/lib/functions.php');
 				$bdd=db_init();
-				$bdd->exec("UPDATE XCH14_users SET score=0");
+				$bdd->exec("UPDATE XCH14_users SET score='0'");
 			}
 		}
 		echo '<meta http-equiv="refresh" content="0; url=admin">';
