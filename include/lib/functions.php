@@ -385,7 +385,7 @@
 		 
 		// Actually create the file
 		// The w+ parameter will wipe out and overwrite any existing file with the same name
-		$handle = fopen($filename, 'w+');
+		$handle = fopen("save/".$filename, 'w+');
 		 
 		// Write the spreadsheet column titles / labels
 		//fputcsv($handle, array('Username','Email'));
