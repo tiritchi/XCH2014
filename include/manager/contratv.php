@@ -10,7 +10,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 
 		<?php
 		include 'footer.php';
-		 
+		echo '<meta http-equiv="refresh" content="0; url=board">';  
 
 				
 	
@@ -22,9 +22,3 @@ elseif(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset(
 else{
 		echo '<meta http-equiv="refresh" content="0; url=.">'; 
 	}
-?>
-
-
-
-
-	
