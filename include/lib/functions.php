@@ -382,11 +382,11 @@
 		//
 		// saving XCH14_users to csv file !!
 		//
-		$filename = "db_user_export_".time().".csv";
+		$filename = "save/db_user_export_".time().".csv";
 		 
 		// Actually create the file
 		// The w+ parameter will wipe out and overwrite any existing file with the same name
-		$handle = fopen("save/".$filename, 'w+');
+		$handle = fopen($filename, 'w+');
 		 
 		// Write the spreadsheet column titles / labels
 		fputcsv($handle, array('prénom','nom','mail','tel','adresse','date_naissance','pseudo','user_no','score'));
@@ -405,11 +405,11 @@
 		//
 		//saving XCH14_contracts to csv file !!
 		//
-		$filename2 = "db_contracts_export_".time().".csv";
+		$filename2 = "save/db_contracts_export_".time().".csv";
 		 
 		// Actually create the file
 		// The w+ parameter will wipe out and overwrite any existing file with the same name
-		$handle = fopen("save/".$filename2, 'w+');
+		$handle = fopen($filename2, 'w+');
 		 
 		// Write the spreadsheet column titles / labels
 		fputcsv($handle, array('prénom','nom','mail','tel','adresse','date_naissance','pseudo','user_no','score'));
@@ -425,7 +425,7 @@
 
 		//sending mail
 		global $url;
-		$body= '<a href="'.$url.$filename.'">'.$url.$filename.'</a></br><a href="'.$url.$filename2.'">'.$url.$filename2.'</a>';
+		$body= '<a href="'.$url.$filename.'">'.$url.$filename.'</a><br/><br/><a href="'.$url.$filename2.'">'.$url.$filename2.'</a>';
 		send_mail(NULL,NULL,NULL,"backup",$body);
 
 	}
