@@ -29,7 +29,7 @@
 											<td>'.$cible.'</td>
 											<td>'.$tueur.'</td>
 											<td><a href="contrat_pdf.php?cno='.$contrat[3].'&pseudo='.$tueur.'" class=" glyphicon glyphicon-file"></a></td>
-											<td>';if($ar[1]==1){
+											<td>';if($contrat[1]==1){
 												    echo '<i class="glyphicon glyphicon-ok pull-right"></i>';
 												}'
 										</tr>';
