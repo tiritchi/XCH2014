@@ -1,6 +1,6 @@
 		<div class="jumbotron">
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-md-4">
 					<div class="panel panel-default">
 						<!-- Default panel contents -->
 						<div class="panel-heading">Tous les Contrats</div>
@@ -12,6 +12,7 @@
 									<th>Cible</th>
 									<th>Tueur</th>
 									<th>PDF</th>
+									<th>Réalisé</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -28,6 +29,9 @@
 											<td>'.$cible.'</td>
 											<td>'.$tueur.'</td>
 											<td><a href="contrat_pdf.php?cno='.$contrat[3].'&pseudo='.$tueur.'" class=" glyphicon glyphicon-file"></a></td>
+											<td>';if($ar[1]==1){
+												    echo '<i class="glyphicon glyphicon-ok pull-right"></i>';
+												}'
 										</tr>';
 									}
 								?>
@@ -65,7 +69,7 @@
 						</table>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<div class="panel panel-default">
 						<!-- Default panel contents -->
 						<div class="panel-heading">Créer un contrat</div>
