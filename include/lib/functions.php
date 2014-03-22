@@ -388,7 +388,7 @@
 		$handle = fopen("save/".$filename, 'w+');
 		 
 		// Write the spreadsheet column titles / labels
-		//fputcsv($handle, array('Username','Email'));
+		fputcsv($handle, array('prénom','nom','mail','tel','adresse','date_naissance','pseudo','user_no','score'));
 		 
 		// Write all the user records to the spreadsheet
 		foreach($results as $row)
