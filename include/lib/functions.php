@@ -93,8 +93,13 @@
 	}
 
 	function delete_contract(PDO $bdd,$cno){
-		$req=$bdd->prepare("DELETE FROM XCH14_contracts WHERE contract_no=?");
-		$req->execute(array($cno));
+		if($cno=="all"){
+			$bdd->exec("DELETE FROM XCH14_contracts");
+		}
+		else{
+			$req=$bdd->prepare("DELETE FROM XCH14_contracts WHERE contract_no=?");
+			$req->execute(array($cno));
+		}
 	}
 
 	function mark_as_complete (PDO $bdd,$contract_no,$target_no){// mark_as_complete(ref bdd, clef primaire du contrat) marque à 1 le champ 'complete' et renvoie true ou false si l'action à été effectuée
