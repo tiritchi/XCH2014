@@ -372,4 +372,36 @@
 			return array_slice($arr, $taille-5);
 		}
 	}
+
+	function save_db($table){
+		$bdd=db_init();
+		$file = 'export';
+		$result = $bdd->query("SHOW COLUMNS FROM ".$table."");
+		$i = 0;
+		if (count($result) > 0)
+		{
+		while ($row = $result->fetch())
+		{
+		$csv_output .= $row['Field']."; ";
+		$i++;
+		}
+		}
+		 
+		$csv_output .= "\n";
+		 
+		$values = $bdd->query("SELECT * FROM ".$table."");
+		while ($rowr = $values->fetch())
+		{
+		for ($j=0;$j<$i;$j++)
+		{
+		$csv_output .= $rowr[$j]."; ";
+		}
+		$csv_output .= "\n";
+		}
+		 
+		$filename = $file."_".date("Y-m-d_H-i",time());
+		 
+		print $csv_output;
+		exit;
+	}
 ?>

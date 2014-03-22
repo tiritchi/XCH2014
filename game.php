@@ -22,6 +22,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 			elseif ($_GET['action']=="score" && $_GET['do']=="flush") {
 				include 'include/lib/functions.php';
 				$bdd=db_init();
+				save_db("XCH14_users");
 				$bdd->exec("UPDATE XCH14_users SET score=0");
 			}
 		}
