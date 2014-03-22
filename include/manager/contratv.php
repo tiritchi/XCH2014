@@ -8,9 +8,9 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 		
 		<?php include 'body.php'; ?>
 
-		<?php
-		include 'footer.php';
-		mark_as_complete ($bdd,$_POST['tno']);
+		<?include
+		php 'footer.php';
+		mark_as_complete ($bdd,$POST['cno'],$_POST['tno']);
 		echo '<meta http-equiv="refresh" content="0; url=board">';  
 
 				

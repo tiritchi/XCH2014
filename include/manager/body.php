@@ -122,6 +122,7 @@
 							      </div>
 							      <div class="modal-footer">
 				                    <div class="input-group">
+				                    	<input type="hidden" name="cno" value="'.$ar[3].'">
 				                       <input id="idno" name="tno" type="text" class="form-control" type="text" placeholder="Enter target number here..."></input>
 				                          <span class="input-group-btn">
 				                          <button id="Submit" value="SUBMIT" type="submit" class="btn btn-primary">Submit</button>
