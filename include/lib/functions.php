@@ -105,7 +105,7 @@
 			if($contrat['target_no']==$target_no){
 				$req=$bdd->exec("UPDATE XCH14_contracts SET complete ='1' WHERE contract_no=$contract_no");
 				//$req->execute(array('1',$contract_id));
-				$req3=$bdd->query("SELECT * FROM XCH14_users WHERE id=$contrat[0]");
+				$bdd->exec("UPDATE XCH14_users SET score=score+1 WHERE id=$contrat[0]");
 			}
 
 		}
