@@ -24,7 +24,7 @@
 				                		}
 				                		else {
 										    foreach ($array as $ar) {
-											    echo '<a href="" class="list-group-item"';if($ar[1]==0){ echo 'data-toggle="modal" data-target="#'.$ar[3];} echo '">'.$ar[3];
+											    echo '<a class="list-group-item"';if($ar[1]==0){ echo 'href="" data-toggle="modal" data-target="#'.$ar[3];} echo '">'.$ar[3];
 											    if($ar[1]==1){
 												    echo '<i class="glyphicon glyphicon-ok pull-right"></i>';
 												}
