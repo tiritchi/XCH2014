@@ -41,6 +41,15 @@
 	                                <li><a href="game.php?action=register&do=0">Fermer</a></li>
 	                            </ul>
 	                        </li>
+	                        <li class="dropdown">
+	                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Phase de jeu<b class="caret"></b></a>
+	                            <ul class="dropdown-menu btn-toolbar">
+	                                <li><a href="game.php?action=game&do=0">Arret</a></li>
+	                                <li><a href="game.php?action=game&do=1">Phase 1</a></li>
+	                                <li><a href="game.php?action=game&do=2">Phase 2</a></li>
+	                                <li><a href="game.php?action=game&do=3">Phase 3</a></li>
+	                            </ul>
+	                        </li>
 	                    </ul>
 	                    <ul class="nav navbar-nav navbar-right">
 	                    	<li class="dropdown">
