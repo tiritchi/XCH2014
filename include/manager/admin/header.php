@@ -50,6 +50,7 @@
 	                                <li><a href="game.php?action=game&do=3">Phase 3</a></li>
 	                            </ul>
 	                        </li>
+	                        <li><a href="game.php?action=score">Réinitialiser scores</a></li>
 	                    </ul>
 	                    <ul class="nav navbar-nav navbar-right">
 	                    	<li class="dropdown">

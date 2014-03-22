@@ -19,6 +19,11 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 				fputs($monfichier, $_GET['do']); // On écrit le nouveau nombre de pages vues			 
 				fclose($monfichier);
 			}
+			elseif ($_GET['action']=="score") {
+				require('include/lib/functions.php');
+				$bdd=db_init();
+				$bdd->exec("UPDATE XCH14_users SET score=0");
+			}
 		}
 		echo '<meta http-equiv="refresh" content="0; url=admin">';
     }
