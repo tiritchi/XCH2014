@@ -405,6 +405,9 @@
 		//
 		//saving XCH14_contracts to csv file !!
 		//
+		$sql2 = "SELECT * FROM XCH14_users ORDER BY pseudo";
+		$results2 = $bdd->query($sql2);
+
 		$filename2 = "save/db_contracts_export_".time().".csv";
 		 
 		// Actually create the file
@@ -412,12 +415,12 @@
 		$handle = fopen($filename2, 'w+');
 		 
 		// Write the spreadsheet column titles / labels
-		fputcsv($handle, array('prénom','nom','mail','tel','adresse','date_naissance','pseudo','user_no','score'));
+		fputcsv($handle, array('contract_no','id_tueur','id_cible','no_cible','école','complété'));
 		 
 		// Write all the user records to the spreadsheet
-		foreach($results as $row)
+		foreach($results2 as $row)
 		{
-		    fputcsv($handle, array($row['fname'], $row['lname'], $row['mail'], $row['phone'], $row['adresse'], $row['date_naissance'], $row['pseudo'], $row['user_no'], $row['score']));
+		    fputcsv($handle, array($row['contract_no'], $row['user_id'], $row['target_id'], $row['target_no'], $row['school'], $row['complete']));
 		}
 		 
 		// Finish writing the file
