@@ -47,7 +47,7 @@
                             $var = fgets($monfichier); // On lit la première ligne (nombre de pages vues)
                             fclose($monfichier);
                         ?>
-                        <li <?php if($var=0){echo 'class="active"';}?> ><a href="#accueil" data-toggle="tab">Accueil</a></li>
+                        <li <?php if($var==0){echo 'class="active"';}?> ><a href="#accueil" data-toggle="tab">Accueil</a></li>
                         <li <?php if($var!=0){echo 'class="active"';}?> ><a href="#news" data-toggle="tab">News</a></li>
                         <li><a href="#regles" data-toggle="tab">Règles</a></li>
                         <li><a href="#jeu" data-toggle="tab">Le jeu</a></li>
@@ -80,10 +80,10 @@
                 <div class="row">                    
                     <div class="col-lg-8">
                         <div class="tab-content">
-                            <div id="accueil" class="tab-pane fade in active">
+                            <div id="accueil" <?php if($var==0){echo 'class="tab-pane fade in active"';}else{echo 'class="tab-pane fade "';}?> >
                                 <?php include 'include/accueil.html';?>
                             </div>
-                            <div id="news" class="tab-pane fade">
+                            <div id="news" <?php if($var!=0){echo 'class="tab-pane fade in active"';}else{echo 'class="tab-pane fade "';}?> >
                                 <?php include 'include/news.html';?>
                             </div>
                             <div id="regles" class="tab-pane fade">
