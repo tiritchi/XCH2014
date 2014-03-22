@@ -376,10 +376,8 @@
 	function save_db($table){
 		$bdd=db_init();
 		$file = 'export';
-
-		 
-		$values = $bdd->query("SELECT * FROM ".$table."");
-		while ($rowr = $values->fetch())
+		$val = $bdd->query("SELECT * FROM ".$table."");
+		while ($rowr = $val->fetch())
 		{
 		for ($j=0;$j<$i;$j++)
 		{
