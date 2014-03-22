@@ -376,18 +376,7 @@
 	function save_db($table){
 		$bdd=db_init();
 		$file = 'export';
-		$result = $bdd->query("SHOW COLUMNS FROM ".$table."");
-		$i = 0;
-		if (count($result) > 0)
-		{
-		while ($row = $result->fetch())
-		{
-		$csv_output .= $row['Field']."; ";
-		$i++;
-		}
-		}
-		 
-		$csv_output .= "\n";
+
 		 
 		$values = $bdd->query("SELECT * FROM ".$table."");
 		while ($rowr = $values->fetch())
