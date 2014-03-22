@@ -49,7 +49,7 @@
 				<div class="col-md-4">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-						    <h3 class="panel-title">Profile<div class="pull-right">Score : <?php echo $var[10];?></div></h3>
+						    <h3 class="panel-title">Profile<div class="pull-right"><span class="badge">Score : <?php echo $var[10];?></span></div></h3>
 						</div>
 						<?php echo '<div class="thumbnail"><img src="get_pic.php?code='.substr($var[9],3,5).'" WIDTH=170 HEIGHT=180/></div>';?>
 						<table class="table">
