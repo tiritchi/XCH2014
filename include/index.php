@@ -42,8 +42,13 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#accueil" data-toggle="tab">Accueil</a></li>
-                        <li><a href="#news" data-toggle="tab">News</a></li>
+                        <?php                             
+                            $monfichier = fopen('include/lib/game.txt', 'r+');
+                            $var = fgets($monfichier); // On lit la première ligne (nombre de pages vues)
+                            fclose($monfichier);
+                        ?>
+                        <li <?php if($var=0){echo 'class="active"';}?> ><a href="#accueil" data-toggle="tab">Accueil</a></li>
+                        <li <?php if($var!=0){echo 'class="active"';}?> ><a href="#news" data-toggle="tab">News</a></li>
                         <li><a href="#regles" data-toggle="tab">Règles</a></li>
                         <li><a href="#jeu" data-toggle="tab">Le jeu</a></li>
                         <li><a href="#contact" data-toggle="tab">Contact</a></li>
@@ -96,7 +101,11 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                       <?php //include 'include/top5.php';?> 
+                        <?php 
+                            if($var!=0){
+                                include 'include/top5.php';
+                            }
+                        ?> 
                     </div>
                 </div>
             </div>
