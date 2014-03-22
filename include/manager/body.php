@@ -24,7 +24,7 @@
 				                		}
 				                		else {
 										    foreach ($array as $ar) {
-											    echo '<a href="" class="list-group-item" data-toggle="modal" data-target="#'.$ar[3].'">'.$ar[3];
+											    echo '<a href="" class="list-group-item"';if($ar[1]==0){ echo 'data-toggle="modal" data-target="#'.$ar[3]} echo '">'.$ar[3];
 											    if($ar[1]==1){
 												    echo '<i class="glyphicon glyphicon-ok pull-right"></i>';
 												}
@@ -102,36 +102,37 @@
 			<?php
 				foreach ($array as $ar) {
 					$tar=get_user_info($bdd,$ar[2]);
-					echo '
-				<!-- Modal -->
-				<form class="form-horizontal" action="validc" method="post">
-					<div class="modal fade" id="'.$ar[3].'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					  <div class="modal-dialog">
-					    <div class="modal-content">
-					      <div class="modal-body">
-		                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		                        <div class="row">
-		                            <div class="col-md-3">
-		                                <img src="get_pic.php?code='.substr($tar[9],3,5).'" WIDTH=170 HEIGHT=180 class="img-thumbnail"></img>
-		                            </div>
-		                            <div class="col-md-3">
-		                                  <h2>'.$ar[3].'   <small>'.$tar[0].'</small><br /></h2>
-		                                  Votre contrat (pdf) >>> <a href="contrat_pdf.php?cno='.$ar[3].'&pseudo='.$tar[0].'" class=" glyphicon glyphicon-file"></a>
-		                            </div>
-                                </div>
-					      </div>
-					      <div class="modal-footer">
-		                    <div class="input-group">
-		                       <input id="idno" name="tno" type="text" class="form-control" type="text" placeholder="Enter target number here..."></input>
-		                          <span class="input-group-btn">
-		                          <button id="Submit" value="SUBMIT" type="submit" class="btn btn-primary">Submit</button>
-		                       </span>
-		                    </div>
-		                  </div>
-					    </div>
-					  </div>
-					</div>
-				</form>';
+					if($ar[1]==0){ echo '
+						<!-- Modal -->
+						<form class="form-horizontal" action="validc" method="post">
+							<div class="modal fade" id="'.$ar[3].'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							  <div class="modal-dialog">
+							    <div class="modal-content">
+							      <div class="modal-body">
+				                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				                        <div class="row">
+				                            <div class="col-md-3">
+				                                <img src="get_pic.php?code='.substr($tar[9],3,5).'" WIDTH=170 HEIGHT=180 class="img-thumbnail"></img>
+				                            </div>
+				                            <div class="col-md-3">
+				                                  <h2>'.$ar[3].'   <small>'.$tar[0].'</small><br /></h2>
+				                                  Votre contrat (pdf) >>> <a href="contrat_pdf.php?cno='.$ar[3].'&pseudo='.$tar[0].'" class=" glyphicon glyphicon-file"></a>
+				                            </div>
+		                                </div>
+							      </div>
+							      <div class="modal-footer">
+				                    <div class="input-group">
+				                       <input id="idno" name="tno" type="text" class="form-control" type="text" placeholder="Enter target number here..."></input>
+				                          <span class="input-group-btn">
+				                          <button id="Submit" value="SUBMIT" type="submit" class="btn btn-primary">Submit</button>
+				                       </span>
+				                    </div>
+				                  </div>
+							    </div>
+							  </div>
+							</div>
+						</form>';
+					}
 				}
 			?>
 		</div>
