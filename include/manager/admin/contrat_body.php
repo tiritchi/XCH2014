@@ -8,7 +8,7 @@
 						<table class="table">
 							<thead>
 								<tr>
-									<th><a href="deletec.php?cno=all"><i class="glyphicon glyphicon-remove"></i></a>Del</th>
+									<th><a href="deletec.php?cno=all"><i class="glyphicon glyphicon-remove"></i></a>   Del</th>
 									<th>Cible</th>
 									<th>Tueur</th>
 									<th>PDF</th>
