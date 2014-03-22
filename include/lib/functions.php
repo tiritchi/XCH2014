@@ -377,7 +377,7 @@
 		// Connect and query the database for the users
 		$bdd=db_init();
 		$sql = "SELECT * FROM XCH14_users ORDER BY pseudo";
-		$results = $conn->query($sql);
+		$results = $bdd->query($sql);
 		 
 		// Pick a filename and destination directory for the file
 		// Remember that the folder where you want to write the file has to be writable
