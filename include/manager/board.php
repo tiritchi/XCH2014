@@ -18,15 +18,26 @@ if(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset($_SE
 			            <div class="panel-body">
 			                <div class="list-group">
 			                	<?php
-			                		$array=get_contracts($bdd,$_SESSION['user_id']);
-			                		if ($array==NULL) {
-			                		    echo 'pas de contrats';
-			                		}
-			                		else {
-									    foreach ($array as $ar) {
-										    echo '<a href="" class="list-group-item" data-toggle="modal" data-target="#'.$ar[3].'">';
-										    echo $ar[3].'</a>';
+			                		$monfichier = fopen('include/lib/game.txt', 'r+');
+									$var = fgets($monfichier); // On lit la première ligne (nombre de pages vues)
+									fclose($monfichier);
+									if($var==0){
+										echo 'Le jeu n\'à pas encore commencé';
+									}
+									elseif($var==1 || $var==2){
+				                		$array=get_contracts($bdd,$_SESSION['user_id']);
+				                		if ($array==NULL) {
+				                		    echo 'pas de contrats';
+				                		}
+				                		else {
+										    foreach ($array as $ar) {
+											    echo '<a href="" class="list-group-item" data-toggle="modal" data-target="#'.$ar[3].'">';
+											    echo $ar[3].'</a>';
+											}
 										}
+									}
+									elseif($var==3){
+										echo 'Eliminez Le parrain';
 									}
 								?>
                             </div>
