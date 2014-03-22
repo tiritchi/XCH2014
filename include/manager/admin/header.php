@@ -48,9 +48,10 @@
 	                                <li><a href="game.php?action=game&do=1">Phase 1</a></li>
 	                                <li><a href="game.php?action=game&do=2">Phase 2</a></li>
 	                                <li><a href="game.php?action=game&do=3">Phase 3</a></li>
+	                                <li class="divider"></li>
+	                                <li><a href="game.php?action=score&do=flush" class="list-group-item list-group-item-danger">Réinitialiser scores</a></li>
 	                            </ul>
 	                        </li>
-	                        <li><a href="game.php?action=score&do=flush">Réinitialiser scores</a></li>
 	                    </ul>
 	                    <ul class="nav navbar-nav navbar-right">
 	                    	<li class="dropdown">
