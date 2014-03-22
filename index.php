@@ -36,7 +36,7 @@ if (isset($_GET['page']) && $_GET['page'] != "")
 		include($basepath."manager/admin/createc.php");
 		break;
 	case "validc":
-		include($basepath."manager/contractv.php");
+		include($basepath."manager/contratv.php");
 		break;
 	default:
 		include($basepath."index.php");
