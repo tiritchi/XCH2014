@@ -379,8 +379,9 @@
 		$sql = "SELECT * FROM XCH14_users ORDER BY pseudo";
 		$results = $bdd->query($sql);
 		 
-		// Pick a filename and destination directory for the file
-		// Remember that the folder where you want to write the file has to be writable
+		//
+		// saving XCH14_users to csv file !!
+		//
 		$filename = "db_user_export_".time().".csv";
 		 
 		// Actually create the file
@@ -398,5 +399,34 @@
 		 
 		// Finish writing the file
 		fclose($handle);
+
+
+
+		//
+		//saving XCH14_contracts to csv file !!
+		//
+		$filename2 = "db_contracts_export_".time().".csv";
+		 
+		// Actually create the file
+		// The w+ parameter will wipe out and overwrite any existing file with the same name
+		$handle = fopen("save/".$filename2, 'w+');
+		 
+		// Write the spreadsheet column titles / labels
+		fputcsv($handle, array('prénom','nom','mail','tel','adresse','date_naissance','pseudo','user_no','score'));
+		 
+		// Write all the user records to the spreadsheet
+		foreach($results as $row)
+		{
+		    fputcsv($handle, array($row['fname'], $row['lname'], $row['mail'], $row['phone'], $row['adresse'], $row['date_naissance'], $row['pseudo'], $row['user_no'], $row['score']));
+		}
+		 
+		// Finish writing the file
+		fclose($handle);
+
+		//sending mail
+		global $url
+		$body= "<a href=".$url.$filename">".$url.$filename."</a></br><a href=".$url.$filename2">".$url.$filename2."</a>";
+		send_mail(,,,"backup",$body);
+
 	}
 ?>
