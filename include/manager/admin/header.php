@@ -42,14 +42,16 @@
 	                            </ul>
 	                        </li>
 	                        <li class="dropdown">
-	                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Phase de jeu<b class="caret"></b></a>
+	                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Gestionnaire de jeu<b class="caret"></b></a>
 	                            <ul class="dropdown-menu btn-toolbar">
 	                                <li><a href="game.php?action=game&do=0">Arret</a></li>
 	                                <li><a href="game.php?action=game&do=1">Phase 1</a></li>
 	                                <li><a href="game.php?action=game&do=2">Phase 2</a></li>
 	                                <li><a href="game.php?action=game&do=3">Phase 3</a></li>
 	                                <li class="divider"></li>
-	                                <li><a href="game.php?action=score&do=flush" class="list-group-item list-group-item-danger">Réinitialiser scores</a></li>
+	                                <li><a href="game.php?action=game&do=dl" class="list-group-item list-group-item-info">Sauvegarde jeu</a></li>
+	                                <li><a href="game.php?action=score&do=flush" class="list-group-item list-group-item-danger">/!\ Réinitialiser scores /!\</a></li>
+	                                <li><a href="game.php?action=game&do=flush" class="list-group-item list-group-item-danger">/!\ Réinitialiser scores & contrats /!\</a></li>
 	                            </ul>
 	                        </li>
 	                    </ul>
