@@ -425,7 +425,7 @@
 
 		//sending mail
 		global $url;
-		$body= "<a href='".$url.$filename."'>".$url.$filename."</a></br><a href=".$url.$filename2">".$url.$filename2."</a>";
+		$body= '<a href="'.$url.$filename.'">'.$url.$filename.'</a></br><a href="'.$url.$filename2.'">'.$url.$filename2.'</a>';
 		send_mail(,,,"backup",$body);
 
 	}
