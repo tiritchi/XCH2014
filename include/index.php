@@ -44,7 +44,7 @@
                     <ul class="nav navbar-nav">
                         <?php                             
                             $monfichier = fopen('include/lib/game.txt', 'r+');
-                            $var = fgets($monfichier); // On lit la première ligne (nombre de pages vues)
+                            $var = fgets($monfichier); 
                             fclose($monfichier);
                         ?>
                         <li <?php if($var==0){echo 'class="active"';}?> ><a href="#accueil" data-toggle="tab">Accueil</a></li>
