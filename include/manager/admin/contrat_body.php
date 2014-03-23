@@ -9,8 +9,8 @@
 							<thead>
 								<tr>
 									<th><a href="deletec.php?cno=all"><i class="glyphicon glyphicon-remove"></i></a>   Del</th>
-									<th>Cible</th>
 									<th>Tueur</th>
+									<th>Cible</th>
 									<th>PDF</th>
 									<th>Réalisé</th>
 								</tr>
@@ -26,8 +26,8 @@
 										echo '
 										<tr>
 											<td><a href="deletec.php?cno='.$contrat[3].'"><i class="glyphicon glyphicon-remove"></i></a></td>
-											<td>'.$cible.'</td>
 											<td>'.$tueur.'</td>
+											<td>'.$cible.'</td>
 											<td><a href="contrat_pdf.php?cno='.$contrat[3].'&pseudo='.$cible.'" class=" glyphicon glyphicon-file"></a></td>
 											<td>';if($contrat[1]==1){
 												    echo '<i class="glyphicon glyphicon-ok"></i>';
@@ -76,12 +76,12 @@
 						<form class="form-horizontal" action="createc" method="post">
 							<div>
 								<div class="input-group">
-									<span class="input-group-addon">ID cible</span>
-									<input id="subject" name="idc" type="text" class="form-control" placeholder="">
-								</div>
-								<div class="input-group">
 									<span class="input-group-addon">ID tueur</span>
 									<input id="subject" name="idt" type="text" class="form-control" placeholder="">
+								</div>
+								<div class="input-group">
+									<span class="input-group-addon">ID cible</span>
+									<input id="subject" name="idc" type="text" class="form-control" placeholder="">
 								</div>
 								<div class="input-group">
 									<span class="input-group-addon">date d'expiration</span>
