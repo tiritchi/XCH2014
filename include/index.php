@@ -55,8 +55,14 @@
                         <li><a href="#remerciements" data-toggle="tab">Remerciements</a></li>
                     </ul>
                     <div class="navbar-form navbar-right">
+                        <?php 
+                            $monfichier2 = fopen('include/lib/game.txt', 'r+');
+                            $var2=fgets($monfichier2);
+                            fclose($monfichier2);
+                            echo $var2;
+                        ?>
                         <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Connexion</button>
-                        <a class=<?php if($var==1){echo '"btn  btn-danger btn-sm"';} else {echo '"btn  btn-danger btn-sm disabled"';} ?> role="button" href="register">>> Inscrivez vous <<</a>
+                        <a class=<?php if($var2==1){echo '"btn  btn-danger btn-sm"';} else {echo '"btn  btn-danger btn-sm disabled"';} ?> role="button" href="register">>> Inscrivez vous <<</a>
                     </div>
                 </div>
             </div>
