@@ -389,12 +389,12 @@
 		$handle = fopen($filename, 'w+');
 		 
 		// Write the spreadsheet column titles / labels
-		fputcsv($handle, array('prénom','nom','mail','tel','adresse','date_naissance','pseudo','user_no','score'));
+		fputcsv($handle, array('prénom','nom','école','mail','tel','adresse','date_naissance','pseudo','user_no','score'));
 		 
 		// Write all the user records to the spreadsheet
 		foreach($results as $row)
 		{
-		    fputcsv($handle, array($row['fname'], $row['lname'], $row['mail'], $row['phone'], $row['adresse'], $row['date_naissance'], $row['pseudo'], $row['user_no'], $row['score']));
+		    fputcsv($handle, array($row['fname'], $row['lname'], $row['school'], $row['mail'], $row['phone'], $row['adresse'], $row['date_naissance'], $row['pseudo'], $row['user_no'], $row['score']));
 		}
 		 
 		// Finish writing the file
