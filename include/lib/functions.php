@@ -254,14 +254,23 @@
 		}
 		return 'sent';
 	}
+	function reset_password($newp,$mail,$code){
+		//hashage du password
+        $hasher = new PasswordHash(8, FALSE);
+        $hash = $hasher->HashPassword($newp);
+        //password hashé
+
+        $subject="Modification de mot passe";
+        $body="Votre mot de passe à bien été modifié<br>Tentez de vous reconnecter vec votre nouveau mot de passe,<br> si celui-ci ne fonctionne toujours pas contactez l'administrateur.<br> A bientôt<br><br> Webmaster";
+		//send_mail(NULL,$mail,NULL,$subject,$body);
+	}
 
 	function register(PDO $bdd,$psswd,$lname,$fname,$email,$phone,$school,$sex,$addA,$addB,$addC,$bd_y,$bd_m,$bd_d,$nn,$pos1,$pos2,$pos3,$pos4,$pos5){
 		srand();
 
 		//hashage du password
-		$password = $_POST['userpsswd'];
         $hasher = new PasswordHash(8, FALSE);
-        $hash = $hasher->HashPassword($password);
+        $hash = $hasher->HashPassword($psswd);
         //password hashé
 
         //préparation des données
@@ -274,7 +283,7 @@
 		$adress = $bdd->quote($_POST['Adress_a']."-".$_POST['Adress_pc']."-".$_POST['Adress_c']);
 		$date = $_POST['Bd_y']."-".$_POST['Bd_m']."-".$_POST['Bd_d'];
 		$nick = $bdd->quote($_POST['Nn']);
-		$psswd = $hash;
+		$password = $hash;
 		$ucode = gen_user_code($_POST['School'],$_POST['Sexe'],$_POST['Phone']);
 		$position = $pos1."-".$pos2."-".$pos3."-".$pos4."-".$pos5;
 
@@ -294,7 +303,7 @@
 		    'adresse'=>$adress,
 		    'date_n'=>$date,
 		    'pseudo'=>$nick,
-		    'psswd'=>$psswd,
+		    'psswd'=>$password,
 		    'ucode'=>$ucode,
 		    'pos'=>$position,
 		    'conf'=>$confirmation_code,
