@@ -45,17 +45,17 @@
 		                            fclose($monfichier2);
 		                        ?>
 	                            <ul class="dropdown-menu btn-toolbar">
-	                                <li><a href="game.php?action=register&do=1"><?php if($var==1){ echo'<i class="glyphicon glyphicon-log-out pull-left"></i>';}?>Ouvrir</a></li>
-	                                <li><a href="game.php?action=register&do=0"><?php if($var==0){ echo'<i class="glyphicon glyphicon-log-out pull-left"></i>';}?>Fermer</a></li>
+	                                <li><a href="game.php?action=register&do=1"><?php if($var==1){ echo'<i class="glyphicon glyphicon-ok pull-left"></i>';}?>Ouvrir</a></li>
+	                                <li><a href="game.php?action=register&do=0"><?php if($var==0){ echo'<i class="glyphicon glyphicon-ok pull-left"></i>';}?>Fermer</a></li>
 	                            </ul>
 	                        </li>
 	                        <li class="dropdown">
 	                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Gestionnaire de jeu<b class="caret"></b></a>
 	                            <ul class="dropdown-menu btn-toolbar">
-	                                <li><a href="game.php?action=game&do=0"><?php if($var2==0){ echo'<i class="glyphicon glyphicon-log-out pull-left"></i>';}?>Arret</a></li>
-	                                <li><a href="game.php?action=game&do=1"><?php if($var2==1){ echo'<i class="glyphicon glyphicon-log-out pull-left"></i>';}?>Phase 1</a></li>
-	                                <li><a href="game.php?action=game&do=2"><?php if($var2==2){ echo'<i class="glyphicon glyphicon-log-out pull-left"></i>';}?>Phase 2</a></li>
-	                                <li><a href="game.php?action=game&do=3"><?php if($var2==3){ echo'<i class="glyphicon glyphicon-log-out pull-left"></i>';}?>Phase 3</a></li>
+	                                <li><a href="game.php?action=game&do=0"><?php if($var2==0){ echo'<i class="glyphicon glyphicon-ok pull-left"></i>';}?>Arret</a></li>
+	                                <li><a href="game.php?action=game&do=1"><?php if($var2==1){ echo'<i class="glyphicon glyphicon-ok pull-left"></i>';}?>Phase 1</a></li>
+	                                <li><a href="game.php?action=game&do=2"><?php if($var2==2){ echo'<i class="glyphicon glyphicon-ok pull-left"></i>';}?>Phase 2</a></li>
+	                                <li><a href="game.php?action=game&do=3"><?php if($var2==3){ echo'<i class="glyphicon glyphicon-ok pull-left"></i>';}?>Phase 3</a></li>
 	                                <li class="divider"></li>
 	                                <li><a href="game.php?action=game&do=dl" class="list-group-item list-group-item-info">Sauvegarde jeu</a></li>
 	                                <li><a href="game.php?action=score&do=flush" class="list-group-item list-group-item-danger">/!\ Réinitialiser scores /!\</a></li>
