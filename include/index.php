@@ -56,7 +56,7 @@
                     </ul>
                     <div class="navbar-form navbar-right">
                         <?php 
-                            $monfichier2 = fopen('include/lib/game.txt', 'r+');
+                            $monfichier2 = fopen('include/lib/register.txt', 'r+');
                             $var2=fgets($monfichier2);
                             fclose($monfichier2);
                             echo $var2;
