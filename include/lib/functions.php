@@ -405,7 +405,7 @@
 		//
 		//saving XCH14_contracts to csv file !!
 		//
-		$sql2 = "SELECT * FROM XCH14_users ORDER BY pseudo";
+		$sql2 = "SELECT * FROM XCH14_contracts ORDER BY user_id";
 		$results2 = $bdd->query($sql2);
 
 		$filename2 = "save/db_contracts_export_".time().".csv";
