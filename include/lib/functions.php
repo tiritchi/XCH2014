@@ -255,14 +255,42 @@
 		return 'sent';
 	}
 	function reset_password($newp,$mail,$code){
-		//hashage du password
-        $hasher = new PasswordHash(8, FALSE);
-        $hash = $hasher->HashPassword($newp);
-        //password hashé
 
-        $subject="Modification de mot passe";
-        $body="Votre mot de passe à bien été modifié<br>Tentez de vous reconnecter vec votre nouveau mot de passe,<br> si celui-ci ne fonctionne toujours pas contactez l'administrateur.<br> A bientôt<br><br> Webmaster";
-		//send_mail(NULL,$mail,NULL,$subject,$body);
+
+		$monfichier = fopen('include/register/secucode.txt', 'r+');
+		$var = fgets($monfichier); // On lit la première ligne (nombre de pages vues)
+		
+
+		if($var==$code){
+
+			//hashage du password
+	        $hasher = new PasswordHash(8, FALSE);
+	        $hash = $hasher->HashPassword($newp);
+	        //password hashé
+
+	        $bdd=db_init();
+	        $bdd->exec('UPDATE XCH14_users SET psswd=$hash WHERE mail=$mail');
+
+			//sending mail
+	        $subject="Modification de mot passe";
+	        $body="Votre mot de passe à bien été modifié<br>Tentez de vous reconnecter vec votre nouveau mot de passe,<br> si celui-ci ne fonctionne toujours pas contactez l'administrateur.<br> A bientôt<br><br> Webmaster";
+			//send_mail(NULL,$mail,NULL,$subject,$body);
+
+
+			srand();	
+			fseek($monfichier, 0); // On remet le curseur au début du fichier
+			fputs($monfichier, rand(100,999));
+	        fclose($monfichier);
+
+			return TRUE;
+
+		}
+		else{
+			fclose($monfichier);
+			return FALSE;
+		}
+
+
 	}
 
 	function register(PDO $bdd,$psswd,$lname,$fname,$email,$phone,$school,$sex,$addA,$addB,$addC,$bd_y,$bd_m,$bd_d,$nn,$pos1,$pos2,$pos3,$pos4,$pos5){
