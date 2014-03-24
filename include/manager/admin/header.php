@@ -13,6 +13,10 @@
             body { padding-top: 50px; }
         	.btn-toolbar {text-align:center;}
 
+			.marge {
+				margin-left: 5em;
+			}
+
         </style>
 		<?php require('include/lib/functions.php'); ?> 
 		</head>
