@@ -254,42 +254,52 @@
 		}
 		return 'sent';
 	}
-	function reset_password($newp,$mail,$code){
-
-
-		$monfichier = fopen('include/register/secucode.txt', 'r+');
-		$var = fgets($monfichier); // On lit la première ligne (nombre de pages vues)
-		
-
-		if($var==$code){
-
-			//hashage du password
-	        $hasher = new PasswordHash(8, FALSE);
-	        $hash = $hasher->HashPassword($newp);
-	        //password hashé
-
-	        $bdd=db_init();
-	        $req=$bdd->prepare('UPDATE XCH14_users SET psswd=? WHERE mail=?');
-	        $req->execute(array($hash,$mail));
-			//sending mail
-	        $subject="Modification de mot passe";
-	        $body="Votre mot de passe à bien été modifié<br>Tentez de vous reconnecter vec votre nouveau mot de passe,<br> si celui-ci ne fonctionne toujours pas contactez l'administrateur.<br> A bientôt<br><br> Webmaster";
-			//send_mail(NULL,$mail,NULL,$subject,$body);
-
-	        echo $newp;
-	        echo $hash;
-	        
-			srand();	
-			fseek($monfichier, 0); // On remet le curseur au début du fichier
-			//fputs($monfichier, rand(100,999));
-	        fclose($monfichier);
+	function reset_password($action,$newp,$mail,$code){
+		if($action=="send"){
+			srand();
+			$codec=rand(0,99999999);
+			$name='temp/'.$mail.$codec;
+			$monfichier=fopen($name,'w+');
+			fputs('0');
+			fclose($monfichier);
+			global $url;
+			$link= $url.'psswdr.php?m='.$mail.'c='.$codec;
+			$subject="réinitialisation de mot de passe";
+			$body="veuillez suivre ce lien :  ". $link."<br>et taper votre nouveau mot de passe";
+			send_mail(NULL,$mail,NULL,$subject,$body);
 
 			return TRUE;
-
 		}
-		else{
-			fclose($monfichier);
-			return FALSE;
+		elseif ($action=="reset") {
+
+			if(file_exists('temp/'.$mail.$code)){
+
+				//hashage du password
+		        $hasher = new PasswordHash(8, FALSE);
+		        $hash = $hasher->HashPassword($newp);
+		        //password hashé
+
+		        $bdd=db_init();
+		        $email==quote($mail);
+		        $req=$bdd->prepare('UPDATE XCH14_users SET psswd=? WHERE mail=?');
+		        $req->execute(array($hash,$email));
+				//sending mail
+		        $subject="Modification de mot passe";
+		        $body="Votre mot de passe à bien été modifié<br>Tentez de vous reconnecter vec votre nouveau mot de passe,<br> si celui-ci ne fonctionne toujours pas contactez l'administrateur.<br> A bientôt<br><br> Webmaster";
+				//send_mail(NULL,$mail,NULL,$subject,$body);
+
+		        //echo $newp;
+		        //echo $hash;
+
+		        unlink('temp/'.$email.$code);
+
+				return TRUE;
+
+			}
+			else{
+
+				return FALSE;
+			}
 		}
 
 
