@@ -255,7 +255,7 @@
 		return 'sent';
 	}
 	function reset_password($action,$newp,$mail,$code){
-		if($action=="send"){
+		if($action==send){
 			srand();
 			$codec=rand(0,99999999);
 			$name='temp/'.$mail.$codec;
@@ -270,7 +270,7 @@
 
 			return TRUE;
 		}
-		elseif ($action=="reset") {
+		elseif ($action==reset) {
 
 			if(file_exists('temp/'.$mail.$code)){
 
