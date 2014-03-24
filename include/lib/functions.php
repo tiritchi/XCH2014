@@ -280,7 +280,7 @@
 		        //password hashé
 
 		        $bdd=db_init();
-		        $email==$bdd->quote($mail);
+		        $email=$bdd->quote($mail);
 		        $req=$bdd->prepare('UPDATE XCH14_users SET psswd=? WHERE mail=?');
 		        $req->execute(array($hash,$email));
 				//sending mail
