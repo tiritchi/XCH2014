@@ -269,8 +269,8 @@
 	        //password hashé
 
 	        $bdd=db_init();
-	        $bdd->exec('UPDATE XCH14_users SET psswd=$hash WHERE mail=$mail');
-
+	        $req=$bdd->prepare('UPDATE XCH14_users SET psswd=? WHERE mail=?');
+	        $req->execute(array($hash,$mail));
 			//sending mail
 	        $subject="Modification de mot passe";
 	        $body="Votre mot de passe à bien été modifié<br>Tentez de vous reconnecter vec votre nouveau mot de passe,<br> si celui-ci ne fonctionne toujours pas contactez l'administrateur.<br> A bientôt<br><br> Webmaster";
