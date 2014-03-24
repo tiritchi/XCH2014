@@ -8,14 +8,22 @@
 	include 'include/lib/functions.php';
 	include 'include/lib/PasswordHash.php';
 
-	if(isset($_GET['a']) && isset($_GET['m']) && isset($_GET['c'])){
-		$res=reset_password($_GET['a'],$_GET['p'],$_GET['m'],$_GET['c']);
+	if(isset($_POST['a']) && isset($_POST['m']) && isset($_POST['c'])){
+		$res=reset_password($_POST['a'],$_POST['p'],$_GET['m'],$_POST['c']);
 		
-		if($res==TRUE){
-			echo 'votre mot de passe à bien été modifié';
+		if($_POST['a']==send){
+			if($res==TRUE){
+				echo 'Mail envoyé';
+				echo '<meta http-equiv="refresh" content="0; url=admin">';
+			}
 		}
 		else{
-			echo 'echec';
+			if($res==TRUE){
+			echo 'votre mot de passe à bien été modifié';
+			}
+			else{
+				echo 'echec';
+			}
 		}
 	}
 ?>
