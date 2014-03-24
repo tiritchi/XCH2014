@@ -265,7 +265,7 @@
 			global $url;
 			$link= $url.'rpsswd.php?m='.$mail.'&c='.$codec;
 			$subject="réinitialisation de mot de passe";
-			$body="veuillez suivre ce lien :  ". $link."<br>et taper votre nouveau mot de passe";
+			$body='veuillez suivre ce lien :  <a href="'. $link.'">'.$link.'</a><br>et taper votre nouveau mot de passe";
 			send_mail(NULL,$mail,NULL,$subject,$body);
 
 			return TRUE;
