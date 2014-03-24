@@ -59,11 +59,11 @@
 									foreach($req as $user){							
 										echo '
 										<tr>
-											<td>'.$user[0].'</td>
-											<td>'.$user[11].'</td>
+											<td>'.$user['id'].'</td>
+											<td>'.$user['pseudo'].'</td>
 											<td>'.$user['score'].'</td>
-											<td>'.$user[5].'</td>
-											<td>'.$user[14].'</td>
+											<td>'.$user['school'].'</td>
+											<td>'.$user['position'].'</td>
 										</tr>';
 									}
 								?>
