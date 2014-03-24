@@ -272,7 +272,7 @@
 		}
 		elseif ($action==reset) {
 
-			if(file_exists('temp/'.$mail.$code){
+			if(file_exists('temp/'.$mail.$code)){
 
 				//hashage du password
 		        $hasher = new PasswordHash(8, FALSE);
