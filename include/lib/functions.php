@@ -413,7 +413,7 @@
 		}
 		$taille=count($arr);
 
-		return array_slice($arr,0, $taille-5);
+		return array_slice($arr,0,5);
 
 	}
 
