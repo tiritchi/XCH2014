@@ -8,8 +8,8 @@
 	include 'include/lib/functions.php';
 	include 'include/lib/PasswordHash.php';
 
-	if(isset($_GET['a']) && isset($_GET['m']) && isset($_GET['c'])){
-		$res=reset_password($_GET['a'],$_POST['p'],$_GET['m'],$_GET['c']);
+	if(isset($_POST['a']) && isset($_POST['m']) && isset($_POST['c'])){
+		$res=reset_password($_POST['a'],$_POST['p'],$_POST['m'],$_POST['c']);
 		
 		if($res==TRUE){
 			echo 'votre mot de passe à bien été modifié';

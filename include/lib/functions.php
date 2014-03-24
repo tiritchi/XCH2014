@@ -263,7 +263,7 @@
 			fputs('0');
 			fclose($monfichier);
 			global $url;
-			$link= $url.'psswdr.php?m='.$mail.'c='.$codec;
+			$link= $url.'rpsswd.php?m='.$mail.'&c='.$codec;
 			$subject="réinitialisation de mot de passe";
 			$body="veuillez suivre ce lien :  ". $link."<br>et taper votre nouveau mot de passe";
 			send_mail(NULL,$mail,NULL,$subject,$body);
@@ -413,13 +413,8 @@
 		}
 		$taille=count($arr);
 
+		return array_slice($arr,0, $taille-5);
 
-		if($taille<5){
-			return $arr;
-		}
-		else{
-			return array_slice($arr, $taille-5);
-		}
 	}
 
 	function save_db($table){

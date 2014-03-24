@@ -1,0 +1,1 @@
+//link with /include/register/reset_psswd.php
