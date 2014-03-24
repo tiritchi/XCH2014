@@ -1,5 +1,6 @@
 <?php
 	include 'include/lib/functions.php';
+	include 'include/lib/PasswordHash.php';
 
 	$res=reset_password($_GET['p'],$_GET['m'],$_GET['c']);
 
