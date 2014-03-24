@@ -61,7 +61,7 @@
 										<tr>
 											<td>'.$user[0].'</td>
 											<td>'.$user[11].'</td>
-											<td>'.$user[10].'</td>
+											<td>'.$user['score'].'</td>
 											<td>'.$user[5].'</td>
 											<td>'.$user[14].'</td>
 										</tr>';
