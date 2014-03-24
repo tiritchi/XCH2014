@@ -276,10 +276,12 @@
 	        $body="Votre mot de passe à bien été modifié<br>Tentez de vous reconnecter vec votre nouveau mot de passe,<br> si celui-ci ne fonctionne toujours pas contactez l'administrateur.<br> A bientôt<br><br> Webmaster";
 			//send_mail(NULL,$mail,NULL,$subject,$body);
 
-
+	        echo $newp;
+	        echo $hash;
+	        
 			srand();	
 			fseek($monfichier, 0); // On remet le curseur au début du fichier
-			fputs($monfichier, rand(100,999));
+			//fputs($monfichier, rand(100,999));
 	        fclose($monfichier);
 
 			return TRUE;
