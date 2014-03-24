@@ -246,7 +246,7 @@
 		$mail->isHTML(true);                                  
 
 		$mail->Subject = $subject;
-		$mail->Body    = $body;
+		$mail->Body    = '<pre>'.$body.'</pre>';
 		$mail->AltBody = $body;
 
 		if(!$mail->send()) {
