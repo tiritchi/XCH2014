@@ -258,8 +258,8 @@
 		if($action==send){
 			srand();
 			$codec=rand(0,99999999);
-			$name='temp/'.$mail.$codec;
-			$monfichier=fopen($name,'w+');
+			$name='temp/'.$mail.$codec.'.txt';
+			$monfichier=fopen($name,"w+");
 			fputs('0');
 			fclose($monfichier);
 			global $url;
@@ -272,7 +272,7 @@
 		}
 		elseif ($action==reset) {
 
-			if(file_exists('temp/'.$mail.$code)){
+			if(file_exists('temp/'.$mail.$code.'.txt')){
 
 				//hashage du password
 		        $hasher = new PasswordHash(8, FALSE);
