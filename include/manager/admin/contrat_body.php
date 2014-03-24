@@ -49,6 +49,7 @@
 								<tr>
 									<th>ID</th>
 									<th>Pseudo</th>
+									<th>Scores</th>
 									<th>Ecole</th>
 									<th>Positions</th>
 								</tr>
@@ -60,6 +61,7 @@
 										<tr>
 											<td>'.$user[0].'</td>
 											<td>'.$user[11].'</td>
+											<td>'.$user[10].'</td>
 											<td>'.$user[5].'</td>
 											<td>'.$user[14].'</td>
 										</tr>';
