@@ -105,6 +105,7 @@
 	function mark_as_complete (PDO $bdd,$contract_no,$target_no){// mark_as_complete(ref bdd, clef primaire du contrat) marque à 1 le champ 'complete' et renvoie true ou false si l'action à été effectuée
 		$monfichier=fopen('include/lib/game.txt',"r+");
 		$phase=fgets($monfichier);
+		fclose($monfichier);
 		try 
 		{
 			$req2=$bdd->query("SELECT * FROM XCH14_contracts WHERE contract_no=$contract_no");
