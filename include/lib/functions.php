@@ -103,21 +103,24 @@
 	}
 
 	function mark_as_complete (PDO $bdd,$contract_no,$target_no){// mark_as_complete(ref bdd, clef primaire du contrat) marque à 1 le champ 'complete' et renvoie true ou false si l'action à été effectuée
-		$monfichier=fopen('include/lib/game.txt',"r+");
-		$phase=fgets($monfichier);
-		fclose($monfichier);
 		try 
 		{
+			$monfichier=fopen('include/lib/game.txt',"r+");
+			$phase=fgets($monfichier);
+			fclose($monfichier);
+			
 			$req2=$bdd->query("SELECT * FROM XCH14_contracts WHERE contract_no=$contract_no");
 			$contrat=$req2->fetch();
 			if($contrat['target_no']==$target_no){
 				$req=$bdd->exec("UPDATE XCH14_contracts SET complete ='1' WHERE contract_no=$contract_no");
 				$uid=$contrat['user_id'];
+				$tid=$contrat['target_id'];
+
 				$bdd->exec("UPDATE XCH14_users SET score=score+1 WHERE id=$uid");
 
 				//si phase de jeu = 2 alors assigner contrat du tué au tueur
 				if($phase==2){
-					$tid=$contrat['target_id'];
+					
 					$bdd->exec('UPDATE XCH14_contracts SET user_id=$uid WHERE user_id=$tid');
 				}
 			}
