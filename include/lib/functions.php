@@ -123,7 +123,7 @@
 					if($phase==2){
 
 						$req3=$bdd->prepare('UPDATE XCH14_contracts SET user_id=? WHERE user_id=?');
-						$req3=execute(array($uid,$tid));
+						$req3->execute(array($uid,$tid));
 					}
 				}
 			}
