@@ -13,7 +13,6 @@
 									<th>Cible</th>
 									<th>PDF</th>
 									<th>Réalisé</th>
-									<th>En vie</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -31,7 +30,7 @@
 											<td>'.$cible.'</td>
 											<td><a href="contrat_pdf.php?cno='.$contrat[3].'&pseudo='.$cible.'" class=" glyphicon glyphicon-file"></a></td>
 											<td>';if($contrat[1]==1){
-												    echo '<i class="glyphicon glyphicon-remove"></i>';
+												    echo '<i class="glyphicon glyphicon-ok"></i>';
 												}'
 										</tr>';
 									}
@@ -53,6 +52,7 @@
 									<th>Scores</th>
 									<th>Ecole</th>
 									<th>Positions</th>
+									<th>En vie</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -66,7 +66,7 @@
 											<td>'.$user['school'].'</td>
 											<td>'.$user['position'].'</td>
 											<td>';if($user['alive']==0){
-												    echo '<i class="glyphicon glyphicon-"></i>';
+												    echo '<i class="glyphicon glyphicon-remove"></i>';
 												}'
 										</tr>';
 									}
