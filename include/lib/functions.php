@@ -112,16 +112,18 @@
 			$req2=$bdd->query("SELECT * FROM XCH14_contracts WHERE contract_no=$contract_no");
 			$contrat=$req2->fetch();
 			if($contrat['target_no']==$target_no){
-				$req=$bdd->exec("UPDATE XCH14_contracts SET complete ='1' WHERE contract_no=$contract_no");
-				$uid=$contrat['user_id'];
-				$tid=$contrat['target_id'];
+				if($contrat['complete']==0){
+					$req=$bdd->exec("UPDATE XCH14_contracts SET complete ='1' WHERE contract_no=$contract_no");
+					$uid=$contrat['user_id'];
+					$tid=$contrat['target_id'];
 
-				$bdd->exec("UPDATE XCH14_users SET score=score+1 WHERE id=$uid");
+					$bdd->exec("UPDATE XCH14_users SET score=score+1 WHERE id=$uid");
 
-				//si phase de jeu = 2 alors assigner contrat du tué au tueur
-				if($phase==2){
-					
-					$bdd->exec('UPDATE XCH14_contracts SET user_id=$uid WHERE user_id=$tid');
+					//si phase de jeu = 2 alors assigner contrat du tué au tueur
+					if($phase==2){
+
+						$bdd->exec('UPDATE XCH14_contracts SET user_id=$uid WHERE user_id=$tid');
+					}
 				}
 			}
 
