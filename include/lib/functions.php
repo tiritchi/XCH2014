@@ -126,7 +126,7 @@
 						$req3->execute(array($uid,$tid));
 
 						$req4=$bdd->prepare('UPDATE XCH14_users SET alive=? WHERE id=?');
-						$req4->execute(array('0',$tid));
+						$req4->execute(array(0,$tid));
 					}
 				}
 			}
