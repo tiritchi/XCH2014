@@ -10,26 +10,34 @@
 			            </div>
 			            <div class="panel-body">
 			                <div class="list-group">
+			                	<?php 
+							        $var=get_user_info($bdd,$_SESSION['user_id']);
+							    ?>
 			                	<?php
 			                		$monfichier = fopen('include/lib/game.txt', 'r+');
-									$var = fgets($monfichier); // On lit la première ligne (nombre de pages vues)
+									$var2 = fgets($monfichier); // On lit la première ligne (nombre de pages vues)
 									fclose($monfichier);
-									if($var==0){
+									if($var2==0){
 										echo 'Le jeu n\'a pas encore commencé';
 									}
-									elseif($var==1 || $var==2){
-				                		$array=get_contracts($bdd,$_SESSION['user_id']);
-				                		if ($array==NULL) {
-				                		    echo 'pas de contrats';
-				                		}
-				                		else {
-										    foreach ($array as $ar) {
-											    echo '<a class="list-group-item"';if($ar[1]==0){ echo 'href="" data-toggle="modal" data-target="#'.$ar[3];} echo '">'.$ar[3];
-											    if($ar[1]==1){
-												    echo '<i class="glyphicon glyphicon-ok pull-right"></i>';
+									elseif($var2==1 || $var2==2){
+										if($var['alive']==1){
+					                		$array=get_contracts($bdd,$_SESSION['user_id']);
+					                		if ($array==NULL) {
+					                		    echo 'pas de contrats';
+					                		}
+					                		else {
+											    foreach ($array as $ar) {
+												    echo '<a class="list-group-item"';if($ar[1]==0){ echo 'href="" data-toggle="modal" data-target="#'.$ar[3];} echo '">'.$ar[3];
+												    if($ar[1]==1){
+													    echo '<i class="glyphicon glyphicon-ok pull-right"></i>';
+													}
+													echo '</a>';
 												}
-												echo '</a>';
 											}
+										}
+										else{
+											echo 'Vous avez été éliminé <br>Attendez pour de nouvelles insctructions !';
 										}
 									}
 									elseif($var==3){
@@ -42,9 +50,7 @@
 			    </div>
 	    
 			    
-			    <?php 
-			        $var=get_user_info($bdd,$_SESSION['user_id']);
-			    ?>
+
 			    
 				<div class="col-md-4">
 					<div class="panel panel-default">
