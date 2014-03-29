@@ -117,7 +117,8 @@
 
 				//si phase de jeu = 2 alors assigner contrat du tué au tueur
 				if($phase==2){
-					$bdd->exec('UPDATE XCH14_contracts SET user_id=$uid WHERE target_no=$target_no');
+					$tid=$contrat['target_id'];
+					$bdd->exec('UPDATE XCH14_contracts SET user_id=$uid WHERE user_id=$tid');
 				}
 			}
 
