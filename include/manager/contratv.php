@@ -23,3 +23,5 @@ elseif(isset($_SESSION['connected']) && $_SESSION['connected']=='TRUE' && isset(
 else{
 		echo '<meta http-equiv="refresh" content="0; url=.">'; 
 	}
+
+?>
