@@ -124,6 +124,9 @@
 
 						$req3=$bdd->prepare('UPDATE XCH14_contracts SET user_id=? WHERE user_id=?');
 						$req3->execute(array($uid,$tid));
+
+						$req4=$bdd->prepare('UPDATE XCH14_users SET alive=? WHERE id=?');
+						$req4->execute(array(0,$tid));
 					}
 				}
 			}
