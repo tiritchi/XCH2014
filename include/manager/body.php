@@ -21,7 +21,7 @@
 										echo 'Le jeu n\'a pas encore commencé';
 									}
 									elseif($var2==1 || $var2==2){
-										if($var['alive']==1){
+										if($var[11]==1){
 					                		$array=get_contracts($bdd,$_SESSION['user_id']);
 					                		if ($array==NULL) {
 					                		    echo 'pas de contrats';
